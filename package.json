@@ -1,0 +1,21 @@
+{
+  "name": "cosmicfut",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "data:build": "npm run build --workspace @cosmicfut/data",
+    "photos:build": "node packages/data/src/photos.mjs",
+    "dev": "npm run dev --workspace @cosmicfut/web",
+    "build": "npm run build --workspace @cosmicfut/web",
+    "server": "npm run dev --workspace @cosmicfut/server",
+    "play": "npm run build && npm run start --workspace @cosmicfut/server",
+    "play:tunnel": "cloudflared tunnel --url http://localhost:8787",
+    "server:test": "npm run test --workspace @cosmicfut/server",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}

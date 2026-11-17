@@ -1,0 +1,15 @@
+{
+  "name": "@cosmicfut/data",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pipeline de dados do COSMICFUT: converte o conteúdo do jogo original em JSON + assets para apps/web/public.",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "build:data-only": "node src/build.mjs --skip-assets",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

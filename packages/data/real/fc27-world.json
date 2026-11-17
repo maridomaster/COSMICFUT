@@ -1,0 +1,5989 @@
+[
+  {
+    "clubId": "porto",
+    "name": "Diogo Costa",
+    "overall": 86,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Victor Froholdt",
+    "overall": 82,
+    "potential": 89,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Jakub Kiwior",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Jan Bednarek",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Gabri Veiga",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Alan Varela",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Samu Aghehowa",
+    "overall": 80,
+    "potential": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Alberto Costa",
+    "overall": 78,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Pablo Rosario",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Pepê",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "André Silva",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "William Gomes",
+    "overall": 77,
+    "potential": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Francisco Moura",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Borja Sainz",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Martim Fernandes",
+    "overall": 76,
+    "potential": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "In-beom Hwang",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Nehuén Pérez",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Zaidu Sanusi",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Oskar Pietuszewski",
+    "overall": 74,
+    "potential": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Cláudio Ramos",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Dominik Prpić",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Deniz Gül",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "João Costa",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Vasco Sousa",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "leixoes-por",
+    "name": "Tiago Silva",
+    "overall": 63,
+    "potential": 67,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Vangelis Pavlidis",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Fredrik Aursnes",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Anatoliy Trubin",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Rafa Silva",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Dodi Lukébakio",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Andreas Schjelderup",
+    "overall": 80,
+    "potential": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Richard Ríos",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Alexander Bah",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Georgiy Sudakov",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Jhon Durán",
+    "overall": 78,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Tomás Araújo",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Leandro Barreiro",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Jakub Kamiński",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Enzo Barrenechea",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Clément Lenglet",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Samuel Dahl",
+    "overall": 75,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Gianluca Prestianni",
+    "overall": 75,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Alessandro Circati",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Manu Silva",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Samuel Soares",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Daniel Banjaqui",
+    "overall": 63,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Gabriel Índio",
+    "overall": 63,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Anísio Cabral",
+    "overall": 63,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "José Neto",
+    "overall": 61,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Rodrigo Zalazar",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Luis Suárez",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Maxi Araújo",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Rui Silva",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Gonçalo Inácio",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Geny Catamo",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Zeno Debast",
+    "overall": 78,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Eduardo Quaresma",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Sergi Altimira",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Iván Fresneda",
+    "overall": 76,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Fotis Ioannidis",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Nuno Santos",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Georgios Vagiannidis",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Silas Andersen",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Issa Doumbia",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Luís Guilherme",
+    "overall": 72,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Ibrahima Ba",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Nestory Irankunda",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "João Simões",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Pedro Lima",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Diego Callai",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Rafael Nel",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Jesse Derry",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Salvador Blopa",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Flávio Gonçalves",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Ricardo Horta",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Víctor Gómez",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "João Moutinho",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Leonardo Lelo",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Vítor Carvalho",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Pau Víctor",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Gustaf Lagerbielke",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Gabri Martínez",
+    "overall": 74,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "santaclara-por",
+    "name": "Gabriel Silva",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Bright Arrey-Mbi",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Sikou Niakaté",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Gorby",
+    "overall": 74,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Fran Navarro",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Demir Ege Tıknaz",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Adrian Leon Barisic",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Mario Dorgeles",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Diego Rodrigues",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Tiago Sá",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Jonatás Noro",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Rúben Neves",
+    "overall": 85,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Sergej Milinković-Savić",
+    "overall": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Theo Hernández",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Yassine Bounou",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Kalidou Koulibaly",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Salem Al-Dawsari",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Crysencio Summerville",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Mohamed Kanno",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Hassan Tambakti",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Kader Meïté",
+    "overall": 72,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Sultan Mandash",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Nasser Al-Dawsari",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Ali Lajami",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Mohammed Al-Owais",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Moteb Al-Harbi",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Hamad Al-Yami",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Saïmon Bouabré",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Yusuf Akçiçek",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Mohammed Mahzari",
+    "overall": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Murad Al-Hawsawi",
+    "overall": 63,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Nawaf Al-Habashi",
+    "overall": 62,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Sabri Dahal",
+    "overall": 62,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Abdullah Al-Anazi",
+    "overall": 58,
+    "potential": 60,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Ivan Perisic",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Mauro Júnior",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Jerdy Schouten",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Sergiño Dest",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Guus Til",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Lutsharel Geertruida",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Ricardo Pepi",
+    "overall": 78,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Filip Kostic",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Dennis Man",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Kodai Sano",
+    "overall": 77,
+    "potential": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Alassane Pléa",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Sven Mijnans",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Matej Kovar",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Yarek Gasiorowski",
+    "overall": 77,
+    "potential": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Paul Wanner",
+    "overall": 76,
+    "potential": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Ryan Flamingo",
+    "overall": 76,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Nick Olij",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Esmir Bajraktarevic",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Ruben van Bommel",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Armando Obispo",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Kiliann Sildillia",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Adamo Nagalo",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Noah Fernandez",
+    "overall": 67,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Isaac Babadi",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Amir Bouhamdi",
+    "overall": 64,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Fabian Merién",
+    "overall": 63,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Tijn Smolenaars",
+    "overall": 62,
+    "potential": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Marc ter Stegen",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Julian Brandt",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Youri Baas",
+    "overall": 78,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Marcos Leonardo",
+    "overall": 78,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Caio Henrique",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Kasper Dolberg",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Oscar Gloukh",
+    "overall": 77,
+    "potential": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Davy Klaassen",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Steven Berghuis",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Daley Blind",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Tolu Arokodare",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Oliver Edvardsen",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Lucas Rosa",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Anton Gaaei",
+    "overall": 71,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Owen Wijndal",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Jorthy Mokio",
+    "overall": 71,
+    "potential": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Maarten Paes",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Dies Janse",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Rayane Bounida",
+    "overall": 69,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Aaron Bouwman",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Abdellah Ouazane",
+    "overall": 66,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Joeri Heerkens",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Jofre Torrents",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Tsuyoshi Watanabe",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Luciano Valente",
+    "overall": 77,
+    "potential": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Sem Steijn",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Anis Hadj Moussa",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Jordan Bos",
+    "overall": 76,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Givairo Read",
+    "overall": 76,
+    "potential": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Oussama Targhalline",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Mika Mármol",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Charles Vanhoutte",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Jeremiah St. Juste",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Gjivai Zechiël",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Jakub Moder",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Gijs Smal",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Thomas Beelen",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Javi López",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Bart Nieuwkoop",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Mats Deijl",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Tjark Ernst",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Gonçalo Borges",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Gaoussou Diarra",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Nacho Ferri",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Thijs Kraaijeveld",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Tobias van den Elshout",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Liam Bossin",
+    "overall": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Shaqueel van Persie",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Jivayno Zinhagel",
+    "overall": 59,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Mannou Berger",
+    "overall": 59,
+    "potential": 63,
+    "source": "fc27"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Tijme Wessels",
+    "overall": 58,
+    "potential": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Cristiano Ronaldo",
+    "overall": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "João Félix",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Iñigo Martínez",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Kingsley Coman",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Sadio Mané",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Mohamed Simakan",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Bento",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Samú Costa",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Ângelo",
+    "overall": 76,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Abdulelah Al-Amri",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Sultan Al-Ghannam",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Nawaf Al-Aqidi",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Nawaf Boushal",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Ayman Yahya",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Abdullah Al-Khaibari",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Abdullah Al-Hamdan",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-fateh-ara",
+    "name": "Ali Al-Hassan",
+    "overall": 65,
+    "potential": 67,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Nader Al-Sharari",
+    "overall": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Saad Al-Nasser",
+    "overall": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Salem Al-Najdi",
+    "overall": 62,
+    "potential": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Sami Al-Najei",
+    "overall": 61,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Haydeer Abdulkareem",
+    "overall": 61,
+    "potential": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Abdulmalik Al-Jaber",
+    "overall": 59,
+    "potential": 63,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Mohammed Marran",
+    "overall": 58,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Danilo Pereira",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Youssef En-Nesyri",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Houssem Aouar",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Steven Bergwijn",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Predrag Rajković",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Roger Fernandes",
+    "overall": 75,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Dion Lopy",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Muhannad Al-Shanqeeti",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "George Ilenikhena",
+    "overall": 72,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Mahamadou Doumbia",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Hassan Kadesh",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Marwan Al-Sahafi",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Jan-Carlo Simić",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Mukhtar Ali",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Ahmed Sharahili",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Saleh Al-Shehri",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "jeddah-ara",
+    "name": "Bryant Ortega",
+    "overall": 66,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Ahmed Al-Ghamdi",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Faris Abdi",
+    "overall": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Saad Al-Mousa",
+    "overall": 64,
+    "potential": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Hamed Al-Ghamdi",
+    "overall": 61,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Muath Faqihi",
+    "overall": 60,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Rakan Kaabi",
+    "overall": 60,
+    "potential": 62,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Victor Osimhen",
+    "overall": 85,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Lucas Torreira",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Barış Alper Yılmaz",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Gabriel Sara",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Uğurcan Çakır",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Davinson Sánchez",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Leroy Sané",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Yunus Akgün",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Abdülkerim Bardakcı",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Mario Lemina",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Roland Sallai",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Wilfried Singo",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "İlkay Gündoğan",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Lesley Ugochukwu",
+    "overall": 76,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Eren Elmalı",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Ismail Jakobs",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Kaan Ayhan",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Günay Güvenç",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Kazımcan Karataş",
+    "overall": 67,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Jankat Yılmaz",
+    "overall": 66,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Arda Ünyay",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Eyüp Aydın",
+    "overall": 64,
+    "potential": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Renato Nhaga",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Armando Güner",
+    "overall": 64,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Berat Luş",
+    "overall": 62,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "N'Golo Kanté",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Mason Greenwood",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Ederson",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Romelu Lukaku",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Marco Asensio",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Mattéo Guendouzi",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Vedat Muriqi",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Milan Škriniar",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Nathan Aké",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Sofyan Amrabat",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Kerem Aktürkoğlu",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Nélson Semedo",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "İsmail Yüksek",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Jayden Oosterwolde",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Dorgeles Nene",
+    "overall": 75,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Oğuz Aydın",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "İrfan Can Kahveci",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Archie Brown",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Mert Günok",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Levent Mercan",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Mert Müldür",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Ognjen Mimović",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Tarık Çetin",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Bartuğ Elmaz",
+    "overall": 66,
+    "potential": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Yiğit Efe Demir",
+    "overall": 65,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Amara Diouf",
+    "overall": 60,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Jordy Clasie",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Wouter Goes",
+    "overall": 77,
+    "potential": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Calvin Stengs",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Kees Smit",
+    "overall": 75,
+    "potential": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Peer Koopmeiners",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Mexx Meerdink",
+    "overall": 74,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Denso Kasius",
+    "overall": 73,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Jari De Busser",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Seiya Maikuma",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Stije Resink",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Weslley Patati",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Ro-Zangelo Daal",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "nordsjaelland-din",
+    "name": "Ibrahim Sadiq",
+    "overall": 71,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Mees de Wit",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Elijah Dijkstra",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Mateo Chávez",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Rome-Jayden Owusu-Oduro",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Jizz Hornkamp",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Jeroen Zoet",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Dave Kwakman",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Rion Ichihara",
+    "overall": 67,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Mayckel Lahdo",
+    "overall": 67,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Ayoub Oufkir",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Hobie Verhulst",
+    "overall": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Lewis Schouten",
+    "overall": 65,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Bendegúz Kovács",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "azalkmaar-hol",
+    "name": "Wassim Bouziane",
+    "overall": 63,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Wout Weghorst",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Bart van Rooij",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Lars Unnerstall",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Joël Drommel",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Ramiz Zerrouki",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Daan Rots",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Sondre Ørjasæter",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Robin Pröpper",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Remko Pasveer",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Thomas van den Belt",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Ruud Nijstad",
+    "overall": 70,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Marko Pjaca",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Stav Lemkin",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Kristian Hlynsson",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "breda-hol",
+    "name": "Arno Verschueren",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Younes Taha",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Max Bruns",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Naci Ünüvar",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Aske Adelgaard",
+    "overall": 67,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Daouda Weidmann",
+    "overall": 65,
+    "potential": 67,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Gijs Besselink",
+    "overall": 65,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Filip Thorvaldsen",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "ajaxb-hol",
+    "name": "Issam El Maach",
+    "overall": 63,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Krzysztof Kurowski",
+    "overall": 62,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Lucas Vennegoor of Hesselink",
+    "overall": 61,
+    "potential": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Yann Sommer",
+    "overall": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Hans Vanaken",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Brandon Mechele",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Jan Virgili",
+    "overall": 76,
+    "potential": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Joel Ordóñez",
+    "overall": 76,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Carlos Forbs",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Nicolò Tresoldi",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Joaquin Seys",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Félix Lemaréchal",
+    "overall": 73,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Freddie Potts",
+    "overall": 73,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Romeo Vermant",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Kyriani Sabbe",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "union-bel",
+    "name": "Gustaf Nilsson",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Han-beom Lee",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Hugo Vetlesen",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Hugo Siquet",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Nordin Jackers",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Mamadou Diakhon",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Jorne Spileers",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Lynnt Audoor",
+    "overall": 66,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Cheveyo Tsawa",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Matteo Dams",
+    "overall": 65,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Argus Vanden Driessche",
+    "overall": 63,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Tian Nai Koren",
+    "overall": 63,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Axl De Corte",
+    "overall": 62,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Andrej Vasovic",
+    "overall": 61,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "brugge-bel",
+    "name": "Gianluca Okon-Engstler",
+    "overall": 60,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Orkun Kökçü",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Leandro Trossard",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Dušan Vlahović",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Alexander Nübel",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Emmanuel Agbadou",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Vaclav Cerny",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Wilfred Ndidi",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Hyeon-gyu Oh",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Milot Rashica",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Amir Murillo",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Salih Özcan",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Tiago Djaló",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Emirhan Topçu",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Semih Kılıçsoy",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Rıdvan Yılmaz",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Kassoum Ouattara",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Junior Olaitan",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Yasin Özcan",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Kartal Yılmaz",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Doğan Alemdar",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Taylan Bulut",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Mustafa Hekimoğlu",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Can Keleş",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "İlhan Fakılı",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Alistair Johnston",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Cameron Carter-Vickers",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Callum McGregor",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Kieran Tierney",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Jota",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Benjamin Nygren",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Liam Scales",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Reo Hatate",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Auston Trusty",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Alex Oxlade-Chamberlain",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Hyun-jun Yang",
+    "overall": 73,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Luke McCowan",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "James Forrest",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Sebastian Tounekti",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Viljami Sinisalo",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Anthony Ralston",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Michel-Ange Balikwisha",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Colby Donovan",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Dane Murray",
+    "overall": 67,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Callum Osmand",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Ross Doohan",
+    "overall": 61,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Ivan Toney",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Francisco Trincão",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Roger Ibañez",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Galeno",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Edouard Mendy",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Merih Demiral",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Artem Bondarenko",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Valentin Atangana",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Feras Al-Buraikan",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Eduard Spertsyan",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Ali Majrashi",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Abubacarr Sedi Kinteh",
+    "overall": 71,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Zakaria Hawsawi",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Ziyad Al-Johani",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Matheus Gonçalves",
+    "overall": 67,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Saleh Abu Al-Shamat",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Saad Balobaid",
+    "overall": 65,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Rayan Hamed",
+    "overall": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Naif Masoud",
+    "overall": 62,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Mohammed Abdulrahman",
+    "overall": 62,
+    "potential": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Mohammed Sulaiman",
+    "overall": 62,
+    "potential": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Abdullah Radif",
+    "overall": 61,
+    "potential": 63,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Abdulrahman Al-Sanbi",
+    "overall": 61,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-ahli-ara",
+    "name": "Meshal Al-Mutairi",
+    "overall": 60,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Leandro Paredes",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Santiago Ascacíbar",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Sebastián Villa",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Lautaro Blanco",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Leandro Lozano",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Álvaro Montero",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Miguel Merentiel",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Lautaro Di Lollo",
+    "overall": 76,
+    "potential": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Agustín Marchesín",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Adam Bareiro",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Malcom Braida",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Rodrigo Battaglia",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Ayrton Costa",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Carlos Palacios",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Enner Valencia",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Milton Delgado",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Tomás Belmonte",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Alan Velasco",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Juan Barinaga",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Nicolás Figal",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Ángel Romero",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Milton Giménez",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Marco Pellegrino",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Williams Alarcón",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Tomás Aranda",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Leandro Brey",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Mauricio Benítez",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Javier García",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Leonel Flores",
+    "overall": 66,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Camilo Rey Domenech",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "bocajuniors-arg",
+    "name": "Dylan Gorosito",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Mauro Arambarri",
+    "overall": 80,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Aníbal Moreno",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Ángel Correa",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Thiago Almada",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Nicolás Otamendi",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Gonzalo Montiel",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Marcos Acuña",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Lucas Martínez Quarta",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Tomás Galván",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Sebastián Driussi",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Rafael Santos Borré",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Lautaro Rivero",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Lucas Beltrán",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Fausto Vera",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Juan Carlos Portillo",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Santiago Beltrán",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Francisco Ortega",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Giovanni González",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Ezequiel Centurión",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Lucas Silva",
+    "overall": 71,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Tobías Andrada",
+    "overall": 69,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Tobías Ramírez",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Agustín Ruberto",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Lautaro Pereyra",
+    "overall": 68,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Juan Cruz Meza",
+    "overall": 67,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "riverplate-arg",
+    "name": "Facundo González",
+    "overall": 62,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-shabab-ara",
+    "name": "Yannick Carrasco",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-shabab-ara",
+    "name": "Daniel Podence",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-shabab-ara",
+    "name": "Josh Brownhill",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "alkholood-ara",
+    "name": "Hammam Al-Hammami",
+    "overall": 64,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Nicolas Raskin",
+    "overall": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Lawrence Shankland",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Cammy Devlin",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Emmanuel Fernandez",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Djeidi Gassama",
+    "overall": 74,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Youssef Chermiti",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Dan Neil",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Dujon Sterling",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "John Souttar",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Ivor Pandur",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Ben Godfrey",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "James Penrice",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Kosta Nedeljkovic",
+    "overall": 71,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Tuur Rommens",
+    "overall": 71,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Daisuke Yokota",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Bojan Miovski",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "José Cifuentes",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Ross McCrorie",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Tochi Chukwuani",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Vanja Dragojevic",
+    "overall": 69,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Findlay Curtis",
+    "overall": 69,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "aberdeen-esc",
+    "name": "Lyall Cameron",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Olwethu Makhanya",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Liam Kelly",
+    "overall": 67,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Ryan Naderi",
+    "overall": 67,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "rangers-esc",
+    "name": "Ross McCausland",
+    "overall": 67,
+    "potential": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Lionel Messi",
+    "overall": 89,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Julián Quiñones",
+    "overall": 84,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Koen Casteels",
+    "overall": 82,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Nacho Fernández",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Mateo Retegui",
+    "overall": 81,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Haris Tabakovic",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Dominik Schmid",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Yorbe Vertessen",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Karim Konaté",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Abubakr Barry",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Stefan Lainer",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Nikolas Veratschnig",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Frans Krätzig",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Umut Tohumcu",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Christian Früchtl",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Kévin Boma",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Leandro Morgalla",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Tim Drexler",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Gaoussou Diakité",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Soumaïla Diabaté",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Damir Redzic",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Sota Kitano",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Bartosz Mazurek",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Anrie Chase",
+    "overall": 66,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Christian Zawieschitzky",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Edmund Baidoo",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Justin Omoregie",
+    "overall": 64,
+    "potential": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Filip Matijasevic",
+    "overall": 63,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "John Mellberg",
+    "overall": 63,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Aboubacar Camara",
+    "overall": 61,
+    "potential": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Johannes Moser",
+    "overall": 61,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "salzburg-aut",
+    "name": "Valentin Zabransky",
+    "overall": 61,
+    "potential": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "André Onana",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "Paul Onuachu",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "Stefan Savic",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "Ernest Muci",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "Ozan Tufan",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Noah Saviolo",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Rodrigo De Paul",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Casemiro",
+    "overall": 83,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Luis Suárez",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Germán Berterame",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Dayne St. Clair",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Sergio Reguilón",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Facundo Mura",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Telasco Segovia",
+    "overall": 71,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Tadeo Allende",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Yannick Bright",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Micael",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "David Ayala",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Gonzalo Luján",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Maximiliano Falcón",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Ian Fray",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Mateo Silvetti",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Luis Barraza",
+    "overall": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "intermiami-eua",
+    "name": "Rocco Ríos Novo",
+    "overall": 63,
+    "source": "fc27"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Yoann Cathline",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc27"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Dani de Wit",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "excelsior-hol",
+    "name": "Siebe Horemans",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Victor Jensen",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "excelsior-hol",
+    "name": "Arthur Zagre",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Michael Brouwer",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Davy van den Berg",
+    "overall": 67,
+    "source": "fc27"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Zidane Iqbal",
+    "overall": 67,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Colin Coosemans",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Adriano Bertaccini",
+    "overall": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Ludwig Augustinsson",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Enric Llansana",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Mario Stroeykens",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Killian Sardella",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "olympiakos-gre",
+    "name": "Giulian Biancone",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Danylo Sikan",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "César Huerta",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Nathan-Dylan Saliba",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Lucas Hey",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Mihajlo Cvetkovic",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Ilay Camara",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Marco Kana",
+    "overall": 68,
+    "potential": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Tristan Degreef",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Justin Heekeren",
+    "overall": 66,
+    "source": "fc27"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Ali Maamar",
+    "overall": 65,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Álex Zendejas",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Raphael Veiga",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Brian Rodríguez",
+    "overall": 77,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Israel Reyes",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Érick Sánchez",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Cristián Borja",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Luis Malagón",
+    "overall": 74,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Ramón Juárez",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Kevin Álvarez",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Miguel Borja",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Alexis Gutiérrez",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Henry Martin",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Rodolfo Cota",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Alan Cervantes",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Isaías Violante",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Edwin Cerrillo",
+    "overall": 68,
+    "source": "fc27"
+  },
+  {
+    "clubId": "america-mex",
+    "name": "Franco Rossano",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "aek-gre",
+    "name": "Orbelín Pineda",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Óliver Torres",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Lucas Ocampos",
+    "overall": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Luca Orellano",
+    "overall": 73,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Víctor Guzmán",
+    "overall": 73,
+    "potential": 75,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Jesús Corona",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Jorge Rodríguez",
+    "overall": 72,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Fidel Ambríz",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Gerardo Arteaga",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Stefan Medina",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Iker Fimbres",
+    "overall": 71,
+    "potential": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Ricardo Chávez",
+    "overall": 71,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Érick Aguirre",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Luis Cárdenas",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Alonso Aceves",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Carlos Salcedo",
+    "overall": 70,
+    "source": "fc27"
+  },
+  {
+    "clubId": "monterrey-mex",
+    "name": "Roberto de la Rosa",
+    "overall": 69,
+    "source": "fc27"
+  },
+  {
+    "clubId": "tigres-mex",
+    "name": "Juan Brunetta",
+    "overall": 78,
+    "source": "fc27"
+  },
+  {
+    "clubId": "twente-hol",
+    "name": "Yannick Gerritsen",
+    "overall": 57,
+    "potential": 64,
+    "source": "fc27"
+  },
+  {
+    "clubId": "porto",
+    "name": "Seko Fofana",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "porto",
+    "name": "Santiago Gimenez",
+    "overall": 79,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "João Palhinha",
+    "overall": 80,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Souffian El Karouani",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "benfica-por",
+    "name": "Claudio Echeverri",
+    "overall": 72,
+    "potential": 80,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sporting-por",
+    "name": "Sotiris Alexandropoulos",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Lukas Hornicek",
+    "overall": 73,
+    "potential": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Florian Grillitsch",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Paulo Oliveira",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Gabriel Moscardo",
+    "overall": 70,
+    "potential": 78,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sportingbraga-por",
+    "name": "Amine El Ouazzani",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Gil Dias",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Ivan Zlobin",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Rochinha",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Enea Mihaj",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Rafa Soares",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Santiago Colombatto",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "famalicao-por",
+    "name": "Mirko Topic",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Gustavo Silva",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Telmo Arcanjo",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Samu",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Óscar Rivas",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Miguel Nóbrega",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Tony Strata",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Juan Castillo",
+    "overall": 71,
+    "potential": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Matija Mitrović",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Fabio Blanco",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "vitoriaguimaraes-por",
+    "name": "Beni Mukendi",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estoril-por",
+    "name": "Pedro Amaral",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estoril-por",
+    "name": "Jandro Orellana",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estoril-por",
+    "name": "Joãozinho",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estoril-por",
+    "name": "Jordan Holsgrove",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estoril-por",
+    "name": "João Carvalho",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estoril-por",
+    "name": "Kevin Chamorro",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rioave-por",
+    "name": "Cezary Miszta",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rioave-por",
+    "name": "Ryan Guilherme",
+    "overall": 71,
+    "potential": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rioave-por",
+    "name": "Brandon Aguilera",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rioave-por",
+    "name": "Omar Richards",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rioave-por",
+    "name": "Andreas Ntoi",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "casapio-pt",
+    "name": "Ricardo Batista",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "casapio-pt",
+    "name": "Patrick Sequeira",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "casapio-pt",
+    "name": "Nermin Zolotic",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "casapio-pt",
+    "name": "João Goulart",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "casapio-pt",
+    "name": "Carnejy Antoine",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "gilvicente-por",
+    "name": "Luís Esteves",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "gilvicente-por",
+    "name": "Zé Carlos",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "arouca-por",
+    "name": "Ignacio de Arruabarrena",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "arouca-por",
+    "name": "Tiago Esgaio",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "arouca-por",
+    "name": "José Manuel Velázquez",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "arouca-por",
+    "name": "David Simão",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "arouca-por",
+    "name": "Nino Galovic",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estrelaamadora-por",
+    "name": "Léo Jabá",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "avs-por",
+    "name": "John Mercado",
+    "overall": 70,
+    "potential": 74,
+    "source": "estimate"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Mike van der Hoorn",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Nick Viergever",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Paxten Aaronson",
+    "overall": 72,
+    "potential": 79,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Sébastien Haller",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Can Bozdogan",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Tim Handwerker",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "utrecht-hol",
+    "name": "Miguel Rodríguez",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Thilo Kehrer",
+    "overall": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Yves Bissouma",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Simon Adingra",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ajax-hol",
+    "name": "Viktor Tsygankov",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Florian Kastenmeier",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "feynoord-hol",
+    "name": "Reiss Nelson",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "psv-hol",
+    "name": "Sami Ouaissa",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Gabriel Martinelli",
+    "overall": 81,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-hilal",
+    "name": "Ollie Watkins",
+    "overall": 81,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alnassr-ara",
+    "name": "Abdulrahman Ghareeb",
+    "overall": 71,
+    "source": "estimate"
+  },
+  {
+    "clubId": "alittihad-ara",
+    "name": "Ahmed Al-Julaydan",
+    "overall": 66,
+    "potential": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Gastón Álvarez",
+    "overall": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Julian Weigl",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Nahitan Nández",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Musab Al-Juwayr",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Christopher Bonsu Baah",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Yasser Al-Shahrani",
+    "overall": 66,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Mohammed Abu Al-Shamat",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-qadisiya-ara",
+    "name": "Turki Al-Ammar",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "neom-ara",
+    "name": "Alexandre Lacazette",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "neom-ara",
+    "name": "Marcin Bulka",
+    "overall": 78,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "neom-ara",
+    "name": "Luciano Rodríguez",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alkholood-ara",
+    "name": "Myziane Maolida",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alkholood-ara",
+    "name": "William Troost-Ekong",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alkholood-ara",
+    "name": "Norbert Gyömbér",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alkholood-ara",
+    "name": "Kévin N'Doram",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alkholood-ara",
+    "name": "Jackson Muleka",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Georginio Wijnaldum",
+    "overall": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Marek Rodák",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Jack Hendry",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Vitinho",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Demarai Gray",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Filip Kiss",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ettifaq-ara",
+    "name": "Ali Huzazi",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-hazem-ara",
+    "name": "Carlos Strandberg",
+    "overall": 70,
+    "potential": 72,
+    "source": "estimate"
+  },
+  {
+    "clubId": "al-hazem-ara",
+    "name": "Faïz Selemani",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "al-taawon-ara",
+    "name": "João Pedro",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-taawon-ara",
+    "name": "Andrei Girotto",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-taawon-ara",
+    "name": "Flávio",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-fateh-ara",
+    "name": "Jason Denayer",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-fateh-ara",
+    "name": "Sofiane Bendebka",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-fateh-ara",
+    "name": "Marwane Saadane",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-fateh-ara",
+    "name": "Lucas Zelarayán",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-shabab-ara",
+    "name": "Habib Diallo",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-shabab-ara",
+    "name": "Bogdan Planic",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "al-shabab-ara",
+    "name": "Cristian Guanca",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "alriyadh-ara",
+    "name": "Yoann Barbet",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Fernando Muslera",
+    "overall": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Santiago Arzamendia",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Eros Mancuso",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Edwuin Cetré",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Guido Carrillo",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Tiago Palacios",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Alexis Castro",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Santiago Núñez",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Leandro González Pírez",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "estudiantes-ar",
+    "name": "Ezequiel Piovi",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Facundo Cambeses",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Marcos Rojo",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Adrián Martínez",
+    "overall": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Matías Zaracho",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Valentín Carboni",
+    "overall": 73,
+    "potential": 79,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Duván Vergara",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Marco Di Césare",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "racing-arg",
+    "name": "Nazareno Colombo",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosariocentral-arg",
+    "name": "Ángel Di María",
+    "overall": 79,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosariocentral-arg",
+    "name": "Jáminton Campaz",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosariocentral-arg",
+    "name": "Facundo Mallo",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosariocentral-arg",
+    "name": "Axel Werner",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "velezsarsfield-arg",
+    "name": "Tomás Marchiori",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "velezsarsfield-arg",
+    "name": "Manuel Lanzini",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "velezsarsfield-arg",
+    "name": "Claudio Baeza",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "velezsarsfield-arg",
+    "name": "Diego Valdés",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "velezsarsfield-arg",
+    "name": "Lucas Robertone",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "velezsarsfield-arg",
+    "name": "Emanuel Mammana",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "independiente-arg",
+    "name": "Rodrigo Rey",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "independiente-arg",
+    "name": "Luciano Cabral",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "independiente-arg",
+    "name": "Iván Marcone",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "independiente-arg",
+    "name": "Santiago Montiel",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "independiente-arg",
+    "name": "Gabriel Ávalos",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "independiente-arg",
+    "name": "Kevin Lomónaco",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "talleres-arg",
+    "name": "Matías Catalán",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "talleres-arg",
+    "name": "Juan Gabriel Rodríguez",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "talleres-arg",
+    "name": "Rick",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "galatasaray-tur",
+    "name": "Rafael Leão",
+    "overall": 83,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Fabio Miretti",
+    "overall": 74,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "besiktas-tur",
+    "name": "Ernest Poku",
+    "overall": 73,
+    "potential": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Kojo Peprah Oppong",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "fenerbahce-tur",
+    "name": "Mert Hakan Yandaş",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "Edin Višća",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "trabzonspor-tur",
+    "name": "Manolis Siopis",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Muhammed Şengezer",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Onur Bulut",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Léo Duarte",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Jerome Opoku",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Berat Özdemir",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Miguel Crespo",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Amine Harit",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basaksehir-tur",
+    "name": "Jakub Kaluzinski",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "samsunspor-tur",
+    "name": "Carlo Holse",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Arne Engels",
+    "overall": 75,
+    "potential": 79,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Paulo Bernardo",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Adam Montgomery",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Kelechi Iheanacho",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "glasgowceltic-esc",
+    "name": "Marcelo Saracchi",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Yari Verschaeren",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Thorgan Hazard",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "anderlecht-bel",
+    "name": "Mihajlo Ilić",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "union-bel",
+    "name": "Kevin Mac Allister",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "union-bel",
+    "name": "Alessio Castro-Montes",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Hendrik Van Crombrugge",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Zakaria El Ouahdi",
+    "overall": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Mujaid Sadick",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Bryan Heynen",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Jarne Steuckers",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Joris Kayembe",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Tobias Lawal",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Matte Smets",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "genk-bel",
+    "name": "Nikolas Sattlberger",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Dennis Praet",
+    "overall": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Mahamadou Diawara",
+    "overall": 71,
+    "potential": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Gyrano Kerk",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Kobe Corbanie",
+    "overall": 68,
+    "potential": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Rein Van Helden",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "royalantwerp-bel",
+    "name": "Yuto Tsunashima",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "aberdeen-esc",
+    "name": "Dimitar Mitov",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "aberdeen-esc",
+    "name": "Nicky Devlin",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "aberdeen-esc",
+    "name": "Mats Knoester",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Patrick Berg",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Jens Petter Hauge",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Ulrik Saltnes",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Odin Bjørtuft",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Fredrik Bjørkan",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Håkon Evjen",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Sondre Brunstad Fet",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Isak Dybvik Määttä",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Fredrik Sjøvold",
+    "overall": 69,
+    "potential": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Villads Nielsen",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Jostein Gundersen",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Ole Didrik Blomberg",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "bodoglimt-nor",
+    "name": "Andreas Helmersen",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Dominik Kotarski",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Rúnar Alex Rúnarsson",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Gabriel Pereira",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Pantelis Hatzidiakos",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "William Clem",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Magnus Mattsson",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Jordan Larsson",
+    "overall": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Robert",
+    "overall": 70,
+    "potential": 77,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "copenhague-din",
+    "name": "Aurélio Buta",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "midtjylland-din",
+    "name": "Martin Erlić",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "midtjylland-din",
+    "name": "Ousmane Diao",
+    "overall": 74,
+    "potential": 78,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "midtjylland-din",
+    "name": "Denil Castillo",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "midtjylland-din",
+    "name": "Philip Billing",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "midtjylland-din",
+    "name": "Pedro Bravo",
+    "overall": 70,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "midtjylland-din",
+    "name": "Victor Bak",
+    "overall": 68,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Patrick Pentz",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Rasmus Lauritsen",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Mads Frøkjær",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Nicolai Vallys",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Oliver Villadsen",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Luis Binks",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "brondby-din",
+    "name": "Benjamin Tahirović",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Pontus Jansson",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Anders Christiansen",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Busanello",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Otto Rosengren",
+    "overall": 69,
+    "potential": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Colin Rösler",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Arnór Sigurdsson",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "malmo-sue",
+    "name": "Emmanuel Ekong",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "djurgardens-sue",
+    "name": "Magnus Eriksson",
+    "overall": 68,
+    "source": "estimate"
+  },
+  {
+    "clubId": "hammarby-sue",
+    "name": "Warner Hahn",
+    "overall": 69,
+    "source": "estimate"
+  },
+  {
+    "clubId": "hammarby-sue",
+    "name": "Victor Eriksson",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "molde-nor",
+    "name": "Mats Møller Dæhli",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "molde-nor",
+    "name": "Emil Breivik",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "molde-nor",
+    "name": "Casper Øyvann",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosenborg-nor",
+    "name": "Ole Selnæs",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosenborg-nor",
+    "name": "Iver Fossum",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rosenborg-nor",
+    "name": "Santeri Väänänen",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "viking-nor",
+    "name": "Zlatko Tripic",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Xherdan Shaqiri",
+    "overall": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Marwin Hitz",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Kevin Rüegg",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Becir Omeragic",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Finn van Breemen",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Nicolas Vouilloz",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Metinho",
+    "overall": 72,
+    "potential": 76,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Koba Koindredi",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Bénie Traoré",
+    "overall": 72,
+    "potential": 74,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "basel-sui",
+    "name": "Keigo Tsunemoto",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Marvin Keller",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Edimilson Fernandes",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Alvyn Sanches",
+    "overall": 70,
+    "potential": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Loris Benito",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Sandro Lauper",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Gregory Wüthrich",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Saidy Janko",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "youngboys-sui",
+    "name": "Moritz Jenz",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "servette-sui",
+    "name": "Jérémy Frick",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "servette-sui",
+    "name": "Steve Rouiller",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "servette-sui",
+    "name": "Miroslav Stevanovic",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "servette-sui",
+    "name": "David Douline",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "servette-sui",
+    "name": "Timothé Cognat",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "servette-sui",
+    "name": "Dylan Bronn",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lugano-sui",
+    "name": "Renato Steffen",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lugano-sui",
+    "name": "Jonathan Sabbatini",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sturmgraz-aut",
+    "name": "Otar Kiteishvili",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sturmgraz-aut",
+    "name": "Jon Gorenc Stankovic",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sturmgraz-aut",
+    "name": "Dimitri Lavalée",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "sturmgraz-aut",
+    "name": "Emir Karic",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rapidviena-aut",
+    "name": "Lukas Grgic",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "rapidviena-aut",
+    "name": "Niklas Hedl",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lechpoznan-pol",
+    "name": "Mikael Ishak",
+    "overall": 75,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lechpoznan-pol",
+    "name": "Joel Pereira",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lechpoznan-pol",
+    "name": "Antonio Milic",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lechpoznan-pol",
+    "name": "Radoslaw Murawski",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "lechpoznan-pol",
+    "name": "Filip Jagiello",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "legiawarsaw",
+    "name": "Bartosz Kapustka",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "legiawarsaw",
+    "name": "Pawel Wszolek",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "legiawarsaw",
+    "name": "Rúben Vinagre",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "legiawarsaw",
+    "name": "Josué",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "legiawarsaw",
+    "name": "Marc Gual",
+    "overall": 71,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "legiawarsaw",
+    "name": "Patryk Kun",
+    "overall": 68,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "jagiellonia-pl",
+    "name": "Taras Romanczuk",
+    "overall": 70,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "jagiellonia-pl",
+    "name": "Jesús Imaz",
+    "overall": 72,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "jagiellonia-pl",
+    "name": "Adrián Diéguez",
+    "overall": 69,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Andrea Compagno",
+    "overall": 72,
+    "source": "estimate"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Tiago Orobó",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Dong-jun Lee",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Jin-gyu Kim",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Bum-keun Song",
+    "overall": 69,
+    "source": "estimate"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Yeong-jae Lee",
+    "overall": 69,
+    "source": "estimate"
+  },
+  {
+    "clubId": "jeonbuk-cor",
+    "name": "Ji-su Park",
+    "overall": 68,
+    "source": "estimate"
+  },
+  {
+    "clubId": "fcseoul-cor",
+    "name": "Jesse Lingard",
+    "overall": 73,
+    "source": "fc26-adjusted"
+  },
+  {
+    "clubId": "ulsan-jap",
+    "name": "Hyeon-woo Jo",
+    "overall": 71,
+    "source": "estimate"
+  },
+  {
+    "clubId": "ulsan-jap",
+    "name": "Dong-gyeong Lee",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "ulsan-jap",
+    "name": "Thomas Oude Kotte",
+    "overall": 68,
+    "source": "estimate"
+  },
+  {
+    "clubId": "ulsan-jap",
+    "name": "Gyu-sung Lee",
+    "overall": 69,
+    "source": "estimate"
+  },
+  {
+    "clubId": "ulsan-jap",
+    "name": "Erick Farias",
+    "overall": 69,
+    "source": "estimate"
+  },
+  {
+    "clubId": "melbournecityfc-aus",
+    "name": "Mathew Leckie",
+    "overall": 68,
+    "source": "estimate"
+  },
+  {
+    "clubId": "melbournecityfc-aus",
+    "name": "Aziz Behich",
+    "overall": 66,
+    "source": "estimate"
+  },
+  {
+    "clubId": "sydneyfc-aus",
+    "name": "Douglas Costa",
+    "overall": 70,
+    "source": "estimate"
+  },
+  {
+    "clubId": "sydneyfc-aus",
+    "name": "Luke Brattan",
+    "overall": 66,
+    "source": "estimate"
+  }
+]

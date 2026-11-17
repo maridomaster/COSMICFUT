@@ -1,0 +1,8314 @@
+[
+ {
+  "clubId": "inter-it",
+  "name": "Josep Martínez",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 304000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Ivan Provedel",
+  "overall": 78,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 254000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Raffaele Di Gennaro",
+  "overall": 62,
+  "potential": 62,
+  "value": 300000,
+  "wage": 14000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Alessandro Bastoni",
+  "overall": 86,
+  "potential": 86,
+  "value": 70000000,
+  "wage": 1091000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Yann Bisseck",
+  "overall": 80,
+  "potential": 81,
+  "value": 35000000,
+  "wage": 365000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Manuel Akanji",
+  "overall": 84,
+  "potential": 84,
+  "value": 25000000,
+  "wage": 758000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "John Stones",
+  "overall": 82,
+  "potential": 82,
+  "value": 15000000,
+  "wage": 526000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Benjamin Pavard",
+  "overall": 82,
+  "potential": 82,
+  "value": 15000000,
+  "wage": 526000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Federico Dimarco",
+  "overall": 85,
+  "potential": 85,
+  "value": 45000000,
+  "wage": 909000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Carlos Augusto",
+  "overall": 79,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 304000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Djed Spence",
+  "overall": 78,
+  "potential": 78,
+  "value": 22000000,
+  "wage": 254000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Aleksandar Stanković",
+  "overall": 76,
+  "potential": 82,
+  "value": 20000000,
+  "wage": 176000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Hakan Çalhanoğlu",
+  "overall": 85,
+  "potential": 85,
+  "value": 20000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Nicolò Barella",
+  "overall": 86,
+  "potential": 86,
+  "value": 60000000,
+  "wage": 1100000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Petar Sučić",
+  "overall": 77,
+  "potential": 81,
+  "value": 30000000,
+  "wage": 211000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Curtis Jones",
+  "overall": 79,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 304000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Andy Diouf",
+  "overall": 76,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 176000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Piotr Zielinski",
+  "overall": 81,
+  "potential": 81,
+  "value": 8000000,
+  "wage": 438000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Henrikh Mkhitaryan",
+  "overall": 79,
+  "potential": 79,
+  "value": 3000000,
+  "wage": 304000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Luis Henrique",
+  "overall": 79,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 304000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Lautaro Martínez",
+  "overall": 88,
+  "potential": 88,
+  "value": 85000000,
+  "wage": 1300000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Marcus Thuram",
+  "overall": 85,
+  "potential": 85,
+  "value": 65000000,
+  "wage": 950000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Pio Esposito",
+  "overall": 74,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "inter-it",
+  "name": "Ange-Yoan Bonny",
+  "overall": 76,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 176000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Guglielmo Vicario",
+  "overall": 82,
+  "potential": 82,
+  "value": 20000000,
+  "wage": 715000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Kamil Grabara",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 287000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Carlo Pinsoglio",
+  "overall": 62,
+  "potential": 62,
+  "value": 300000,
+  "wage": 19000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Bremer",
+  "overall": 84,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 765000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Pierre Kalulu",
+  "overall": 81,
+  "potential": 81,
+  "value": 28000000,
+  "wage": 596000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Lloyd Kelly",
+  "overall": 77,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 287000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Jhon Lucumí",
+  "overall": 81,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 596000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Federico Gatti",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 345000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Daniele Rugani",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 139000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Andrea Cambiaso",
+  "overall": 82,
+  "potential": 82,
+  "value": 40000000,
+  "wage": 715000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Juan Cabal",
+  "overall": 76,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 240000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Zeki Çelik",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 240000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Manuel Locatelli",
+  "overall": 82,
+  "potential": 82,
+  "value": 25000000,
+  "wage": 715000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Teun Koopmeiners",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 497000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Khéphren Thuram",
+  "overall": 81,
+  "potential": 82,
+  "value": 35000000,
+  "wage": 596000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Weston McKennie",
+  "overall": 79,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 414000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Pape Matar Sarr",
+  "overall": 80,
+  "potential": 82,
+  "value": 35000000,
+  "wage": 497000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Douglas Luiz",
+  "overall": 78,
+  "potential": 78,
+  "value": 18000000,
+  "wage": 345000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Kenan Yıldız",
+  "overall": 85,
+  "potential": 91,
+  "value": 80000000,
+  "wage": 900000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Kerim Alajbegovic",
+  "overall": 72,
+  "potential": 84,
+  "value": 15000000,
+  "wage": 116000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Nico González",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 345000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Jérémie Boga",
+  "overall": 76,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 240000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Francisco Conceição",
+  "overall": 81,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 596000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Edon Zhegrova",
+  "overall": 80,
+  "potential": 80,
+  "value": 35000000,
+  "wage": 497000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Nick Woltemade",
+  "overall": 80,
+  "potential": 82,
+  "value": 65000000,
+  "wage": 497000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Randal Kolo Muani",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 497000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Jeff Ekhator",
+  "overall": 66,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 39000
+ },
+ {
+  "clubId": "juventus-it",
+  "name": "Arkadiusz Milik",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 166000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Marco Carnesecchi",
+  "overall": 82,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 457000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Marco Sportiello",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Thomas Pompei",
+  "overall": 60,
+  "potential": 68,
+  "value": 300000,
+  "wage": 8000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Giorgio Scalvini",
+  "overall": 80,
+  "potential": 84,
+  "value": 30000000,
+  "wage": 318000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Isak Hien",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 318000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Odilon Kossounou",
+  "overall": 79,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 265000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Thomas Kristensen",
+  "overall": 76,
+  "potential": 78,
+  "value": 18000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Sead Kolasinac",
+  "overall": 76,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Relja Obrić",
+  "overall": 68,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Lorenzo Bernasconi",
+  "overall": 72,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 74000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Raoul Bellanova",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 221000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Davide Zappacosta",
+  "overall": 75,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 128000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Gianluca Gaetano",
+  "overall": 76,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Éderson",
+  "overall": 83,
+  "potential": 83,
+  "value": 45000000,
+  "wage": 549000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Franck Kessié",
+  "overall": 79,
+  "potential": 79,
+  "value": 10000000,
+  "wage": 265000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Mario Pašalić",
+  "overall": 79,
+  "potential": 79,
+  "value": 7000000,
+  "wage": 265000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Nicola Zalewski",
+  "overall": 77,
+  "potential": 79,
+  "value": 16000000,
+  "wage": 184000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Charles De Ketelaere",
+  "overall": 83,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 549000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Lazar Samardžić",
+  "overall": 78,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 221000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Eljif Elmas",
+  "overall": 77,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 184000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Jonathan Rowe",
+  "overall": 76,
+  "potential": 79,
+  "value": 22000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Kamaldeen Sulemana",
+  "overall": 75,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 128000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Giacomo Raspadori",
+  "overall": 79,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 265000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Nikola Krstović",
+  "overall": 77,
+  "potential": 77,
+  "value": 25000000,
+  "wage": 184000
+ },
+ {
+  "clubId": "atalanta-it",
+  "name": "Gianluca Scamacca",
+  "overall": 78,
+  "potential": 78,
+  "value": 18000000,
+  "wage": 221000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Robert Sánchez",
+  "overall": 79,
+  "potential": 79,
+  "value": 12000000,
+  "wage": 286000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Jean Butez",
+  "overall": 77,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 198000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Mauro Vigorito",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 27000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Trevoh Chalobah",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 343000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Jacobo Ramón",
+  "overall": 75,
+  "potential": 81,
+  "value": 20000000,
+  "wage": 138000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Alberto Dossena",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 115000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Marc Oliver Kempf",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 198000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Willy Kambwala",
+  "overall": 72,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Edoardo Goldaniga",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Kaiki",
+  "overall": 72,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Álex Valle",
+  "overall": 76,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 165000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Yan Couto",
+  "overall": 78,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 238000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Ivan Smolcic",
+  "overall": 73,
+  "potential": 73,
+  "value": 4000000,
+  "wage": 96000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Máximo Perrone",
+  "overall": 79,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 286000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Samuele Ricci",
+  "overall": 78,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 238000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Lucas Da Cunha",
+  "overall": 79,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 286000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Maxence Caqueret",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 286000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Adrian Lahdo",
+  "overall": 62,
+  "potential": 74,
+  "value": 1000000,
+  "wage": 13000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Luis Milla",
+  "overall": 77,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 198000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Nico Paz",
+  "overall": 84,
+  "potential": 88,
+  "value": 65000000,
+  "wage": 711000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Martin Baturina",
+  "overall": 79,
+  "potential": 82,
+  "value": 25000000,
+  "wage": 286000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Mattia Liberali",
+  "overall": 64,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 19000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Assane Diao",
+  "overall": 77,
+  "potential": 83,
+  "value": 30000000,
+  "wage": 198000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Jesús Rodríguez",
+  "overall": 76,
+  "potential": 84,
+  "value": 20000000,
+  "wage": 165000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Jayden Addai",
+  "overall": 72,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Moise Kean",
+  "overall": 82,
+  "potential": 82,
+  "value": 50000000,
+  "wage": 494000
+ },
+ {
+  "clubId": "como-ita",
+  "name": "Anastasios Douvikas",
+  "overall": 77,
+  "potential": 77,
+  "value": 20000000,
+  "wage": 198000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Mike Maignan",
+  "overall": 86,
+  "potential": 86,
+  "value": 30000000,
+  "wage": 800000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Pietro Terracciano",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 35000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Lorenzo Torriani",
+  "overall": 62,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Strahinja Pavlović",
+  "overall": 81,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 543000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Mario Gila",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 452000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Koni De Winter",
+  "overall": 78,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 314000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Fikayo Tomori",
+  "overall": 80,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 452000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Matteo Gabbia",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 314000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Filippo Terracciano",
+  "overall": 72,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Sankhoun Diawara",
+  "overall": 60,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 12000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Valeri Vladimirov",
+  "overall": 60,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 12000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Davide Bartesaghi",
+  "overall": 74,
+  "potential": 82,
+  "value": 15000000,
+  "wage": 151000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Pervis Estupiñán",
+  "overall": 78,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 314000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Ardon Jashari",
+  "overall": 79,
+  "potential": 81,
+  "value": 35000000,
+  "wage": 377000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Adrien Rabiot",
+  "overall": 83,
+  "potential": 83,
+  "value": 18000000,
+  "wage": 800000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Yunus Musah",
+  "overall": 76,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 218000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Ruben Loftus-Cheek",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 314000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Warren Bondo",
+  "overall": 73,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 126000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Christian Comotto",
+  "overall": 64,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Luka Modrić",
+  "overall": 85,
+  "potential": 85,
+  "value": 4000000,
+  "wage": 500000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Alexis Saelemaekers",
+  "overall": 80,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 452000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Diego Moreira",
+  "overall": 74,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 151000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Alphadjo Cisse",
+  "overall": 62,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Christian Pulisic",
+  "overall": 84,
+  "potential": 84,
+  "value": 45000000,
+  "wage": 800000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Omari Hutchinson",
+  "overall": 75,
+  "potential": 79,
+  "value": 30000000,
+  "wage": 182000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Samuel Chukwueze",
+  "overall": 76,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 218000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Gonçalo Ramos",
+  "overall": 80,
+  "potential": 81,
+  "value": 35000000,
+  "wage": 452000
+ },
+ {
+  "clubId": "milan-it",
+  "name": "Francesco Camarda",
+  "overall": 68,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Mile Svilar",
+  "overall": 84,
+  "potential": 84,
+  "value": 45000000,
+  "wage": 935000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Devis Vásquez",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 113000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Pierluigi Gollini",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 79000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Giorgio De Marzi",
+  "overall": 58,
+  "potential": 68,
+  "value": 300000,
+  "wage": 9000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Evan Ndicka",
+  "overall": 81,
+  "potential": 81,
+  "value": 35000000,
+  "wage": 585000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Konstantinos Koulierakis",
+  "overall": 76,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 235000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Leonardo Balerdi",
+  "overall": 80,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 487000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Daniele Ghilardi",
+  "overall": 73,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 136000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Gianluca Mancini",
+  "overall": 80,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 487000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Mario Hermoso",
+  "overall": 76,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 235000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Wesley",
+  "overall": 78,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Nahuel Molina",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Devyne Rensch",
+  "overall": 74,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 163000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Emanuele Lulli",
+  "overall": 60,
+  "potential": 70,
+  "value": 500000,
+  "wage": 13000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Bryan Cristante",
+  "overall": 78,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Marten de Roon",
+  "overall": 77,
+  "potential": 77,
+  "value": 3000000,
+  "wage": 282000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Manu Koné",
+  "overall": 83,
+  "potential": 84,
+  "value": 45000000,
+  "wage": 842000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Niccolò Pisilli",
+  "overall": 74,
+  "potential": 80,
+  "value": 18000000,
+  "wage": 163000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Rodrigo Mora",
+  "overall": 77,
+  "potential": 87,
+  "value": 30000000,
+  "wage": 282000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Lorenzo Pellegrini",
+  "overall": 78,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Matías Soulé",
+  "overall": 81,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 585000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Paulo Dybala",
+  "overall": 82,
+  "potential": 82,
+  "value": 8000000,
+  "wage": 1100000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Donyell Malen",
+  "overall": 80,
+  "potential": 80,
+  "value": 22000000,
+  "wage": 487000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Santiago Castro",
+  "overall": 76,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 235000
+ },
+ {
+  "clubId": "roma-it",
+  "name": "Antonio Arena",
+  "overall": 62,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Massimo Pessina",
+  "overall": 68,
+  "potential": 80,
+  "value": 5000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Lukasz Skorupski",
+  "overall": 78,
+  "potential": 78,
+  "value": 2000000,
+  "wage": 207000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Ukko Happonen",
+  "overall": 58,
+  "potential": 68,
+  "value": 300000,
+  "wage": 5000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Arthur Theate",
+  "overall": 76,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 144000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Torbjørn Heggem",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 172000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Martin Vitík",
+  "overall": 75,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 120000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Eivind Helland",
+  "overall": 68,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Nicolò Casale",
+  "overall": 75,
+  "potential": 75,
+  "value": 7000000,
+  "wage": 120000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Juan Miranda",
+  "overall": 79,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 248000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Rahim Alhassane",
+  "overall": 65,
+  "potential": 67,
+  "value": 1000000,
+  "wage": 19000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Emil Holm",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 207000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Nadir Zortea",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 172000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Lorenzo De Silvestri",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 48000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Nikola Moro",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 172000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Oussama El Azzouzi",
+  "overall": 72,
+  "potential": 73,
+  "value": 5000000,
+  "wage": 69000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Lewis Ferguson",
+  "overall": 81,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 357000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Tommaso Pobega",
+  "overall": 76,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 144000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Mikel Amondarain",
+  "overall": 64,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 16000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Marco Libra",
+  "overall": 58,
+  "potential": 70,
+  "value": 300000,
+  "wage": 5000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Jens Odgaard",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 248000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Nicolò Cambiaghi",
+  "overall": 76,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 144000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Samuel Mbangula",
+  "overall": 72,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 69000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Riccardo Orsolini",
+  "overall": 81,
+  "potential": 81,
+  "value": 22000000,
+  "wage": 357000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Federico Bernardeschi",
+  "overall": 77,
+  "potential": 77,
+  "value": 3000000,
+  "wage": 172000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Artem Dovbyk",
+  "overall": 79,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 248000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Roberto Piccoli",
+  "overall": 78,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 207000
+ },
+ {
+  "clubId": "bologna-it",
+  "name": "Jay Enem",
+  "overall": 62,
+  "potential": 65,
+  "value": 1000000,
+  "wage": 11000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "David de Gea",
+  "overall": 84,
+  "potential": 84,
+  "value": 4000000,
+  "wage": 600000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Oliver Christensen",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 93000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Luca Lezzerini",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 22000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Radu Drăgușin",
+  "overall": 77,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 231000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Marin Pongracic",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 231000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Luca Ranieri",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 231000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Viery",
+  "overall": 70,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 64000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Víctor Valdepeñas",
+  "overall": 62,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 15000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Fabiano Parisi",
+  "overall": 77,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 231000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Álex Jiménez",
+  "overall": 74,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Dodô",
+  "overall": 81,
+  "potential": 81,
+  "value": 22000000,
+  "wage": 479000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "João Mário",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Christ Inao Oulaï",
+  "overall": 68,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Arthur Atta",
+  "overall": 72,
+  "potential": 75,
+  "value": 10000000,
+  "wage": 93000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Cher Ndour",
+  "overall": 73,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 111000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Nicolò Fagioli",
+  "overall": 78,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 277000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Marco Brescianini",
+  "overall": 74,
+  "potential": 74,
+  "value": 8000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Pedro Gonçalves",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 333000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Riccardo Sottil",
+  "overall": 73,
+  "potential": 73,
+  "value": 5000000,
+  "wage": 111000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Alieu Njie",
+  "overall": 60,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 10000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Federico Croci",
+  "overall": 55,
+  "potential": 67,
+  "value": 200000,
+  "wage": 4000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Franco Mastantuono",
+  "overall": 78,
+  "potential": 88,
+  "value": 50000000,
+  "wage": 277000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Wilfried Gnonto",
+  "overall": 75,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 160000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Beto",
+  "overall": 75,
+  "potential": 75,
+  "value": 15000000,
+  "wage": 160000
+ },
+ {
+  "clubId": "fiorentina-ita",
+  "name": "Mateo Pellegrino",
+  "overall": 72,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 93000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Vanja Milinković-Savić",
+  "overall": 81,
+  "potential": 81,
+  "value": 22000000,
+  "wage": 405000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Alex Meret",
+  "overall": 79,
+  "potential": 79,
+  "value": 10000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Nikita Contini",
+  "overall": 62,
+  "potential": 62,
+  "value": 300000,
+  "wage": 13000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Alessandro Buongiorno",
+  "overall": 82,
+  "potential": 82,
+  "value": 35000000,
+  "wage": 486000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Sam Beukema",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 337000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Benoît Badiashile",
+  "overall": 75,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 136000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Rafa Marín",
+  "overall": 76,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 163000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Amir Rrahmani",
+  "overall": 81,
+  "potential": 81,
+  "value": 10000000,
+  "wage": 405000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Luca Marianucci",
+  "overall": 68,
+  "potential": 72,
+  "value": 6000000,
+  "wage": 38000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Mathías Olivera",
+  "overall": 79,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Leonardo Spinazzola",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 163000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Giovanni Di Lorenzo",
+  "overall": 82,
+  "potential": 82,
+  "value": 12000000,
+  "wage": 486000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Costantino Favasuli",
+  "overall": 66,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 26000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Billy Gilmour",
+  "overall": 80,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 337000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Stanislav Lobotka",
+  "overall": 84,
+  "potential": 84,
+  "value": 20000000,
+  "wage": 699000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Scott McTominay",
+  "overall": 85,
+  "potential": 85,
+  "value": 50000000,
+  "wage": 800000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Frank Anguissa",
+  "overall": 82,
+  "potential": 82,
+  "value": 20000000,
+  "wage": 486000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Antonio Vergara",
+  "overall": 72,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Kevin De Bruyne",
+  "overall": 85,
+  "potential": 85,
+  "value": 10000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Alisson Santos",
+  "overall": 74,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 113000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Noa Lang",
+  "overall": 77,
+  "potential": 77,
+  "value": 20000000,
+  "wage": 195000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "David Neres",
+  "overall": 80,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 337000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Matteo Politano",
+  "overall": 79,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Rasmus Højlund",
+  "overall": 80,
+  "potential": 83,
+  "value": 40000000,
+  "wage": 337000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Lorenzo Lucca",
+  "overall": 76,
+  "potential": 76,
+  "value": 22000000,
+  "wage": 163000
+ },
+ {
+  "clubId": "napoli-it",
+  "name": "Giovane",
+  "overall": 72,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Christos Mandas",
+  "overall": 78,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 251000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Edoardo Motta",
+  "overall": 68,
+  "potential": 74,
+  "value": 8000000,
+  "wage": 41000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Alessio Furlanetto",
+  "overall": 65,
+  "potential": 67,
+  "value": 1000000,
+  "wage": 23000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Oliver Provstgaard",
+  "overall": 72,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Danilho Doekhi",
+  "overall": 78,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 251000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Diogo Leite",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 174000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Josip Sutalo",
+  "overall": 77,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 209000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Patric",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Nuno Tavares",
+  "overall": 80,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 362000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Luca Pellegrini",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Alfonso Pedraza",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 174000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Mohamed Fares",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 41000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Adam Marusic",
+  "overall": 75,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 145000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Manuel Lazzari",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Nicolò Rovella",
+  "overall": 81,
+  "potential": 83,
+  "value": 30000000,
+  "wage": 434000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Reda Belahyane",
+  "overall": 72,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Danilo Cataldi",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 174000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Kenneth Taylor",
+  "overall": 79,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 302000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Davide Frattesi",
+  "overall": 79,
+  "potential": 79,
+  "value": 22000000,
+  "wage": 302000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Fisayo Dele-Bashiru",
+  "overall": 74,
+  "potential": 75,
+  "value": 12000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Adrian Przyborek",
+  "overall": 60,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 9000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Tijjani Noslin",
+  "overall": 74,
+  "potential": 74,
+  "value": 10000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Mattia Zaccagni",
+  "overall": 80,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 362000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Gustav Isaksen",
+  "overall": 77,
+  "potential": 78,
+  "value": 18000000,
+  "wage": 209000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Matteo Cancellieri",
+  "overall": 73,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 101000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Albert Gudmundsson",
+  "overall": 79,
+  "potential": 79,
+  "value": 22000000,
+  "wage": 302000
+ },
+ {
+  "clubId": "lazio-it",
+  "name": "Andrea Pinamonti",
+  "overall": 75,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 145000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Daniele Sommariva",
+  "overall": 64,
+  "potential": 64,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Stefano Sabelli",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Ridgeciano Haps",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Djed Spence",
+  "overall": 78,
+  "potential": 81,
+  "value": 22000000,
+  "wage": 216000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Alessandro Zanoli",
+  "overall": 72,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Radu Dragusin",
+  "overall": 77,
+  "potential": 83,
+  "value": 15000000,
+  "wage": 180000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Alan Matturro",
+  "overall": 70,
+  "potential": 82,
+  "value": 5000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Leo Østigård",
+  "overall": 76,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Hernani",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Morten Frendrup",
+  "overall": 79,
+  "potential": 87,
+  "value": 20000000,
+  "wage": 259000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Nadiem Amiri",
+  "overall": 76,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Morten Thorsby",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Léandre Kuavita",
+  "overall": 62,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 12000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Emil Bohinen",
+  "overall": 70,
+  "potential": 71,
+  "value": 2000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Fabio Miretti",
+  "overall": 73,
+  "potential": 79,
+  "value": 6000000,
+  "wage": 87000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Albert Grønbæk",
+  "overall": 72,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Caleb Ekuban",
+  "overall": 68,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 35000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "George Puscas",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Vitinha",
+  "overall": 74,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Andrea Pinamonti",
+  "overall": 75,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 125000
+ },
+ {
+  "clubId": "genoa-it",
+  "name": "Maxwel Cornet",
+  "overall": 71,
+  "potential": 71,
+  "value": 2000000,
+  "wage": 60000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Luca Gemello",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Mihai Popa",
+  "overall": 64,
+  "potential": 68,
+  "value": 500000,
+  "wage": 20000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Alberto Paleari",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 42000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Stephane Singo",
+  "overall": 75,
+  "potential": 81,
+  "value": 15000000,
+  "wage": 151000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Valentino Lazaro",
+  "overall": 73,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Adam Masina",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Cristiano Biraghi",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 105000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Perr Schuurs",
+  "overall": 74,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 126000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "David Zima",
+  "overall": 68,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 42000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Saúl Coco",
+  "overall": 75,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 151000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Alessandro Dellavalle",
+  "overall": 64,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 20000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Guillermo Maripán",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 181000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Nikola Vlasic",
+  "overall": 79,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 313000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Brian Bayeye",
+  "overall": 64,
+  "potential": 68,
+  "value": 500000,
+  "wage": 20000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Ivan Ilic",
+  "overall": 76,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 181000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Ronaldo Vieira",
+  "overall": 70,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Adrien Tamèze",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 126000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Marcus Pedersen",
+  "overall": 74,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 126000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Kristjan Asllani",
+  "overall": 75,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 151000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Zakaria Aboukhlal",
+  "overall": 74,
+  "potential": 75,
+  "value": 10000000,
+  "wage": 126000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Pietro Pellegri",
+  "overall": 70,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Antonio Sanabria",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 87000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Duván Zapata",
+  "overall": 76,
+  "potential": 76,
+  "value": 2500000,
+  "wage": 181000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Uros Kabic",
+  "overall": 60,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 10000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Zanos Savva",
+  "overall": 62,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Amine Salama",
+  "overall": 62,
+  "potential": 64,
+  "value": 1000000,
+  "wage": 14000
+ },
+ {
+  "clubId": "torino-it",
+  "name": "Giovanni Simeone",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 217000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Manuel Gasparini",
+  "overall": 60,
+  "potential": 72,
+  "value": 500000,
+  "wage": 8000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Daniele Padelli",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 17000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Marco Silvestri",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Egil Selvik",
+  "overall": 66,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Enzo Ebosse",
+  "overall": 70,
+  "potential": 73,
+  "value": 4000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Destiny Udogie",
+  "overall": 81,
+  "potential": 91,
+  "value": 40000000,
+  "wage": 372000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Kingsley Ehizibue",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Jordan Zemura",
+  "overall": 74,
+  "potential": 77,
+  "value": 7000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Samir",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Christian Kabasele",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 72000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Lautaro Giannetti",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Isaak Touré",
+  "overall": 66,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Nicolò Bertola",
+  "overall": 66,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Saba Goglichidze",
+  "overall": 74,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Martín Payero",
+  "overall": 73,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 86000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Arthur Atta",
+  "overall": 72,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Nicolò Zaniolo",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 179000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Lennon Miller",
+  "overall": 70,
+  "potential": 82,
+  "value": 10000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Gerard Deulofeu",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Beto",
+  "overall": 75,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 124000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Florian Thauvin",
+  "overall": 78,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 215000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Brenner",
+  "overall": 70,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Keinan Davis",
+  "overall": 76,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 149000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Damián Pizarro",
+  "overall": 64,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Alexis Sánchez",
+  "overall": 74,
+  "potential": 74,
+  "value": 1000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "udinese-it",
+  "name": "Vakoun Bayo",
+  "overall": 68,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 35000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Filippo Rinaldi",
+  "overall": 64,
+  "potential": 76,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Leandro Chichizola",
+  "overall": 67,
+  "potential": 67,
+  "value": 300000,
+  "wage": 38000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Zion Suzuki",
+  "overall": 79,
+  "potential": 85,
+  "value": 25000000,
+  "wage": 340000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Enrico Del Prato",
+  "overall": 74,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 137000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Emanuele Valeri",
+  "overall": 76,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 197000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Botond Balogh",
+  "overall": 70,
+  "potential": 82,
+  "value": 4000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Mariano Troilo",
+  "overall": 74,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 137000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Christian Ordóñez",
+  "overall": 65,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 27000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Oliver Sörensen",
+  "overall": 73,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 114000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Mateo Pellegrino",
+  "overall": 72,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Patrick Cutrone",
+  "overall": 74,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 137000
+ },
+ {
+  "clubId": "parma-ita",
+  "name": "Matija Frigan",
+  "overall": 70,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Boris Radunović",
+  "overall": 62,
+  "potential": 62,
+  "value": 400000,
+  "wage": 11000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Elia Caprile",
+  "overall": 77,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 165000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Gabriele Zappa",
+  "overall": 72,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Paulo Azzi",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Alessandro Di Pardo",
+  "overall": 66,
+  "potential": 69,
+  "value": 500000,
+  "wage": 22000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Raoul Ballanova",
+  "overall": 78,
+  "potential": 82,
+  "value": 15000000,
+  "wage": 198000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Matteo Lovato",
+  "overall": 69,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 38000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Edoardo Goldaniga",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Yerry Mina",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 96000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Sebastiano Luperto",
+  "overall": 74,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 96000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "João Pedro",
+  "overall": 75,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 115000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Răzvan Marin",
+  "overall": 74,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 96000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Antoine Makoumbou",
+  "overall": 73,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Gianluca Gaetano",
+  "overall": 76,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 138000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Michel Adopo",
+  "overall": 73,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Nadir Zortea",
+  "overall": 77,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 165000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Pavoletti",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 32000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Gianluca Lapadula",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Mattia Felici",
+  "overall": 70,
+  "potential": 73,
+  "value": 4000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Semih Kılıçsoy",
+  "overall": 72,
+  "potential": 82,
+  "value": 10000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "cagliari-it",
+  "name": "Sebastiano Esposito",
+  "overall": 73,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 80000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Michele Cerofolini",
+  "overall": 68,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Francesco Zampano",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 15000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Riccardo Marchizza",
+  "overall": 68,
+  "potential": 69,
+  "value": 1000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Giorgio Cittadini",
+  "overall": 68,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Reinier",
+  "overall": 68,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Ebrima Darboe",
+  "overall": 69,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 37000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Giuseppe Caso",
+  "overall": 68,
+  "potential": 71,
+  "value": 1500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Farès Ghedjemis",
+  "overall": 67,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 26000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Demba Seck",
+  "overall": 66,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Ben Lhassine Kone",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Arijon Ibrahimovic",
+  "overall": 70,
+  "potential": 82,
+  "value": 4000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "frosinone-ita",
+  "name": "Giuseppe Ambrosino",
+  "overall": 68,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Wladimiro Falcone",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 141000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Christian Früchtl",
+  "overall": 66,
+  "potential": 68,
+  "value": 500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Frédéric Guilbert",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 47000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Kialonda Gaspar",
+  "overall": 74,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Andy Pelmard",
+  "overall": 66,
+  "potential": 68,
+  "value": 500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Ylber Ramadani",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Youssef Maleh",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 47000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Balthazar Pierret",
+  "overall": 73,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Mohamed Kaba",
+  "overall": 68,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Oumar Ngom",
+  "overall": 72,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 68000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Pontus Almqvist",
+  "overall": 68,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Lorenzo Colombo",
+  "overall": 73,
+  "potential": 79,
+  "value": 6000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Riccardo Sottil",
+  "overall": 73,
+  "potential": 73,
+  "value": 5000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Valentin Gendrey",
+  "overall": 74,
+  "potential": 82,
+  "value": 5000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Pablo Rodríguez",
+  "overall": 66,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 23000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Tete Morente",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 47000
+ },
+ {
+  "clubId": "lecce-ita",
+  "name": "Rémi Oudin",
+  "overall": 69,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 39000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Filip Stankovic",
+  "overall": 72,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 70000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Luca Lezzerini",
+  "overall": 64,
+  "potential": 65,
+  "value": 400000,
+  "wage": 16000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Franco Carboni",
+  "overall": 70,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 49000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Michael Svoboda",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 49000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Giorgio Altare",
+  "overall": 68,
+  "potential": 69,
+  "value": 1000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Joël Schingtienne",
+  "overall": 68,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Fali Candé",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Gianluca Busio",
+  "overall": 72,
+  "potential": 82,
+  "value": 6000000,
+  "wage": 70000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Hans Nicolussi Caviglia",
+  "overall": 74,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 101000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Issa Doumbia",
+  "overall": 72,
+  "potential": 80,
+  "value": 6000000,
+  "wage": 70000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Gaetano Oristanio",
+  "overall": 72,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 70000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Cheick Conde",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 49000
+ },
+ {
+  "clubId": "venezia-ita",
+  "name": "Antonio Raimondo",
+  "overall": 68,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Alessio Cragno",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Samuele Birindelli",
+  "overall": 72,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 64000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Pablo Marí",
+  "overall": 75,
+  "potential": 75,
+  "value": 1500000,
+  "wage": 110000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Armando Izzo",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 44000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Andrea D'Errico",
+  "overall": 70,
+  "potential": 70,
+  "value": 600000,
+  "wage": 44000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Matteo Pessina",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Daniel Maldini",
+  "overall": 74,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Stefano Sensi",
+  "overall": 71,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 53000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Kevin Zeroli",
+  "overall": 68,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Patrick Ciurria",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 44000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Andrea Petagna",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 44000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Alessio Zerbin",
+  "overall": 69,
+  "potential": 71,
+  "value": 1500000,
+  "wage": 37000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Omari Forson",
+  "overall": 68,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Gianluca Caprari",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 44000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Andrea Colpani",
+  "overall": 72,
+  "potential": 80,
+  "value": 5000000,
+  "wage": 64000
+ },
+ {
+  "clubId": "monza-ita",
+  "name": "Lorenzo Pirola",
+  "overall": 66,
+  "potential": 76,
+  "value": 1000000,
+  "wage": 21000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Andrea Consigli",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 25000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Horațiu Moldovan",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Jeremy Toljan",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 106000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Josh Doig",
+  "overall": 74,
+  "potential": 80,
+  "value": 8000000,
+  "wage": 106000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Filippo Romagna",
+  "overall": 74,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 106000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Tarik Muharemovic",
+  "overall": 76,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Cas Odenthal",
+  "overall": 70,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Jay Idzes",
+  "overall": 76,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Martin Erlic",
+  "overall": 70,
+  "potential": 71,
+  "value": 2000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Kristian Thorstvedt",
+  "overall": 75,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 127000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Nedim Bajrami",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 74000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Cristian Volpato",
+  "overall": 72,
+  "potential": 82,
+  "value": 5000000,
+  "wage": 74000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Edoardo Iannoni",
+  "overall": 68,
+  "potential": 71,
+  "value": 2000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Luca Mazzitelli",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Aster Vranckx",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Domenico Berardi",
+  "overall": 79,
+  "potential": 79,
+  "value": 6000000,
+  "wage": 264000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Armand Laurienté",
+  "overall": 77,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 183000
+ },
+ {
+  "clubId": "sassuolo-ita",
+  "name": "Samuele Mulattieri",
+  "overall": 66,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 25000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Jonas Urbig",
+  "overall": 76,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Manuel Neuer",
+  "overall": 85,
+  "potential": 85,
+  "value": 4000000,
+  "wage": 1100000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Sven Ulreich",
+  "overall": 70,
+  "potential": 70,
+  "value": 300000,
+  "wage": 74000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Dayot Upamecano",
+  "overall": 85,
+  "potential": 85,
+  "value": 70000000,
+  "wage": 1300000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Jonathan Tah",
+  "overall": 84,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Min-jae Kim",
+  "overall": 83,
+  "potential": 83,
+  "value": 30000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Hiroki Ito",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 379000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Nathaniel Brown",
+  "overall": 80,
+  "potential": 83,
+  "value": 40000000,
+  "wage": 455000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Alphonso Davies",
+  "overall": 82,
+  "potential": 83,
+  "value": 35000000,
+  "wage": 1150000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Josip Stanisic",
+  "overall": 79,
+  "potential": 79,
+  "value": 30000000,
+  "wage": 379000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Konrad Laimer",
+  "overall": 82,
+  "potential": 82,
+  "value": 28000000,
+  "wage": 656000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Sacha Boey",
+  "overall": 74,
+  "potential": 74,
+  "value": 12000000,
+  "wage": 152000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Aleksandar Pavlovic",
+  "overall": 84,
+  "potential": 88,
+  "value": 80000000,
+  "wage": 944000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Joshua Kimmich",
+  "overall": 87,
+  "potential": 87,
+  "value": 40000000,
+  "wage": 1600000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Tom Bischof",
+  "overall": 79,
+  "potential": 85,
+  "value": 40000000,
+  "wage": 379000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Bara Sapoko Ndiaye",
+  "overall": 62,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Jamal Musiala",
+  "overall": 89,
+  "potential": 92,
+  "value": 130000000,
+  "wage": 1700000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Lennart Karl",
+  "overall": 79,
+  "potential": 91,
+  "value": 60000000,
+  "wage": 379000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Ismael Saibari",
+  "overall": 79,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 379000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Luis Díaz",
+  "overall": 86,
+  "potential": 86,
+  "value": 70000000,
+  "wage": 1200000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Michael Olise",
+  "overall": 88,
+  "potential": 90,
+  "value": 130000000,
+  "wage": 1200000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Serge Gnabry",
+  "overall": 80,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 850000
+ },
+ {
+  "clubId": "bayern-ale",
+  "name": "Harry Kane",
+  "overall": 89,
+  "potential": 89,
+  "value": 65000000,
+  "wage": 2000000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Mark Flekken",
+  "overall": 81,
+  "potential": 81,
+  "value": 8000000,
+  "wage": 477000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Janis Blaswich",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 92000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Niklas Lomb",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 21000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Jarell Quansah",
+  "overall": 80,
+  "potential": 83,
+  "value": 40000000,
+  "wage": 397000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Edmond Tapsoba",
+  "overall": 81,
+  "potential": 81,
+  "value": 30000000,
+  "wage": 477000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Loïc Badé",
+  "overall": 79,
+  "potential": 79,
+  "value": 30000000,
+  "wage": 331000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Facundo Medina",
+  "overall": 79,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 331000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Tim Oermann",
+  "overall": 70,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 64000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Miguel Gutiérrez",
+  "overall": 79,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 331000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Guéla Doué",
+  "overall": 76,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Lucas Vázquez",
+  "overall": 77,
+  "potential": 77,
+  "value": 2000000,
+  "wage": 230000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Equi Fernández",
+  "overall": 78,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 276000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Kennet Eichhorn",
+  "overall": 70,
+  "potential": 82,
+  "value": 15000000,
+  "wage": 64000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Robert Andrich",
+  "overall": 80,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 397000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Aleix García",
+  "overall": 82,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 572000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Ibrahim Maza",
+  "overall": 76,
+  "potential": 84,
+  "value": 30000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Malik Tillman",
+  "overall": 81,
+  "potential": 83,
+  "value": 35000000,
+  "wage": 477000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Jonas Hofmann",
+  "overall": 76,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Afonso Moreira",
+  "overall": 66,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Eliesse Ben Seghir",
+  "overall": 79,
+  "potential": 85,
+  "value": 30000000,
+  "wage": 331000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Martin Terrier",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 331000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Moussa Diaby",
+  "overall": 80,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 397000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Nathan Tella",
+  "overall": 78,
+  "potential": 78,
+  "value": 18000000,
+  "wage": 276000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Montrell Culbreath",
+  "overall": 64,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 21000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Christian Kofane",
+  "overall": 72,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Patrik Schick",
+  "overall": 82,
+  "potential": 82,
+  "value": 20000000,
+  "wage": 572000
+ },
+ {
+  "clubId": "bayerleverkusen-ale",
+  "name": "Victor Boniface",
+  "overall": 79,
+  "potential": 80,
+  "value": 18000000,
+  "wage": 331000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Gregor Kobel",
+  "overall": 87,
+  "potential": 87,
+  "value": 40000000,
+  "wage": 700000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Alexander Meyer",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 67000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Patrick Drewes",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 47000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Silas Ostrzinski",
+  "overall": 60,
+  "potential": 64,
+  "value": 300000,
+  "wage": 16000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Nico Schlotterbeck",
+  "overall": 85,
+  "potential": 85,
+  "value": 45000000,
+  "wage": 700000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Joane Gadou",
+  "overall": 70,
+  "potential": 80,
+  "value": 10000000,
+  "wage": 97000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Waldemar Anton",
+  "overall": 82,
+  "potential": 82,
+  "value": 25000000,
+  "wage": 680000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Luca Reggiani",
+  "overall": 66,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 47000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Ramy Bensebaini",
+  "overall": 79,
+  "potential": 79,
+  "value": 7000000,
+  "wage": 499000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Emre Can",
+  "overall": 77,
+  "potential": 77,
+  "value": 3000000,
+  "wage": 347000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Filippo Mane",
+  "overall": 68,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 67000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Daniel Svensson",
+  "overall": 79,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 499000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Kauã Prates",
+  "overall": 68,
+  "potential": 80,
+  "value": 6000000,
+  "wage": 67000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Felix Nmecha",
+  "overall": 81,
+  "potential": 82,
+  "value": 40000000,
+  "wage": 680000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Jobe Bellingham",
+  "overall": 79,
+  "potential": 87,
+  "value": 35000000,
+  "wage": 499000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Joey Veerman",
+  "overall": 78,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 416000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Carney Chukwuemeka",
+  "overall": 75,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 241000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Marcel Sabitzer",
+  "overall": 80,
+  "potential": 80,
+  "value": 8000000,
+  "wage": 599000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Ethan Nwaneri",
+  "overall": 80,
+  "potential": 90,
+  "value": 55000000,
+  "wage": 599000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Konstantinos Karetsas",
+  "overall": 74,
+  "potential": 86,
+  "value": 20000000,
+  "wage": 201000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Giannis Konstantelias",
+  "overall": 74,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 201000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Justin Lerma",
+  "overall": 66,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 47000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Samuele Inácio",
+  "overall": 66,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 47000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Maximilian Beier",
+  "overall": 80,
+  "potential": 83,
+  "value": 35000000,
+  "wage": 599000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Serhou Guirassy",
+  "overall": 86,
+  "potential": 86,
+  "value": 40000000,
+  "wage": 800000
+ },
+ {
+  "clubId": "borussia-ale",
+  "name": "Fábio Silva",
+  "overall": 76,
+  "potential": 78,
+  "value": 22000000,
+  "wage": 289000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Noah Atubolu",
+  "overall": 80,
+  "potential": 82,
+  "value": 15000000,
+  "wage": 460000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Kauã Santos",
+  "overall": 74,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Jens Grahl",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 25000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Nnamdi Collins",
+  "overall": 77,
+  "potential": 81,
+  "value": 22000000,
+  "wage": 266000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Lilian Brassier",
+  "overall": 76,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 222000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Robin Koch",
+  "overall": 81,
+  "potential": 81,
+  "value": 15000000,
+  "wage": 552000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Keita Kosugi",
+  "overall": 70,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 74000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Elias Baum",
+  "overall": 74,
+  "potential": 82,
+  "value": 10000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Timothy Chandler",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 36000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Raphael Onyedika",
+  "overall": 77,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 266000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Noël Aséko",
+  "overall": 68,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Oscar Højlund",
+  "overall": 76,
+  "potential": 82,
+  "value": 12000000,
+  "wage": 222000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Can Uzun",
+  "overall": 79,
+  "potential": 87,
+  "value": 45000000,
+  "wage": 384000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Farès Chaïbi",
+  "overall": 77,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 266000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Mario Götze",
+  "overall": 77,
+  "potential": 77,
+  "value": 3000000,
+  "wage": 266000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Ritsu Doan",
+  "overall": 79,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 384000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Ansgar Knauff",
+  "overall": 77,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 266000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Ayoube Amaimouni-Echghouyab",
+  "overall": 68,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Jonathan Burkardt",
+  "overall": 81,
+  "potential": 81,
+  "value": 30000000,
+  "wage": 552000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Younes Ebnoutalib",
+  "overall": 72,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 107000
+ },
+ {
+  "clubId": "fsvfrankfurt-ale",
+  "name": "Jessic Ngankam",
+  "overall": 68,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 52000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Dennis Seimen",
+  "overall": 68,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 38000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Fabian Bredlow",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Stefan Drljaca",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 26000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Finn Jeltsch",
+  "overall": 76,
+  "potential": 84,
+  "value": 25000000,
+  "wage": 162000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Ramon Hendriks",
+  "overall": 77,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 194000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Jeff Chabot",
+  "overall": 80,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 336000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Luca Jaquez",
+  "overall": 74,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 112000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Ameen Al-Dakhil",
+  "overall": 73,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 94000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Dan-Axel Zagadou",
+  "overall": 77,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 194000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Maximilian Mittelstädt",
+  "overall": 81,
+  "potential": 81,
+  "value": 20000000,
+  "wage": 403000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Josha Vagnoman",
+  "overall": 76,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 162000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Lorenz Assignon",
+  "overall": 75,
+  "potential": 75,
+  "value": 10000000,
+  "wage": 135000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Leonidas Stergiou",
+  "overall": 72,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Angelo Stiller",
+  "overall": 83,
+  "potential": 84,
+  "value": 45000000,
+  "wage": 580000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Atakan Karazor",
+  "overall": 77,
+  "potential": 77,
+  "value": 7000000,
+  "wage": 194000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Nikolas Nartey",
+  "overall": 72,
+  "potential": 72,
+  "value": 5000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Grischa Prömel",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 112000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Bilal El Khannouss",
+  "overall": 77,
+  "potential": 81,
+  "value": 20000000,
+  "wage": 194000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Jarzinho Malanga",
+  "overall": 64,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Chris Führich",
+  "overall": 79,
+  "potential": 79,
+  "value": 18000000,
+  "wage": 280000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Leo Sauer",
+  "overall": 64,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Justin Diehl",
+  "overall": 72,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Jamie Leweling",
+  "overall": 79,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 280000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Tiago Tomás",
+  "overall": 74,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 112000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Ermedin Demirovic",
+  "overall": 80,
+  "potential": 80,
+  "value": 22000000,
+  "wage": 336000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Deniz Undav",
+  "overall": 81,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 403000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Dzenan Pejcinovic",
+  "overall": 66,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 26000
+ },
+ {
+  "clubId": "sttutgart-ale",
+  "name": "Enzo Millot",
+  "overall": 79,
+  "potential": 87,
+  "value": 30000000,
+  "wage": 280000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Maarten Vandevoordt",
+  "overall": 74,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 202000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Ørjan Nyland",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Leopold Zingerle",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 33000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Castello Lukeba",
+  "overall": 81,
+  "potential": 84,
+  "value": 50000000,
+  "wage": 725000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Maxime Estève",
+  "overall": 75,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 243000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Abdoul Koné",
+  "overall": 70,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Willi Orbán",
+  "overall": 80,
+  "potential": 80,
+  "value": 8000000,
+  "wage": 604000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Lukas Klostermann",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 291000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "David Raum",
+  "overall": 82,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 870000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Max Finkgräfe",
+  "overall": 74,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 202000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Ridle Baku",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 350000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Benjamin Henrichs",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 291000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Nicolas Seiwald",
+  "overall": 79,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 504000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Neil El Aynaoui",
+  "overall": 79,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 504000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Assan Ouédraogo",
+  "overall": 74,
+  "potential": 82,
+  "value": 25000000,
+  "wage": 202000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Rocco Reitz",
+  "overall": 77,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 350000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Ezechiel Banzuzi",
+  "overall": 75,
+  "potential": 81,
+  "value": 22000000,
+  "wage": 243000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Christoph Baumgartner",
+  "overall": 81,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 725000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Brajan Gruda",
+  "overall": 76,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 291000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Andrija Maksimovic",
+  "overall": 70,
+  "potential": 80,
+  "value": 8000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Antonio Nusa",
+  "overall": 79,
+  "potential": 85,
+  "value": 45000000,
+  "wage": 504000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Johan Bakayoko",
+  "overall": 79,
+  "potential": 82,
+  "value": 40000000,
+  "wage": 504000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Rômulo",
+  "overall": 74,
+  "potential": 76,
+  "value": 18000000,
+  "wage": 202000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Christopher Nkunku",
+  "overall": 81,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 725000
+ },
+ {
+  "clubId": "leipzig-ale",
+  "name": "Marc Guiu",
+  "overall": 72,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 141000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Robin Zentner",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 159000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Alexander Schwolow",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 53000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Kacper Potulski",
+  "overall": 66,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 26000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Stefan Posch",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 159000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Dominik Kohr",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Danny da Costa",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Stefan Bell",
+  "overall": 70,
+  "potential": 70,
+  "value": 300000,
+  "wage": 53000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Phillipp Mwene",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 77000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Anthony Caci",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Silvan Widmer",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 110000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Kaishu Sano",
+  "overall": 78,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 229000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Eric Martel",
+  "overall": 76,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 159000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Lennard Maloney",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Sota Kawasaki",
+  "overall": 74,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Nadiem Amiri",
+  "overall": 78,
+  "potential": 78,
+  "value": 7000000,
+  "wage": 229000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Paul Nebel",
+  "overall": 76,
+  "potential": 79,
+  "value": 12000000,
+  "wage": 159000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Jae-sung Lee",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 191000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Sheraldo Becker",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Silas",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Benedict Hollerbach",
+  "overall": 74,
+  "potential": 75,
+  "value": 7000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Ransford Königsdörffer",
+  "overall": 72,
+  "potential": 73,
+  "value": 5000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "fsvmainz-ale",
+  "name": "Phillip Tietz",
+  "overall": 73,
+  "potential": 73,
+  "value": 4000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Mio Backhaus",
+  "overall": 72,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Florian Müller",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Jannik Huth",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 20000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Bruno Ogbus",
+  "overall": 68,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 41000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Philipp Lienhart",
+  "overall": 78,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 252000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Max Rosenfelder",
+  "overall": 76,
+  "potential": 79,
+  "value": 12000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Matthias Ginter",
+  "overall": 78,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 252000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Anthony Jung",
+  "overall": 70,
+  "potential": 70,
+  "value": 400000,
+  "wage": 59000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Berkay Yılmaz",
+  "overall": 66,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 28000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Jordy Makengo",
+  "overall": 75,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 146000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Christian Günter",
+  "overall": 75,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 146000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Philipp Treu",
+  "overall": 76,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Lukas Kübler",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Patrick Osterhage",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Yannik Engelhardt",
+  "overall": 70,
+  "potential": 71,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Maximilian Eggestein",
+  "overall": 78,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 252000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Derry Scherhant",
+  "overall": 70,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Vincenzo Grifo",
+  "overall": 78,
+  "potential": 78,
+  "value": 4000000,
+  "wage": 252000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Florent Muslija",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Niklas Beste",
+  "overall": 76,
+  "potential": 76,
+  "value": 9000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Cyriaque Irié",
+  "overall": 70,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Yuito Suzuki",
+  "overall": 77,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 210000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Igor Matanovic",
+  "overall": 74,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "freiburg-ale",
+  "name": "Lucas Höler",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 84000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Oliver Baumann",
+  "overall": 79,
+  "potential": 79,
+  "value": 2000000,
+  "wage": 332000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Luca Philipp",
+  "overall": 66,
+  "potential": 67,
+  "value": 2000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Lúkas Petersson",
+  "overall": 64,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Albian Hajdari",
+  "overall": 77,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 231000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Ozan Kabak",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Robin Hranac",
+  "overall": 74,
+  "potential": 74,
+  "value": 7000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Koki Machida",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Bernardo",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Valentin Gendrey",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Vladimír Coufal",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 134000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Leon Avdullahu",
+  "overall": 76,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Wouter Burger",
+  "overall": 77,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 231000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Cajetan Lenz",
+  "overall": 64,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Nathan De Cat",
+  "overall": 64,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Alexander Prass",
+  "overall": 74,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Patrick Wimmer",
+  "overall": 76,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Andrej Kramaric",
+  "overall": 79,
+  "potential": 79,
+  "value": 3000000,
+  "wage": 332000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Fisnik Asllani",
+  "overall": 76,
+  "potential": 78,
+  "value": 20000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Tim Lemperle",
+  "overall": 74,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 134000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Adam Hlozek",
+  "overall": 76,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 192000
+ },
+ {
+  "clubId": "hoffebheim-ale",
+  "name": "Max Moerstedt",
+  "overall": 68,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Karl Hein",
+  "overall": 72,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Markus Kolke",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 17000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Marco Friedl",
+  "overall": 77,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 187000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Amos Pieper",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 155000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Niklas Stark",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Felix Agu",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Olivier Deman",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Mitchell Weiser",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 155000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Senne Lynen",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 155000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Jens Stage",
+  "overall": 79,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 269000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Marco Grüll",
+  "overall": 75,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 130000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Justin Njinmah",
+  "overall": 74,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Niclas Füllkrug",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 155000
+ },
+ {
+  "clubId": "werderbremen-ale",
+  "name": "Keke Topp",
+  "overall": 70,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Finn Dahmen",
+  "overall": 77,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 182000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Nediljko Labrovic",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Chrislain Matsima",
+  "overall": 74,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Noahkai Banks",
+  "overall": 70,
+  "potential": 80,
+  "value": 10000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Jeffrey Gouweleeuw",
+  "overall": 73,
+  "potential": 73,
+  "value": 1000000,
+  "wage": 88000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Marius Wolf",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 152000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Yannik Keitel",
+  "overall": 74,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Han-Noah Massengo",
+  "overall": 71,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Alexis Claude-Maurice",
+  "overall": 74,
+  "potential": 74,
+  "value": 7000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Mert Kömür",
+  "overall": 70,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Fabian Rieder",
+  "overall": 76,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 152000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Rodrigo Ribeiro",
+  "overall": 72,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Michael Gregoritsch",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 105000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Dion Beljo",
+  "overall": 72,
+  "potential": 80,
+  "value": 6000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "augsburg-ale",
+  "name": "Robin Fellhauer",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Marvin Schwäbe",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Ron-Robert Zieler",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 35000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Jahmai Simpson-Pusey",
+  "overall": 64,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Rav van den Berg",
+  "overall": 70,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Luka Lochoshvili",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Timo Hübers",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Borna Sosa",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Sebastian Sebulonsen",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Alessio Castro-Montes",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Ellyes Skhiri",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 258000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Tom Krauß",
+  "overall": 73,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 125000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Ísak Jóhannesson",
+  "overall": 74,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Said El Mala",
+  "overall": 76,
+  "potential": 84,
+  "value": 30000000,
+  "wage": 215000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Marius Bülter",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Jan Thielmann",
+  "overall": 74,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Linton Maina",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Ragnar Ache",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "fckoln-ale",
+  "name": "Luca Waldschmidt",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Heuer Fernandes",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 122000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Nicolás Capaldo",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Jordan Torunarigha",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Mario Vuskovic",
+  "overall": 74,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Warmed Omari",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Sebastiaan Bornauw",
+  "overall": 73,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 101000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Miro Muheim",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Nicolai Remberg",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Albert Sambi Lokonga",
+  "overall": 73,
+  "potential": 73,
+  "value": 5000000,
+  "wage": 101000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Bakery Jatta",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Fábio Vieira",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 210000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Albert Grønbaek",
+  "overall": 72,
+  "potential": 73,
+  "value": 6000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Immanuel Pherai",
+  "overall": 70,
+  "potential": 71,
+  "value": 2000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Yussuf Poulsen",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 122000
+ },
+ {
+  "clubId": "hamburgo-ale",
+  "name": "Patson Daka",
+  "overall": 72,
+  "potential": 72,
+  "value": 5000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "schalke04-ale",
+  "name": "Loris Karius",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 83000
+ },
+ {
+  "clubId": "schalke04-ale",
+  "name": "Dejan Ljubicic",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 119000
+ },
+ {
+  "clubId": "schalke04-ale",
+  "name": "Ron Schallenberg",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 83000
+ },
+ {
+  "clubId": "schalke04-ale",
+  "name": "Kenan Karaman",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 119000
+ },
+ {
+  "clubId": "schalke04-ale",
+  "name": "Moussa Sylla",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 119000
+ },
+ {
+  "clubId": "schalke04-ale",
+  "name": "Bryan Lasme",
+  "overall": 66,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 40000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Moritz Nicolas",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 199000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Jan Olschowsky",
+  "overall": 66,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 32000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Ko Itakura",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 239000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Kevin Diks",
+  "overall": 75,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 166000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Fabio Chiarodia",
+  "overall": 70,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 67000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Lukas Ullrich",
+  "overall": 70,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 67000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Joe Scally",
+  "overall": 74,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 138000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Jens Castrop",
+  "overall": 74,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 138000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Florian Neuhaus",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 199000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Kevin Stöger",
+  "overall": 76,
+  "potential": 76,
+  "value": 2500000,
+  "wage": 199000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Robin Hack",
+  "overall": 75,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 166000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Franck Honorat",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 199000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Tim Kleindienst",
+  "overall": 77,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 239000
+ },
+ {
+  "clubId": "monchengladbach-ale",
+  "name": "Shuto Machino",
+  "overall": 74,
+  "potential": 74,
+  "value": 8000000,
+  "wage": 138000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Frederik Rönnow",
+  "overall": 76,
+  "potential": 76,
+  "value": 1500000,
+  "wage": 319000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Matheo Raab",
+  "overall": 66,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Leopold Querfeld",
+  "overall": 76,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 319000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Tom Rothe",
+  "overall": 72,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Derrick Köhn",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 107000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Josip Juranovic",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 222000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Christopher Trimmel",
+  "overall": 68,
+  "potential": 68,
+  "value": 200000,
+  "wage": 74000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Aljoscha Kemlein",
+  "overall": 70,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 107000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Rani Khedira",
+  "overall": 76,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 319000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "András Schäfer",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Janik Haberer",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Woo-yeong Jeong",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Andrej Ilic",
+  "overall": 72,
+  "potential": 72,
+  "value": 5000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Oliver Burke",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 107000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Marin Ljubicic",
+  "overall": 66,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "unionberlin-ale",
+  "name": "Livan Burcu",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Matvey Safonov",
+  "overall": 79,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 484000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Lucas Chevalier",
+  "overall": 82,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 836000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Willian Pacho",
+  "overall": 84,
+  "potential": 86,
+  "value": 70000000,
+  "wage": 1204000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Ilya Zabarnyi",
+  "overall": 81,
+  "potential": 83,
+  "value": 50000000,
+  "wage": 697000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Marquinhos",
+  "overall": 86,
+  "potential": 86,
+  "value": 25000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Lucas Beraldo",
+  "overall": 77,
+  "potential": 81,
+  "value": 30000000,
+  "wage": 336000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Nuno Mendes",
+  "overall": 87,
+  "potential": 89,
+  "value": 75000000,
+  "wage": 800000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Lucas Hernández",
+  "overall": 82,
+  "potential": 82,
+  "value": 25000000,
+  "wage": 700000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Lucas Digne",
+  "overall": 79,
+  "potential": 79,
+  "value": 3000000,
+  "wage": 484000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Achraf Hakimi",
+  "overall": 89,
+  "potential": 89,
+  "value": 80000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Vitinha",
+  "overall": 89,
+  "potential": 89,
+  "value": 110000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "João Neves",
+  "overall": 87,
+  "potential": 93,
+  "value": 120000000,
+  "wage": 700000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Warren Zaïre-Emery",
+  "overall": 81,
+  "potential": 89,
+  "value": 50000000,
+  "wage": 697000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Senny Mayulu",
+  "overall": 74,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 195000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Fabián Ruiz",
+  "overall": 84,
+  "potential": 84,
+  "value": 40000000,
+  "wage": 600000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Dro Fernández",
+  "overall": 70,
+  "potential": 82,
+  "value": 18000000,
+  "wage": 94000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Khvicha Kvaratskhelia",
+  "overall": 89,
+  "potential": 90,
+  "value": 80000000,
+  "wage": 1000000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Mika Godts",
+  "overall": 77,
+  "potential": 83,
+  "value": 20000000,
+  "wage": 336000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Quentin Ndjantou",
+  "overall": 68,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 65000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Désiré Doué",
+  "overall": 86,
+  "potential": 92,
+  "value": 110000000,
+  "wage": 600000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Maghnes Akliouche",
+  "overall": 79,
+  "potential": 81,
+  "value": 35000000,
+  "wage": 484000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Ousmane Dembélé",
+  "overall": 90,
+  "potential": 90,
+  "value": 60000000,
+  "wage": 1500000
+ },
+ {
+  "clubId": "parissaintgermain-fr",
+  "name": "Ferran Torres",
+  "overall": 80,
+  "potential": 80,
+  "value": 40000000,
+  "wage": 581000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Philipp Köhn",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 188000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Lukas Hradecky",
+  "overall": 79,
+  "potential": 79,
+  "value": 3000000,
+  "wage": 325000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Christian Mawissa",
+  "overall": 74,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 130000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Mohammed Salisu",
+  "overall": 79,
+  "potential": 79,
+  "value": 12000000,
+  "wage": 325000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Eric Dier",
+  "overall": 78,
+  "potential": 78,
+  "value": 4000000,
+  "wage": 271000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Vanderson",
+  "overall": 81,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 467000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Jordan Teze",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 225000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Denis Zakaria",
+  "overall": 82,
+  "potential": 82,
+  "value": 25000000,
+  "wage": 561000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Lamine Camara",
+  "overall": 79,
+  "potential": 83,
+  "value": 35000000,
+  "wage": 325000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Mamadou Coulibaly",
+  "overall": 76,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 188000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Aleksandr Golovin",
+  "overall": 81,
+  "potential": 81,
+  "value": 12000000,
+  "wage": 467000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Stanis Idumbo",
+  "overall": 74,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 130000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Ansu Fati",
+  "overall": 76,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 188000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Takumi Minamino",
+  "overall": 79,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 325000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Folarin Balogun",
+  "overall": 81,
+  "potential": 82,
+  "value": 30000000,
+  "wage": 467000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Matthis Abline",
+  "overall": 76,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 188000
+ },
+ {
+  "clubId": "monaco-fr",
+  "name": "Mika Biereth",
+  "overall": 76,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 188000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Dominik Greif",
+  "overall": 79,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 420000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Rémy Descamps",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Moussa Niakhaté",
+  "overall": 80,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 504000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Ruben Kluivert",
+  "overall": 74,
+  "potential": 75,
+  "value": 12000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Clinton Mata",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 243000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Abner",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 292000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Nicolás Tagliafico",
+  "overall": 79,
+  "potential": 79,
+  "value": 3000000,
+  "wage": 420000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Tyler Morton",
+  "overall": 77,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 292000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Tanner Tessmann",
+  "overall": 78,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 350000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Paul Akouokou",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Corentin Tolisso",
+  "overall": 79,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 420000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Pavel Sulc",
+  "overall": 79,
+  "potential": 80,
+  "value": 18000000,
+  "wage": 420000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Ernest Nuamah",
+  "overall": 74,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "lyon",
+  "name": "Loïs Openda",
+  "overall": 80,
+  "potential": 80,
+  "value": 40000000,
+  "wage": 504000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Ismaël Doukouré",
+  "overall": 77,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 269000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Lucas Høgsberg",
+  "overall": 70,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Dário Essugo",
+  "overall": 72,
+  "potential": 78,
+  "value": 15000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Samir El Mourabet",
+  "overall": 72,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Giovanni Reyna",
+  "overall": 72,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Omari Kellyman",
+  "overall": 66,
+  "potential": 72,
+  "value": 5000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Martial Godo",
+  "overall": 76,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 224000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Sebastian Nanasi",
+  "overall": 77,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 269000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Joaquín Panichelli",
+  "overall": 76,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 224000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Sékou Mara",
+  "overall": 72,
+  "potential": 74,
+  "value": 8000000,
+  "wage": 108000
+ },
+ {
+  "clubId": "strasbourg-fra",
+  "name": "Deivid Washington",
+  "overall": 70,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Jeffrey de Lange",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 158000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Nayef Aguerd",
+  "overall": 80,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 678000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "CJ Egan-Riley",
+  "overall": 74,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 227000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Bamo Meïté",
+  "overall": 74,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 227000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Derek Cornelius",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 227000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Emerson",
+  "overall": 77,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 393000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Ulisses Garcia",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 273000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Timothy Weah",
+  "overall": 77,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 393000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Pierre-Emile Højbjerg",
+  "overall": 81,
+  "potential": 81,
+  "value": 12000000,
+  "wage": 814000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Tochukwu Nnadi",
+  "overall": 70,
+  "potential": 73,
+  "value": 8000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Geoffrey Kondogbia",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 327000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Himad Abdelli",
+  "overall": 78,
+  "potential": 78,
+  "value": 18000000,
+  "wage": 471000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Angel Gomes",
+  "overall": 79,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 565000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Igor Paixão",
+  "overall": 78,
+  "potential": 78,
+  "value": 30000000,
+  "wage": 471000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Amine Harit",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 327000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Keyliane Abdallah",
+  "overall": 66,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 53000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Amine Gouiri",
+  "overall": 80,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 678000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Neal Maupay",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 227000
+ },
+ {
+  "clubId": "olympiquemarseile-fra",
+  "name": "Faris Moumbagna",
+  "overall": 70,
+  "potential": 70,
+  "value": 3000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Berke Özer",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 243000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Nathan Ngoy",
+  "overall": 76,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 203000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Alexsandro",
+  "overall": 80,
+  "potential": 80,
+  "value": 25000000,
+  "wage": 420000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Romain Perraud",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 203000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Calvin Verdonk",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 141000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Tiago Santos",
+  "overall": 77,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 243000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Ngal'ayel Mukau",
+  "overall": 75,
+  "potential": 81,
+  "value": 18000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Nabil Bentaleb",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 203000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Benjamin André",
+  "overall": 78,
+  "potential": 78,
+  "value": 2000000,
+  "wage": 292000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Hákon Arnar Haraldsson",
+  "overall": 77,
+  "potential": 80,
+  "value": 18000000,
+  "wage": 243000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Osame Sahraoui",
+  "overall": 75,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Ethan Mbappé",
+  "overall": 70,
+  "potential": 80,
+  "value": 6000000,
+  "wage": 68000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Gaëtan Perrin",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Hamza Igamane",
+  "overall": 74,
+  "potential": 77,
+  "value": 15000000,
+  "wage": 141000
+ },
+ {
+  "clubId": "lille-fra",
+  "name": "Olivier Giroud",
+  "overall": 78,
+  "potential": 78,
+  "value": 1000000,
+  "wage": 292000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Yehvann Diouf",
+  "overall": 77,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Antoine Mendy",
+  "overall": 77,
+  "potential": 81,
+  "value": 15000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Youssouf Ndayishimiye",
+  "overall": 78,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 183000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Moïse Bombito",
+  "overall": 77,
+  "potential": 77,
+  "value": 18000000,
+  "wage": 153000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Mohamed Abdelmonem",
+  "overall": 74,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 88000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Ali Abdi",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 88000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Jonathan Clauss",
+  "overall": 78,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 183000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Hicham Boudaoui",
+  "overall": 79,
+  "potential": 79,
+  "value": 25000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Morgan Sanson",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 127000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Sofiane Diop",
+  "overall": 79,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Mohamed Amoura",
+  "overall": 79,
+  "potential": 79,
+  "value": 30000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "nice-fra",
+  "name": "Elye Wahi",
+  "overall": 74,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 88000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Brice Samba",
+  "overall": 79,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 302000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Anthony Rouault",
+  "overall": 76,
+  "potential": 77,
+  "value": 12000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Quentin Merlin",
+  "overall": 76,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Przemyslaw Frankowski",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 210000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Charlie Cresswell",
+  "overall": 74,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Mahdi Camara",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Djaoui Cissé",
+  "overall": 72,
+  "potential": 76,
+  "value": 15000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Adrien Thomasson",
+  "overall": 75,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 146000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Ludovic Blas",
+  "overall": 77,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 210000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Sebastian Szymański",
+  "overall": 79,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 302000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Mousa Al-Tamari",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "rennes-fr",
+  "name": "Estéban Lepaul",
+  "overall": 76,
+  "potential": 76,
+  "value": 15000000,
+  "wage": 175000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Brice Samba",
+  "overall": 79,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 325000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Ruben Aguilar",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 131000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Deiver Machado",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 131000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Jonathan Gradit",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 131000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Malang Sarr",
+  "overall": 74,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 131000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Samson Baidoo",
+  "overall": 72,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 91000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Adrien Thomasson",
+  "overall": 75,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 157000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Florian Sotoca",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 109000
+ },
+ {
+  "clubId": "lens-fr",
+  "name": "Wesley Saïd",
+  "overall": 73,
+  "potential": 73,
+  "value": 5000000,
+  "wage": 109000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Guillaume Restes",
+  "overall": 77,
+  "potential": 89,
+  "value": 15000000,
+  "wage": 132000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Rasmus Nicolaisen",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 110000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Mark McKenzie",
+  "overall": 74,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 76000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Charlie Cresswell",
+  "overall": 74,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 76000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Yann Gboho",
+  "overall": 72,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 53000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Cristian Cásseres Jr.",
+  "overall": 77,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 132000
+ },
+ {
+  "clubId": "toulouse-fr",
+  "name": "Aron Dönnum",
+  "overall": 74,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 76000
+ },
+ {
+  "clubId": "lorient-fr",
+  "name": "Yvon Mvogo",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 65000
+ },
+ {
+  "clubId": "lorient-fr",
+  "name": "Montassar Talbi",
+  "overall": 73,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 78000
+ },
+ {
+  "clubId": "lorient-fr",
+  "name": "Aiyegun Tosin",
+  "overall": 70,
+  "potential": 71,
+  "value": 3000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "paris-fra",
+  "name": "Ilan Kebbal",
+  "overall": 76,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "paris-fra",
+  "name": "Maxime López",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "paris-fra",
+  "name": "Moses Simon",
+  "overall": 77,
+  "potential": 77,
+  "value": 8000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Marco Bizot",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 114000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Kenny Lala",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 79000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Bradley Locko",
+  "overall": 74,
+  "potential": 80,
+  "value": 8000000,
+  "wage": 79000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Romain Del Castillo",
+  "overall": 75,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Pierre Lees-Melou",
+  "overall": 75,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Kamory Doumbia",
+  "overall": 76,
+  "potential": 84,
+  "value": 12000000,
+  "wage": 114000
+ },
+ {
+  "clubId": "brest-fr",
+  "name": "Ludovic Ajorque",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 79000
+ },
+ {
+  "clubId": "angers-fr",
+  "name": "Cédric Hountondji",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "angers-fr",
+  "name": "Jordan Lefort",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "angers-fr",
+  "name": "Pierrick Capelle",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "angers-fr",
+  "name": "Louis Mouton",
+  "overall": 72,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "auxerre-fr",
+  "name": "Donovan Léon",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "auxerre-fr",
+  "name": "Francisco Sierralta",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 41000
+ },
+ {
+  "clubId": "auxerre-fr",
+  "name": "Elisha Owusu",
+  "overall": 76,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "auxerre-fr",
+  "name": "Gauthier Hein",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 41000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Kamil Grabara",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Marius Müller",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 45000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Pavao Pervan",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 32000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Joakim Maehle",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Aaron Zehnter",
+  "overall": 66,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Rogério",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 195000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Saël Kumbedi",
+  "overall": 70,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 94000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Kilian Fischer",
+  "overall": 74,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 195000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Konstantinos Koulierakis",
+  "overall": 76,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Jeanuël Belocian",
+  "overall": 70,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 94000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Denis Vavro",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 235000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Jonas Adjetey",
+  "overall": 72,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 136000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Jenson Seelt",
+  "overall": 70,
+  "potential": 74,
+  "value": 6000000,
+  "wage": 94000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Moritz Jenz",
+  "overall": 70,
+  "potential": 70,
+  "value": 3000000,
+  "wage": 94000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Vini Souza",
+  "overall": 76,
+  "potential": 76,
+  "value": 12000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Mattias Svanberg",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Maximilian Arnold",
+  "overall": 77,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Yannick Gerhardt",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 136000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Kevin Paredes",
+  "overall": 72,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 136000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Lovro Majer",
+  "overall": 77,
+  "potential": 77,
+  "value": 10000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Bence Dárdai",
+  "overall": 72,
+  "potential": 80,
+  "value": 10000000,
+  "wage": 136000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Christian Eriksen",
+  "overall": 77,
+  "potential": 77,
+  "value": 3000000,
+  "wage": 338000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Patrick Wimmer",
+  "overall": 76,
+  "potential": 78,
+  "value": 12000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Jesper Lindstrøm",
+  "overall": 74,
+  "potential": 75,
+  "value": 8000000,
+  "wage": 195000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Adam Daghim",
+  "overall": 68,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 65000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Mohamed Amoura",
+  "overall": 79,
+  "potential": 80,
+  "value": 30000000,
+  "wage": 486000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Jonas Wind",
+  "overall": 76,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 281000
+ },
+ {
+  "clubId": "wolfsburg-ale",
+  "name": "Dzenan Pejcinovic",
+  "overall": 66,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "fortuna-ale",
+  "name": "Christos Tzolis",
+  "overall": 81,
+  "potential": 87,
+  "value": 30000000,
+  "wage": 93000
+ },
+ {
+  "clubId": "fortuna-ale",
+  "name": "Shinta Appelkamp",
+  "overall": 72,
+  "potential": 80,
+  "value": 5000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "fortuna-ale",
+  "name": "Ísak Bergmann Jóhannesson",
+  "overall": 74,
+  "potential": 82,
+  "value": 6000000,
+  "wage": 26000
+ },
+ {
+  "clubId": "herthaberlim-ale",
+  "name": "Fabian Reese",
+  "overall": 77,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 138000
+ },
+ {
+  "clubId": "herthaberlim-ale",
+  "name": "Jonjoe Kenny",
+  "overall": 72,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 55000
+ },
+ {
+  "clubId": "herthaberlim-ale",
+  "name": "Michal Karbownik",
+  "overall": 72,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 55000
+ },
+ {
+  "clubId": "herthaberlim-ale",
+  "name": "Kevin Sessa",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 55000
+ },
+ {
+  "clubId": "herthaberlim-ale",
+  "name": "Haris Tabakovic",
+  "overall": 75,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 96000
+ },
+ {
+  "clubId": "herthaberlim-ale",
+  "name": "Palkó Dárdai",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 38000
+ },
+ {
+  "clubId": "heidenheim-ale",
+  "name": "Leonidas Stergiou",
+  "overall": 72,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 71000
+ },
+ {
+  "clubId": "heidenheim-ale",
+  "name": "Patrick Mainka",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 71000
+ },
+ {
+  "clubId": "heidenheim-ale",
+  "name": "Julian Niehues",
+  "overall": 72,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 71000
+ },
+ {
+  "clubId": "heidenheim-ale",
+  "name": "Mathias Honsak",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 49000
+ },
+ {
+  "clubId": "heidenheim-ale",
+  "name": "Sirlord Conteh",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 49000
+ },
+ {
+  "clubId": "bochum-ale",
+  "name": "Leandro Morgalla",
+  "overall": 70,
+  "potential": 78,
+  "value": 4000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "bochum-ale",
+  "name": "Matus Bero",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 62000
+ },
+ {
+  "clubId": "hannover96-ale",
+  "name": "Muhammed Damar",
+  "overall": 70,
+  "potential": 80,
+  "value": 4000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "karlsruher-ale",
+  "name": "Marvin Wanitzek",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Emil Audero",
+  "overall": 75,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 91000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Joel Pohjanpalo",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 76000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Claudio Gomes",
+  "overall": 72,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Jacopo Segre",
+  "overall": 72,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Matteo Luigi Brunori",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Salim Diakité",
+  "overall": 70,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Pietro Ceccaroni",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "palermo-it",
+  "name": "Niccolò Pierozzi",
+  "overall": 70,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Lorenzo Montipò",
+  "overall": 76,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 100000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Suat Serdar",
+  "overall": 75,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 84000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Martin Frese",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Gift Orban",
+  "overall": 76,
+  "potential": 79,
+  "value": 15000000,
+  "wage": 100000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Giovane",
+  "overall": 72,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Nicolás Valentini",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Victor Nelsson",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Daniel Mosquera",
+  "overall": 72,
+  "potential": 72,
+  "value": 6000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Antoine Bernede",
+  "overall": 71,
+  "potential": 71,
+  "value": 3000000,
+  "wage": 40000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Cheikh Niasse",
+  "overall": 70,
+  "potential": 71,
+  "value": 3000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Grigoris Kastanos",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "verona-ita",
+  "name": "Tomas Suslov",
+  "overall": 76,
+  "potential": 82,
+  "value": 12000000,
+  "wage": 100000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Adrian Semper",
+  "overall": 70,
+  "potential": 71,
+  "value": 1500000,
+  "wage": 45000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Antonio Caracciolo",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 65000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Simone Canestrelli",
+  "overall": 72,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 65000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Marius Marin",
+  "overall": 72,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 65000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Mehdi Léris",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 93000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Matteo Tramoni",
+  "overall": 74,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 93000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Tomás Esteves",
+  "overall": 70,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "pisa-ita",
+  "name": "Nicholas Bonfanti",
+  "overall": 68,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Johan Vásquez",
+  "overall": 79,
+  "potential": 82,
+  "value": 18000000,
+  "wage": 109000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Filippo Terracciano",
+  "overall": 72,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Michele Collocolo",
+  "overall": 72,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Warren Bondo",
+  "overall": 73,
+  "potential": 79,
+  "value": 12000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Marco Carnesecchi",
+  "overall": 82,
+  "potential": 90,
+  "value": 30000000,
+  "wage": 188000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Caleb Okoli",
+  "overall": 76,
+  "potential": 84,
+  "value": 15000000,
+  "wage": 63000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Felix Afena-Gyan",
+  "overall": 70,
+  "potential": 80,
+  "value": 4000000,
+  "wage": 21000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Leonardo Sernicola",
+  "overall": 70,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 21000
+ },
+ {
+  "clubId": "cremonese-ita",
+  "name": "Gianluca Gaetano",
+  "overall": 76,
+  "potential": 84,
+  "value": 10000000,
+  "wage": 63000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Mattia De Sciglio",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 28000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Sebastian Walukiewicz",
+  "overall": 75,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Mattia Viti",
+  "overall": 72,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 28000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Emmanuel Gyasi",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 19000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Stiven Shpendi",
+  "overall": 72,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 28000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Fabiano Parisi",
+  "overall": 77,
+  "potential": 85,
+  "value": 15000000,
+  "wage": 69000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Koni De Winter",
+  "overall": 78,
+  "potential": 86,
+  "value": 20000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "empoli-it",
+  "name": "Matteo Cancellieri",
+  "overall": 73,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "spezia-ita",
+  "name": "Arkadiusz Reca",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "spezia-ita",
+  "name": "Salvatore Esposito",
+  "overall": 72,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 33000
+ },
+ {
+  "clubId": "spezia-ita",
+  "name": "Francesco Pio Esposito",
+  "overall": 74,
+  "potential": 86,
+  "value": 30000000,
+  "wage": 47000
+ },
+ {
+  "clubId": "sampdoria-ita",
+  "name": "Daniele Ghilardi",
+  "overall": 73,
+  "potential": 81,
+  "value": 10000000,
+  "wage": 74000
+ },
+ {
+  "clubId": "sampdoria-ita",
+  "name": "Massimo Coda",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 30000
+ },
+ {
+  "clubId": "sampdoria-ita",
+  "name": "Estanis Pedrola",
+  "overall": 70,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "sampdoria-ita",
+  "name": "Melle Meulensteen",
+  "overall": 68,
+  "potential": 69,
+  "value": 1000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "sampdoria-ita",
+  "name": "Ebenezer Akinsanmiro",
+  "overall": 68,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "sampdoria-ita",
+  "name": "Alessandro Pio Riccio",
+  "overall": 70,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "bari-ita",
+  "name": "Michael Folorunsho",
+  "overall": 75,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "bari-ita",
+  "name": "George Pușcaș",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "bari-ita",
+  "name": "Sebastiano Esposito",
+  "overall": 73,
+  "potential": 81,
+  "value": 6000000,
+  "wage": 25000
+ },
+ {
+  "clubId": "modena-ita",
+  "name": "Mattia Caldara",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 25000
+ },
+ {
+  "clubId": "modena-ita",
+  "name": "Antonio Palumbo",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 25000
+ },
+ {
+  "clubId": "catanzaro-ita",
+  "name": "Pietro Iemmello",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "catanzaro-ita",
+  "name": "Marco Pompetti",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "cesena-ita",
+  "name": "Cristian Shpendi",
+  "overall": 70,
+  "potential": 80,
+  "value": 4000000,
+  "wage": 17000
+ },
+ {
+  "clubId": "nantes-fr",
+  "name": "Alban Lafont",
+  "overall": 77,
+  "potential": 81,
+  "value": 6000000,
+  "wage": 100000
+ },
+ {
+  "clubId": "nantes-fr",
+  "name": "Kolo Muani",
+  "overall": 80,
+  "potential": 84,
+  "value": 30000000,
+  "wage": 172000
+ },
+ {
+  "clubId": "nantes-fr",
+  "name": "Douglas Augusto",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 83000
+ },
+ {
+  "clubId": "nantes-fr",
+  "name": "Mostafa Mohamed",
+  "overall": 76,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 83000
+ },
+ {
+  "clubId": "nantes-fr",
+  "name": "Imran Louza",
+  "overall": 76,
+  "potential": 82,
+  "value": 8000000,
+  "wage": 83000
+ },
+ {
+  "clubId": "montpellier-fra",
+  "name": "Jonas Omlin",
+  "overall": 76,
+  "potential": 76,
+  "value": 2000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "montpellier-fra",
+  "name": "Téji Savanier",
+  "overall": 75,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "montpellier-fra",
+  "name": "Becir Omeragic",
+  "overall": 72,
+  "potential": 78,
+  "value": 3000000,
+  "wage": 25000
+ },
+ {
+  "clubId": "montpellier-fra",
+  "name": "Akor Adams",
+  "overall": 79,
+  "potential": 82,
+  "value": 20000000,
+  "wage": 89000
+ },
+ {
+  "clubId": "reims-fr",
+  "name": "Joseph Okumu",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 60000
+ },
+ {
+  "clubId": "reims-fr",
+  "name": "Teddy Teuma",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 86000
+ }
+]

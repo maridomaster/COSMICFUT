@@ -1,0 +1,282 @@
+{
+  "flarj": {
+    "balance": 35000000,
+    "revenue": 330000000,
+    "wageBill": 110000000,
+    "squadValue": 209200000,
+    "confidence": "high"
+  },
+  "palmeiras": {
+    "balance": 30000000,
+    "revenue": 275000000,
+    "wageBill": 95000000,
+    "squadValue": 207100000,
+    "confidence": "high"
+  },
+  "flurj": {
+    "balance": 12000000,
+    "revenue": 150000000,
+    "wageBill": 65000000,
+    "squadValue": 113000000,
+    "confidence": "medium"
+  },
+  "atleticopr-bra": {
+    "balance": 8000000,
+    "revenue": 75000000,
+    "wageBill": 35000000,
+    "squadValue": 51000000,
+    "confidence": "medium"
+  },
+  "bahia": {
+    "balance": 15000000,
+    "revenue": 80000000,
+    "wageBill": 40000000,
+    "squadValue": 81300000,
+    "confidence": "medium"
+  },
+  "cruzeiro-bra": {
+    "balance": 15000000,
+    "revenue": 105000000,
+    "wageBill": 60000000,
+    "squadValue": 129700000,
+    "confidence": "medium"
+  },
+  "atleticomg-bra": {
+    "balance": 8000000,
+    "revenue": 120000000,
+    "wageBill": 60000000,
+    "squadValue": 78200000,
+    "confidence": "medium"
+  },
+  "corinthians-bra": {
+    "balance": 3000000,
+    "revenue": 165000000,
+    "wageBill": 75000000,
+    "squadValue": 90500000,
+    "confidence": "medium"
+  },
+  "miirassol-sp": {
+    "balance": 4000000,
+    "revenue": 30000000,
+    "wageBill": 14000000,
+    "squadValue": 23700000,
+    "confidence": "low"
+  },
+  "botafogorj-bra": {
+    "balance": 8000000,
+    "revenue": 200000000,
+    "wageBill": 75000000,
+    "squadValue": 73700000,
+    "confidence": "medium"
+  },
+  "santos": {
+    "balance": 6000000,
+    "revenue": 90000000,
+    "wageBill": 45000000,
+    "squadValue": 76200000,
+    "confidence": "medium"
+  },
+  "saopaulo-bra": {
+    "balance": 3000000,
+    "revenue": 170000000,
+    "wageBill": 70000000,
+    "squadValue": 60800000,
+    "confidence": "medium"
+  },
+  "coritiba-bra": {
+    "balance": 6000000,
+    "revenue": 35000000,
+    "wageBill": 16000000,
+    "squadValue": 32600000,
+    "confidence": "low"
+  },
+  "gremio": {
+    "balance": 6000000,
+    "revenue": 100000000,
+    "wageBill": 45000000,
+    "squadValue": 48800000,
+    "confidence": "medium"
+  },
+  "vasco": {
+    "balance": 6000000,
+    "revenue": 80000000,
+    "wageBill": 40000000,
+    "squadValue": 64000000,
+    "confidence": "medium"
+  },
+  "bragantino-bra": {
+    "balance": 15000000,
+    "revenue": 60000000,
+    "wageBill": 28000000,
+    "squadValue": 56400000,
+    "confidence": "medium"
+  },
+  "internacional-bra": {
+    "balance": 6000000,
+    "revenue": 100000000,
+    "wageBill": 45000000,
+    "squadValue": 52800000,
+    "confidence": "medium"
+  },
+  "remo": {
+    "balance": 4000000,
+    "revenue": 28000000,
+    "wageBill": 13000000,
+    "squadValue": 15300000,
+    "confidence": "low"
+  },
+  "vitoria": {
+    "balance": 4000000,
+    "revenue": 35000000,
+    "wageBill": 16000000,
+    "squadValue": 24100000,
+    "confidence": "low"
+  },
+  "chapecoense-bra": {
+    "balance": 2000000,
+    "revenue": 18000000,
+    "wageBill": 9000000,
+    "squadValue": 15400000,
+    "confidence": "low"
+  },
+  "ceara-bra": {
+    "balance": 4000000,
+    "revenue": 32000000,
+    "wageBill": 14000000,
+    "squadValue": 9700000,
+    "confidence": "low"
+  },
+  "criciuma-bra": {
+    "balance": 2000000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 6000000,
+    "confidence": "low"
+  },
+  "fortaleza": {
+    "balance": 5000000,
+    "revenue": 45000000,
+    "wageBill": 18000000,
+    "squadValue": 9100000,
+    "confidence": "medium"
+  },
+  "goias": {
+    "balance": 2500000,
+    "revenue": 18000000,
+    "wageBill": 8000000,
+    "squadValue": 4900000,
+    "confidence": "low"
+  },
+  "juventude": {
+    "balance": 3000000,
+    "revenue": 20000000,
+    "wageBill": 9000000,
+    "squadValue": 5800000,
+    "confidence": "low"
+  },
+  "sport": {
+    "balance": 3000000,
+    "revenue": 30000000,
+    "wageBill": 13000000,
+    "squadValue": 5600000,
+    "confidence": "low"
+  },
+  "novorinzontino-sp": {
+    "balance": 2000000,
+    "revenue": 12000000,
+    "wageBill": 6000000,
+    "squadValue": 5400000,
+    "confidence": "low"
+  },
+  "atleticogo-bra": {
+    "balance": 2500000,
+    "revenue": 18000000,
+    "wageBill": 8000000,
+    "squadValue": 5000000,
+    "confidence": "low"
+  },
+  "avai-bra": {
+    "balance": 1500000,
+    "revenue": 12000000,
+    "wageBill": 6000000,
+    "squadValue": 4200000,
+    "confidence": "low"
+  },
+  "crb-bra": {
+    "balance": 1500000,
+    "revenue": 10000000,
+    "wageBill": 5000000,
+    "squadValue": 4200000,
+    "confidence": "low"
+  },
+  "pontepreta-bra": {
+    "balance": 1000000,
+    "revenue": 9000000,
+    "wageBill": 4500000,
+    "squadValue": 3100000,
+    "confidence": "low"
+  },
+  "vilago": {
+    "balance": 1500000,
+    "revenue": 10000000,
+    "wageBill": 5000000,
+    "squadValue": 3600000,
+    "confidence": "low"
+  },
+  "cuiaba-bra": {
+    "balance": 3000000,
+    "revenue": 18000000,
+    "wageBill": 8000000,
+    "squadValue": 4100000,
+    "confidence": "low"
+  },
+  "operario-pr": {
+    "balance": 1500000,
+    "revenue": 8000000,
+    "wageBill": 4500000,
+    "squadValue": 3600000,
+    "confidence": "low"
+  },
+  "americamg-bra": {
+    "balance": 2500000,
+    "revenue": 18000000,
+    "wageBill": 8000000,
+    "squadValue": 3700000,
+    "confidence": "low"
+  },
+  "nautico": {
+    "balance": 1000000,
+    "revenue": 8000000,
+    "wageBill": 4000000,
+    "squadValue": 3300000,
+    "confidence": "low"
+  },
+  "botafogosp-bra": {
+    "balance": 1500000,
+    "revenue": 7000000,
+    "wageBill": 4000000,
+    "squadValue": 3600000,
+    "confidence": "low"
+  },
+  "londrina-pr": {
+    "balance": 1000000,
+    "revenue": 6000000,
+    "wageBill": 3500000,
+    "squadValue": 5000000,
+    "confidence": "low"
+  },
+  "saobernardo-sp": {
+    "balance": 1000000,
+    "revenue": 6000000,
+    "wageBill": 3500000,
+    "squadValue": 4100000,
+    "confidence": "low"
+  },
+  "athleticclub-mg": {
+    "balance": 1500000,
+    "revenue": 6000000,
+    "wageBill": 3500000,
+    "squadValue": 4100000,
+    "confidence": "low"
+  }
+}

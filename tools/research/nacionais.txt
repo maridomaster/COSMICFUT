@@ -1,0 +1,176 @@
+﻿AFS d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Africa do Sul|1ª Divisão 
+AFS d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Africa do Sul|2ª Divisão 
+AFS d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Africa do Sul|3ª Divisão 
+AFS d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Africa do Sul|4ª Divisão 
+ALE d1 n=18 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|Bundesliga 
+ALE d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|2. Bundesliga 
+ALE d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|3. Liga 
+ALE d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|Regionalliga 
+ALE d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|Oberliga 
+ALE d6 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|Verbandsliga 
+ALE d7 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|Landesliga 
+ALE d8 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Alemão|Bezirksliga 
+ALG d1 n=16 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argelino|1ª Divisão 
+ALG d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argelino|2ª Divisão 
+ALG d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argelino|3ª Divisão 
+ALG d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argelino|4ª Divisão 
+ARG d1 n=30 F=4 G=2 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=T des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=fTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argentino|Apertura 
+ARG d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argentino|2ª Divisão 
+ARG d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argentino|3ª Divisão 
+ARG d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Argentino|4ª Divisão 
+ARS d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Arábia Saudita|1ª Divisão 
+ARS d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Arábia Saudita|2ª Divisão 
+ARS d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Arábia Saudita|3ª Divisão 
+ARS d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Arábia Saudita|4ª Divisão 
+AUS d1 n=12 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Australiano|1ª Divisão 
+AUS d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Australiano|2ª Divisão 
+AUS d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Australiano|3ª Divisão 
+AUS d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Australiano|4ª Divisão 
+AUT d1 n=12 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Austríaco|1ª Divisão 
+AUT d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Austríaco|2ª Divisão 
+AUT d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Austríaco|3ª Divisão 
+AUT d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Austríaco|4ª Divisão 
+BEL d1 n=18 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Belga|Pro League 
+BEL d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Belga|Challenger Pro League 
+BEL d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Belga|Nationale 1 
+BEL d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Belga|2e Nationale 
+BEL d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Belga|3e Nationale 
+BOL d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Boliviano|1ª Divisão 
+BOL d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Boliviano|2ª Divisão 
+BOL d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Boliviano|3ª Divisão 
+BOL d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Boliviano|4ª Divisão 
+BRA d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|1ª Divisão 
+BRA d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=T sobeMM=2 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|2ª Divisão 
+BRA d3 n=28 F=3 G=2 2T=f reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|3ª Divisão 
+BRA d4 n=96 F=6 G=16 2T=T reb=64/64 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|4ª Divisão 
+BRA d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|5ª Divisão 
+BRA d6 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|6ª Divisão 
+BRA d7 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|7ª Divisão 
+BRA d8 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|8ª Divisão 
+BRA d9 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|9ª Divisão 
+BRA d10 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Brasileiro|10ª Divisão 
+CAT d1 n=12 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Catar|1ª Divisão 
+CAT d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Catar|2ª Divisão 
+CAT d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Catar|3ª Divisão 
+CAT d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Catar|4ª Divisão 
+CHI d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chileno|1ª Divisão 
+CHI d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chileno|2ª Divisão 
+CHI d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chileno|3ª Divisão 
+CHI d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chileno|4ª Divisão 
+CHN d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chinês|1ª Divisão 
+CHN d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chinês|2ª Divisão 
+CHN d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chinês|3ª Divisão 
+CHN d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Chinês|4ª Divisão 
+COL d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Colombiano|1ª Divisão 
+COL d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Colombiano|2ª Divisão 
+COL d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Colombiano|3ª Divisão 
+COL d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Colombiano|4ª Divisão 
+CRS d1 n=12 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sul-Coreano|1ª Divisão 
+CRS d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sul-Coreano|2ª Divisão 
+CRS d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sul-Coreano|3ª Divisão 
+CRS d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sul-Coreano|4ª Divisão 
+EQU d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Equatoriano|1ª Divisão 
+EQU d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Equatoriano|2ª Divisão 
+EQU d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Equatoriano|3ª Divisão 
+EQU d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Equatoriano|4ª Divisão 
+ESP d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|LaLiga 
+ESP d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|LaLiga 2 
+ESP d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|Primera Federación 
+ESP d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|Segunda Federación 
+ESP d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|Tercera Federación 
+ESP d6 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|División de Honor Regional 
+ESP d7 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Espanhol|Primera Regional 
+EUA d1 n=30 F=0 G=0 2T=f reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de EUA|1ª Divisão 
+EUA d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de EUA|2ª Divisão 
+EUA d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de EUA|3ª Divisão 
+EUA d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de EUA|4ª Divisão 
+FRA d1 n=18 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Francês|Ligue 1 
+FRA d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Francês|Ligue 2 
+FRA d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Francês|National 
+FRA d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Francês|National 2 
+FRA d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Francês|National 3 
+FRA d6 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Francês|Régional 1 
+HOL d1 n=18 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Holandês|Eredivisie 
+HOL d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Holandês|Eerste Divisie 
+HOL d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Holandês|Tweede Divisie 
+HOL d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Holandês|Derde Divisie 
+HOL d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Holandês|Vierde Divisie 
+ING d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|Premier League 
+ING d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|Championship 
+ING d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|League One 
+ING d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|League Two 
+ING d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|National League 
+ING d6 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|National League North/South 
+ING d7 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|7ª Divisão 
+ING d8 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|8ª Divisão 
+ING d9 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|9ª Divisão 
+ING d10 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Inglês|10ª Divisão 
+ITA d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Serie A 
+ITA d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Serie B 
+ITA d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Serie C 
+ITA d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Serie D 
+ITA d5 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Eccellenza 
+ITA d6 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Promozione 
+ITA d7 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Prima Categoria 
+ITA d8 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Seconda Categoria 
+ITA d9 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Italiano|Terza Categoria 
+JAP d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Japonês|1ª Divisão 
+JAP d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Japonês|2ª Divisão 
+JAP d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Japonês|3ª Divisão 
+JAP d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Japonês|4ª Divisão 
+MAR d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Marroquino|1ª Divisão 
+MAR d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Marroquino|2ª Divisão 
+MAR d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Marroquino|3ª Divisão 
+MAR d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Marroquino|4ª Divisão 
+MEX d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Mexicano|1ª Divisão 
+MEX d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Mexicano|2ª Divisão 
+MEX d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Mexicano|3ª Divisão 
+MEX d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Mexicano|4ª Divisão 
+NOR d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Noruega|1ª Divisão 
+NOR d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Noruega|2ª Divisão 
+NOR d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Noruega|3ª Divisão 
+NOR d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Noruega|4ª Divisão 
+NOZ d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Nova Zelândia|1ª Divisão 
+NOZ d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Nova Zelândia|2ª Divisão 
+NOZ d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Nova Zelândia|3ª Divisão 
+NOZ d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato de Nova Zelândia|4ª Divisão 
+PAR d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Paraguaio|1ª Divisão 
+PAR d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Paraguaio|2ª Divisão 
+PAR d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Paraguaio|3ª Divisão 
+PAR d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Paraguaio|4ª Divisão 
+PER d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Peruano|1ª Divisão 
+PER d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Peruano|2ª Divisão 
+PER d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Peruano|3ª Divisão 
+PER d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Peruano|4ª Divisão 
+POR d1 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Português|1ª Divisão 
+POR d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Português|2ª Divisão 
+POR d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Português|3ª Divisão 
+POR d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Português|4ª Divisão 
+RUS d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Russo|1ª Divisão 
+RUS d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Russo|2ª Divisão 
+RUS d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Russo|3ª Divisão 
+RUS d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Russo|4ª Divisão 
+SUE d1 n=16 F=0 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sueco|1ª Divisão 
+SUE d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sueco|2ª Divisão 
+SUE d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sueco|3ª Divisão 
+SUE d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Sueco|4ª Divisão 
+SUI d1 n=12 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Suiço|1ª Divisão 
+SUI d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Suiço|2ª Divisão 
+SUI d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Suiço|3ª Divisão 
+SUI d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Suiço|4ª Divisão 
+TUR d1 n=18 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Turco|1ª Divisão 
+TUR d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Turco|2ª Divisão 
+TUR d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Turco|3ª Divisão 
+TUR d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Turco|4ª Divisão 
+UCR d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Ucraniano|1ª Divisão 
+UCR d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Ucraniano|2ª Divisão 
+UCR d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Ucraniano|3ª Divisão 
+UCR d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Ucraniano|4ª Divisão 
+URU d1 n=16 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=T des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Uruguaio|Apertura 
+URU d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Uruguaio|2ª Divisão 
+URU d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Uruguaio|3ª Divisão 
+URU d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Uruguaio|4ª Divisão 
+VEN d1 n=16 F=0 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Venezuelano|1ª Divisão 
+VEN d2 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Venezuelano|2ª Divisão 
+VEN d3 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Venezuelano|3ª Divisão 
+VEN d4 n=20 F=0 G=0 2T=T reb=4/4 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Campeonato Venezuelano|4ª Divisão 

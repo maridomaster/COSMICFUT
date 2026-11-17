@@ -1,0 +1,67 @@
+﻿AC d1 n=8 F=1 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Acreanão|1ª Divisão 
+AC d2 n=4 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Acreanão Série B|2ª Divisão 
+AL d1 n=8 F=7 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Alagoano|1ª Divisão 
+AL d2 n=6 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Alagoano Série B|2ª Divisão 
+AM d1 n=8 F=3 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=BAREZÃO Sicredi|1ª Divisão 
+AP d1 n=8 F=2 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Amapazão Sicredi|1ª Divisão 
+AP d2 n=12 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Amapazão Série B|2ª Divisão 
+BA d1 n=10 F=2 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Baianão Série A|1ª Divisão 
+BA d2 n=10 F=2 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Baianão Série B|2ª Divisão 
+BA d3 n=10 F=2 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Baianão Série C|3ª Divisão 
+CE d1 n=10 F=5 G=0 2T=T reb=2/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=2 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=CEARENSE|1ª Divisão 
+CE d2 n=10 F=6 G=0 2T=T reb=2/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=2 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Cearense Série B|2ª Divisão 
+CE d3 n=4 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Cearense Série C|3ª Divisão 
+DF d1 n=10 F=11 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Candangão BRB|1ª Divisão 
+DF d2 n=8 F=4 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Candangão Série B|2ª Divisão 
+ES d1 n=10 F=4 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Capixabão|1ª Divisão 
+ES d2 n=8 F=2 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Capixabão Série B|2ª Divisão 
+GO d1 n=12 F=8 G=0 2T=T reb=2/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=1 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=GOIANÃO novomundo|1ª Divisão 
+GO d2 n=10 F=8 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Goianão Série B|2ª Divisão 
+GO d3 n=10 F=9 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Goianão Série C|3ª Divisão 
+MA d1 n=8 F=5 G=0 2T=T reb=2/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=1 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Maranhense Série A|1ª Divisão 
+MA d2 n=12 F=13 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Maranhense Série B|2ª Divisão 
+MG d1 n=12 F=9 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=T 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=MINEIRO SICOOB|1ª Divisão 
+MG d2 n=12 F=10 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Mineiro Módulo II|2ª Divisão 
+MG d3 n=12 F=11 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Mineiro Segundona|3ª Divisão 
+MS d1 n=10 F=15 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Sul-Mato-Grossense A|1ª Divisão 
+MS d2 n=6 F=3 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Sul-Mato-Grossense B|2ª Divisão 
+MT d1 n=10 F=12 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Mato-Grossense A|1ª Divisão 
+MT d2 n=10 F=10 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Mato-Grossense B|2ª Divisão 
+PA d1 n=12 F=12 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Parazão Banpará|1ª Divisão 
+PA d2 n=12 F=13 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=T 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Parazão B1|2ª Divisão 
+PA d3 n=8 F=2 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Parazão B2|3ª Divisão 
+PB d1 n=10 F=11 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paraibano|1ª Divisão 
+PB d2 n=10 F=12 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paraibano B|2ª Divisão 
+PB d3 n=4 F=2 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paraibano C|3ª Divisão 
+PE d1 n=31 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Pernambucano A1|1ª Divisão 
+PI d1 n=8 F=7 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Piauiense JELTA / FIAT|1ª Divisão 
+PI d2 n=6 F=2 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Piauiense Série B|2ª Divisão 
+PR d1 n=12 F=6 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paranaense A1|1ª Divisão 
+PR d2 n=10 F=4 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paranaense A2|2ª Divisão 
+PR d3 n=8 F=7 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paranaense Terceirona|3ª Divisão 
+RJ d1 n=12 F=2 G=0 2T=T reb=2/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=2 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=CARIOCA|1ª Divisão 
+RJ d2 n=12 F=3 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Cariocão A2|2ª Divisão 
+RJ d3 n=12 F=4 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Cariocão B1|3ª Divisão 
+RJ d4 n=9 F=1 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Cariocão B2|4ª Divisão 
+RJ d5 n=13 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Cariocão Série C|5ª Divisão 
+RN d1 n=8 F=6 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Potiguar A|1ª Divisão 
+RN d2 n=7 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Potiguar B|2ª Divisão 
+RO d1 n=7 F=2 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Rondoniense Sicredi|1ª Divisão 
+RO d2 n=2 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Rondoniense Série B|2ª Divisão 
+RR d1 n=9 F=3 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Roraimense GIRO/AGRO|1ª Divisão 
+RS d1 n=12 F=7 G=0 2T=T reb=2/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=2 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=GAUCHÃO|1ª Divisão 
+RS d2 n=16 F=1 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=GAUCHÃO A2|2ª Divisão 
+RS d3 n=8 F=7 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=GAUCHÃO Série B|3ª Divisão 
+SC d1 n=12 F=5 G=0 2T=T reb=2/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=2 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Catarinense Fort/ATACADISTA|1ª Divisão 
+SC d2 n=9 F=2 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Catarinense Série B|2ª Divisão 
+SC d3 n=3 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Catarinense Série C|3ª Divisão 
+SE d1 n=10 F=14 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=SERGIPÃO|1ª Divisão 
+SE d2 n=10 F=9 G=0 2T=T reb=1/1 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=SERGIPÃO A2|2ª Divisão 
+SE d3 n=14 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=SERGIPÃO A3|3ª Divisão 
+SP d1 n=16 F=2 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paulistão CASASBAHIA|1ª Divisão 
+SP d2 n=16 F=3 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paulistão A2|2ª Divisão 
+SP d3 n=16 F=1 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paulistão A3|3ª Divisão 
+SP d4 n=16 F=1 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paulistão A4|4ª Divisão 
+SP d5 n=24 F=1 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Paulistão Segundona|5ª Divisão 
+TO d1 n=8 F=7 G=0 2T=T reb=2/2 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Tocantinense Série A|1ª Divisão 
+TO d2 n=8 F=7 G=0 2T=T reb=0/0 pAc=f sobeMM=0 nMM=0 AC=f des=0 geral=f m3=f pReb=0 dentro=T rebGrp=f rebGeral=f 2vMM=TTTTTTT 2vSobe=fff 2vReb=fff nome=Tocantinense Série B|2ª Divisão 

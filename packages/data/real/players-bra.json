@@ -1,0 +1,6506 @@
+[
+ {
+  "clubId": "flarj",
+  "name": "Agustín Rossi",
+  "overall": 79,
+  "potential": 79,
+  "value": 4500000,
+  "wage": 242000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Andrew",
+  "overall": 74,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 133000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Dyogo Alves",
+  "overall": 66,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Ayrton Lucas",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Alex Sandro",
+  "overall": 74,
+  "potential": 74,
+  "value": 1200000,
+  "wage": 133000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Emerson Royal",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Guillermo Varela",
+  "overall": 76,
+  "potential": 76,
+  "value": 2500000,
+  "wage": 169000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Léo Ortiz",
+  "overall": 79,
+  "potential": 79,
+  "value": 9000000,
+  "wage": 242000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Léo Pereira",
+  "overall": 79,
+  "potential": 79,
+  "value": 9000000,
+  "wage": 242000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Vitão",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 169000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Danilo",
+  "overall": 77,
+  "potential": 77,
+  "value": 1500000,
+  "wage": 190000
+ },
+ {
+  "clubId": "flarj",
+  "name": "João Souza",
+  "overall": 63,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 35000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Evertton Araújo",
+  "overall": 72,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Erick Pulgar",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 190000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Jorginho",
+  "overall": 79,
+  "potential": 79,
+  "value": 3000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Nicolás de la Cruz",
+  "overall": 80,
+  "potential": 80,
+  "value": 13000000,
+  "wage": 272000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Saúl Ñíguez",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Lucas Paquetá",
+  "overall": 82,
+  "potential": 82,
+  "value": 35000000,
+  "wage": 450000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Giorgian de Arrascaeta",
+  "overall": 82,
+  "potential": 82,
+  "value": 10000000,
+  "wage": 320000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Jorge Carrascal",
+  "overall": 78,
+  "potential": 78,
+  "value": 14000000,
+  "wage": 214000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Lorran",
+  "overall": 66,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 51000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Samuel Lino",
+  "overall": 79,
+  "potential": 79,
+  "value": 20000000,
+  "wage": 242000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Gonzalo Plata",
+  "overall": 79,
+  "potential": 81,
+  "value": 18000000,
+  "wage": 242000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Luiz Araújo",
+  "overall": 77,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 190000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Anthony Valencia",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Pedro",
+  "overall": 80,
+  "potential": 80,
+  "value": 10000000,
+  "wage": 300000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Joaquín Freitas",
+  "overall": 64,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 40000
+ },
+ {
+  "clubId": "flarj",
+  "name": "Bruno Henrique",
+  "overall": 75,
+  "potential": 75,
+  "value": 1500000,
+  "wage": 200000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Carlos Miguel",
+  "overall": 77,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 174000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Marcelo Lomba",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 46000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Joaquín Piquerez",
+  "overall": 79,
+  "potential": 79,
+  "value": 10000000,
+  "wage": 221000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Jefté",
+  "overall": 72,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Arthur Gabriel",
+  "overall": 66,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Agustín Giay",
+  "overall": 75,
+  "potential": 79,
+  "value": 9000000,
+  "wage": 137000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Khellven",
+  "overall": 74,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Alexander Barboza",
+  "overall": 76,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Murilo",
+  "overall": 78,
+  "potential": 78,
+  "value": 9000000,
+  "wage": 196000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Bruno Fuchs",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Luis Benedetti",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Gustavo Gómez",
+  "overall": 79,
+  "potential": 79,
+  "value": 4000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Emiliano Martínez",
+  "overall": 77,
+  "potential": 77,
+  "value": 9000000,
+  "wage": 174000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Marlon Freitas",
+  "overall": 78,
+  "potential": 78,
+  "value": 7000000,
+  "wage": 196000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Luis Pacheco",
+  "overall": 64,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Andreas Pereira",
+  "overall": 79,
+  "potential": 79,
+  "value": 13000000,
+  "wage": 280000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Lucas Evangelista",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 121000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Larson",
+  "overall": 64,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Mauricio",
+  "overall": 77,
+  "potential": 79,
+  "value": 10000000,
+  "wage": 174000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Erick Belé",
+  "overall": 63,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 32000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Felipe Anderson",
+  "overall": 76,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Jhon Arias",
+  "overall": 81,
+  "potential": 81,
+  "value": 25000000,
+  "wage": 350000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Ramón Sosa",
+  "overall": 76,
+  "potential": 76,
+  "value": 9000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Paulinho",
+  "overall": 76,
+  "potential": 76,
+  "value": 10000000,
+  "wage": 154000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "Vitor Roque",
+  "overall": 79,
+  "potential": 85,
+  "value": 30000000,
+  "wage": 300000
+ },
+ {
+  "clubId": "palmeiras",
+  "name": "José Manuel López",
+  "overall": 78,
+  "potential": 80,
+  "value": 20000000,
+  "wage": 196000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Vitor Eudes",
+  "overall": 66,
+  "potential": 66,
+  "value": 800000,
+  "wage": 35000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Marcelo Pitaluga",
+  "overall": 66,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 35000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Fábio",
+  "overall": 73,
+  "potential": 73,
+  "value": 200000,
+  "wage": 120000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Guilherme Arana",
+  "overall": 77,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 132000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Renê",
+  "overall": 72,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 73000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Léo Jance",
+  "overall": 64,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 28000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Guga",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Julio Fidelis",
+  "overall": 62,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Samuel Xavier",
+  "overall": 72,
+  "potential": 72,
+  "value": 600000,
+  "wage": 73000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Juan Pablo Freytes",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Julián Millán",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Jemmes",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Ignácio",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Igor Rabello",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Thiago Silva",
+  "overall": 78,
+  "potential": 78,
+  "value": 1500000,
+  "wage": 220000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Martinelli",
+  "overall": 78,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 149000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Otávio",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Luis Fernando",
+  "overall": 66,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 35000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Hércules",
+  "overall": 76,
+  "potential": 78,
+  "value": 8000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Nonato",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Alisson",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Jefferson Savarino",
+  "overall": 78,
+  "potential": 78,
+  "value": 7000000,
+  "wage": 149000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Luciano Acosta",
+  "overall": 78,
+  "potential": 78,
+  "value": 5000000,
+  "wage": 200000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Ganso",
+  "overall": 73,
+  "potential": 73,
+  "value": 1000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Yago Ferreira",
+  "overall": 68,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 45000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Yeferson Soteldo",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Matheus Reis",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Agustín Canobbio",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Riquelme",
+  "overall": 64,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 28000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Kevin Serna",
+  "overall": 75,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "flurj",
+  "name": "John Kennedy",
+  "overall": 74,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Rodrigo Castillo",
+  "overall": 72,
+  "potential": 72,
+  "value": 4000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Hulk",
+  "overall": 76,
+  "potential": 76,
+  "value": 1500000,
+  "wage": 250000
+ },
+ {
+  "clubId": "flurj",
+  "name": "Germán Cano",
+  "overall": 72,
+  "potential": 72,
+  "value": 800000,
+  "wage": 150000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Mycael",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Santos",
+  "overall": 73,
+  "potential": 73,
+  "value": 1000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Matheus Soares",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 16000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Lucas Esquivel",
+  "overall": 73,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Léo Derik",
+  "overall": 68,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Claudinho",
+  "overall": 63,
+  "potential": 69,
+  "value": 800000,
+  "wage": 18000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Gastón Benavídez",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 43000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Gilberto",
+  "overall": 71,
+  "potential": 71,
+  "value": 800000,
+  "wage": 48000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Gilberto Junior",
+  "overall": 63,
+  "potential": 69,
+  "value": 800000,
+  "wage": 18000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Arthur Dias",
+  "overall": 64,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 21000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Carlos Terán",
+  "overall": 74,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 69000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Juan Felipe Aguirre",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 54000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Léo",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 43000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Dantas",
+  "overall": 64,
+  "potential": 68,
+  "value": 800000,
+  "wage": 21000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Luiz Gustavo",
+  "overall": 70,
+  "potential": 70,
+  "value": 300000,
+  "wage": 43000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Juan Portilla",
+  "overall": 73,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 61000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "João Cruz",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 26000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Felipinho",
+  "overall": 70,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 43000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Jádson",
+  "overall": 69,
+  "potential": 69,
+  "value": 500000,
+  "wage": 38000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Alejandro García",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 43000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Dudu",
+  "overall": 64,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 21000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Bruno Zapelli",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 54000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Chiqueti",
+  "overall": 63,
+  "potential": 69,
+  "value": 800000,
+  "wage": 18000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Stiven Mendoza",
+  "overall": 72,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 54000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Kerwin Vargas",
+  "overall": 71,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Leozinho",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 34000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Kevin Viveros",
+  "overall": 73,
+  "potential": 73,
+  "value": 4500000,
+  "wage": 61000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Jorge Rivaldo",
+  "overall": 64,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 21000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Renan Peixoto",
+  "overall": 67,
+  "potential": 67,
+  "value": 1000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "atleticopr-bra",
+  "name": "Renan Viana",
+  "overall": 68,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 34000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Ronaldo",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Guido Herrera",
+  "overall": 73,
+  "potential": 73,
+  "value": 800000,
+  "wage": 66000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Léo Vieira",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 23000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Victor",
+  "overall": 60,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Luciano Juba",
+  "overall": 76,
+  "potential": 76,
+  "value": 7000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Zé Guilherme",
+  "overall": 64,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Román Gómez",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Kanu",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "bahia",
+  "name": "David Duarte",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Luiz Gustavo",
+  "overall": 64,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Marcos Victor",
+  "overall": 70,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Caio Alexandre",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Nicolás Acevedo",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Erick",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Lautaro López",
+  "overall": 64,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 23000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Jean Lucas",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Rodrigo Nestor",
+  "overall": 75,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Everton Ribeiro",
+  "overall": 75,
+  "potential": 75,
+  "value": 1200000,
+  "wage": 180000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Roger Gabriel",
+  "overall": 62,
+  "potential": 71,
+  "value": 500000,
+  "wage": 18000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Erick Pulga",
+  "overall": 74,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Ruan Pablo",
+  "overall": 60,
+  "potential": 69,
+  "value": 1000000,
+  "wage": 14000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Mateo Sanabria",
+  "overall": 68,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Cristian Olivera",
+  "overall": 72,
+  "potential": 74,
+  "value": 5000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Michel Araújo",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Ademir",
+  "overall": 73,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 66000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Alejo Veliz",
+  "overall": 70,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Dell",
+  "overall": 60,
+  "potential": 69,
+  "value": 800000,
+  "wage": 14000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Willian José",
+  "overall": 72,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 59000
+ },
+ {
+  "clubId": "bahia",
+  "name": "Everaldo",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 46000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Léo Aragão",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Otávio",
+  "overall": 64,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 28000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Cássio",
+  "overall": 73,
+  "potential": 73,
+  "value": 600000,
+  "wage": 150000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Gabriel Rojas",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Matías Viña",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "William",
+  "overall": 75,
+  "potential": 75,
+  "value": 2500000,
+  "wage": 104000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Kauã Moraes",
+  "overall": 64,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 28000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Fagner",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 57000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Fabrício Bruno",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Jonathan Jesus",
+  "overall": 72,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "João Marcelo",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 73000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Lucas Villalba",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Zé Lucas",
+  "overall": 66,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 35000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Lucas Romero",
+  "overall": 76,
+  "potential": 76,
+  "value": 2500000,
+  "wage": 117000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Lucas Silva",
+  "overall": 73,
+  "potential": 73,
+  "value": 1000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Gerson",
+  "overall": 81,
+  "potential": 81,
+  "value": 20000000,
+  "wage": 330000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Matheus Henrique",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Fabrizio Peralta",
+  "overall": 73,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Matheus Pereira",
+  "overall": 80,
+  "potential": 80,
+  "value": 8000000,
+  "wage": 280000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Felipe Morais",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Luis Sinisterra",
+  "overall": 76,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Wesley",
+  "overall": 66,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 35000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Kaique Kenji",
+  "overall": 66,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 35000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Wanderson",
+  "overall": 73,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 82000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Bruno Rodrigues",
+  "overall": 73,
+  "potential": 73,
+  "value": 4000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Keny Arroyo",
+  "overall": 72,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Gabriel Pec",
+  "overall": 73,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Marquinhos",
+  "overall": 68,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "João Costa",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 22000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Kaio Jorge",
+  "overall": 78,
+  "potential": 80,
+  "value": 15000000,
+  "wage": 149000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Luciano Rodríguez",
+  "overall": 71,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 64000
+ },
+ {
+  "clubId": "cruzeiro-bra",
+  "name": "Néiser Villarreal",
+  "overall": 70,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Everson",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Pedro Cobra",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 22000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Gabriel Delfim",
+  "overall": 68,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 45000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Robert",
+  "overall": 58,
+  "potential": 64,
+  "value": 300000,
+  "wage": 14000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Renan Lodi",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Kauã Pascini",
+  "overall": 62,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Natanael",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Angelo Preciado",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Lyanco",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Ruan",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Léo Duarte",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Vitor Hugo",
+  "overall": 71,
+  "potential": 71,
+  "value": 600000,
+  "wage": 64000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Vitão",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Alexsander",
+  "overall": 72,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Kevin Castaño",
+  "overall": 72,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Tomás Pérez",
+  "overall": 68,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Victor Hugo",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Fred",
+  "overall": 74,
+  "potential": 74,
+  "value": 800000,
+  "wage": 200000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Alan Franco",
+  "overall": 76,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 117000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Maycon",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Mamady Cissé",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Índio",
+  "overall": 58,
+  "potential": 67,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Gustavo Scarpa",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Igor Gomes",
+  "overall": 73,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Reinier",
+  "overall": 73,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Tomás Cuello",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Dudu",
+  "overall": 74,
+  "potential": 74,
+  "value": 1000000,
+  "wage": 180000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Bernard",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 92000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Alan Minda",
+  "overall": 73,
+  "potential": 77,
+  "value": 5000000,
+  "wage": 82000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Mateo Cassierra",
+  "overall": 74,
+  "potential": 74,
+  "value": 3500000,
+  "wage": 92000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Thiago Borbas",
+  "overall": 70,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "atleticomg-bra",
+  "name": "Cauã Soares",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Hugo Souza",
+  "overall": 77,
+  "potential": 77,
+  "value": 9000000,
+  "wage": 140000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Felipe Longo",
+  "overall": 64,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 30000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Kauê",
+  "overall": 62,
+  "potential": 66,
+  "value": 500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Matheus Bidu",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Hugo",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Fabrizio Angileri",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 87000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Matheuzinho",
+  "overall": 73,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 87000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Pedro Milans",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Léo Mana",
+  "overall": 64,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 30000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "João Pedro Tchoca",
+  "overall": 70,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "André Ramalho",
+  "overall": 74,
+  "potential": 74,
+  "value": 1200000,
+  "wage": 98000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Gustavo Henrique",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Gabriel Paulista",
+  "overall": 73,
+  "potential": 73,
+  "value": 600000,
+  "wage": 87000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Renato Santos",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 23000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Raniele",
+  "overall": 74,
+  "potential": 74,
+  "value": 3500000,
+  "wage": 98000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Allan",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 87000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Charles",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Breno Bidon",
+  "overall": 72,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "André",
+  "overall": 66,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 38000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Matheus Pereira",
+  "overall": 66,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 38000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Alex Santana",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "André Carrillo",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 87000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Bahia",
+  "overall": 60,
+  "potential": 66,
+  "value": 400000,
+  "wage": 18000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Rodrigo Garro",
+  "overall": 78,
+  "potential": 78,
+  "value": 10000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Jesse Lingard",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Zakaria Labyad",
+  "overall": 70,
+  "potential": 70,
+  "value": 600000,
+  "wage": 61000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Kayke",
+  "overall": 64,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Vitinho",
+  "overall": 72,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 77000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Kaio César",
+  "overall": 70,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Dieguinho",
+  "overall": 63,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 26000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Yuri Alberto",
+  "overall": 78,
+  "potential": 80,
+  "value": 13000000,
+  "wage": 250000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Memphis Depay",
+  "overall": 80,
+  "potential": 80,
+  "value": 6000000,
+  "wage": 550000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Gui Negão",
+  "overall": 62,
+  "potential": 71,
+  "value": 1500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "corinthians-bra",
+  "name": "Pedro Raul",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Walter",
+  "overall": 69,
+  "potential": 69,
+  "value": 300000,
+  "wage": 24000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Alex Muralha",
+  "overall": 72,
+  "potential": 72,
+  "value": 600000,
+  "wage": 34000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Thomazella",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 13000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Reinaldo",
+  "overall": 73,
+  "potential": 73,
+  "value": 800000,
+  "wage": 39000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Victor Luís",
+  "overall": 70,
+  "potential": 70,
+  "value": 600000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Igor Formiga",
+  "overall": 71,
+  "potential": 71,
+  "value": 1500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Elias",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 13000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Daniel Borges",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 21000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Wesley Santos",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 10000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Willian Machado",
+  "overall": 71,
+  "potential": 71,
+  "value": 800000,
+  "wage": 31000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "João Victor",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 34000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Lucas Oliveira",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Gabriel",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 10000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Neto Moura",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 39000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Wallisson",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Gustavo Cazonatti",
+  "overall": 67,
+  "potential": 67,
+  "value": 600000,
+  "wage": 19000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Denilson",
+  "overall": 70,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Aldo Filho",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 21000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Japa",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 10000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Shaylon",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Eduardo",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Chico Kim",
+  "overall": 67,
+  "potential": 67,
+  "value": 400000,
+  "wage": 19000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Alesson",
+  "overall": 71,
+  "potential": 71,
+  "value": 1200000,
+  "wage": 31000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Fernandinho",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Negueba",
+  "overall": 71,
+  "potential": 71,
+  "value": 1200000,
+  "wage": 31000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Gustavo Silva",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 21000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Carlos Eduardo",
+  "overall": 69,
+  "potential": 69,
+  "value": 800000,
+  "wage": 24000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Luiz Filipe",
+  "overall": 66,
+  "potential": 68,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Edson Carioca",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 21000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "André Luis",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 27000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Zé Roberto",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 21000
+ },
+ {
+  "clubId": "miirassol-sp",
+  "name": "Renato Marques",
+  "overall": 64,
+  "potential": 70,
+  "value": 600000,
+  "wage": 13000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Gabriel Batista",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 48000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Warleson",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 38000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Cristhian Loor",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 23000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Alex Telles",
+  "overall": 77,
+  "potential": 77,
+  "value": 2500000,
+  "wage": 200000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Paulinho",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 61000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Marçal",
+  "overall": 71,
+  "potential": 71,
+  "value": 500000,
+  "wage": 68000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Jhoan Hernández",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 23000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Vitinho",
+  "overall": 76,
+  "potential": 76,
+  "value": 6000000,
+  "wage": 125000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Mateo Ponte",
+  "overall": 74,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Arthur Chaves",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Nahuel Ferraresi",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Kaio",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 77000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Lucas Monzón",
+  "overall": 68,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 48000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Gabriel Justino",
+  "overall": 60,
+  "potential": 66,
+  "value": 400000,
+  "wage": 18000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Kawan",
+  "overall": 64,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 30000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Domingos Andrade",
+  "overall": 66,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 38000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Allan",
+  "overall": 72,
+  "potential": 72,
+  "value": 800000,
+  "wage": 77000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Wallace Davi",
+  "overall": 62,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 23000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Huguinho",
+  "overall": 63,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 26000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Cristian Medina",
+  "overall": 74,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Edenilson",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 61000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Jordan Barrera",
+  "overall": 70,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Álvaro Montoro",
+  "overall": 70,
+  "potential": 79,
+  "value": 8000000,
+  "wage": 61000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Matheus Martins",
+  "overall": 74,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Júnior Santos",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 98000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Hakim Ziyech",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 200000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Arthur Cabral",
+  "overall": 75,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 111000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Kadir Barría",
+  "overall": 64,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 30000
+ },
+ {
+  "clubId": "botafogorj-bra",
+  "name": "Tiquinho Soares",
+  "overall": 71,
+  "potential": 71,
+  "value": 600000,
+  "wage": 68000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gabriel Brazão",
+  "overall": 75,
+  "potential": 77,
+  "value": 6000000,
+  "wage": 91000
+ },
+ {
+  "clubId": "santos",
+  "name": "João Paulo",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 50000
+ },
+ {
+  "clubId": "santos",
+  "name": "Diógenes",
+  "overall": 64,
+  "potential": 66,
+  "value": 500000,
+  "wage": 24000
+ },
+ {
+  "clubId": "santos",
+  "name": "João Fernandes",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 19000
+ },
+ {
+  "clubId": "santos",
+  "name": "Rodrigo Falcão",
+  "overall": 60,
+  "potential": 66,
+  "value": 300000,
+  "wage": 15000
+ },
+ {
+  "clubId": "santos",
+  "name": "Vinicius Lira",
+  "overall": 64,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gonzalo Escobar",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gabriel Menino",
+  "overall": 74,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 81000
+ },
+ {
+  "clubId": "santos",
+  "name": "Igor Vinícius",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 63000
+ },
+ {
+  "clubId": "santos",
+  "name": "Rodinei",
+  "overall": 70,
+  "potential": 70,
+  "value": 600000,
+  "wage": 50000
+ },
+ {
+  "clubId": "santos",
+  "name": "Lucas Veríssimo",
+  "overall": 74,
+  "potential": 74,
+  "value": 2000000,
+  "wage": 81000
+ },
+ {
+  "clubId": "santos",
+  "name": "Alexis Duarte",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 63000
+ },
+ {
+  "clubId": "santos",
+  "name": "Luan Peres",
+  "overall": 72,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 63000
+ },
+ {
+  "clubId": "santos",
+  "name": "João Ananias",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 15000
+ },
+ {
+  "clubId": "santos",
+  "name": "João Alencar",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 15000
+ },
+ {
+  "clubId": "santos",
+  "name": "Arthur Melo",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 200000
+ },
+ {
+  "clubId": "santos",
+  "name": "Christian Oliva",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "santos",
+  "name": "Willian Arão",
+  "overall": 72,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 63000
+ },
+ {
+  "clubId": "santos",
+  "name": "João Schmidt",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 72000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gustavinho",
+  "overall": 64,
+  "potential": 70,
+  "value": 800000,
+  "wage": 24000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gabriel Bontempo",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 31000
+ },
+ {
+  "clubId": "santos",
+  "name": "Neymar",
+  "overall": 80,
+  "potential": 80,
+  "value": 12000000,
+  "wage": 650000
+ },
+ {
+  "clubId": "santos",
+  "name": "Miguelito",
+  "overall": 70,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "santos",
+  "name": "Philippe Coutinho",
+  "overall": 74,
+  "potential": 74,
+  "value": 1000000,
+  "wage": 150000
+ },
+ {
+  "clubId": "santos",
+  "name": "Lima",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 39000
+ },
+ {
+  "clubId": "santos",
+  "name": "Thaciano",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 63000
+ },
+ {
+  "clubId": "santos",
+  "name": "Everton",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 63000
+ },
+ {
+  "clubId": "santos",
+  "name": "Álvaro Barreal",
+  "overall": 73,
+  "potential": 73,
+  "value": 4000000,
+  "wage": 72000
+ },
+ {
+  "clubId": "santos",
+  "name": "Moisés",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gustavo Caballero",
+  "overall": 70,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "santos",
+  "name": "Mateus Xavier",
+  "overall": 60,
+  "potential": 69,
+  "value": 600000,
+  "wage": 15000
+ },
+ {
+  "clubId": "santos",
+  "name": "Benjamín Rollheiser",
+  "overall": 75,
+  "potential": 75,
+  "value": 6000000,
+  "wage": 91000
+ },
+ {
+  "clubId": "santos",
+  "name": "Enzo Boer",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 19000
+ },
+ {
+  "clubId": "santos",
+  "name": "Rony",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 72000
+ },
+ {
+  "clubId": "santos",
+  "name": "Gabriel Barbosa",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 300000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Carlos Coronel",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Rafael",
+  "overall": 74,
+  "potential": 74,
+  "value": 600000,
+  "wage": 92000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Young",
+  "overall": 64,
+  "potential": 66,
+  "value": 800000,
+  "wage": 28000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "João Pedro",
+  "overall": 60,
+  "potential": 66,
+  "value": 400000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Felipe Preis",
+  "overall": 60,
+  "potential": 66,
+  "value": 400000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Iago",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 45000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Enzo Díaz",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Wendell",
+  "overall": 72,
+  "potential": 72,
+  "value": 800000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Nicolas",
+  "overall": 63,
+  "potential": 72,
+  "value": 1000000,
+  "wage": 25000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Pedro Lima",
+  "overall": 60,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Aurélio Buta",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 57000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Lucas Ramon",
+  "overall": 69,
+  "potential": 69,
+  "value": 800000,
+  "wage": 51000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Cédric Soares",
+  "overall": 69,
+  "potential": 69,
+  "value": 500000,
+  "wage": 51000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Igor Felisberto",
+  "overall": 62,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Sabino",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Matheus Belém",
+  "overall": 64,
+  "potential": 68,
+  "value": 600000,
+  "wage": 28000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Rafael Tolói",
+  "overall": 73,
+  "potential": 73,
+  "value": 600000,
+  "wage": 150000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Domingos Duarte",
+  "overall": 71,
+  "potential": 71,
+  "value": 800000,
+  "wage": 64000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Robert Arboleda",
+  "overall": 74,
+  "potential": 74,
+  "value": 1200000,
+  "wage": 92000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Isac",
+  "overall": 60,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Luis Osorio",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 22000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Pablo Maia",
+  "overall": 74,
+  "potential": 76,
+  "value": 8000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Newton",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 45000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Marcos Antônio",
+  "overall": 75,
+  "potential": 75,
+  "value": 5000000,
+  "wage": 104000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Damián Bobadilla",
+  "overall": 74,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 92000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Danielzinho",
+  "overall": 71,
+  "potential": 71,
+  "value": 1200000,
+  "wage": 64000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Djhordney",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Cauly",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Pedro Ferreira",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Ferreirinha",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Lucca",
+  "overall": 62,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Victor Sá",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 57000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Tetê",
+  "overall": 60,
+  "potential": 69,
+  "value": 600000,
+  "wage": 17000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Artur",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Lucas Moura",
+  "overall": 77,
+  "potential": 77,
+  "value": 2000000,
+  "wage": 280000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Ryan Francisco",
+  "overall": 66,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 35000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "André Silva",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 73000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Jonathan Calleri",
+  "overall": 75,
+  "potential": 75,
+  "value": 2000000,
+  "wage": 220000
+ },
+ {
+  "clubId": "saopaulo-bra",
+  "name": "Luciano",
+  "overall": 74,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 180000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Pedro Morisco",
+  "overall": 70,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 29000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Pedro Rangel",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 18000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Keiller",
+  "overall": 67,
+  "potential": 67,
+  "value": 600000,
+  "wage": 20000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Felipe Jonatan",
+  "overall": 71,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 32000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Rodrigo Gelado",
+  "overall": 64,
+  "potential": 68,
+  "value": 600000,
+  "wage": 14000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Bruno Melo",
+  "overall": 67,
+  "potential": 67,
+  "value": 400000,
+  "wage": 20000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "JP Chermont",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Fabricio Bustos",
+  "overall": 72,
+  "potential": 72,
+  "value": 1200000,
+  "wage": 36000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Tinga",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Jacy",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Tiago Cóser",
+  "overall": 68,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Maicon",
+  "overall": 69,
+  "potential": 69,
+  "value": 300000,
+  "wage": 25000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Rodrigo Moledo",
+  "overall": 68,
+  "potential": 68,
+  "value": 300000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Thiago Santos",
+  "overall": 68,
+  "potential": 68,
+  "value": 300000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Nicolás Fonseca",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 29000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Richard",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 18000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Sebastián Gómez",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 29000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Vini Paulista",
+  "overall": 68,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Gustavo",
+  "overall": 64,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Josué",
+  "overall": 72,
+  "potential": 72,
+  "value": 500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Joaquín Lavega",
+  "overall": 70,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 29000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Breno Lopes",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Brian Ocampo",
+  "overall": 70,
+  "potential": 70,
+  "value": 2000000,
+  "wage": 29000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Keno",
+  "overall": 68,
+  "potential": 68,
+  "value": 300000,
+  "wage": 22000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Lucas Ronier",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Fabinho",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 18000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Pedro Rocha",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 29000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Renato Marques",
+  "overall": 63,
+  "potential": 67,
+  "value": 500000,
+  "wage": 12000
+ },
+ {
+  "clubId": "coritiba-bra",
+  "name": "Rodrigo Rodrigues",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 18000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Gabriel Grando",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Weverton",
+  "overall": 74,
+  "potential": 74,
+  "value": 600000,
+  "wage": 170000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Thiago Beltrame",
+  "overall": 63,
+  "potential": 67,
+  "value": 400000,
+  "wage": 20000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Gabriel Menegon",
+  "overall": 58,
+  "potential": 67,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Marlon",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Caio Paulista",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Pedro Gabriel",
+  "overall": 62,
+  "potential": 71,
+  "value": 600000,
+  "wage": 18000
+ },
+ {
+  "clubId": "gremio",
+  "name": "João Pedro",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Marcos Rocha",
+  "overall": 70,
+  "potential": 70,
+  "value": 300000,
+  "wage": 46000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Gustavo Martins",
+  "overall": 72,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Wagner Leonardo",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Fabián Balbuena",
+  "overall": 73,
+  "potential": 73,
+  "value": 1000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Walter Kannemann",
+  "overall": 71,
+  "potential": 71,
+  "value": 500000,
+  "wage": 52000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Wallace",
+  "overall": 64,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 23000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Luis Eduardo",
+  "overall": 60,
+  "potential": 69,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Erick Noriega",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Mathías Villasanti",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Danilo Barbosa",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 46000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Filip Krovinovic",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Dodi",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Juan Nardoni",
+  "overall": 72,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Tiago Augusto",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Riquelme",
+  "overall": 60,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Francis Amuzu",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Jovane Cabral",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 36000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Tetê",
+  "overall": 73,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 66000
+ },
+ {
+  "clubId": "gremio",
+  "name": "José Enamorado",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Cristian Pavón",
+  "overall": 73,
+  "potential": 73,
+  "value": 1500000,
+  "wage": 66000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Carlos Vinícius",
+  "overall": 73,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 66000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Matheus Nascimento",
+  "overall": 66,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 29000
+ },
+ {
+  "clubId": "gremio",
+  "name": "Martin Braithwaite",
+  "overall": 74,
+  "potential": 74,
+  "value": 1000000,
+  "wage": 200000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Léo Jardim",
+  "overall": 77,
+  "potential": 77,
+  "value": 4000000,
+  "wage": 107000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Daniel Fuzato",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Pablo",
+  "overall": 60,
+  "potential": 64,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Cuiabano",
+  "overall": 72,
+  "potential": 76,
+  "value": 4000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Lucas Piton",
+  "overall": 74,
+  "potential": 76,
+  "value": 5000000,
+  "wage": 75000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Riquelme",
+  "overall": 63,
+  "potential": 65,
+  "value": 600000,
+  "wage": 20000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Paulinho",
+  "overall": 62,
+  "potential": 66,
+  "value": 500000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Paulo Henrique",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "vasco",
+  "name": "José Luis Rodríguez",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "JV Fonseca",
+  "overall": 62,
+  "potential": 68,
+  "value": 500000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Robert Renan",
+  "overall": 70,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Carlos Cuesta",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Gabriel Pereira",
+  "overall": 64,
+  "potential": 64,
+  "value": 600000,
+  "wage": 23000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Alan Saldivia",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Lucas Freitas",
+  "overall": 70,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Walace Falcão",
+  "overall": 64,
+  "potential": 70,
+  "value": 800000,
+  "wage": 23000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Santiago Sosa",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Cauan Barros",
+  "overall": 68,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Thiago Mendes",
+  "overall": 72,
+  "potential": 72,
+  "value": 600000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Mateus Carvalho",
+  "overall": 68,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Jair",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Euder",
+  "overall": 62,
+  "potential": 68,
+  "value": 500000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Ramon Rique",
+  "overall": 62,
+  "potential": 71,
+  "value": 1000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Tchê Tchê",
+  "overall": 70,
+  "potential": 70,
+  "value": 600000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Alan Lescano",
+  "overall": 68,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Johan Rojas",
+  "overall": 72,
+  "potential": 76,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Guilherme Estrella",
+  "overall": 62,
+  "potential": 68,
+  "value": 800000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Andrés Gómez",
+  "overall": 73,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "vasco",
+  "name": "David",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Nuno Moreira",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Marino Hinestroza",
+  "overall": 71,
+  "potential": 73,
+  "value": 3000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Adson",
+  "overall": 72,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Loide Augusto",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Facundo Colidio",
+  "overall": 72,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 59000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Bruno Duarte",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 29000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Brenner",
+  "overall": 70,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "vasco",
+  "name": "Claudio Spinelli",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Cleiton",
+  "overall": 74,
+  "potential": 74,
+  "value": 3000000,
+  "wage": 63000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Tiago Volpi",
+  "overall": 70,
+  "potential": 70,
+  "value": 400000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Fabrício",
+  "overall": 60,
+  "potential": 60,
+  "value": 300000,
+  "wage": 12000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Gustavo Reis",
+  "overall": 60,
+  "potential": 66,
+  "value": 300000,
+  "wage": 12000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Juninho Capixaba",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 56000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Vanderlan",
+  "overall": 70,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Cauê Nascimento",
+  "overall": 62,
+  "potential": 71,
+  "value": 600000,
+  "wage": 15000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Agustín Sant'Anna",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "José Andrés Hurtado",
+  "overall": 73,
+  "potential": 75,
+  "value": 3000000,
+  "wage": 56000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Ryan Augusto",
+  "overall": 62,
+  "potential": 71,
+  "value": 600000,
+  "wage": 15000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Gustavo Marques",
+  "overall": 70,
+  "potential": 72,
+  "value": 3000000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Guzmán Rodríguez",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Alix",
+  "overall": 68,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Eduardo",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Fabinho",
+  "overall": 72,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Patrick",
+  "overall": 64,
+  "potential": 68,
+  "value": 600000,
+  "wage": 19000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Matheus Fernandes",
+  "overall": 72,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 50000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Gabriel",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Ignacio Sosa",
+  "overall": 70,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Eric Ramires",
+  "overall": 72,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 50000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Gustavo Neves",
+  "overall": 64,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 19000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Praxedes",
+  "overall": 70,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Rodriguinho",
+  "overall": 68,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 31000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Bruninho",
+  "overall": 64,
+  "potential": 68,
+  "value": 800000,
+  "wage": 19000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Marcelinho Braz",
+  "overall": 62,
+  "potential": 66,
+  "value": 500000,
+  "wage": 15000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Vinicinho",
+  "overall": 66,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 24000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Henry Mosquera",
+  "overall": 70,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 39000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Davi Gomes",
+  "overall": 64,
+  "potential": 70,
+  "value": 800000,
+  "wage": 19000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Lucas Barbosa",
+  "overall": 66,
+  "potential": 68,
+  "value": 1500000,
+  "wage": 24000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "José Herrera",
+  "overall": 66,
+  "potential": 70,
+  "value": 1500000,
+  "wage": 24000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Kawê",
+  "overall": 62,
+  "potential": 64,
+  "value": 500000,
+  "wage": 15000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Isidro Pitta",
+  "overall": 74,
+  "potential": 74,
+  "value": 4000000,
+  "wage": 63000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Wallace Yan",
+  "overall": 66,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Fernando",
+  "overall": 66,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Eduardo Sasha",
+  "overall": 73,
+  "potential": 73,
+  "value": 1000000,
+  "wage": 56000
+ },
+ {
+  "clubId": "bragantino-bra",
+  "name": "Gabriel Novaes",
+  "overall": 66,
+  "potential": 66,
+  "value": 1000000,
+  "wage": 24000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Anthoni",
+  "overall": 70,
+  "potential": 72,
+  "value": 2500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Matheus Cunha",
+  "overall": 66,
+  "potential": 68,
+  "value": 800000,
+  "wage": 29000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Sergio Rochet",
+  "overall": 77,
+  "potential": 77,
+  "value": 2500000,
+  "wage": 180000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Kauan",
+  "overall": 60,
+  "potential": 64,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Diego Esser",
+  "overall": 60,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Alexandro Bernabei",
+  "overall": 76,
+  "potential": 78,
+  "value": 6000000,
+  "wage": 95000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Matheus Bahia",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 36000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Bruno Gomes",
+  "overall": 72,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Braian Aguirre",
+  "overall": 73,
+  "potential": 73,
+  "value": 2500000,
+  "wage": 66000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Victor Gabriel",
+  "overall": 68,
+  "potential": 72,
+  "value": 2000000,
+  "wage": 36000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Guillermo Maripán",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Félix Torres",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Juninho",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Gabriel Mercado",
+  "overall": 69,
+  "potential": 69,
+  "value": 200000,
+  "wage": 41000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Rodrigo Villagra",
+  "overall": 72,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Thiago Maia",
+  "overall": 74,
+  "potential": 74,
+  "value": 2500000,
+  "wage": 75000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Ronaldo",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 46000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Benjamin",
+  "overall": 62,
+  "potential": 68,
+  "value": 500000,
+  "wage": 18000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Paulinho Paula",
+  "overall": 64,
+  "potential": 64,
+  "value": 500000,
+  "wage": 23000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Bruno Henrique",
+  "overall": 72,
+  "potential": 72,
+  "value": 500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Niclas Eliasson",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 46000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Alan Patrick",
+  "overall": 77,
+  "potential": 77,
+  "value": 1500000,
+  "wage": 220000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Calebe",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 29000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Allex",
+  "overall": 58,
+  "potential": 64,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Yago Noal",
+  "overall": 60,
+  "potential": 69,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Johan Carbonero",
+  "overall": 75,
+  "potential": 75,
+  "value": 4000000,
+  "wage": 85000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Vitinho",
+  "overall": 73,
+  "potential": 73,
+  "value": 2000000,
+  "wage": 66000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Kayky",
+  "overall": 70,
+  "potential": 74,
+  "value": 1500000,
+  "wage": 46000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Alerrandro",
+  "overall": 71,
+  "potential": 71,
+  "value": 2000000,
+  "wage": 52000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Antonio Sanabria",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 59000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Raykkonen",
+  "overall": 60,
+  "potential": 69,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Marcel",
+  "overall": 62,
+  "potential": 68,
+  "value": 600000,
+  "wage": 18000
+ },
+ {
+  "clubId": "internacional-bra",
+  "name": "Gabriel Almeida",
+  "overall": 60,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "remo",
+  "name": "Ivan",
+  "overall": 69,
+  "potential": 69,
+  "value": 400000,
+  "wage": 24000
+ },
+ {
+  "clubId": "remo",
+  "name": "Marcelo Rangel",
+  "overall": 67,
+  "potential": 67,
+  "value": 200000,
+  "wage": 19000
+ },
+ {
+  "clubId": "remo",
+  "name": "Ygor Vinhas",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 12000
+ },
+ {
+  "clubId": "remo",
+  "name": "Mayk",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Marlon",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 21000
+ },
+ {
+  "clubId": "remo",
+  "name": "João Lucas",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Matheus Alexandre",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Marcelinho",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 13000
+ },
+ {
+  "clubId": "remo",
+  "name": "Zé Ivaldo",
+  "overall": 70,
+  "potential": 70,
+  "value": 800000,
+  "wage": 27000
+ },
+ {
+  "clubId": "remo",
+  "name": "Tchamba",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Matheus Felipe",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 13000
+ },
+ {
+  "clubId": "remo",
+  "name": "Léo Andrade",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 21000
+ },
+ {
+  "clubId": "remo",
+  "name": "Marllon",
+  "overall": 67,
+  "potential": 67,
+  "value": 300000,
+  "wage": 19000
+ },
+ {
+  "clubId": "remo",
+  "name": "Cristian Tassano",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Leonel Picco",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Zé Welison",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 21000
+ },
+ {
+  "clubId": "remo",
+  "name": "David Braga",
+  "overall": 64,
+  "potential": 66,
+  "value": 500000,
+  "wage": 13000
+ },
+ {
+  "clubId": "remo",
+  "name": "Zé Ricardo",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 13000
+ },
+ {
+  "clubId": "remo",
+  "name": "Patrick",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 17000
+ },
+ {
+  "clubId": "remo",
+  "name": "Vitor Bueno",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 21000
+ },
+ {
+  "clubId": "remo",
+  "name": "Jajá",
+  "overall": 67,
+  "potential": 67,
+  "value": 500000,
+  "wage": 19000
+ },
+ {
+  "clubId": "remo",
+  "name": "Jáderson",
+  "overall": 67,
+  "potential": 67,
+  "value": 600000,
+  "wage": 19000
+ },
+ {
+  "clubId": "remo",
+  "name": "Alef Manga",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 21000
+ },
+ {
+  "clubId": "remo",
+  "name": "Antonio Galeano",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 21000
+ },
+ {
+  "clubId": "remo",
+  "name": "Yago Pikachu",
+  "overall": 70,
+  "potential": 70,
+  "value": 400000,
+  "wage": 27000
+ },
+ {
+  "clubId": "remo",
+  "name": "Gabriel Taliari",
+  "overall": 67,
+  "potential": 67,
+  "value": 600000,
+  "wage": 19000
+ },
+ {
+  "clubId": "remo",
+  "name": "Gabriel Poveda",
+  "overall": 65,
+  "potential": 65,
+  "value": 400000,
+  "wage": 15000
+ },
+ {
+  "clubId": "remo",
+  "name": "Eduardo Melo",
+  "overall": 66,
+  "potential": 68,
+  "value": 600000,
+  "wage": 17000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Lucas Arcanjo",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Fintelman",
+  "overall": 60,
+  "potential": 62,
+  "value": 300000,
+  "wage": 8600
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Yuri Sena",
+  "overall": 62,
+  "potential": 64,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Luan Cândido",
+  "overall": 68,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Ramon",
+  "overall": 66,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Jamerson",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Nathan Mendes",
+  "overall": 64,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Fabiano",
+  "overall": 62,
+  "potential": 62,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Mateus Silva",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Riccieli",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Cacá",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Zé Marcos",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Edu Ribeiro",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Emanuel Brítez",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Camutanga",
+  "overall": 69,
+  "potential": 69,
+  "value": 500000,
+  "wage": 25000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Darlan",
+  "overall": 63,
+  "potential": 67,
+  "value": 400000,
+  "wage": 12000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Walace",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Baralhas",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Rúben Ismael",
+  "overall": 68,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Dudu",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 18000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Caíque Gonçalves",
+  "overall": 63,
+  "potential": 63,
+  "value": 300000,
+  "wage": 12000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Zé Vitor",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Tomás Pochettino",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 29000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Matheuzinho",
+  "overall": 70,
+  "potential": 70,
+  "value": 1000000,
+  "wage": 29000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Emmanuel Martínez",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 22000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Diego Tarzia",
+  "overall": 64,
+  "potential": 68,
+  "value": 800000,
+  "wage": 14000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Renê",
+  "overall": 63,
+  "potential": 67,
+  "value": 500000,
+  "wage": 12000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Erick",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 29000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Ignacio Laquintana",
+  "overall": 70,
+  "potential": 70,
+  "value": 1200000,
+  "wage": 29000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Marinho",
+  "overall": 69,
+  "potential": 69,
+  "value": 300000,
+  "wage": 25000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Osvaldo",
+  "overall": 62,
+  "potential": 62,
+  "value": 100000,
+  "wage": 11000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Renato Kayzer",
+  "overall": 72,
+  "potential": 72,
+  "value": 1500000,
+  "wage": 36000
+ },
+ {
+  "clubId": "vitoria",
+  "name": "Fabri",
+  "overall": 66,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 18000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Anderson",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Rafael Santos",
+  "overall": 65,
+  "potential": 65,
+  "value": 200000,
+  "wage": 13000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Léo Vieira",
+  "overall": 62,
+  "potential": 62,
+  "value": 100000,
+  "wage": 8700
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Mancha",
+  "overall": 66,
+  "potential": 68,
+  "value": 600000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Walter Clar",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Bruno Pacheco",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 18000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Arthur Vanzela",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8700
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Marcos Vinícius",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Everton",
+  "overall": 63,
+  "potential": 63,
+  "value": 300000,
+  "wage": 9900
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Doma",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "João Paulo",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Victor Caetano",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Bruno Leonardo",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Rafael Thyere",
+  "overall": 67,
+  "potential": 67,
+  "value": 400000,
+  "wage": 16000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Kauan Faria",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8700
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Carvalheira",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Camilo",
+  "overall": 67,
+  "potential": 67,
+  "value": 500000,
+  "wage": 16000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Higor Meritão",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Vinicius Balieiro",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Bruno Matias",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "João Vitor",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Robert Santos",
+  "overall": 62,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8700
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Jean Carlos",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Giovanni Augusto",
+  "overall": 65,
+  "potential": 65,
+  "value": 200000,
+  "wage": 13000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Maurício Garcez",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Ênio",
+  "overall": 66,
+  "potential": 68,
+  "value": 600000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Mailson",
+  "overall": 64,
+  "potential": 68,
+  "value": 600000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Marcinho",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 14000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Perotti",
+  "overall": 67,
+  "potential": 67,
+  "value": 600000,
+  "wage": 16000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Neto Pessoa",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "chapecoense-bra",
+  "name": "Yannick Bolasie",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 14000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Matheus Nogueira",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 10000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Richard Costa",
+  "overall": 68,
+  "potential": 68,
+  "value": 200000,
+  "wage": 13000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Caíque França",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 7100
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Luizão",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 10000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Thalisson",
+  "overall": 64,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Júlio César",
+  "overall": 63,
+  "potential": 67,
+  "value": 400000,
+  "wage": 7100
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Éder",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 10000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Luiz Otávio",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 8000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Sávio",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 8000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Sánchez",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 13000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Rafael Ramos",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 13000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Zanocelo",
+  "overall": 68,
+  "potential": 70,
+  "value": 800000,
+  "wage": 13000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Richardson",
+  "overall": 68,
+  "potential": 68,
+  "value": 200000,
+  "wage": 13000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Matheus Araújo",
+  "overall": 67,
+  "potential": 69,
+  "value": 800000,
+  "wage": 11000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Vina",
+  "overall": 70,
+  "potential": 70,
+  "value": 400000,
+  "wage": 16000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Lucas Mugni",
+  "overall": 70,
+  "potential": 70,
+  "value": 500000,
+  "wage": 16000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Lenny Lobato",
+  "overall": 63,
+  "potential": 65,
+  "value": 400000,
+  "wage": 7100
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Wendel",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 8000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Saulo Mineiro",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 13000
+ },
+ {
+  "clubId": "ceara-bra",
+  "name": "Renzo López",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 8000
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Alisson",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8200
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Luciano Castán",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 6400
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Rodrigo",
+  "overall": 62,
+  "potential": 62,
+  "value": 100000,
+  "wage": 5000
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Marcelo Hermes",
+  "overall": 65,
+  "potential": 65,
+  "value": 300000,
+  "wage": 7200
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Willean Lepo",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 6400
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Marcinho",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8200
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Ronald",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 6400
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Eduardo",
+  "overall": 65,
+  "potential": 65,
+  "value": 300000,
+  "wage": 7200
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Jean Irmer",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 6400
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Rómulo Otero",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 8200
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Fellipe Mateus",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5700
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Diego Gonçalves",
+  "overall": 65,
+  "potential": 65,
+  "value": 300000,
+  "wage": 7200
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Waguininho",
+  "overall": 62,
+  "potential": 62,
+  "value": 100000,
+  "wage": 5000
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Romarinho",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 6400
+ },
+ {
+  "clubId": "criciuma-bra",
+  "name": "Yuri Tanque",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 5700
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "João Ricardo",
+  "overall": 68,
+  "potential": 68,
+  "value": 200000,
+  "wage": 14000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Lucas Gazal",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 11000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Tomás Cardona",
+  "overall": 68,
+  "potential": 68,
+  "value": 800000,
+  "wage": 14000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Bastos",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 11000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Ronald",
+  "overall": 64,
+  "potential": 68,
+  "value": 600000,
+  "wage": 8500
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Rodrigo Santos",
+  "overall": 66,
+  "potential": 66,
+  "value": 600000,
+  "wage": 11000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Lucas Sasha",
+  "overall": 68,
+  "potential": 68,
+  "value": 200000,
+  "wage": 14000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Pierre",
+  "overall": 66,
+  "potential": 68,
+  "value": 600000,
+  "wage": 11000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Lucca Prior",
+  "overall": 64,
+  "potential": 68,
+  "value": 1000000,
+  "wage": 8500
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Lucas Crispim",
+  "overall": 68,
+  "potential": 68,
+  "value": 500000,
+  "wage": 14000
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Paulo Baya",
+  "overall": 64,
+  "potential": 64,
+  "value": 500000,
+  "wage": 8500
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Pedro Henrique",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 8500
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Nathan Fogaça",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 8500
+ },
+ {
+  "clubId": "fortaleza",
+  "name": "Chico da Costa",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 8500
+ },
+ {
+  "clubId": "goias",
+  "name": "Tadeu",
+  "overall": 67,
+  "potential": 67,
+  "value": 200000,
+  "wage": 10000
+ },
+ {
+  "clubId": "goias",
+  "name": "Thiago Rodrigues",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Lucas Ribeiro",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Ramon Menezes",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Djalma Silva",
+  "overall": 62,
+  "potential": 62,
+  "value": 200000,
+  "wage": 5700
+ },
+ {
+  "clubId": "goias",
+  "name": "Rodrigo Soares",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Filipe Machado",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Juninho",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Lucas Lima",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 9200
+ },
+ {
+  "clubId": "goias",
+  "name": "Bruno Sávio",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Esli García",
+  "overall": 64,
+  "potential": 64,
+  "value": 400000,
+  "wage": 7200
+ },
+ {
+  "clubId": "goias",
+  "name": "Wellington Rato",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 9200
+ },
+ {
+  "clubId": "goias",
+  "name": "Anselmo Ramon",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6400
+ },
+ {
+  "clubId": "juventude",
+  "name": "Jandrei",
+  "overall": 68,
+  "potential": 68,
+  "value": 400000,
+  "wage": 12000
+ },
+ {
+  "clubId": "juventude",
+  "name": "Rodrigo Sam",
+  "overall": 67,
+  "potential": 67,
+  "value": 400000,
+  "wage": 11000
+ },
+ {
+  "clubId": "juventude",
+  "name": "Titi",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6600
+ },
+ {
+  "clubId": "juventude",
+  "name": "Patryck",
+  "overall": 64,
+  "potential": 68,
+  "value": 400000,
+  "wage": 7500
+ },
+ {
+  "clubId": "juventude",
+  "name": "Diogo Barbosa",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 7500
+ },
+ {
+  "clubId": "juventude",
+  "name": "Alan Ruschel",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6600
+ },
+ {
+  "clubId": "juventude",
+  "name": "Raí Ramos",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 9500
+ },
+ {
+  "clubId": "juventude",
+  "name": "Aderlan",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6600
+ },
+ {
+  "clubId": "juventude",
+  "name": "Lucas Mineiro",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 9500
+ },
+ {
+  "clubId": "juventude",
+  "name": "Mandaca",
+  "overall": 66,
+  "potential": 68,
+  "value": 500000,
+  "wage": 9500
+ },
+ {
+  "clubId": "juventude",
+  "name": "Alan Kardec",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 7500
+ },
+ {
+  "clubId": "juventude",
+  "name": "Luis Amarilla",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 6600
+ },
+ {
+  "clubId": "sport",
+  "name": "Thiago Couto",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 10000
+ },
+ {
+  "clubId": "sport",
+  "name": "Denis",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 7100
+ },
+ {
+  "clubId": "sport",
+  "name": "Marcelo Benevenuto",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 10000
+ },
+ {
+  "clubId": "sport",
+  "name": "Patrick de Paula",
+  "overall": 68,
+  "potential": 68,
+  "value": 600000,
+  "wage": 13000
+ },
+ {
+  "clubId": "sport",
+  "name": "Willian Oliveira",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 8000
+ },
+ {
+  "clubId": "sport",
+  "name": "Carlos de Pena",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 10000
+ },
+ {
+  "clubId": "sport",
+  "name": "Clayson",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 8000
+ },
+ {
+  "clubId": "sport",
+  "name": "Chrystian Barletta",
+  "overall": 64,
+  "potential": 66,
+  "value": 500000,
+  "wage": 8000
+ },
+ {
+  "clubId": "sport",
+  "name": "Perotti",
+  "overall": 66,
+  "potential": 66,
+  "value": 500000,
+  "wage": 10000
+ },
+ {
+  "clubId": "sport",
+  "name": "Neto Pessoa",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 7100
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Jordi",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 8200
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Patrick",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 6400
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Alexis Alvariño",
+  "overall": 64,
+  "potential": 66,
+  "value": 300000,
+  "wage": 6400
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Carlinhos",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 6400
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Eduardo Brock",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5700
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Renato Palm",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 6400
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Sander",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5700
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Madson",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5700
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Léo Naldi",
+  "overall": 64,
+  "potential": 66,
+  "value": 300000,
+  "wage": 6400
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Luís Oyama",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8200
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Marlon",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5700
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Matheus Bianqui",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 8200
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Christian Ortíz",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5700
+ },
+ {
+  "clubId": "novorinzontino-sp",
+  "name": "Robson",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 6400
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "Vladimir",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 7200
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "Adriano Martins",
+  "overall": 66,
+  "potential": 66,
+  "value": 400000,
+  "wage": 9200
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "Guilherme Lopes",
+  "overall": 64,
+  "potential": 66,
+  "value": 400000,
+  "wage": 7200
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "Leandro Vilela",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 7200
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "Matheusinho",
+  "overall": 65,
+  "potential": 65,
+  "value": 300000,
+  "wage": 8100
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "David Terans",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 9200
+ },
+ {
+  "clubId": "atleticogo-bra",
+  "name": "Marrony",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 7200
+ },
+ {
+  "clubId": "avai-bra",
+  "name": "Igor Bohn",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 5900
+ },
+ {
+  "clubId": "avai-bra",
+  "name": "Reynaldo",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 5900
+ },
+ {
+  "clubId": "avai-bra",
+  "name": "Zé Ricardo",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 5900
+ },
+ {
+  "clubId": "avai-bra",
+  "name": "Felipe Vizeu",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 5200
+ },
+ {
+  "clubId": "avai-bra",
+  "name": "Léo Gamalho",
+  "overall": 60,
+  "potential": 60,
+  "value": 50000,
+  "wage": 3600
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Fábio Alemão",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 5900
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Bressan",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5900
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Lucas Lovat",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 5900
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Hereda",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5200
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Danielzinho",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 5900
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Pedro Castro",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5200
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Douglas Baggio",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5200
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Dadá Belmonte",
+  "overall": 63,
+  "potential": 63,
+  "value": 200000,
+  "wage": 5200
+ },
+ {
+  "clubId": "crb-bra",
+  "name": "Luiz Phellype",
+  "overall": 62,
+  "potential": 62,
+  "value": 100000,
+  "wage": 4600
+ },
+ {
+  "clubId": "pontepreta-bra",
+  "name": "Danilo Barcelos",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5300
+ },
+ {
+  "clubId": "pontepreta-bra",
+  "name": "Élvis",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5300
+ },
+ {
+  "clubId": "pontepreta-bra",
+  "name": "Rodrigo Souza",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "pontepreta-bra",
+  "name": "Jonathan Cafu",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "vilago",
+  "name": "Helton Leite",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5900
+ },
+ {
+  "clubId": "vilago",
+  "name": "Tiago Pagnussat",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4600
+ },
+ {
+  "clubId": "vilago",
+  "name": "Igor Cariús",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5200
+ },
+ {
+  "clubId": "vilago",
+  "name": "Hayner",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5200
+ },
+ {
+  "clubId": "vilago",
+  "name": "Willian Formiga",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 5200
+ },
+ {
+  "clubId": "vilago",
+  "name": "Higor Meritão",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5900
+ },
+ {
+  "clubId": "vilago",
+  "name": "Marquinhos Gabriel",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4600
+ },
+ {
+  "clubId": "vilago",
+  "name": "Everton Galdino",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 5900
+ },
+ {
+  "clubId": "vilago",
+  "name": "Janderson",
+  "overall": 64,
+  "potential": 64,
+  "value": 300000,
+  "wage": 5900
+ },
+ {
+  "clubId": "vilago",
+  "name": "Dellatorre",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4600
+ },
+ {
+  "clubId": "vilago",
+  "name": "Rafa Silva",
+  "overall": 62,
+  "potential": 62,
+  "value": 100000,
+  "wage": 4600
+ },
+ {
+  "clubId": "cuiaba-bra",
+  "name": "João Carlos",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 5700
+ },
+ {
+  "clubId": "cuiaba-bra",
+  "name": "Alan Empereur",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 9200
+ },
+ {
+  "clubId": "operario-pr",
+  "name": "Gabriel Boschilia",
+  "overall": 66,
+  "potential": 66,
+  "value": 300000,
+  "wage": 6800
+ },
+ {
+  "clubId": "operario-pr",
+  "name": "Aylon",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5300
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Ricardo Silva",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6400
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Manoel",
+  "overall": 63,
+  "potential": 63,
+  "value": 50000,
+  "wage": 6400
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Alê",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 7200
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Fernando Elizari",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6400
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Guilherme Parede",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 6400
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Willian Bigode",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 5700
+ },
+ {
+  "clubId": "americamg-bra",
+  "name": "Gonzalo Mastriani",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 7200
+ },
+ {
+  "clubId": "nautico",
+  "name": "Muriel",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "nautico",
+  "name": "Auremir",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "nautico",
+  "name": "Jean Carlos",
+  "overall": 63,
+  "potential": 63,
+  "value": 50000,
+  "wage": 4700
+ },
+ {
+  "clubId": "nautico",
+  "name": "Victor Andrade",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4700
+ },
+ {
+  "clubId": "nautico",
+  "name": "Paulo Sérgio",
+  "overall": 61,
+  "potential": 61,
+  "value": 50000,
+  "wage": 3700
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Victor Souza",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4700
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Wallace",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5300
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Gabriel Inocêncio",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4700
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Matheus Sales",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 5300
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Rafael Gava",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Arthur Caíke",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "botafogosp-bra",
+  "name": "Hygor",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 4200
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "Mauricio Kozlinski",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4300
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "Wallace",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 3800
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "Nino Paraíba",
+  "overall": 61,
+  "potential": 61,
+  "value": 30000,
+  "wage": 3400
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "Tarik",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4300
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "William Pottker",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 4800
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "Pablo Dyego",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4300
+ },
+ {
+  "clubId": "londrina-pr",
+  "name": "Gilberto",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 3800
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Jemerson",
+  "overall": 66,
+  "potential": 66,
+  "value": 200000,
+  "wage": 6100
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Pará",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4300
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Foguinho",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 3800
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Hyoran",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4300
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Léo Jabá",
+  "overall": 64,
+  "potential": 64,
+  "value": 200000,
+  "wage": 4800
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Felipe Garcia",
+  "overall": 61,
+  "potential": 61,
+  "value": 50000,
+  "wage": 3400
+ },
+ {
+  "clubId": "saobernardo-sp",
+  "name": "Daniel Amorim",
+  "overall": 60,
+  "potential": 60,
+  "value": 30000,
+  "wage": 3000
+ },
+ {
+  "clubId": "athleticclub-mg",
+  "name": "Luan Polli",
+  "overall": 63,
+  "potential": 63,
+  "value": 100000,
+  "wage": 4300
+ },
+ {
+  "clubId": "athleticclub-mg",
+  "name": "Philipe Sampaio",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 4800
+ },
+ {
+  "clubId": "athleticclub-mg",
+  "name": "Sidimar",
+  "overall": 62,
+  "potential": 62,
+  "value": 50000,
+  "wage": 3800
+ },
+ {
+  "clubId": "athleticclub-mg",
+  "name": "Zeca",
+  "overall": 64,
+  "potential": 64,
+  "value": 100000,
+  "wage": 4800
+ }
+]

@@ -1,0 +1,3824 @@
+{
+ "amazulu-rsa": {
+  "balance": 480000,
+  "revenue": 6000000,
+  "wageBill": 3000000,
+  "squadValue": 12000000,
+  "confidence": "low"
+ },
+ "polokwanecity-rsa": {
+  "balance": 440000,
+  "revenue": 5480000,
+  "wageBill": 2740000,
+  "squadValue": 10690000,
+  "confidence": "low"
+ },
+ "capetown-rsa": {
+  "balance": 400000,
+  "revenue": 5000000,
+  "wageBill": 2500000,
+  "squadValue": 9520000,
+  "confidence": "low"
+ },
+ "celtic-rsa": {
+  "balance": 360000,
+  "revenue": 4560000,
+  "wageBill": 2280000,
+  "squadValue": 8490000,
+  "confidence": "low"
+ },
+ "chippa-rsa": {
+  "balance": 330000,
+  "revenue": 4160000,
+  "wageBill": 2080000,
+  "squadValue": 7560000,
+  "confidence": "low"
+ },
+ "supersport-rsa": {
+  "balance": 300000,
+  "revenue": 3800000,
+  "wageBill": 1900000,
+  "squadValue": 6730000,
+  "confidence": "low"
+ },
+ "stellenbosch-rsa": {
+  "balance": 280000,
+  "revenue": 3460000,
+  "wageBill": 1730000,
+  "squadValue": 6000000,
+  "confidence": "low"
+ },
+ "highlandspark-rsa": {
+  "balance": 250000,
+  "revenue": 3160000,
+  "wageBill": 1580000,
+  "squadValue": 5350000,
+  "confidence": "low"
+ },
+ "bidvest-afs": {
+  "balance": 230000,
+  "revenue": 2880000,
+  "wageBill": 1440000,
+  "squadValue": 4760000,
+  "confidence": "low"
+ },
+ "arrows-rsa": {
+  "balance": 210000,
+  "revenue": 2630000,
+  "wageBill": 1320000,
+  "squadValue": 4240000,
+  "confidence": "low"
+ },
+ "galaxy-rsa": {
+  "balance": 190000,
+  "revenue": 2400000,
+  "wageBill": 1200000,
+  "squadValue": 3780000,
+  "confidence": "low"
+ },
+ "royaleagles-rsa": {
+  "balance": 180000,
+  "revenue": 2190000,
+  "wageBill": 1100000,
+  "squadValue": 3370000,
+  "confidence": "low"
+ },
+ "blackleopards-rsa": {
+  "balance": 160000,
+  "revenue": 2000000,
+  "wageBill": 1000000,
+  "squadValue": 3000000,
+  "confidence": "low"
+ },
+ "mamelodisundows-afs": {
+  "balance": 10000000,
+  "revenue": 40000000,
+  "wageBill": 18000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "orlandopirates-afs": {
+  "balance": 4000000,
+  "revenue": 20000000,
+  "wageBill": 9000000,
+  "squadValue": 18000000,
+  "confidence": "medium"
+ },
+ "kaiserchiefs-afs": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 9000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "jeddah-ara": {
+  "balance": 10000000,
+  "revenue": 50000000,
+  "wageBill": 42500000,
+  "squadValue": 50000000,
+  "confidence": "low"
+ },
+ "al-fateh-ara": {
+  "balance": 8750000,
+  "revenue": 43740000,
+  "wageBill": 37180000,
+  "squadValue": 43740000,
+  "confidence": "low"
+ },
+ "al-raed-ara": {
+  "balance": 7650000,
+  "revenue": 38260000,
+  "wageBill": 32520000,
+  "squadValue": 38260000,
+  "confidence": "low"
+ },
+ "al-wehda-ara": {
+  "balance": 6690000,
+  "revenue": 33470000,
+  "wageBill": 28450000,
+  "squadValue": 33470000,
+  "confidence": "low"
+ },
+ "abha-ara": {
+  "balance": 5860000,
+  "revenue": 29280000,
+  "wageBill": 24890000,
+  "squadValue": 29280000,
+  "confidence": "low"
+ },
+ "al-hazem-ara": {
+  "balance": 5120000,
+  "revenue": 25610000,
+  "wageBill": 21770000,
+  "squadValue": 25610000,
+  "confidence": "low"
+ },
+ "al-fayha-ara": {
+  "balance": 4480000,
+  "revenue": 22410000,
+  "wageBill": 19050000,
+  "squadValue": 22410000,
+  "confidence": "low"
+ },
+ "al-khaleej-ara": {
+  "balance": 3920000,
+  "revenue": 19600000,
+  "wageBill": 16660000,
+  "squadValue": 19600000,
+  "confidence": "low"
+ },
+ "alriyadh-ara": {
+  "balance": 3430000,
+  "revenue": 17150000,
+  "wageBill": 14570000,
+  "squadValue": 17150000,
+  "confidence": "low"
+ },
+ "al-faisaly-ara": {
+  "balance": 3000000,
+  "revenue": 15000000,
+  "wageBill": 12750000,
+  "squadValue": 15000000,
+  "confidence": "low"
+ },
+ "al-hilal": {
+  "balance": 120000000,
+  "revenue": 250000000,
+  "wageBill": 200000000,
+  "squadValue": 218200000,
+  "confidence": "high"
+ },
+ "alittihad-ara": {
+  "balance": 80000000,
+  "revenue": 180000000,
+  "wageBill": 180000000,
+  "squadValue": 146900000,
+  "confidence": "medium"
+ },
+ "alnassr-ara": {
+  "balance": 80000000,
+  "revenue": 220000000,
+  "wageBill": 330000000,
+  "squadValue": 143400000,
+  "confidence": "high"
+ },
+ "al-qadisiya-ara": {
+  "balance": 60000000,
+  "revenue": 120000000,
+  "wageBill": 110000000,
+  "squadValue": 151700000,
+  "confidence": "medium"
+ },
+ "al-ahli-ara": {
+  "balance": 70000000,
+  "revenue": 160000000,
+  "wageBill": 160000000,
+  "squadValue": 180400000,
+  "confidence": "medium"
+ },
+ "neom-ara": {
+  "balance": 30000000,
+  "revenue": 80000000,
+  "wageBill": 60000000,
+  "squadValue": 80000000,
+  "confidence": "medium"
+ },
+ "alkholood-ara": {
+  "balance": 8000000,
+  "revenue": 40000000,
+  "wageBill": 35000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "ettifaq-ara": {
+  "balance": 15000000,
+  "revenue": 60000000,
+  "wageBill": 50000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "al-taawon-ara": {
+  "balance": 8000000,
+  "revenue": 45000000,
+  "wageBill": 35000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "al-shabab-ara": {
+  "balance": 15000000,
+  "revenue": 60000000,
+  "wageBill": 55000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "constantine-arg": {
+  "balance": 300000,
+  "revenue": 6000000,
+  "wageBill": 3900000,
+  "squadValue": 6000000,
+  "confidence": "low"
+ },
+ "asochlef-alg": {
+  "balance": 270000,
+  "revenue": 5380000,
+  "wageBill": 3490000,
+  "squadValue": 5380000,
+  "confidence": "low"
+ },
+ "mcoran-alg": {
+  "balance": 240000,
+  "revenue": 4820000,
+  "wageBill": 3130000,
+  "squadValue": 4820000,
+  "confidence": "low"
+ },
+ "husseindey-alg": {
+  "balance": 220000,
+  "revenue": 4320000,
+  "wageBill": 2800000,
+  "squadValue": 4320000,
+  "confidence": "low"
+ },
+ "biskra-alg": {
+  "balance": 190000,
+  "revenue": 3870000,
+  "wageBill": 2510000,
+  "squadValue": 3870000,
+  "confidence": "low"
+ },
+ "bordjbouarreridj-alg": {
+  "balance": 170000,
+  "revenue": 3460000,
+  "wageBill": 2250000,
+  "squadValue": 3460000,
+  "confidence": "low"
+ },
+ "mlila-alg": {
+  "balance": 160000,
+  "revenue": 3100000,
+  "wageBill": 2020000,
+  "squadValue": 3100000,
+  "confidence": "low"
+ },
+ "jssaoura-arl": {
+  "balance": 140000,
+  "revenue": 2780000,
+  "wageBill": 1810000,
+  "squadValue": 2780000,
+  "confidence": "low"
+ },
+ "magra-alg": {
+  "balance": 120000,
+  "revenue": 2490000,
+  "wageBill": 1620000,
+  "squadValue": 2490000,
+  "confidence": "low"
+ },
+ "khenchela-alg": {
+  "balance": 110000,
+  "revenue": 2230000,
+  "wageBill": 1450000,
+  "squadValue": 2230000,
+  "confidence": "low"
+ },
+ "rouissat-alg": {
+  "balance": 100000,
+  "revenue": 2000000,
+  "wageBill": 1300000,
+  "squadValue": 2000000,
+  "confidence": "low"
+ },
+ "crbelouizdad-arl": {
+  "balance": 1000000,
+  "revenue": 10000000,
+  "wageBill": 7000000,
+  "squadValue": 10000000,
+  "confidence": "medium"
+ },
+ "essetif-arl": {
+  "balance": 500000,
+  "revenue": 7000000,
+  "wageBill": 5000000,
+  "squadValue": 7000000,
+  "confidence": "medium"
+ },
+ "jskabylie-arg": {
+  "balance": 1000000,
+  "revenue": 8000000,
+  "wageBill": 6000000,
+  "squadValue": 8000000,
+  "confidence": "medium"
+ },
+ "mcalger-arl": {
+  "balance": 1000000,
+  "revenue": 12000000,
+  "wageBill": 8000000,
+  "squadValue": 10000000,
+  "confidence": "medium"
+ },
+ "usmalger-arl": {
+  "balance": 1000000,
+  "revenue": 10000000,
+  "wageBill": 7000000,
+  "squadValue": 9000000,
+  "confidence": "medium"
+ },
+ "tigre-arg": {
+  "balance": 1680000,
+  "revenue": 28000000,
+  "wageBill": 15400000,
+  "squadValue": 40000000,
+  "confidence": "low"
+ },
+ "independienteridavia-arg": {
+  "balance": 1520000,
+  "revenue": 25270000,
+  "wageBill": 13900000,
+  "squadValue": 35930000,
+  "confidence": "low"
+ },
+ "sarmiento-arg": {
+  "balance": 1370000,
+  "revenue": 22800000,
+  "wageBill": 12540000,
+  "squadValue": 32270000,
+  "confidence": "low"
+ },
+ "atleticotucaman-arg": {
+  "balance": 1230000,
+  "revenue": 20580000,
+  "wageBill": 11320000,
+  "squadValue": 28990000,
+  "confidence": "low"
+ },
+ "godoycruz-ar": {
+  "balance": 1110000,
+  "revenue": 18570000,
+  "wageBill": 10210000,
+  "squadValue": 26040000,
+  "confidence": "low"
+ },
+ "banfield-arg": {
+  "balance": 1010000,
+  "revenue": 16760000,
+  "wageBill": 9220000,
+  "squadValue": 23390000,
+  "confidence": "low"
+ },
+ "aldosivi-arg": {
+  "balance": 910000,
+  "revenue": 15120000,
+  "wageBill": 8320000,
+  "squadValue": 21010000,
+  "confidence": "low"
+ },
+ "platense-arg": {
+  "balance": 820000,
+  "revenue": 13640000,
+  "wageBill": 7500000,
+  "squadValue": 18870000,
+  "confidence": "low"
+ },
+ "defensayjusticia-ar": {
+  "balance": 740000,
+  "revenue": 12310000,
+  "wageBill": 6770000,
+  "squadValue": 16950000,
+  "confidence": "low"
+ },
+ "gimnasiamendoza-arg": {
+  "balance": 670000,
+  "revenue": 11110000,
+  "wageBill": 6110000,
+  "squadValue": 15230000,
+  "confidence": "low"
+ },
+ "centralcordoba-arg": {
+  "balance": 600000,
+  "revenue": 10030000,
+  "wageBill": 5510000,
+  "squadValue": 13680000,
+  "confidence": "low"
+ },
+ "union-arg": {
+  "balance": 540000,
+  "revenue": 9050000,
+  "wageBill": 4980000,
+  "squadValue": 12290000,
+  "confidence": "low"
+ },
+ "instituto-arg": {
+  "balance": 490000,
+  "revenue": 8160000,
+  "wageBill": 4490000,
+  "squadValue": 11040000,
+  "confidence": "low"
+ },
+ "estudiantesderiocuarto-arg": {
+  "balance": 440000,
+  "revenue": 7370000,
+  "wageBill": 4050000,
+  "squadValue": 9910000,
+  "confidence": "low"
+ },
+ "barracascentral-arg": {
+  "balance": 400000,
+  "revenue": 6650000,
+  "wageBill": 3660000,
+  "squadValue": 8910000,
+  "confidence": "low"
+ },
+ "depriestra-arg": {
+  "balance": 360000,
+  "revenue": 6000000,
+  "wageBill": 3300000,
+  "squadValue": 8000000,
+  "confidence": "low"
+ },
+ "bocajuniors-arg": {
+  "balance": 20000000,
+  "revenue": 140000000,
+  "wageBill": 70000000,
+  "squadValue": 106500000,
+  "confidence": "high"
+ },
+ "riverplate-arg": {
+  "balance": 25000000,
+  "revenue": 150000000,
+  "wageBill": 80000000,
+  "squadValue": 104000000,
+  "confidence": "high"
+ },
+ "estudiantes-ar": {
+  "balance": 6000000,
+  "revenue": 50000000,
+  "wageBill": 28000000,
+  "squadValue": 44800000,
+  "confidence": "medium"
+ },
+ "racing-arg": {
+  "balance": 8000000,
+  "revenue": 70000000,
+  "wageBill": 40000000,
+  "squadValue": 51000000,
+  "confidence": "medium"
+ },
+ "rosariocentral-arg": {
+  "balance": 5000000,
+  "revenue": 45000000,
+  "wageBill": 25000000,
+  "squadValue": 34600000,
+  "confidence": "medium"
+ },
+ "sanlorenzo-ar": {
+  "balance": 1000000,
+  "revenue": 40000000,
+  "wageBill": 25000000,
+  "squadValue": 24000000,
+  "confidence": "medium"
+ },
+ "velezsarsfield-arg": {
+  "balance": 5000000,
+  "revenue": 45000000,
+  "wageBill": 25000000,
+  "squadValue": 20300000,
+  "confidence": "medium"
+ },
+ "argentinojnrs-arg": {
+  "balance": 5000000,
+  "revenue": 30000000,
+  "wageBill": 15000000,
+  "squadValue": 55000000,
+  "confidence": "medium"
+ },
+ "newoldboys-ar": {
+  "balance": 2000000,
+  "revenue": 30000000,
+  "wageBill": 18000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "lanus-arg": {
+  "balance": 4000000,
+  "revenue": 35000000,
+  "wageBill": 20000000,
+  "squadValue": 50000000,
+  "confidence": "medium"
+ },
+ "talleres-arg": {
+  "balance": 5000000,
+  "revenue": 45000000,
+  "wageBill": 25000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "independiente-arg": {
+  "balance": 3000000,
+  "revenue": 55000000,
+  "wageBill": 30000000,
+  "squadValue": 33800000,
+  "confidence": "medium"
+ },
+ "belgrano-arg": {
+  "balance": 3000000,
+  "revenue": 30000000,
+  "wageBill": 18000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "huracan-arg": {
+  "balance": 2000000,
+  "revenue": 30000000,
+  "wageBill": 18000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "newcastle-aus": {
+  "balance": 750000,
+  "revenue": 15000000,
+  "wageBill": 6750000,
+  "squadValue": 7000000,
+  "confidence": "low"
+ },
+ "adelaide-aus": {
+  "balance": 670000,
+  "revenue": 13450000,
+  "wageBill": 6050000,
+  "squadValue": 6200000,
+  "confidence": "low"
+ },
+ "perthglory-aus": {
+  "balance": 600000,
+  "revenue": 12060000,
+  "wageBill": 5430000,
+  "squadValue": 5490000,
+  "confidence": "low"
+ },
+ "macarthur-aus": {
+  "balance": 540000,
+  "revenue": 10820000,
+  "wageBill": 4870000,
+  "squadValue": 4870000,
+  "confidence": "low"
+ },
+ "westernunited-aus": {
+  "balance": 490000,
+  "revenue": 9700000,
+  "wageBill": 4370000,
+  "squadValue": 4310000,
+  "confidence": "low"
+ },
+ "phoenix-aus": {
+  "balance": 440000,
+  "revenue": 8700000,
+  "wageBill": 3920000,
+  "squadValue": 3820000,
+  "confidence": "low"
+ },
+ "brisbaneroar-aus": {
+  "balance": 390000,
+  "revenue": 7810000,
+  "wageBill": 3510000,
+  "squadValue": 3390000,
+  "confidence": "low"
+ },
+ "ccmariners-aus": {
+  "balance": 350000,
+  "revenue": 7000000,
+  "wageBill": 3150000,
+  "squadValue": 3000000,
+  "confidence": "low"
+ },
+ "melbournecityfc-aus": {
+  "balance": 3000000,
+  "revenue": 25000000,
+  "wageBill": 10000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "melbournevictory-aus": {
+  "balance": 1000000,
+  "revenue": 20000000,
+  "wageBill": 9000000,
+  "squadValue": 8000000,
+  "confidence": "medium"
+ },
+ "sydneyfc-aus": {
+  "balance": 1000000,
+  "revenue": 20000000,
+  "wageBill": 9000000,
+  "squadValue": 9000000,
+  "confidence": "medium"
+ },
+ "sydneywanderers-aus": {
+  "balance": 1000000,
+  "revenue": 18000000,
+  "wageBill": 8000000,
+  "squadValue": 7000000,
+  "confidence": "medium"
+ },
+ "tsvhartberg-aut": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 10000000,
+  "squadValue": 30000000,
+  "confidence": "low"
+ },
+ "wolfsbergerac-aut": {
+  "balance": 1590000,
+  "revenue": 15870000,
+  "wageBill": 7940000,
+  "squadValue": 24070000,
+  "confidence": "low"
+ },
+ "austrialustenau-aut": {
+  "balance": 1260000,
+  "revenue": 12600000,
+  "wageBill": 6300000,
+  "squadValue": 19310000,
+  "confidence": "low"
+ },
+ "grazer-aut": {
+  "balance": 1000000,
+  "revenue": 10000000,
+  "wageBill": 5000000,
+  "squadValue": 15490000,
+  "confidence": "low"
+ },
+ "mattersburg-aut": {
+  "balance": 790000,
+  "revenue": 7940000,
+  "wageBill": 3970000,
+  "squadValue": 12430000,
+  "confidence": "low"
+ },
+ "ried-aut": {
+  "balance": 630000,
+  "revenue": 6300000,
+  "wageBill": 3150000,
+  "squadValue": 9970000,
+  "confidence": "low"
+ },
+ "wsgtirol-aut": {
+  "balance": 500000,
+  "revenue": 5000000,
+  "wageBill": 2500000,
+  "squadValue": 8000000,
+  "confidence": "low"
+ },
+ "salzburg-aut": {
+  "balance": 50000000,
+  "revenue": 140000000,
+  "wageBill": 60000000,
+  "squadValue": 112100000,
+  "confidence": "high"
+ },
+ "sturmgraz-aut": {
+  "balance": 15000000,
+  "revenue": 55000000,
+  "wageBill": 25000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "lask-aut": {
+  "balance": 5000000,
+  "revenue": 40000000,
+  "wageBill": 20000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "austriawien-aut": {
+  "balance": 1000000,
+  "revenue": 35000000,
+  "wageBill": 18000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "rapidviena-aut": {
+  "balance": 5000000,
+  "revenue": 50000000,
+  "wageBill": 25000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "cerclebrugge-bel": {
+  "balance": 2000000,
+  "revenue": 25000000,
+  "wageBill": 15000000,
+  "squadValue": 50000000,
+  "confidence": "low"
+ },
+ "kvmechelen-bel": {
+  "balance": 1760000,
+  "revenue": 22010000,
+  "wageBill": 13210000,
+  "squadValue": 43350000,
+  "confidence": "low"
+ },
+ "charleroi-bel": {
+  "balance": 1550000,
+  "revenue": 19380000,
+  "wageBill": 11630000,
+  "squadValue": 37580000,
+  "confidence": "low"
+ },
+ "kortrijk-bel": {
+  "balance": 1370000,
+  "revenue": 17060000,
+  "wageBill": 10240000,
+  "squadValue": 32590000,
+  "confidence": "low"
+ },
+ "westerlo-bel": {
+  "balance": 1200000,
+  "revenue": 15020000,
+  "wageBill": 9010000,
+  "squadValue": 28250000,
+  "confidence": "low"
+ },
+ "sint-bel": {
+  "balance": 1060000,
+  "revenue": 13230000,
+  "wageBill": 7940000,
+  "squadValue": 24490000,
+  "confidence": "low"
+ },
+ "zulte-bel": {
+  "balance": 930000,
+  "revenue": 11650000,
+  "wageBill": 6990000,
+  "squadValue": 21240000,
+  "confidence": "low"
+ },
+ "waasland-bel": {
+  "balance": 820000,
+  "revenue": 10260000,
+  "wageBill": 6150000,
+  "squadValue": 18410000,
+  "confidence": "low"
+ },
+ "lommelunited-bel": {
+  "balance": 720000,
+  "revenue": 9030000,
+  "wageBill": 5420000,
+  "squadValue": 15960000,
+  "confidence": "low"
+ },
+ "lalouviere-bel": {
+  "balance": 640000,
+  "revenue": 7950000,
+  "wageBill": 4770000,
+  "squadValue": 13840000,
+  "confidence": "low"
+ },
+ "ohleuven-bel": {
+  "balance": 560000,
+  "revenue": 7000000,
+  "wageBill": 4200000,
+  "squadValue": 12000000,
+  "confidence": "low"
+ },
+ "brugge-bel": {
+  "balance": 40000000,
+  "revenue": 160000000,
+  "wageBill": 70000000,
+  "squadValue": 172500000,
+  "confidence": "high"
+ },
+ "genk-bel": {
+  "balance": 15000000,
+  "revenue": 70000000,
+  "wageBill": 35000000,
+  "squadValue": 130000000,
+  "confidence": "medium"
+ },
+ "royalantwerp-bel": {
+  "balance": 5000000,
+  "revenue": 55000000,
+  "wageBill": 35000000,
+  "squadValue": 75000000,
+  "confidence": "medium"
+ },
+ "gent-bel": {
+  "balance": 8000000,
+  "revenue": 50000000,
+  "wageBill": 30000000,
+  "squadValue": 85000000,
+  "confidence": "medium"
+ },
+ "standardliege-bel": {
+  "balance": 1000000,
+  "revenue": 35000000,
+  "wageBill": 22000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "union-bel": {
+  "balance": 20000000,
+  "revenue": 75000000,
+  "wageBill": 30000000,
+  "squadValue": 100000000,
+  "confidence": "medium"
+ },
+ "anderlecht-bel": {
+  "balance": 10000000,
+  "revenue": 90000000,
+  "wageBill": 50000000,
+  "squadValue": 120000000,
+  "confidence": "medium"
+ },
+ "alwaysready-bol": {
+  "balance": 240000,
+  "revenue": 4000000,
+  "wageBill": 2400000,
+  "squadValue": 6000000,
+  "confidence": "low"
+ },
+ "blooming-bol": {
+  "balance": 210000,
+  "revenue": 3530000,
+  "wageBill": 2120000,
+  "squadValue": 5390000,
+  "confidence": "low"
+ },
+ "nacionalpotosi-bol": {
+  "balance": 190000,
+  "revenue": 3120000,
+  "wageBill": 1870000,
+  "squadValue": 4850000,
+  "confidence": "low"
+ },
+ "orientepetrolero-bol": {
+  "balance": 170000,
+  "revenue": 2760000,
+  "wageBill": 1660000,
+  "squadValue": 4360000,
+  "confidence": "low"
+ },
+ "royalpari-bol": {
+  "balance": 150000,
+  "revenue": 2440000,
+  "wageBill": 1460000,
+  "squadValue": 3920000,
+  "confidence": "low"
+ },
+ "indeppetro-bol": {
+  "balance": 130000,
+  "revenue": 2150000,
+  "wageBill": 1290000,
+  "squadValue": 3520000,
+  "confidence": "low"
+ },
+ "jorgewil-bol": {
+  "balance": 110000,
+  "revenue": 1900000,
+  "wageBill": 1140000,
+  "squadValue": 3160000,
+  "confidence": "low"
+ },
+ "sportboyswarnes-bol": {
+  "balance": 100000,
+  "revenue": 1680000,
+  "wageBill": 1010000,
+  "squadValue": 2840000,
+  "confidence": "low"
+ },
+ "sanjose-bol": {
+  "balance": 90000,
+  "revenue": 1490000,
+  "wageBill": 890000,
+  "squadValue": 2560000,
+  "confidence": "low"
+ },
+ "clubdeportivoguabira-bol": {
+  "balance": 80000,
+  "revenue": 1310000,
+  "wageBill": 790000,
+  "squadValue": 2300000,
+  "confidence": "low"
+ },
+ "clubaurora-bol": {
+  "balance": 70000,
+  "revenue": 1160000,
+  "wageBill": 700000,
+  "squadValue": 2070000,
+  "confidence": "low"
+ },
+ "clubrealpotosi-bol": {
+  "balance": 60000,
+  "revenue": 1020000,
+  "wageBill": 610000,
+  "squadValue": 1860000,
+  "confidence": "low"
+ },
+ "realsantacruz-bol": {
+  "balance": 50000,
+  "revenue": 910000,
+  "wageBill": 540000,
+  "squadValue": 1670000,
+  "confidence": "low"
+ },
+ "atleticopalmaflor-bol": {
+  "balance": 50000,
+  "revenue": 800000,
+  "wageBill": 480000,
+  "squadValue": 1500000,
+  "confidence": "low"
+ },
+ "bolivar-bol": {
+  "balance": 1000000,
+  "revenue": 8000000,
+  "wageBill": 5000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "thestrongest-bol": {
+  "balance": 500000,
+  "revenue": 6000000,
+  "wageBill": 4000000,
+  "squadValue": 9000000,
+  "confidence": "medium"
+ },
+ "alsailiya-cat": {
+  "balance": 1800000,
+  "revenue": 12000000,
+  "wageBill": 8400000,
+  "squadValue": 10000000,
+  "confidence": "low"
+ },
+ "qatarsc-cat": {
+  "balance": 1510000,
+  "revenue": 10070000,
+  "wageBill": 7050000,
+  "squadValue": 8330000,
+  "confidence": "low"
+ },
+ "alkhor-cat": {
+  "balance": 1270000,
+  "revenue": 8450000,
+  "wageBill": 5920000,
+  "squadValue": 6930000,
+  "confidence": "low"
+ },
+ "alshahaniya-cat": {
+  "balance": 1060000,
+  "revenue": 7100000,
+  "wageBill": 4970000,
+  "squadValue": 5770000,
+  "confidence": "low"
+ },
+ "alwakrah-cat": {
+  "balance": 890000,
+  "revenue": 5960000,
+  "wageBill": 4170000,
+  "squadValue": 4800000,
+  "confidence": "low"
+ },
+ "alshamal-cat": {
+  "balance": 750000,
+  "revenue": 5000000,
+  "wageBill": 3500000,
+  "squadValue": 4000000,
+  "confidence": "low"
+ },
+ "alduhail-cat": {
+  "balance": 8000000,
+  "revenue": 35000000,
+  "wageBill": 25000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "alrayyan-cat": {
+  "balance": 5000000,
+  "revenue": 30000000,
+  "wageBill": 22000000,
+  "squadValue": 20000000,
+  "confidence": "medium"
+ },
+ "alsad-cat": {
+  "balance": 10000000,
+  "revenue": 45000000,
+  "wageBill": 30000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "alahli-cat": {
+  "balance": 2000000,
+  "revenue": 15000000,
+  "wageBill": 11000000,
+  "squadValue": 10000000,
+  "confidence": "medium"
+ },
+ "alarabi-cat": {
+  "balance": 3000000,
+  "revenue": 18000000,
+  "wageBill": 13000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "algharafa-cat": {
+  "balance": 3000000,
+  "revenue": 20000000,
+  "wageBill": 15000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "everton-chi": {
+  "balance": 600000,
+  "revenue": 10000000,
+  "wageBill": 5500000,
+  "squadValue": 15000000,
+  "confidence": "low"
+ },
+ "huachipato-chi": {
+  "balance": 560000,
+  "revenue": 9280000,
+  "wageBill": 5100000,
+  "squadValue": 14000000,
+  "confidence": "low"
+ },
+ "ohiggins-chi": {
+  "balance": 520000,
+  "revenue": 8600000,
+  "wageBill": 4730000,
+  "squadValue": 13080000,
+  "confidence": "low"
+ },
+ "univconcepcion-chi": {
+  "balance": 480000,
+  "revenue": 7980000,
+  "wageBill": 4390000,
+  "squadValue": 12210000,
+  "confidence": "low"
+ },
+ "audax-chi": {
+  "balance": 440000,
+  "revenue": 7400000,
+  "wageBill": 4070000,
+  "squadValue": 11400000,
+  "confidence": "low"
+ },
+ "laserena-chi": {
+  "balance": 410000,
+  "revenue": 6860000,
+  "wageBill": 3780000,
+  "squadValue": 10640000,
+  "confidence": "low"
+ },
+ "santiagowanders-chi": {
+  "balance": 380000,
+  "revenue": 6370000,
+  "wageBill": 3500000,
+  "squadValue": 9940000,
+  "confidence": "low"
+ },
+ "nublense-chi": {
+  "balance": 350000,
+  "revenue": 5910000,
+  "wageBill": 3250000,
+  "squadValue": 9280000,
+  "confidence": "low"
+ },
+ "palestino-chi": {
+  "balance": 330000,
+  "revenue": 5480000,
+  "wageBill": 3010000,
+  "squadValue": 8660000,
+  "confidence": "low"
+ },
+ "cobresal-chi": {
+  "balance": 300000,
+  "revenue": 5080000,
+  "wageBill": 2790000,
+  "squadValue": 8090000,
+  "confidence": "low"
+ },
+ "deportesiquique-chi": {
+  "balance": 280000,
+  "revenue": 4710000,
+  "wageBill": 2590000,
+  "squadValue": 7550000,
+  "confidence": "low"
+ },
+ "curicounido-chi": {
+  "balance": 260000,
+  "revenue": 4370000,
+  "wageBill": 2400000,
+  "squadValue": 7050000,
+  "confidence": "low"
+ },
+ "cobreloa-chi": {
+  "balance": 240000,
+  "revenue": 4050000,
+  "wageBill": 2230000,
+  "squadValue": 6580000,
+  "confidence": "low"
+ },
+ "antofagasta-chi": {
+  "balance": 230000,
+  "revenue": 3760000,
+  "wageBill": 2070000,
+  "squadValue": 6140000,
+  "confidence": "low"
+ },
+ "coquimbounido-chi": {
+  "balance": 210000,
+  "revenue": 3490000,
+  "wageBill": 1920000,
+  "squadValue": 5740000,
+  "confidence": "low"
+ },
+ "unionlacalera-chi": {
+  "balance": 190000,
+  "revenue": 3230000,
+  "wageBill": 1780000,
+  "squadValue": 5360000,
+  "confidence": "low"
+ },
+ "limache-chi": {
+  "balance": 180000,
+  "revenue": 3000000,
+  "wageBill": 1650000,
+  "squadValue": 5000000,
+  "confidence": "low"
+ },
+ "colocolo-chi": {
+  "balance": 5000000,
+  "revenue": 40000000,
+  "wageBill": 20000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "universidadcatolica-chi": {
+  "balance": 3000000,
+  "revenue": 25000000,
+  "wageBill": 13000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "universidadchile-chi": {
+  "balance": 2000000,
+  "revenue": 25000000,
+  "wageBill": 14000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "guangzhou-chn": {
+  "balance": 1500000,
+  "revenue": 30000000,
+  "wageBill": 16500000,
+  "squadValue": 8000000,
+  "confidence": "low"
+ },
+ "jiangsu-chn": {
+  "balance": 1310000,
+  "revenue": 26290000,
+  "wageBill": 14460000,
+  "squadValue": 7120000,
+  "confidence": "low"
+ },
+ "henanjianye-chn": {
+  "balance": 1150000,
+  "revenue": 23030000,
+  "wageBill": 12670000,
+  "squadValue": 6340000,
+  "confidence": "low"
+ },
+ "qingdao-chn": {
+  "balance": 1010000,
+  "revenue": 20180000,
+  "wageBill": 11100000,
+  "squadValue": 5640000,
+  "confidence": "low"
+ },
+ "shenzhen-chn": {
+  "balance": 880000,
+  "revenue": 17680000,
+  "wageBill": 9720000,
+  "squadValue": 5020000,
+  "confidence": "low"
+ },
+ "hebei-chn": {
+  "balance": 770000,
+  "revenue": 15490000,
+  "wageBill": 8520000,
+  "squadValue": 4470000,
+  "confidence": "low"
+ },
+ "guangzhourf-chn": {
+  "balance": 680000,
+  "revenue": 13570000,
+  "wageBill": 7470000,
+  "squadValue": 3980000,
+  "confidence": "low"
+ },
+ "chongqinglifan-chn": {
+  "balance": 590000,
+  "revenue": 11890000,
+  "wageBill": 6540000,
+  "squadValue": 3540000,
+  "confidence": "low"
+ },
+ "beijingrenhe-chn": {
+  "balance": 520000,
+  "revenue": 10420000,
+  "wageBill": 5730000,
+  "squadValue": 3150000,
+  "confidence": "low"
+ },
+ "dalianyifang-chn": {
+  "balance": 460000,
+  "revenue": 9130000,
+  "wageBill": 5020000,
+  "squadValue": 2810000,
+  "confidence": "low"
+ },
+ "guizhou-chn": {
+  "balance": 400000,
+  "revenue": 8000000,
+  "wageBill": 4400000,
+  "squadValue": 2500000,
+  "confidence": "low"
+ },
+ "shangaisipg-chn": {
+  "balance": 5000000,
+  "revenue": 80000000,
+  "wageBill": 40000000,
+  "squadValue": 20000000,
+  "confidence": "medium"
+ },
+ "hangzhou-chn": {
+  "balance": 3000000,
+  "revenue": 35000000,
+  "wageBill": 18000000,
+  "squadValue": 10000000,
+  "confidence": "medium"
+ },
+ "sanghai-chn": {
+  "balance": 5000000,
+  "revenue": 60000000,
+  "wageBill": 30000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "beijinggoan-chn": {
+  "balance": 3000000,
+  "revenue": 50000000,
+  "wageBill": 25000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "shandong-chn": {
+  "balance": 3000000,
+  "revenue": 50000000,
+  "wageBill": 25000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "deportestolima-col": {
+  "balance": 900000,
+  "revenue": 15000000,
+  "wageBill": 8250000,
+  "squadValue": 20000000,
+  "confidence": "low"
+ },
+ "deportivocali-col": {
+  "balance": 800000,
+  "revenue": 13250000,
+  "wageBill": 7290000,
+  "squadValue": 17980000,
+  "confidence": "low"
+ },
+ "oncecaldas-col": {
+  "balance": 700000,
+  "revenue": 11710000,
+  "wageBill": 6440000,
+  "squadValue": 16160000,
+  "confidence": "low"
+ },
+ "cucuta-col": {
+  "balance": 620000,
+  "revenue": 10350000,
+  "wageBill": 5690000,
+  "squadValue": 14520000,
+  "confidence": "low"
+ },
+ "rionegro-col": {
+  "balance": 550000,
+  "revenue": 9140000,
+  "wageBill": 5030000,
+  "squadValue": 13060000,
+  "confidence": "low"
+ },
+ "alianza-col": {
+  "balance": 480000,
+  "revenue": 8080000,
+  "wageBill": 4440000,
+  "squadValue": 11730000,
+  "confidence": "low"
+ },
+ "atleticohuila-col": {
+  "balance": 430000,
+  "revenue": 7140000,
+  "wageBill": 3930000,
+  "squadValue": 10550000,
+  "confidence": "low"
+ },
+ "deportivopasto-col": {
+  "balance": 380000,
+  "revenue": 6310000,
+  "wageBill": 3470000,
+  "squadValue": 9480000,
+  "confidence": "low"
+ },
+ "boyaca-col": {
+  "balance": 330000,
+  "revenue": 5570000,
+  "wageBill": 3060000,
+  "squadValue": 8520000,
+  "confidence": "low"
+ },
+ "fortaleza-col": {
+  "balance": 300000,
+  "revenue": 4920000,
+  "wageBill": 2710000,
+  "squadValue": 7660000,
+  "confidence": "low"
+ },
+ "deportivopereira-col": {
+  "balance": 260000,
+  "revenue": 4350000,
+  "wageBill": 2390000,
+  "squadValue": 6890000,
+  "confidence": "low"
+ },
+ "bogota-col": {
+  "balance": 230000,
+  "revenue": 3840000,
+  "wageBill": 2110000,
+  "squadValue": 6190000,
+  "confidence": "low"
+ },
+ "llaneros-col": {
+  "balance": 200000,
+  "revenue": 3400000,
+  "wageBill": 1870000,
+  "squadValue": 5560000,
+  "confidence": "low"
+ },
+ "bucaramanga-col": {
+  "balance": 180000,
+  "revenue": 3000000,
+  "wageBill": 1650000,
+  "squadValue": 5000000,
+  "confidence": "low"
+ },
+ "nacional-col": {
+  "balance": 5000000,
+  "revenue": 35000000,
+  "wageBill": 18000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "americacali-col": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 12000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "indepmedellin-col": {
+  "balance": 3000000,
+  "revenue": 20000000,
+  "wageBill": 12000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "santafe-col": {
+  "balance": 2000000,
+  "revenue": 18000000,
+  "wageBill": 10000000,
+  "squadValue": 22000000,
+  "confidence": "medium"
+ },
+ "millionarios-col": {
+  "balance": 3000000,
+  "revenue": 25000000,
+  "wageBill": 14000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "junior-col": {
+  "balance": 3000000,
+  "revenue": 22000000,
+  "wageBill": 12000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "gangwon-cor": {
+  "balance": 1320000,
+  "revenue": 22000000,
+  "wageBill": 11000000,
+  "squadValue": 10000000,
+  "confidence": "low"
+ },
+ "seongnam-cor": {
+  "balance": 1160000,
+  "revenue": 19390000,
+  "wageBill": 9690000,
+  "squadValue": 8920000,
+  "confidence": "low"
+ },
+ "busanipark-cor": {
+  "balance": 1030000,
+  "revenue": 17080000,
+  "wageBill": 8540000,
+  "squadValue": 7950000,
+  "confidence": "low"
+ },
+ "pohangsteelers-cor": {
+  "balance": 900000,
+  "revenue": 15050000,
+  "wageBill": 7530000,
+  "squadValue": 7090000,
+  "confidence": "low"
+ },
+ "gwangju-cor": {
+  "balance": 800000,
+  "revenue": 13270000,
+  "wageBill": 6630000,
+  "squadValue": 6320000,
+  "confidence": "low"
+ },
+ "incheon-cor": {
+  "balance": 700000,
+  "revenue": 11690000,
+  "wageBill": 5850000,
+  "squadValue": 5640000,
+  "confidence": "low"
+ },
+ "jeju-cor": {
+  "balance": 620000,
+  "revenue": 10300000,
+  "wageBill": 5150000,
+  "squadValue": 5030000,
+  "confidence": "low"
+ },
+ "daejeoncitizen-cor": {
+  "balance": 540000,
+  "revenue": 9080000,
+  "wageBill": 4540000,
+  "squadValue": 4490000,
+  "confidence": "low"
+ },
+ "anyang-kor": {
+  "balance": 480000,
+  "revenue": 8000000,
+  "wageBill": 4000000,
+  "squadValue": 4000000,
+  "confidence": "low"
+ },
+ "jeonbuk-cor": {
+  "balance": 3000000,
+  "revenue": 35000000,
+  "wageBill": 18000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "ulsan-jap": {
+  "balance": 3000000,
+  "revenue": 32000000,
+  "wageBill": 16000000,
+  "squadValue": 14000000,
+  "confidence": "medium"
+ },
+ "fcseoul-cor": {
+  "balance": 3000000,
+  "revenue": 30000000,
+  "wageBill": 15000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "univcatolicaquito-equ": {
+  "balance": 480000,
+  "revenue": 8000000,
+  "wageBill": 4400000,
+  "squadValue": 15000000,
+  "confidence": "low"
+ },
+ "tecnico-equ": {
+  "balance": 410000,
+  "revenue": 6870000,
+  "wageBill": 3780000,
+  "squadValue": 13300000,
+  "confidence": "low"
+ },
+ "aucas-equ": {
+  "balance": 350000,
+  "revenue": 5900000,
+  "wageBill": 3250000,
+  "squadValue": 11800000,
+  "confidence": "low"
+ },
+ "delfin-equ": {
+  "balance": 300000,
+  "revenue": 5070000,
+  "wageBill": 2790000,
+  "squadValue": 10460000,
+  "confidence": "low"
+ },
+ "deportivocuenca-equ": {
+  "balance": 260000,
+  "revenue": 4350000,
+  "wageBill": 2390000,
+  "squadValue": 9280000,
+  "confidence": "low"
+ },
+ "elnacional-equ": {
+  "balance": 220000,
+  "revenue": 3740000,
+  "wageBill": 2060000,
+  "squadValue": 8230000,
+  "confidence": "low"
+ },
+ "guayaquil-equ": {
+  "balance": 190000,
+  "revenue": 3210000,
+  "wageBill": 1770000,
+  "squadValue": 7290000,
+  "confidence": "low"
+ },
+ "macara-equ": {
+  "balance": 170000,
+  "revenue": 2760000,
+  "wageBill": 1520000,
+  "squadValue": 6470000,
+  "confidence": "low"
+ },
+ "mushucruna-equ": {
+  "balance": 140000,
+  "revenue": 2370000,
+  "wageBill": 1300000,
+  "squadValue": 5740000,
+  "confidence": "low"
+ },
+ "orense-equ": {
+  "balance": 120000,
+  "revenue": 2030000,
+  "wageBill": 1120000,
+  "squadValue": 5090000,
+  "confidence": "low"
+ },
+ "independientejnrs-equ": {
+  "balance": 100000,
+  "revenue": 1750000,
+  "wageBill": 960000,
+  "squadValue": 4510000,
+  "confidence": "low"
+ },
+ "manta-equ": {
+  "balance": 90000,
+  "revenue": 1500000,
+  "wageBill": 830000,
+  "squadValue": 4000000,
+  "confidence": "low"
+ },
+ "ldu-equ": {
+  "balance": 5000000,
+  "revenue": 35000000,
+  "wageBill": 15000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "independiente-equ": {
+  "balance": 10000000,
+  "revenue": 40000000,
+  "wageBill": 15000000,
+  "squadValue": 65000000,
+  "confidence": "medium"
+ },
+ "barcelona-equ": {
+  "balance": 1000000,
+  "revenue": 25000000,
+  "wageBill": 14000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "emelec-equ": {
+  "balance": 500000,
+  "revenue": 15000000,
+  "wageBill": 8000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "nyredbulls-eua": {
+  "balance": 3000000,
+  "revenue": 60000000,
+  "wageBill": 19200000,
+  "squadValue": 50000000,
+  "confidence": "low"
+ },
+ "orlandocity-eua": {
+  "balance": 2920000,
+  "revenue": 58500000,
+  "wageBill": 18720000,
+  "squadValue": 47770000,
+  "confidence": "low"
+ },
+ "fcdallas-eua": {
+  "balance": 2850000,
+  "revenue": 57030000,
+  "wageBill": 18250000,
+  "squadValue": 45640000,
+  "confidence": "low"
+ },
+ "coloradorapids-eua": {
+  "balance": 2780000,
+  "revenue": 55600000,
+  "wageBill": 17790000,
+  "squadValue": 43610000,
+  "confidence": "low"
+ },
+ "nerevolution-eua": {
+  "balance": 2710000,
+  "revenue": 54210000,
+  "wageBill": 17350000,
+  "squadValue": 41660000,
+  "confidence": "low"
+ },
+ "vancouver-can": {
+  "balance": 2640000,
+  "revenue": 52850000,
+  "wageBill": 16910000,
+  "squadValue": 39800000,
+  "confidence": "low"
+ },
+ "portlandtimbers-eua": {
+  "balance": 2580000,
+  "revenue": 51530000,
+  "wageBill": 16490000,
+  "squadValue": 38030000,
+  "confidence": "low"
+ },
+ "torontofc-can": {
+  "balance": 2510000,
+  "revenue": 50240000,
+  "wageBill": 16080000,
+  "squadValue": 36330000,
+  "confidence": "low"
+ },
+ "nashville-eua": {
+  "balance": 2450000,
+  "revenue": 48980000,
+  "wageBill": 15670000,
+  "squadValue": 34710000,
+  "confidence": "low"
+ },
+ "dcunited-eua": {
+  "balance": 2390000,
+  "revenue": 47750000,
+  "wageBill": 15280000,
+  "squadValue": 33170000,
+  "confidence": "low"
+ },
+ "chicagofire-eua": {
+  "balance": 2330000,
+  "revenue": 46550000,
+  "wageBill": 14900000,
+  "squadValue": 31690000,
+  "confidence": "low"
+ },
+ "kansascity-eua": {
+  "balance": 2270000,
+  "revenue": 45390000,
+  "wageBill": 14520000,
+  "squadValue": 30270000,
+  "confidence": "low"
+ },
+ "houstondynamo-eua": {
+  "balance": 2210000,
+  "revenue": 44250000,
+  "wageBill": 14160000,
+  "squadValue": 28920000,
+  "confidence": "low"
+ },
+ "austin-eua": {
+  "balance": 2160000,
+  "revenue": 43140000,
+  "wageBill": 13800000,
+  "squadValue": 27640000,
+  "confidence": "low"
+ },
+ "philadelphiaunion-eua": {
+  "balance": 2100000,
+  "revenue": 42060000,
+  "wageBill": 13460000,
+  "squadValue": 26400000,
+  "confidence": "low"
+ },
+ "realsaltlake-eua": {
+  "balance": 2050000,
+  "revenue": 41010000,
+  "wageBill": 13120000,
+  "squadValue": 25230000,
+  "confidence": "low"
+ },
+ "minnesotaunited-eua": {
+  "balance": 2000000,
+  "revenue": 39980000,
+  "wageBill": 12790000,
+  "squadValue": 24100000,
+  "confidence": "low"
+ },
+ "sjearthquakes-eua": {
+  "balance": 1950000,
+  "revenue": 38980000,
+  "wageBill": 12470000,
+  "squadValue": 23030000,
+  "confidence": "low"
+ },
+ "montreal-eua": {
+  "balance": 1900000,
+  "revenue": 38000000,
+  "wageBill": 12160000,
+  "squadValue": 22000000,
+  "confidence": "low"
+ },
+ "intermiami-eua": {
+  "balance": 15000000,
+  "revenue": 210000000,
+  "wageBill": 60000000,
+  "squadValue": 80400000,
+  "confidence": "high"
+ },
+ "columbuscrew-eua": {
+  "balance": 6000000,
+  "revenue": 65000000,
+  "wageBill": 20000000,
+  "squadValue": 55000000,
+  "confidence": "medium"
+ },
+ "fccincinnati-eua": {
+  "balance": 6000000,
+  "revenue": 75000000,
+  "wageBill": 23000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "newyorkcity-eua": {
+  "balance": 6000000,
+  "revenue": 80000000,
+  "wageBill": 22000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "losangeles-eua": {
+  "balance": 10000000,
+  "revenue": 150000000,
+  "wageBill": 35000000,
+  "squadValue": 61200000,
+  "confidence": "medium"
+ },
+ "seatllesounders-eua": {
+  "balance": 8000000,
+  "revenue": 90000000,
+  "wageBill": 25000000,
+  "squadValue": 55000000,
+  "confidence": "medium"
+ },
+ "losangelesgalaxy-eua": {
+  "balance": 8000000,
+  "revenue": 110000000,
+  "wageBill": 30000000,
+  "squadValue": 65000000,
+  "confidence": "medium"
+ },
+ "atlantaunited-eua": {
+  "balance": 8000000,
+  "revenue": 100000000,
+  "wageBill": 30000000,
+  "squadValue": 70000000,
+  "confidence": "medium"
+ },
+ "elpaso-usa": {
+  "balance": 300000,
+  "revenue": 5000000,
+  "wageBill": 2500000,
+  "squadValue": 3000000,
+  "confidence": "low"
+ },
+ "indyeleven-eua": {
+  "balance": 300000,
+  "revenue": 5000000,
+  "wageBill": 2500000,
+  "squadValue": 3000000,
+  "confidence": "low"
+ },
+ "portlandphoenix-eua": {
+  "balance": 50000,
+  "revenue": 500000,
+  "wageBill": 300000,
+  "squadValue": 300000,
+  "confidence": "low"
+ },
+ "goaheadeagles-hol": {
+  "balance": 3500000,
+  "revenue": 35000000,
+  "wageBill": 19250000,
+  "squadValue": 75000000,
+  "confidence": "low"
+ },
+ "heerenveen-hol": {
+  "balance": 3060000,
+  "revenue": 30610000,
+  "wageBill": 16830000,
+  "squadValue": 64790000,
+  "confidence": "low"
+ },
+ "nec-hol": {
+  "balance": 2680000,
+  "revenue": 26760000,
+  "wageBill": 14720000,
+  "squadValue": 55970000,
+  "confidence": "low"
+ },
+ "excelsior-hol": {
+  "balance": 2340000,
+  "revenue": 23400000,
+  "wageBill": 12870000,
+  "squadValue": 48350000,
+  "confidence": "low"
+ },
+ "willemii-hol": {
+  "balance": 2050000,
+  "revenue": 20460000,
+  "wageBill": 11260000,
+  "squadValue": 41770000,
+  "confidence": "low"
+ },
+ "adodenhaag-hol": {
+  "balance": 1790000,
+  "revenue": 17890000,
+  "wageBill": 9840000,
+  "squadValue": 36090000,
+  "confidence": "low"
+ },
+ "groningen-hol": {
+  "balance": 1560000,
+  "revenue": 15650000,
+  "wageBill": 8610000,
+  "squadValue": 31170000,
+  "confidence": "low"
+ },
+ "peczwolle-hol": {
+  "balance": 1370000,
+  "revenue": 13680000,
+  "wageBill": 7530000,
+  "squadValue": 26930000,
+  "confidence": "low"
+ },
+ "telstar-hol": {
+  "balance": 1200000,
+  "revenue": 11960000,
+  "wageBill": 6580000,
+  "squadValue": 23270000,
+  "confidence": "low"
+ },
+ "fortuna-hol": {
+  "balance": 1050000,
+  "revenue": 10460000,
+  "wageBill": 5750000,
+  "squadValue": 20100000,
+  "confidence": "low"
+ },
+ "sparta-hol": {
+  "balance": 910000,
+  "revenue": 9150000,
+  "wageBill": 5030000,
+  "squadValue": 17360000,
+  "confidence": "low"
+ },
+ "cambuur-hol": {
+  "balance": 800000,
+  "revenue": 8000000,
+  "wageBill": 4400000,
+  "squadValue": 15000000,
+  "confidence": "low"
+ },
+ "psv-hol": {
+  "balance": 40000000,
+  "revenue": 170000000,
+  "wageBill": 90000000,
+  "squadValue": 249800000,
+  "confidence": "high"
+ },
+ "ajax-hol": {
+  "balance": 30000000,
+  "revenue": 180000000,
+  "wageBill": 100000000,
+  "squadValue": 203000000,
+  "confidence": "high"
+ },
+ "feynoord-hol": {
+  "balance": 30000000,
+  "revenue": 140000000,
+  "wageBill": 75000000,
+  "squadValue": 161800000,
+  "confidence": "high"
+ },
+ "azalkmaar-hol": {
+  "balance": 20000000,
+  "revenue": 70000000,
+  "wageBill": 40000000,
+  "squadValue": 140000000,
+  "confidence": "medium"
+ },
+ "twente-hol": {
+  "balance": 8000000,
+  "revenue": 55000000,
+  "wageBill": 30000000,
+  "squadValue": 90000000,
+  "confidence": "medium"
+ },
+ "utrecht-hol": {
+  "balance": 6000000,
+  "revenue": 40000000,
+  "wageBill": 22000000,
+  "squadValue": 80000000,
+  "confidence": "medium"
+ },
+ "jubiloiwata-jap": {
+  "balance": 2800000,
+  "revenue": 35000000,
+  "wageBill": 15750000,
+  "squadValue": 12000000,
+  "confidence": "low"
+ },
+ "consadolesapporo-jap": {
+  "balance": 2520000,
+  "revenue": 31480000,
+  "wageBill": 14170000,
+  "squadValue": 10760000,
+  "confidence": "low"
+ },
+ "shonanbellmare-jap": {
+  "balance": 2270000,
+  "revenue": 28320000,
+  "wageBill": 12740000,
+  "squadValue": 9640000,
+  "confidence": "low"
+ },
+ "shimizuspulse-jap": {
+  "balance": 2040000,
+  "revenue": 25470000,
+  "wageBill": 11460000,
+  "squadValue": 8640000,
+  "confidence": "low"
+ },
+ "matsumotoyamaga-jap": {
+  "balance": 1830000,
+  "revenue": 22910000,
+  "wageBill": 10310000,
+  "squadValue": 7750000,
+  "confidence": "low"
+ },
+ "vegaltasendai-jap": {
+  "balance": 1650000,
+  "revenue": 20610000,
+  "wageBill": 9270000,
+  "squadValue": 6940000,
+  "confidence": "low"
+ },
+ "oitatrinita-jap": {
+  "balance": 1480000,
+  "revenue": 18540000,
+  "wageBill": 8340000,
+  "squadValue": 6220000,
+  "confidence": "low"
+ },
+ "sagantosu-jap": {
+  "balance": 1330000,
+  "revenue": 16680000,
+  "wageBill": 7500000,
+  "squadValue": 5580000,
+  "confidence": "low"
+ },
+ "mitohollyhock-jap": {
+  "balance": 1200000,
+  "revenue": 15000000,
+  "wageBill": 6750000,
+  "squadValue": 5000000,
+  "confidence": "low"
+ },
+ "kashimaantlers-jap": {
+  "balance": 5000000,
+  "revenue": 45000000,
+  "wageBill": 20000000,
+  "squadValue": 16000000,
+  "confidence": "medium"
+ },
+ "kawasakifrontale-jap": {
+  "balance": 5000000,
+  "revenue": 45000000,
+  "wageBill": 20000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "sanfreccehiroshima-jap": {
+  "balance": 5000000,
+  "revenue": 40000000,
+  "wageBill": 17000000,
+  "squadValue": 16000000,
+  "confidence": "medium"
+ },
+ "kashiwareysol-jap": {
+  "balance": 3000000,
+  "revenue": 35000000,
+  "wageBill": 15000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "urawareds-jap": {
+  "balance": 5000000,
+  "revenue": 60000000,
+  "wageBill": 25000000,
+  "squadValue": 18000000,
+  "confidence": "medium"
+ },
+ "nagoyagrampus-jap": {
+  "balance": 4000000,
+  "revenue": 40000000,
+  "wageBill": 18000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "yokohamamarinos-jap": {
+  "balance": 4000000,
+  "revenue": 45000000,
+  "wageBill": 20000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "visselkobe-jap": {
+  "balance": 5000000,
+  "revenue": 75000000,
+  "wageBill": 30000000,
+  "squadValue": 22000000,
+  "confidence": "medium"
+ },
+ "fctokyo-jap": {
+  "balance": 3000000,
+  "revenue": 40000000,
+  "wageBill": 18000000,
+  "squadValue": 14000000,
+  "confidence": "medium"
+ },
+ "gambaosaka-jap": {
+  "balance": 3000000,
+  "revenue": 40000000,
+  "wageBill": 17000000,
+  "squadValue": 14000000,
+  "confidence": "medium"
+ },
+ "cerezoosaka-jap": {
+  "balance": 3000000,
+  "revenue": 35000000,
+  "wageBill": 15000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "hassania-mar": {
+  "balance": 360000,
+  "revenue": 6000000,
+  "wageBill": 3300000,
+  "squadValue": 8000000,
+  "confidence": "low"
+ },
+ "ittihadtanger-mar": {
+  "balance": 320000,
+  "revenue": 5290000,
+  "wageBill": 2910000,
+  "squadValue": 7200000,
+  "confidence": "low"
+ },
+ "fusrabat-mar": {
+  "balance": 280000,
+  "revenue": 4660000,
+  "wageBill": 2560000,
+  "squadValue": 6480000,
+  "confidence": "low"
+ },
+ "difaa-mar": {
+  "balance": 250000,
+  "revenue": 4110000,
+  "wageBill": 2260000,
+  "squadValue": 5830000,
+  "confidence": "low"
+ },
+ "moghrebtetouan-mar": {
+  "balance": 220000,
+  "revenue": 3620000,
+  "wageBill": 1990000,
+  "squadValue": 5240000,
+  "confidence": "low"
+ },
+ "tetouan-mar": {
+  "balance": 190000,
+  "revenue": 3200000,
+  "wageBill": 1760000,
+  "squadValue": 4710000,
+  "confidence": "low"
+ },
+ "mcoujda-mar": {
+  "balance": 170000,
+  "revenue": 2820000,
+  "wageBill": 1550000,
+  "squadValue": 4240000,
+  "confidence": "low"
+ },
+ "kac-mar": {
+  "balance": 150000,
+  "revenue": 2480000,
+  "wageBill": 1370000,
+  "squadValue": 3820000,
+  "confidence": "low"
+ },
+ "olympiquekhourigba-mar": {
+  "balance": 130000,
+  "revenue": 2190000,
+  "wageBill": 1200000,
+  "squadValue": 3430000,
+  "confidence": "low"
+ },
+ "hoceima-mar": {
+  "balance": 120000,
+  "revenue": 1930000,
+  "wageBill": 1060000,
+  "squadValue": 3090000,
+  "confidence": "low"
+ },
+ "olympiquesafi-mar": {
+  "balance": 100000,
+  "revenue": 1700000,
+  "wageBill": 940000,
+  "squadValue": 2780000,
+  "confidence": "low"
+ },
+ "youssoufiaberrechid-mar": {
+  "balance": 90000,
+  "revenue": 1500000,
+  "wageBill": 830000,
+  "squadValue": 2500000,
+  "confidence": "low"
+ },
+ "wac-mar": {
+  "balance": 3000000,
+  "revenue": 20000000,
+  "wageBill": 10000000,
+  "squadValue": 15000000,
+  "confidence": "medium"
+ },
+ "rajacasablanca-mar": {
+  "balance": 1000000,
+  "revenue": 18000000,
+  "wageBill": 9000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "berkane-mar": {
+  "balance": 3000000,
+  "revenue": 12000000,
+  "wageBill": 6000000,
+  "squadValue": 12000000,
+  "confidence": "medium"
+ },
+ "farrabat-mar": {
+  "balance": 2000000,
+  "revenue": 10000000,
+  "wageBill": 6000000,
+  "squadValue": 10000000,
+  "confidence": "medium"
+ },
+ "puebla-mex": {
+  "balance": 4000000,
+  "revenue": 40000000,
+  "wageBill": 22000000,
+  "squadValue": 30000000,
+  "confidence": "low"
+ },
+ "necaxa-mex": {
+  "balance": 3500000,
+  "revenue": 34990000,
+  "wageBill": 19250000,
+  "squadValue": 27100000,
+  "confidence": "low"
+ },
+ "atleticosanluiz-mex": {
+  "balance": 3060000,
+  "revenue": 30610000,
+  "wageBill": 16840000,
+  "squadValue": 24470000,
+  "confidence": "low"
+ },
+ "tijuana-mex": {
+  "balance": 2680000,
+  "revenue": 26780000,
+  "wageBill": 14730000,
+  "squadValue": 22100000,
+  "confidence": "low"
+ },
+ "atlas-mex": {
+  "balance": 2340000,
+  "revenue": 23420000,
+  "wageBill": 12880000,
+  "squadValue": 19960000,
+  "confidence": "low"
+ },
+ "monarcas-mex": {
+  "balance": 2050000,
+  "revenue": 20490000,
+  "wageBill": 11270000,
+  "squadValue": 18030000,
+  "confidence": "low"
+ },
+ "zacatepec-mex": {
+  "balance": 1790000,
+  "revenue": 17930000,
+  "wageBill": 9860000,
+  "squadValue": 16290000,
+  "confidence": "low"
+ },
+ "mazatlan-mex": {
+  "balance": 1570000,
+  "revenue": 15680000,
+  "wageBill": 8620000,
+  "squadValue": 14710000,
+  "confidence": "low"
+ },
+ "cimarrones-mex": {
+  "balance": 1370000,
+  "revenue": 13720000,
+  "wageBill": 7540000,
+  "squadValue": 13290000,
+  "confidence": "low"
+ },
+ "juarez-mex": {
+  "balance": 1200000,
+  "revenue": 12000000,
+  "wageBill": 6600000,
+  "squadValue": 12000000,
+  "confidence": "low"
+ },
+ "america-mex": {
+  "balance": 20000000,
+  "revenue": 110000000,
+  "wageBill": 55000000,
+  "squadValue": 73600000,
+  "confidence": "high"
+ },
+ "cruzazul-mex": {
+  "balance": 12000000,
+  "revenue": 75000000,
+  "wageBill": 45000000,
+  "squadValue": 59900000,
+  "confidence": "medium"
+ },
+ "dep-guadalajara-mex": {
+  "balance": 15000000,
+  "revenue": 90000000,
+  "wageBill": 40000000,
+  "squadValue": 55000000,
+  "confidence": "medium"
+ },
+ "monterrey-mex": {
+  "balance": 15000000,
+  "revenue": 100000000,
+  "wageBill": 60000000,
+  "squadValue": 40700000,
+  "confidence": "medium"
+ },
+ "pachuca-mex": {
+  "balance": 10000000,
+  "revenue": 55000000,
+  "wageBill": 30000000,
+  "squadValue": 50000000,
+  "confidence": "medium"
+ },
+ "tigres-mex": {
+  "balance": 15000000,
+  "revenue": 95000000,
+  "wageBill": 55000000,
+  "squadValue": 42500000,
+  "confidence": "medium"
+ },
+ "pumasunam-mex": {
+  "balance": 6000000,
+  "revenue": 50000000,
+  "wageBill": 25000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "toluca-mex": {
+  "balance": 10000000,
+  "revenue": 60000000,
+  "wageBill": 35000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "leon-mex": {
+  "balance": 6000000,
+  "revenue": 45000000,
+  "wageBill": 25000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "santos-mex": {
+  "balance": 5000000,
+  "revenue": 40000000,
+  "wageBill": 22000000,
+  "squadValue": 35000000,
+  "confidence": "medium"
+ },
+ "oddgrenland-nor": {
+  "balance": 1800000,
+  "revenue": 15000000,
+  "wageBill": 7500000,
+  "squadValue": 25000000,
+  "confidence": "low"
+ },
+ "stromsgodset-nor": {
+  "balance": 1580000,
+  "revenue": 13140000,
+  "wageBill": 6570000,
+  "squadValue": 21280000,
+  "confidence": "low"
+ },
+ "start-nor": {
+  "balance": 1380000,
+  "revenue": 11520000,
+  "wageBill": 5760000,
+  "squadValue": 18120000,
+  "confidence": "low"
+ },
+ "valerenga-nor": {
+  "balance": 1210000,
+  "revenue": 10090000,
+  "wageBill": 5040000,
+  "squadValue": 15430000,
+  "confidence": "low"
+ },
+ "haugesund-nor": {
+  "balance": 1060000,
+  "revenue": 8840000,
+  "wageBill": 4420000,
+  "squadValue": 13130000,
+  "confidence": "low"
+ },
+ "sarpsborg-nor": {
+  "balance": 930000,
+  "revenue": 7750000,
+  "wageBill": 3870000,
+  "squadValue": 11180000,
+  "confidence": "low"
+ },
+ "lillestrom-nor": {
+  "balance": 810000,
+  "revenue": 6790000,
+  "wageBill": 3390000,
+  "squadValue": 9520000,
+  "confidence": "low"
+ },
+ "sandefjord-nor": {
+  "balance": 710000,
+  "revenue": 5950000,
+  "wageBill": 2970000,
+  "squadValue": 8100000,
+  "confidence": "low"
+ },
+ "aalesund-nor": {
+  "balance": 630000,
+  "revenue": 5210000,
+  "wageBill": 2610000,
+  "squadValue": 6900000,
+  "confidence": "low"
+ },
+ "mjondalen-nor": {
+  "balance": 550000,
+  "revenue": 4570000,
+  "wageBill": 2280000,
+  "squadValue": 5870000,
+  "confidence": "low"
+ },
+ "kristiansund-nor": {
+  "balance": 480000,
+  "revenue": 4000000,
+  "wageBill": 2000000,
+  "squadValue": 5000000,
+  "confidence": "low"
+ },
+ "bodoglimt-nor": {
+  "balance": 40000000,
+  "revenue": 90000000,
+  "wageBill": 25000000,
+  "squadValue": 85000000,
+  "confidence": "medium"
+ },
+ "viking-nor": {
+  "balance": 5000000,
+  "revenue": 25000000,
+  "wageBill": 12000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "molde-nor": {
+  "balance": 10000000,
+  "revenue": 35000000,
+  "wageBill": 18000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "rosenborg-nor": {
+  "balance": 5000000,
+  "revenue": 30000000,
+  "wageBill": 18000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "brann-nor": {
+  "balance": 8000000,
+  "revenue": 30000000,
+  "wageBill": 15000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "easternsuburbs-nze": {
+  "balance": 80000,
+  "revenue": 1000000,
+  "wageBill": 500000,
+  "squadValue": 1500000,
+  "confidence": "low"
+ },
+ "southern-nze": {
+  "balance": 70000,
+  "revenue": 870000,
+  "wageBill": 430000,
+  "squadValue": 1320000,
+  "confidence": "low"
+ },
+ "canterburyunited-nze": {
+  "balance": 60000,
+  "revenue": 760000,
+  "wageBill": 380000,
+  "squadValue": 1160000,
+  "confidence": "low"
+ },
+ "hawke-nze": {
+  "balance": 50000,
+  "revenue": 660000,
+  "wageBill": 330000,
+  "squadValue": 1020000,
+  "confidence": "low"
+ },
+ "hamilton-nze": {
+  "balance": 50000,
+  "revenue": 570000,
+  "wageBill": 290000,
+  "squadValue": 900000,
+  "confidence": "low"
+ },
+ "waitakere-nze": {
+  "balance": 50000,
+  "revenue": 500000,
+  "wageBill": 250000,
+  "squadValue": 790000,
+  "confidence": "low"
+ },
+ "teamwellington-nzl": {
+  "balance": 50000,
+  "revenue": 430000,
+  "wageBill": 220000,
+  "squadValue": 700000,
+  "confidence": "low"
+ },
+ "tasman-nze": {
+  "balance": 50000,
+  "revenue": 370000,
+  "wageBill": 190000,
+  "squadValue": 610000,
+  "confidence": "low"
+ },
+ "coastalspirit-nze": {
+  "balance": 50000,
+  "revenue": 330000,
+  "wageBill": 160000,
+  "squadValue": 540000,
+  "confidence": "low"
+ },
+ "wellingtonolympic-nze": {
+  "balance": 50000,
+  "revenue": 280000,
+  "wageBill": 140000,
+  "squadValue": 470000,
+  "confidence": "low"
+ },
+ "glenfield-nze": {
+  "balance": 50000,
+  "revenue": 250000,
+  "wageBill": 120000,
+  "squadValue": 420000,
+  "confidence": "low"
+ },
+ "phoenix-nze": {
+  "balance": 50000,
+  "revenue": 210000,
+  "wageBill": 110000,
+  "squadValue": 370000,
+  "confidence": "low"
+ },
+ "lowerhutt-nze": {
+  "balance": 50000,
+  "revenue": 190000,
+  "wageBill": 90000,
+  "squadValue": 320000,
+  "confidence": "low"
+ },
+ "napier-nze": {
+  "balance": 50000,
+  "revenue": 160000,
+  "wageBill": 80000,
+  "squadValue": 280000,
+  "confidence": "low"
+ },
+ "cashmere-nze": {
+  "balance": 50000,
+  "revenue": 140000,
+  "wageBill": 70000,
+  "squadValue": 250000,
+  "confidence": "low"
+ },
+ "bayolympic-nze": {
+  "balance": 50000,
+  "revenue": 120000,
+  "wageBill": 60000,
+  "squadValue": 220000,
+  "confidence": "low"
+ },
+ "onehunga-nze": {
+  "balance": 50000,
+  "revenue": 110000,
+  "wageBill": 50000,
+  "squadValue": 190000,
+  "confidence": "low"
+ },
+ "petone-nze": {
+  "balance": 50000,
+  "revenue": 90000,
+  "wageBill": 50000,
+  "squadValue": 170000,
+  "confidence": "low"
+ },
+ "springs-nze": {
+  "balance": 50000,
+  "revenue": 80000,
+  "wageBill": 40000,
+  "squadValue": 150000,
+  "confidence": "low"
+ },
+ "auckland-nze": {
+  "balance": 300000,
+  "revenue": 3000000,
+  "wageBill": 1000000,
+  "squadValue": 2000000,
+  "confidence": "medium"
+ },
+ "guarani-par": {
+  "balance": 300000,
+  "revenue": 5000000,
+  "wageBill": 3000000,
+  "squadValue": 12000000,
+  "confidence": "low"
+ },
+ "nacional-par": {
+  "balance": 270000,
+  "revenue": 4520000,
+  "wageBill": 2710000,
+  "squadValue": 10880000,
+  "confidence": "low"
+ },
+ "generaldiaz-par": {
+  "balance": 250000,
+  "revenue": 4090000,
+  "wageBill": 2450000,
+  "squadValue": 9860000,
+  "confidence": "low"
+ },
+ "sportivoluqueno-par": {
+  "balance": 220000,
+  "revenue": 3700000,
+  "wageBill": 2220000,
+  "squadValue": 8940000,
+  "confidence": "low"
+ },
+ "solamerica-par": {
+  "balance": 200000,
+  "revenue": 3340000,
+  "wageBill": 2010000,
+  "squadValue": 8110000,
+  "confidence": "low"
+ },
+ "2demayo-par": {
+  "balance": 180000,
+  "revenue": 3020000,
+  "wageBill": 1810000,
+  "squadValue": 7350000,
+  "confidence": "low"
+ },
+ "riverplate-par": {
+  "balance": 160000,
+  "revenue": 2730000,
+  "wageBill": 1640000,
+  "squadValue": 6660000,
+  "confidence": "low"
+ },
+ "deportivocapiata-par": {
+  "balance": 150000,
+  "revenue": 2470000,
+  "wageBill": 1480000,
+  "squadValue": 6040000,
+  "confidence": "low"
+ },
+ "deportivosantani-par": {
+  "balance": 130000,
+  "revenue": 2240000,
+  "wageBill": 1340000,
+  "squadValue": 5480000,
+  "confidence": "low"
+ },
+ "3defebrero-par": {
+  "balance": 120000,
+  "revenue": 2020000,
+  "wageBill": 1210000,
+  "squadValue": 4970000,
+  "confidence": "low"
+ },
+ "12deoctubre-par": {
+  "balance": 110000,
+  "revenue": 1830000,
+  "wageBill": 1100000,
+  "squadValue": 4500000,
+  "confidence": "low"
+ },
+ "independiente-par": {
+  "balance": 100000,
+  "revenue": 1650000,
+  "wageBill": 990000,
+  "squadValue": 4080000,
+  "confidence": "low"
+ },
+ "fernando-par": {
+  "balance": 90000,
+  "revenue": 1500000,
+  "wageBill": 900000,
+  "squadValue": 3700000,
+  "confidence": "low"
+ },
+ "rubionu-par": {
+  "balance": 80000,
+  "revenue": 1350000,
+  "wageBill": 810000,
+  "squadValue": 3350000,
+  "confidence": "low"
+ },
+ "guairena-par": {
+  "balance": 70000,
+  "revenue": 1220000,
+  "wageBill": 730000,
+  "squadValue": 3040000,
+  "confidence": "low"
+ },
+ "sanlorenzo-par": {
+  "balance": 70000,
+  "revenue": 1110000,
+  "wageBill": 660000,
+  "squadValue": 2760000,
+  "confidence": "low"
+ },
+ "fulgencio-par": {
+  "balance": 60000,
+  "revenue": 1000000,
+  "wageBill": 600000,
+  "squadValue": 2500000,
+  "confidence": "low"
+ },
+ "olimpia-par": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 12000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "cerroporteno-par": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 12000000,
+  "squadValue": 32000000,
+  "confidence": "medium"
+ },
+ "libertad-par": {
+  "balance": 3000000,
+  "revenue": 15000000,
+  "wageBill": 10000000,
+  "squadValue": 28000000,
+  "confidence": "medium"
+ },
+ "melgar-per": {
+  "balance": 360000,
+  "revenue": 6000000,
+  "wageBill": 3300000,
+  "squadValue": 8000000,
+  "confidence": "low"
+ },
+ "sanmartin-per": {
+  "balance": 320000,
+  "revenue": 5360000,
+  "wageBill": 2950000,
+  "squadValue": 7440000,
+  "confidence": "low"
+ },
+ "utc-per": {
+  "balance": 290000,
+  "revenue": 4800000,
+  "wageBill": 2640000,
+  "squadValue": 6920000,
+  "confidence": "low"
+ },
+ "cuscofcba-per": {
+  "balance": 260000,
+  "revenue": 4290000,
+  "wageBill": 2360000,
+  "squadValue": 6430000,
+  "confidence": "low"
+ },
+ "binacional-per": {
+  "balance": 230000,
+  "revenue": 3830000,
+  "wageBill": 2110000,
+  "squadValue": 5980000,
+  "confidence": "low"
+ },
+ "cesarvallejo-per": {
+  "balance": 210000,
+  "revenue": 3430000,
+  "wageBill": 1890000,
+  "squadValue": 5560000,
+  "confidence": "low"
+ },
+ "cienciano-per": {
+  "balance": 180000,
+  "revenue": 3060000,
+  "wageBill": 1690000,
+  "squadValue": 5170000,
+  "confidence": "low"
+ },
+ "municipal-per": {
+  "balance": 160000,
+  "revenue": 2740000,
+  "wageBill": 1510000,
+  "squadValue": 4810000,
+  "confidence": "low"
+ },
+ "sporthuncayo-per": {
+  "balance": 150000,
+  "revenue": 2450000,
+  "wageBill": 1350000,
+  "squadValue": 4470000,
+  "confidence": "low"
+ },
+ "sportboys-per": {
+  "balance": 130000,
+  "revenue": 2190000,
+  "wageBill": 1200000,
+  "squadValue": 4160000,
+  "confidence": "low"
+ },
+ "carlosmannucci-per": {
+  "balance": 120000,
+  "revenue": 1960000,
+  "wageBill": 1080000,
+  "squadValue": 3870000,
+  "confidence": "low"
+ },
+ "cantolao-per": {
+  "balance": 110000,
+  "revenue": 1750000,
+  "wageBill": 960000,
+  "squadValue": 3600000,
+  "confidence": "low"
+ },
+ "realgarcilaso-per": {
+  "balance": 90000,
+  "revenue": 1570000,
+  "wageBill": 860000,
+  "squadValue": 3340000,
+  "confidence": "low"
+ },
+ "depllacuabambaba-per": {
+  "balance": 80000,
+  "revenue": 1400000,
+  "wageBill": 770000,
+  "squadValue": 3110000,
+  "confidence": "low"
+ },
+ "alianza-per": {
+  "balance": 80000,
+  "revenue": 1250000,
+  "wageBill": 690000,
+  "squadValue": 2890000,
+  "confidence": "low"
+ },
+ "atleticograu-per": {
+  "balance": 70000,
+  "revenue": 1120000,
+  "wageBill": 620000,
+  "squadValue": 2690000,
+  "confidence": "low"
+ },
+ "ayacucho-per": {
+  "balance": 60000,
+  "revenue": 1000000,
+  "wageBill": 550000,
+  "squadValue": 2500000,
+  "confidence": "low"
+ },
+ "universitario-per": {
+  "balance": 3000000,
+  "revenue": 20000000,
+  "wageBill": 10000000,
+  "squadValue": 20000000,
+  "confidence": "medium"
+ },
+ "alianzalima-per": {
+  "balance": 2000000,
+  "revenue": 18000000,
+  "wageBill": 10000000,
+  "squadValue": 20000000,
+  "confidence": "medium"
+ },
+ "sportingcristal-per": {
+  "balance": 3000000,
+  "revenue": 18000000,
+  "wageBill": 10000000,
+  "squadValue": 22000000,
+  "confidence": "medium"
+ },
+ "moreirense-por": {
+  "balance": 2500000,
+  "revenue": 25000000,
+  "wageBill": 13750000,
+  "squadValue": 70000000,
+  "confidence": "low"
+ },
+ "estoril-por": {
+  "balance": 2160000,
+  "revenue": 21600000,
+  "wageBill": 11880000,
+  "squadValue": 62470000,
+  "confidence": "low"
+ },
+ "gilvicente-por": {
+  "balance": 1870000,
+  "revenue": 18660000,
+  "wageBill": 10260000,
+  "squadValue": 55740000,
+  "confidence": "low"
+ },
+ "nacional-por": {
+  "balance": 1610000,
+  "revenue": 16120000,
+  "wageBill": 8860000,
+  "squadValue": 49740000,
+  "confidence": "low"
+ },
+ "tondela-por": {
+  "balance": 1390000,
+  "revenue": 13920000,
+  "wageBill": 7660000,
+  "squadValue": 44390000,
+  "confidence": "low"
+ },
+ "boavista-por": {
+  "balance": 1200000,
+  "revenue": 12030000,
+  "wageBill": 6620000,
+  "squadValue": 39610000,
+  "confidence": "low"
+ },
+ "fcalverca-por": {
+  "balance": 1040000,
+  "revenue": 10390000,
+  "wageBill": 5720000,
+  "squadValue": 35350000,
+  "confidence": "low"
+ },
+ "estrelaamadora-por": {
+  "balance": 900000,
+  "revenue": 8980000,
+  "wageBill": 4940000,
+  "squadValue": 31540000,
+  "confidence": "low"
+ },
+ "arouca-por": {
+  "balance": 780000,
+  "revenue": 7760000,
+  "wageBill": 4270000,
+  "squadValue": 28150000,
+  "confidence": "low"
+ },
+ "farense-por": {
+  "balance": 670000,
+  "revenue": 6700000,
+  "wageBill": 3680000,
+  "squadValue": 25120000,
+  "confidence": "low"
+ },
+ "casapio-pt": {
+  "balance": 580000,
+  "revenue": 5790000,
+  "wageBill": 3180000,
+  "squadValue": 22410000,
+  "confidence": "low"
+ },
+ "avs-por": {
+  "balance": 500000,
+  "revenue": 5000000,
+  "wageBill": 2750000,
+  "squadValue": 20000000,
+  "confidence": "low"
+ },
+ "porto": {
+  "balance": 35000000,
+  "revenue": 190000000,
+  "wageBill": 110000000,
+  "squadValue": 451800000,
+  "confidence": "high"
+ },
+ "benfica-por": {
+  "balance": 50000000,
+  "revenue": 260000000,
+  "wageBill": 130000000,
+  "squadValue": 354000000,
+  "confidence": "high"
+ },
+ "sporting-por": {
+  "balance": 45000000,
+  "revenue": 210000000,
+  "wageBill": 95000000,
+  "squadValue": 336000000,
+  "confidence": "high"
+ },
+ "sportingbraga-por": {
+  "balance": 15000000,
+  "revenue": 70000000,
+  "wageBill": 40000000,
+  "squadValue": 150400000,
+  "confidence": "medium"
+ },
+ "famalicao-por": {
+  "balance": 3000000,
+  "revenue": 25000000,
+  "wageBill": 12000000,
+  "squadValue": 80000000,
+  "confidence": "medium"
+ },
+ "santaclara-por": {
+  "balance": 2000000,
+  "revenue": 18000000,
+  "wageBill": 10000000,
+  "squadValue": 55000000,
+  "confidence": "medium"
+ },
+ "vitoriaguimaraes-por": {
+  "balance": 4000000,
+  "revenue": 35000000,
+  "wageBill": 20000000,
+  "squadValue": 90000000,
+  "confidence": "medium"
+ },
+ "rioave-por": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 12000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "rubinkazan-rus": {
+  "balance": 1500000,
+  "revenue": 25000000,
+  "wageBill": 15000000,
+  "squadValue": 30000000,
+  "confidence": "low"
+ },
+ "nizhnynovgorod-rus": {
+  "balance": 1320000,
+  "revenue": 22030000,
+  "wageBill": 13220000,
+  "squadValue": 26550000,
+  "confidence": "low"
+ },
+ "arsenaltula-rus": {
+  "balance": 1160000,
+  "revenue": 19410000,
+  "wageBill": 11640000,
+  "squadValue": 23500000,
+  "confidence": "low"
+ },
+ "ural-rus": {
+  "balance": 1030000,
+  "revenue": 17100000,
+  "wageBill": 10260000,
+  "squadValue": 20800000,
+  "confidence": "low"
+ },
+ "rostov-rus": {
+  "balance": 900000,
+  "revenue": 15070000,
+  "wageBill": 9040000,
+  "squadValue": 18410000,
+  "confidence": "low"
+ },
+ "krylyasovetov-rus": {
+  "balance": 800000,
+  "revenue": 13270000,
+  "wageBill": 7960000,
+  "squadValue": 16290000,
+  "confidence": "low"
+ },
+ "terekgroznyi-rus": {
+  "balance": 700000,
+  "revenue": 11700000,
+  "wageBill": 7020000,
+  "squadValue": 14420000,
+  "confidence": "low"
+ },
+ "fcsochi-rus": {
+  "balance": 620000,
+  "revenue": 10310000,
+  "wageBill": 6180000,
+  "squadValue": 12770000,
+  "confidence": "low"
+ },
+ "orenburg-rus": {
+  "balance": 540000,
+  "revenue": 9080000,
+  "wageBill": 5450000,
+  "squadValue": 11300000,
+  "confidence": "low"
+ },
+ "baltika-rus": {
+  "balance": 480000,
+  "revenue": 8000000,
+  "wageBill": 4800000,
+  "squadValue": 10000000,
+  "confidence": "low"
+ },
+ "zenit-rus": {
+  "balance": 30000000,
+  "revenue": 230000000,
+  "wageBill": 110000000,
+  "squadValue": 160000000,
+  "confidence": "medium"
+ },
+ "spartak-rus": {
+  "balance": 5000000,
+  "revenue": 80000000,
+  "wageBill": 55000000,
+  "squadValue": 110000000,
+  "confidence": "medium"
+ },
+ "cskamoscow-rus": {
+  "balance": 5000000,
+  "revenue": 70000000,
+  "wageBill": 45000000,
+  "squadValue": 80000000,
+  "confidence": "medium"
+ },
+ "dynamo-rus": {
+  "balance": 5000000,
+  "revenue": 70000000,
+  "wageBill": 45000000,
+  "squadValue": 75000000,
+  "confidence": "medium"
+ },
+ "lokomotiv-rus": {
+  "balance": 5000000,
+  "revenue": 60000000,
+  "wageBill": 40000000,
+  "squadValue": 70000000,
+  "confidence": "medium"
+ },
+ "krasnodar-rus": {
+  "balance": 10000000,
+  "revenue": 80000000,
+  "wageBill": 50000000,
+  "squadValue": 95000000,
+  "confidence": "medium"
+ },
+ "sirius-sue": {
+  "balance": 1200000,
+  "revenue": 12000000,
+  "wageBill": 6000000,
+  "squadValue": 25000000,
+  "confidence": "low"
+ },
+ "helsingborg-sue": {
+  "balance": 1030000,
+  "revenue": 10290000,
+  "wageBill": 5140000,
+  "squadValue": 20390000,
+  "confidence": "low"
+ },
+ "gotenborg-sue": {
+  "balance": 880000,
+  "revenue": 8820000,
+  "wageBill": 4410000,
+  "squadValue": 16640000,
+  "confidence": "low"
+ },
+ "norrkoping-sue": {
+  "balance": 760000,
+  "revenue": 7560000,
+  "wageBill": 3780000,
+  "squadValue": 13570000,
+  "confidence": "low"
+ },
+ "orebro-sue": {
+  "balance": 650000,
+  "revenue": 6480000,
+  "wageBill": 3240000,
+  "squadValue": 11070000,
+  "confidence": "low"
+ },
+ "ostersunds-sue": {
+  "balance": 560000,
+  "revenue": 5560000,
+  "wageBill": 2780000,
+  "squadValue": 9030000,
+  "confidence": "low"
+ },
+ "mjallby-sue": {
+  "balance": 480000,
+  "revenue": 4760000,
+  "wageBill": 2380000,
+  "squadValue": 7370000,
+  "confidence": "low"
+ },
+ "falkenbergs-sue": {
+  "balance": 410000,
+  "revenue": 4080000,
+  "wageBill": 2040000,
+  "squadValue": 6010000,
+  "confidence": "low"
+ },
+ "varberg-sue": {
+  "balance": 350000,
+  "revenue": 3500000,
+  "wageBill": 1750000,
+  "squadValue": 4900000,
+  "confidence": "low"
+ },
+ "kalmar-sue": {
+  "balance": 300000,
+  "revenue": 3000000,
+  "wageBill": 1500000,
+  "squadValue": 4000000,
+  "confidence": "low"
+ },
+ "djurgardens-sue": {
+  "balance": 5000000,
+  "revenue": 30000000,
+  "wageBill": 15000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "hammarby-sue": {
+  "balance": 5000000,
+  "revenue": 28000000,
+  "wageBill": 14000000,
+  "squadValue": 35000000,
+  "confidence": "medium"
+ },
+ "aik-sue": {
+  "balance": 3000000,
+  "revenue": 28000000,
+  "wageBill": 15000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "malmo-sue": {
+  "balance": 15000000,
+  "revenue": 45000000,
+  "wageBill": 20000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "hacken-sue": {
+  "balance": 8000000,
+  "revenue": 25000000,
+  "wageBill": 12000000,
+  "squadValue": 35000000,
+  "confidence": "medium"
+ },
+ "elfsborg-sue": {
+  "balance": 5000000,
+  "revenue": 25000000,
+  "wageBill": 12000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "luzern-sui": {
+  "balance": 2000000,
+  "revenue": 20000000,
+  "wageBill": 11000000,
+  "squadValue": 30000000,
+  "confidence": "low"
+ },
+ "thun-sui": {
+  "balance": 1570000,
+  "revenue": 15720000,
+  "wageBill": 8650000,
+  "squadValue": 23030000,
+  "confidence": "low"
+ },
+ "sion-sui": {
+  "balance": 1240000,
+  "revenue": 12360000,
+  "wageBill": 6800000,
+  "squadValue": 17680000,
+  "confidence": "low"
+ },
+ "lausanne-sui": {
+  "balance": 970000,
+  "revenue": 9710000,
+  "wageBill": 5340000,
+  "squadValue": 13570000,
+  "confidence": "low"
+ },
+ "neuchatel-sui": {
+  "balance": 760000,
+  "revenue": 7630000,
+  "wageBill": 4200000,
+  "squadValue": 10420000,
+  "confidence": "low"
+ },
+ "yverdon-sui": {
+  "balance": 600000,
+  "revenue": 6000000,
+  "wageBill": 3300000,
+  "squadValue": 8000000,
+  "confidence": "low"
+ },
+ "youngboys-sui": {
+  "balance": 20000000,
+  "revenue": 70000000,
+  "wageBill": 35000000,
+  "squadValue": 70000000,
+  "confidence": "medium"
+ },
+ "servette-sui": {
+  "balance": 5000000,
+  "revenue": 30000000,
+  "wageBill": 18000000,
+  "squadValue": 40000000,
+  "confidence": "medium"
+ },
+ "basel-sui": {
+  "balance": 15000000,
+  "revenue": 55000000,
+  "wageBill": 30000000,
+  "squadValue": 70000000,
+  "confidence": "medium"
+ },
+ "lugano-sui": {
+  "balance": 5000000,
+  "revenue": 30000000,
+  "wageBill": 18000000,
+  "squadValue": 45000000,
+  "confidence": "medium"
+ },
+ "stgallen-sui": {
+  "balance": 3000000,
+  "revenue": 20000000,
+  "wageBill": 12000000,
+  "squadValue": 25000000,
+  "confidence": "medium"
+ },
+ "zurique-sui": {
+  "balance": 2000000,
+  "revenue": 25000000,
+  "wageBill": 15000000,
+  "squadValue": 30000000,
+  "confidence": "medium"
+ },
+ "kasimpasa-tur": {
+  "balance": 1500000,
+  "revenue": 30000000,
+  "wageBill": 22500000,
+  "squadValue": 55000000,
+  "confidence": "low"
+ },
+ "alanyaspor-tur": {
+  "balance": 1340000,
+  "revenue": 26870000,
+  "wageBill": 20150000,
+  "squadValue": 49360000,
+  "confidence": "low"
+ },
+ "sivasspor-tur": {
+  "balance": 1200000,
+  "revenue": 24070000,
+  "wageBill": 18050000,
+  "squadValue": 44290000,
+  "confidence": "low"
+ },
+ "goztepe-tur": {
+  "balance": 1080000,
+  "revenue": 21560000,
+  "wageBill": 16170000,
+  "squadValue": 39750000,
+  "confidence": "low"
+ },
+ "antalyspor-tur": {
+  "balance": 970000,
+  "revenue": 19310000,
+  "wageBill": 14480000,
+  "squadValue": 35670000,
+  "confidence": "low"
+ },
+ "konyaspor-tur": {
+  "balance": 860000,
+  "revenue": 17300000,
+  "wageBill": 12970000,
+  "squadValue": 32010000,
+  "confidence": "low"
+ },
+ "caykur-tur": {
+  "balance": 770000,
+  "revenue": 15490000,
+  "wageBill": 11620000,
+  "squadValue": 28720000,
+  "confidence": "low"
+ },
+ "genclerbirligi-tur": {
+  "balance": 690000,
+  "revenue": 13880000,
+  "wageBill": 10410000,
+  "squadValue": 25780000,
+  "confidence": "low"
+ },
+ "malatyaspor-tur": {
+  "balance": 620000,
+  "revenue": 12430000,
+  "wageBill": 9320000,
+  "squadValue": 23130000,
+  "confidence": "low"
+ },
+ "samsunspor-tur": {
+  "balance": 560000,
+  "revenue": 11130000,
+  "wageBill": 8350000,
+  "squadValue": 20760000,
+  "confidence": "low"
+ },
+ "istanbulspor-tur": {
+  "balance": 500000,
+  "revenue": 9970000,
+  "wageBill": 7480000,
+  "squadValue": 18630000,
+  "confidence": "low"
+ },
+ "gazianter-tur": {
+  "balance": 450000,
+  "revenue": 8930000,
+  "wageBill": 6700000,
+  "squadValue": 16720000,
+  "confidence": "low"
+ },
+ "fatihkaragumruk-tur": {
+  "balance": 400000,
+  "revenue": 8000000,
+  "wageBill": 6000000,
+  "squadValue": 15000000,
+  "confidence": "low"
+ },
+ "galatasaray-tur": {
+  "balance": 20000000,
+  "revenue": 300000000,
+  "wageBill": 230000000,
+  "squadValue": 368100000,
+  "confidence": "high"
+ },
+ "fenerbahce-tur": {
+  "balance": 10000000,
+  "revenue": 230000000,
+  "wageBill": 170000000,
+  "squadValue": 269300000,
+  "confidence": "high"
+ },
+ "besiktas-tur": {
+  "balance": 10000000,
+  "revenue": 180000000,
+  "wageBill": 130000000,
+  "squadValue": 206300000,
+  "confidence": "high"
+ },
+ "basaksehir-tur": {
+  "balance": 3000000,
+  "revenue": 40000000,
+  "wageBill": 30000000,
+  "squadValue": 60000000,
+  "confidence": "medium"
+ },
+ "trabzonspor-tur": {
+  "balance": 5000000,
+  "revenue": 90000000,
+  "wageBill": 60000000,
+  "squadValue": 110000000,
+  "confidence": "medium"
+ },
+ "dnipro1-ucr": {
+  "balance": 360000,
+  "revenue": 6000000,
+  "wageBill": 3600000,
+  "squadValue": 25000000,
+  "confidence": "low"
+ },
+ "zorya-ucr": {
+  "balance": 320000,
+  "revenue": 5390000,
+  "wageBill": 3240000,
+  "squadValue": 21710000,
+  "confidence": "low"
+ },
+ "vorsklapoltava-ucr": {
+  "balance": 290000,
+  "revenue": 4850000,
+  "wageBill": 2910000,
+  "squadValue": 18860000,
+  "confidence": "low"
+ },
+ "fclviv-ucr": {
+  "balance": 260000,
+  "revenue": 4360000,
+  "wageBill": 2610000,
+  "squadValue": 16380000,
+  "confidence": "low"
+ },
+ "mariupol-ucr": {
+  "balance": 230000,
+  "revenue": 3920000,
+  "wageBill": 2350000,
+  "squadValue": 14230000,
+  "confidence": "low"
+ },
+ "olimpik-ucr": {
+  "balance": 210000,
+  "revenue": 3520000,
+  "wageBill": 2110000,
+  "squadValue": 12350000,
+  "confidence": "low"
+ },
+ "metalist-ucr": {
+  "balance": 190000,
+  "revenue": 3160000,
+  "wageBill": 1900000,
+  "squadValue": 10730000,
+  "confidence": "low"
+ },
+ "pfc-ucr": {
+  "balance": 170000,
+  "revenue": 2840000,
+  "wageBill": 1710000,
+  "squadValue": 9320000,
+  "confidence": "low"
+ },
+ "kolos-ucr": {
+  "balance": 150000,
+  "revenue": 2560000,
+  "wageBill": 1530000,
+  "squadValue": 8090000,
+  "confidence": "low"
+ },
+ "milaj-ucr": {
+  "balance": 140000,
+  "revenue": 2300000,
+  "wageBill": 1380000,
+  "squadValue": 7030000,
+  "confidence": "low"
+ },
+ "desna-ucr": {
+  "balance": 120000,
+  "revenue": 2070000,
+  "wageBill": 1240000,
+  "squadValue": 6110000,
+  "confidence": "low"
+ },
+ "ahrobiznes-ucr": {
+  "balance": 110000,
+  "revenue": 1860000,
+  "wageBill": 1110000,
+  "squadValue": 5300000,
+  "confidence": "low"
+ },
+ "rukh-ucr": {
+  "balance": 100000,
+  "revenue": 1670000,
+  "wageBill": 1000000,
+  "squadValue": 4610000,
+  "confidence": "low"
+ },
+ "inhulets-ucr": {
+  "balance": 90000,
+  "revenue": 1500000,
+  "wageBill": 900000,
+  "squadValue": 4000000,
+  "confidence": "low"
+ },
+ "shakhtar-ucr": {
+  "balance": 20000000,
+  "revenue": 60000000,
+  "wageBill": 40000000,
+  "squadValue": 150000000,
+  "confidence": "medium"
+ },
+ "dinamokiev-ucr": {
+  "balance": 5000000,
+  "revenue": 40000000,
+  "wageBill": 25000000,
+  "squadValue": 75000000,
+  "confidence": "medium"
+ },
+ "danubio-uru": {
+  "balance": 360000,
+  "revenue": 6000000,
+  "wageBill": 3300000,
+  "squadValue": 15000000,
+  "confidence": "low"
+ },
+ "liverpool-uru": {
+  "balance": 320000,
+  "revenue": 5390000,
+  "wageBill": 2970000,
+  "squadValue": 13250000,
+  "confidence": "low"
+ },
+ "juventud-uru": {
+  "balance": 290000,
+  "revenue": 4850000,
+  "wageBill": 2670000,
+  "squadValue": 11710000,
+  "confidence": "low"
+ },
+ "wanderers-uru": {
+  "balance": 260000,
+  "revenue": 4360000,
+  "wageBill": 2400000,
+  "squadValue": 10350000,
+  "confidence": "low"
+ },
+ "montevideotorque-uru": {
+  "balance": 230000,
+  "revenue": 3920000,
+  "wageBill": 2150000,
+  "squadValue": 9140000,
+  "confidence": "low"
+ },
+ "progreso-uru": {
+  "balance": 210000,
+  "revenue": 3520000,
+  "wageBill": 1940000,
+  "squadValue": 8080000,
+  "confidence": "low"
+ },
+ "plazacolonia-uru": {
+  "balance": 190000,
+  "revenue": 3160000,
+  "wageBill": 1740000,
+  "squadValue": 7140000,
+  "confidence": "low"
+ },
+ "racing-uru": {
+  "balance": 170000,
+  "revenue": 2840000,
+  "wageBill": 1560000,
+  "squadValue": 6310000,
+  "confidence": "low"
+ },
+ "fenix-uru": {
+  "balance": 150000,
+  "revenue": 2560000,
+  "wageBill": 1410000,
+  "squadValue": 5570000,
+  "confidence": "low"
+ },
+ "cerro-par": {
+  "balance": 140000,
+  "revenue": 2300000,
+  "wageBill": 1260000,
+  "squadValue": 4920000,
+  "confidence": "low"
+ },
+ "riverplate-uru": {
+  "balance": 120000,
+  "revenue": 2070000,
+  "wageBill": 1140000,
+  "squadValue": 4350000,
+  "confidence": "low"
+ },
+ "defensor-uru": {
+  "balance": 110000,
+  "revenue": 1860000,
+  "wageBill": 1020000,
+  "squadValue": 3840000,
+  "confidence": "low"
+ },
+ "cerrolargo-uru": {
+  "balance": 100000,
+  "revenue": 1670000,
+  "wageBill": 920000,
+  "squadValue": 3400000,
+  "confidence": "low"
+ },
+ "bostonriver-uru": {
+  "balance": 90000,
+  "revenue": 1500000,
+  "wageBill": 830000,
+  "squadValue": 3000000,
+  "confidence": "low"
+ },
+ "penarol-uru": {
+  "balance": 4000000,
+  "revenue": 30000000,
+  "wageBill": 15000000,
+  "squadValue": 35000000,
+  "confidence": "medium"
+ },
+ "nacional-uru": {
+  "balance": 4000000,
+  "revenue": 28000000,
+  "wageBill": 15000000,
+  "squadValue": 35000000,
+  "confidence": "medium"
+ },
+ "deptachira-ven": {
+  "balance": 240000,
+  "revenue": 4000000,
+  "wageBill": 2200000,
+  "squadValue": 5000000,
+  "confidence": "low"
+ },
+ "caracas-ven": {
+  "balance": 210000,
+  "revenue": 3480000,
+  "wageBill": 1920000,
+  "squadValue": 4490000,
+  "confidence": "low"
+ },
+ "carabobo-ven": {
+  "balance": 180000,
+  "revenue": 3030000,
+  "wageBill": 1670000,
+  "squadValue": 4030000,
+  "confidence": "low"
+ },
+ "zamora-ven": {
+  "balance": 160000,
+  "revenue": 2640000,
+  "wageBill": 1450000,
+  "squadValue": 3620000,
+  "confidence": "low"
+ },
+ "zulia-ven": {
+  "balance": 140000,
+  "revenue": 2300000,
+  "wageBill": 1260000,
+  "squadValue": 3260000,
+  "confidence": "low"
+ },
+ "atleticovenezuela-ven": {
+  "balance": 120000,
+  "revenue": 2000000,
+  "wageBill": 1100000,
+  "squadValue": 2920000,
+  "confidence": "low"
+ },
+ "monaguas-ven": {
+  "balance": 100000,
+  "revenue": 1740000,
+  "wageBill": 960000,
+  "squadValue": 2630000,
+  "confidence": "low"
+ },
+ "deplaguaira-ven": {
+  "balance": 90000,
+  "revenue": 1520000,
+  "wageBill": 830000,
+  "squadValue": 2360000,
+  "confidence": "low"
+ },
+ "metropolitanos-ven": {
+  "balance": 80000,
+  "revenue": 1320000,
+  "wageBill": 730000,
+  "squadValue": 2120000,
+  "confidence": "low"
+ },
+ "trujillanos-ven": {
+  "balance": 70000,
+  "revenue": 1150000,
+  "wageBill": 630000,
+  "squadValue": 1900000,
+  "confidence": "low"
+ },
+ "academia-ven": {
+  "balance": 60000,
+  "revenue": 1000000,
+  "wageBill": 550000,
+  "squadValue": 1710000,
+  "confidence": "low"
+ },
+ "llaneros-ven": {
+  "balance": 50000,
+  "revenue": 870000,
+  "wageBill": 480000,
+  "squadValue": 1540000,
+  "confidence": "low"
+ },
+ "mineros-ven": {
+  "balance": 50000,
+  "revenue": 760000,
+  "wageBill": 420000,
+  "squadValue": 1380000,
+  "confidence": "low"
+ },
+ "deportivolara-ven": {
+  "balance": 50000,
+  "revenue": 660000,
+  "wageBill": 360000,
+  "squadValue": 1240000,
+  "confidence": "low"
+ },
+ "aragua-ven": {
+  "balance": 50000,
+  "revenue": 570000,
+  "wageBill": 320000,
+  "squadValue": 1110000,
+  "confidence": "low"
+ },
+ "ucv-ven": {
+  "balance": 50000,
+  "revenue": 500000,
+  "wageBill": 280000,
+  "squadValue": 1000000,
+  "confidence": "low"
+ }
+}

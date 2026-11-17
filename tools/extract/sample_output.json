@@ -1,0 +1,2057 @@
+[
+  {
+    "arquivo": "palmeiras.ban",
+    "versao_formato": 185,
+    "nome": "Palmeiras",
+    "id_arquivo": "palmeiras",
+    "cor_primaria": "#028b4c",
+    "cor_secundaria": "#ffffff",
+    "estadio": "Allianz Parque",
+    "capacidade": 43713,
+    "tecnico": "Abel Ferreira",
+    "tecnico_nacionalidade": {
+      "id": 154,
+      "nome": "Portugal"
+    },
+    "pais": {
+      "id": 29,
+      "nome": "Brasil"
+    },
+    "estado": "SP",
+    "estado_raw": 25,
+    "nivel": 20,
+    "reputacao": 4,
+    "o_desconhecido": 4,
+    "id_global": 2418,
+    "valido": true,
+    "jogadores": [
+      {
+        "nome": "Carlos Miguel",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Defesa de Pênaltis",
+          "Colocação"
+        ],
+        "caracteristicas_ids": [
+          1,
+          0
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 69400
+      },
+      {
+        "nome": "Marcelo Lomba",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 39,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Saída do Gol",
+          "Defesa de Pênaltis"
+        ],
+        "caracteristicas_ids": [
+          3,
+          1
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 53015
+      },
+      {
+        "nome": "Bruno Bertinato",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Colocação",
+          "Reflexos"
+        ],
+        "caracteristicas_ids": [
+          0,
+          2
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 9,
+        "tm_id": 286772
+      },
+      {
+        "nome": "Joaquín Piquerez",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Resistência",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          12,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 75435
+      },
+      {
+        "nome": "Jefté",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 22,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Resistência",
+          "Armação"
+        ],
+        "caracteristicas_ids": [
+          12,
+          4
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 5,
+        "tm_id": 147361
+      },
+      {
+        "nome": "Arthur Gabriel",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 21,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Drible",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          8,
+          13
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 496268
+      },
+      {
+        "nome": "Agustín Giay",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 22,
+        "nacionalidade": {
+          "id": 11,
+          "nome": "Argentina"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cruzamento",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          6,
+          8
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 5,
+        "tm_id": 345084
+      },
+      {
+        "nome": "Khellven",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 25,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Passe",
+          "Cruzamento"
+        ],
+        "caracteristicas_ids": [
+          11,
+          6
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 215390
+      },
+      {
+        "nome": "Alexander Barboza",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 31,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Desarme",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          7,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 3,
+        "tm_id": 178984
+      },
+      {
+        "nome": "Murilo",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 29,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Desarme",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          7,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 340840
+      },
+      {
+        "nome": "Bruno Fuchs",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          13,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 458710
+      },
+      {
+        "nome": "Luis Benedetti",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 20,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Resistência",
+          "Marcação"
+        ],
+        "caracteristicas_ids": [
+          12,
+          10
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 225432
+      },
+      {
+        "nome": "Gustavo Gómez",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 33,
+        "nacionalidade": {
+          "id": 150,
+          "nome": "Paraguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Desarme",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          7,
+          13
+        ],
+        "craque": true,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 9,
+        "tm_id": 608216
+      },
+      {
+        "nome": "Emiliano Martínez",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Resistência",
+          "Desarme"
+        ],
+        "caracteristicas_ids": [
+          12,
+          7
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 432953
+      },
+      {
+        "nome": "Marlon Freitas",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 31,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Marcação",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          10,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 330085
+      },
+      {
+        "nome": "Luis Pacheco",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 18,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Desarme",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          7,
+          12
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 808509
+      },
+      {
+        "nome": "Andreas Pereira",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 30,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Resistência",
+          "Armação"
+        ],
+        "caracteristicas_ids": [
+          12,
+          4
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 366948
+      },
+      {
+        "nome": "Lucas Evangelista",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 31,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Drible",
+          "Armação"
+        ],
+        "caracteristicas_ids": [
+          8,
+          4
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 469135
+      },
+      {
+        "nome": "Larson",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 21,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Drible",
+          "Armação"
+        ],
+        "caracteristicas_ids": [
+          8,
+          4
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 542598
+      },
+      {
+        "nome": "Mauricio",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 25,
+        "nacionalidade": {
+          "id": 150,
+          "nome": "Paraguai"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Finalização",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          9,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 9,
+        "tm_id": 371009
+      },
+      {
+        "nome": "Erick Belé",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 19,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Armação",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          4,
+          8
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 674732
+      },
+      {
+        "nome": "Felipe Anderson",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 33,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          5,
+          12
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 114937
+      },
+      {
+        "nome": "Jhon Arias",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 46,
+          "nome": "Colômbia"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          13,
+          8
+        ],
+        "craque": true,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 7,
+        "tm_id": 371267
+      },
+      {
+        "nome": "Ramón Sosa",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 150,
+          "nome": "Paraguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Finalização",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          9,
+          8
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "Paulinho",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 26,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Finalização",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          9,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "Vitor Roque",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 21,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Resistência",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          12,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "José Manuel López",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 25,
+        "nacionalidade": {
+          "id": 11,
+          "nome": "Argentina"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Resistência",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          12,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      }
+    ],
+    "juniores": []
+  },
+  {
+    "arquivo": "flarj.ban",
+    "versao_formato": 185,
+    "nome": "Flamengo",
+    "id_arquivo": "flarj",
+    "cor_primaria": "#ff3333",
+    "cor_secundaria": "#000000",
+    "estadio": "Maracanã",
+    "capacidade": 78838,
+    "tecnico": "Leonardo Jardim",
+    "tecnico_nacionalidade": {
+      "id": 154,
+      "nome": "Portugal"
+    },
+    "pais": {
+      "id": 29,
+      "nome": "Brasil"
+    },
+    "estado": "RJ",
+    "estado_raw": 18,
+    "nivel": 21,
+    "reputacao": 4,
+    "o_desconhecido": 5,
+    "id_global": 2278,
+    "valido": true,
+    "jogadores": [
+      {
+        "nome": "Agustín Rossi",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 31,
+        "nacionalidade": {
+          "id": 11,
+          "nome": "Argentina"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Defesa de Pênaltis",
+          "Colocação"
+        ],
+        "caracteristicas_ids": [
+          1,
+          0
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 42373
+      },
+      {
+        "nome": "Andrew",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 25,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Defesa de Pênaltis",
+          "Colocação"
+        ],
+        "caracteristicas_ids": [
+          1,
+          0
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 574901
+      },
+      {
+        "nome": "Dyogo Alves",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 22,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Reflexos",
+          "Colocação"
+        ],
+        "caracteristicas_ids": [
+          2,
+          0
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 140811
+      },
+      {
+        "nome": "Ayrton Lucas",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 29,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Passe",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          11,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 3,
+        "tm_id": 21725
+      },
+      {
+        "nome": "Alex Sandro",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 35,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Resistência",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          12,
+          8
+        ],
+        "craque": true,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 594226
+      },
+      {
+        "nome": "Emerson Royal",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Drible",
+          "Cruzamento"
+        ],
+        "caracteristicas_ids": [
+          8,
+          6
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 185966
+      },
+      {
+        "nome": "Guillermo Varela",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 33,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cruzamento",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          6,
+          8
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 349585
+      },
+      {
+        "nome": "Léo Ortiz",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 30,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          5,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 208681
+      },
+      {
+        "nome": "Léo Pereira",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 30,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Marcação",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          10,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 288431
+      },
+      {
+        "nome": "Vitão",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 26,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          13,
+          12
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 172054
+      },
+      {
+        "nome": "Danilo",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 35,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Passe",
+          "Marcação"
+        ],
+        "caracteristicas_ids": [
+          11,
+          10
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 432773
+      },
+      {
+        "nome": "João Souza",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 19,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          5,
+          11
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 46741
+      },
+      {
+        "nome": "Evertton Araújo",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 23,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Resistência",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          12,
+          5
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 149577
+      },
+      {
+        "nome": "Erick Pulgar",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 32,
+        "nacionalidade": {
+          "id": 42,
+          "nome": "Chile"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Desarme",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          7,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 3,
+        "tm_id": 248410
+      },
+      {
+        "nome": "Jorginho",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 34,
+        "nacionalidade": {
+          "id": 104,
+          "nome": "Itália"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Desarme"
+        ],
+        "caracteristicas_ids": [
+          5,
+          7
+        ],
+        "craque": true,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 4248
+      },
+      {
+        "nome": "Nicolás de la Cruz",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 29,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Passe",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          11,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 7,
+        "tm_id": 52896
+      },
+      {
+        "nome": "Saúl Ñíguez",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 31,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Drible",
+          "Finalização"
+        ],
+        "caracteristicas_ids": [
+          8,
+          9
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 574772
+      },
+      {
+        "nome": "Lucas Paquetá",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 29,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Finalização",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          9,
+          8
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 735570
+      },
+      {
+        "nome": "Giorgian de Arrascaeta",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 32,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          13,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 3,
+        "tm_id": 294873
+      },
+      {
+        "nome": "Jorge Carrascal",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 46,
+          "nome": "Colômbia"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          13,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 37666
+      },
+      {
+        "nome": "Lorran",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 20,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Drible",
+          "Finalização"
+        ],
+        "caracteristicas_ids": [
+          8,
+          9
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 244275
+      },
+      {
+        "nome": "Samuel Lino",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 26,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Drible",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          8,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 432895
+      },
+      {
+        "nome": "Gonzalo Plata",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 25,
+        "nacionalidade": {
+          "id": 60,
+          "nome": "Equador"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Cabeceio",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          5,
+          12
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 213605
+      },
+      {
+        "nome": "Luiz Araújo",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 30,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Finalização",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          9,
+          8
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 5,
+        "tm_id": 353108
+      },
+      {
+        "nome": "Anthony Valencia",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 23,
+        "nacionalidade": {
+          "id": 60,
+          "nome": "Equador"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Finalização",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          9,
+          12
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 3,
+        "tm_id": 74758
+      },
+      {
+        "nome": "Pedro",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 29,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Drible",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          8,
+          12
+        ],
+        "craque": true,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "Joaquín Freitas",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 19,
+        "nacionalidade": {
+          "id": 11,
+          "nome": "Argentina"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Finalização",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          9,
+          5
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "Bruno Henrique",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 35,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Finalização",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          9,
+          8
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      }
+    ],
+    "juniores": []
+  },
+  {
+    "arquivo": "realmadrid_esp.ban",
+    "versao_formato": 185,
+    "nome": "Real Madrid",
+    "id_arquivo": "realmadrid_esp",
+    "cor_primaria": "#ffffff",
+    "cor_secundaria": "#004080",
+    "estadio": "Santiago Bernabéu",
+    "capacidade": 81044,
+    "tecnico": "José Mourinho",
+    "tecnico_nacionalidade": {
+      "id": 65,
+      "nome": "Espanha"
+    },
+    "pais": {
+      "id": 65,
+      "nome": "Espanha"
+    },
+    "estado": null,
+    "estado_raw": 0,
+    "nivel": 24,
+    "reputacao": 5,
+    "o_desconhecido": 0,
+    "id_global": 2445,
+    "valido": true,
+    "jogadores": [
+      {
+        "nome": "Thibaut Courtois",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 34,
+        "nacionalidade": {
+          "id": 21,
+          "nome": "Bélgica"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Defesa de Pênaltis",
+          "Reflexos"
+        ],
+        "caracteristicas_ids": [
+          1,
+          2
+        ],
+        "craque": true,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 7,
+        "tm_id": 108390
+      },
+      {
+        "nome": "Andriy Lunin",
+        "posicao": "GOL",
+        "posicao_id": 0,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 193,
+          "nome": "Ucrânia"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Reflexos",
+          "Saída do Gol"
+        ],
+        "caracteristicas_ids": [
+          2,
+          3
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 8,
+        "tm_id": 404839
+      },
+      {
+        "nome": "Dean Huijsen",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 21,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Desarme",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          7,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": 138927
+      },
+      {
+        "nome": "Ibrahima Konaté",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 72,
+          "nome": "França"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Marcação",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          10,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 291417
+      },
+      {
+        "nome": "Raúl Asencio",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 23,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Marcação",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          10,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 280730
+      },
+      {
+        "nome": "Éder Militão",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Passe",
+          "Marcação"
+        ],
+        "caracteristicas_ids": [
+          11,
+          10
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 58884
+      },
+      {
+        "nome": "Antonio Rüdiger",
+        "posicao": "ZAG",
+        "posicao_id": 2,
+        "idade": 33,
+        "nacionalidade": {
+          "id": 3,
+          "nome": "Alemanha"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          5,
+          13
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 401530
+      },
+      {
+        "nome": "Marc Cucurella",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Drible",
+          "Armação"
+        ],
+        "caracteristicas_ids": [
+          8,
+          4
+        ],
+        "craque": true,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 9,
+        "tm_id": 59016
+      },
+      {
+        "nome": "Álvaro Carreras",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 23,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Velocidade",
+          "Cruzamento"
+        ],
+        "caracteristicas_ids": [
+          13,
+          6
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 251896
+      },
+      {
+        "nome": "Ferland Mendy",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 31,
+        "nacionalidade": {
+          "id": 72,
+          "nome": "França"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Velocidade",
+          "Cruzamento"
+        ],
+        "caracteristicas_ids": [
+          13,
+          6
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 86202
+      },
+      {
+        "nome": "Trent Alexander-Arnold",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 97,
+          "nome": "Inglaterra"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Drible",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          8,
+          12
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": 27992
+      },
+      {
+        "nome": "Denzel Dumfries",
+        "posicao": "LAT",
+        "posicao_id": 1,
+        "idade": 30,
+        "nacionalidade": {
+          "id": 85,
+          "nome": "Holanda"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Drible",
+          "Armação"
+        ],
+        "caracteristicas_ids": [
+          8,
+          4
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 31909
+      },
+      {
+        "nome": "Aurélien Tchouaméni",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 26,
+        "nacionalidade": {
+          "id": 72,
+          "nome": "França"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Passe",
+          "Marcação"
+        ],
+        "caracteristicas_ids": [
+          11,
+          10
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 16306
+      },
+      {
+        "nome": "Federico Valverde",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 28,
+        "nacionalidade": {
+          "id": 195,
+          "nome": "Uruguai"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Armação",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          4,
+          13
+        ],
+        "craque": true,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 2,
+        "tm_id": 221316
+      },
+      {
+        "nome": "Eduardo Camavinga",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 23,
+        "nacionalidade": {
+          "id": 72,
+          "nome": "França"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Marcação",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          10,
+          12
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 296622
+      },
+      {
+        "nome": "Thiago Pitarch",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 19,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Armação",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          4,
+          13
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 7,
+        "tm_id": 369081
+      },
+      {
+        "nome": "Jorge Cestero",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 20,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Finalização"
+        ],
+        "caracteristicas_ids": [
+          5,
+          9
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 3,
+        "tm_id": 412363
+      },
+      {
+        "nome": "Jude Bellingham",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 23,
+        "nacionalidade": {
+          "id": 97,
+          "nome": "Inglaterra"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Drible"
+        ],
+        "caracteristicas_ids": [
+          13,
+          8
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": true,
+        "forca_hash": 9,
+        "tm_id": 640428
+      },
+      {
+        "nome": "Arda Güler",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 21,
+        "nacionalidade": {
+          "id": 192,
+          "nome": "Turquia"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Armação",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          4,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 4,
+        "tm_id": 413112
+      },
+      {
+        "nome": "Bernardo Silva",
+        "posicao": "MEI",
+        "posicao_id": 3,
+        "idade": 32,
+        "nacionalidade": {
+          "id": 154,
+          "nome": "Portugal"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Finalização",
+          "Passe"
+        ],
+        "caracteristicas_ids": [
+          9,
+          11
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 1,
+        "tm_id": 18922
+      },
+      {
+        "nome": "Vinicius Junior",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 26,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Resistência",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          12,
+          5
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": true,
+        "forca_hash": 6,
+        "tm_id": 371998
+      },
+      {
+        "nome": "Yan Diomande",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 19,
+        "nacionalidade": {
+          "id": 50,
+          "nome": "Costa do Marfim"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Resistência",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          12,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 10,
+        "tm_id": 50202
+      },
+      {
+        "nome": "Rodrygo",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 25,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          5,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 6,
+        "tm_id": 225020
+      },
+      {
+        "nome": "Brahim Díaz",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 129,
+          "nome": "Marrocos"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Cabeceio",
+          "Resistência"
+        ],
+        "caracteristicas_ids": [
+          5,
+          12
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 7,
+        "tm_id": 298976
+      },
+      {
+        "nome": "Kylian Mbappé",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 27,
+        "nacionalidade": {
+          "id": 72,
+          "nome": "França"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Finalização"
+        ],
+        "caracteristicas_ids": [
+          13,
+          9
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": true,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "Endrick",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 20,
+        "nacionalidade": {
+          "id": 29,
+          "nome": "Brasil"
+        },
+        "lado": "E",
+        "caracteristicas": [
+          "Finalização",
+          "Velocidade"
+        ],
+        "caracteristicas_ids": [
+          9,
+          13
+        ],
+        "craque": false,
+        "destaque": true,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      },
+      {
+        "nome": "Carlos Espí",
+        "posicao": "ATA",
+        "posicao_id": 4,
+        "idade": 21,
+        "nacionalidade": {
+          "id": 65,
+          "nome": "Espanha"
+        },
+        "lado": "D",
+        "caracteristicas": [
+          "Velocidade",
+          "Cabeceio"
+        ],
+        "caracteristicas_ids": [
+          13,
+          5
+        ],
+        "craque": false,
+        "destaque": false,
+        "top_mundial": false,
+        "forca_hash": 0,
+        "tm_id": null
+      }
+    ],
+    "juniores": []
+  }
+]

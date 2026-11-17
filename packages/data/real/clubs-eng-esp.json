@@ -1,0 +1,562 @@
+{
+  "machestercity-ing": {
+    "balance": 200000000,
+    "revenue": 829000000,
+    "wageBill": 490000000,
+    "squadValue": 1150000000,
+    "confidence": "high"
+  },
+  "arsenal": {
+    "balance": 150000000,
+    "revenue": 821000000,
+    "wageBill": 400000000,
+    "squadValue": 1250000000,
+    "confidence": "high"
+  },
+  "liverpool-ing": {
+    "balance": 150000000,
+    "revenue": 836000000,
+    "wageBill": 450000000,
+    "squadValue": 1100000000,
+    "confidence": "high"
+  },
+  "chelsea": {
+    "balance": 120000000,
+    "revenue": 584000000,
+    "wageBill": 420000000,
+    "squadValue": 1150000000,
+    "confidence": "medium"
+  },
+  "machester-ing": {
+    "balance": 90000000,
+    "revenue": 793000000,
+    "wageBill": 380000000,
+    "squadValue": 800000000,
+    "confidence": "high"
+  },
+  "newcastle-ing": {
+    "balance": 80000000,
+    "revenue": 380000000,
+    "wageBill": 260000000,
+    "squadValue": 620000000,
+    "confidence": "medium"
+  },
+  "tottenhamhotspur-ing": {
+    "balance": 90000000,
+    "revenue": 672000000,
+    "wageBill": 280000000,
+    "squadValue": 820000000,
+    "confidence": "medium"
+  },
+  "astonvilla-ing": {
+    "balance": 50000000,
+    "revenue": 420000000,
+    "wageBill": 300000000,
+    "squadValue": 560000000,
+    "confidence": "medium"
+  },
+  "brighton-ing": {
+    "balance": 60000000,
+    "revenue": 270000000,
+    "wageBill": 170000000,
+    "squadValue": 520000000,
+    "confidence": "medium"
+  },
+  "nottinghamforest-ing": {
+    "balance": 50000000,
+    "revenue": 260000000,
+    "wageBill": 160000000,
+    "squadValue": 500000000,
+    "confidence": "medium"
+  },
+  "bournemouth-ing": {
+    "balance": 50000000,
+    "revenue": 210000000,
+    "wageBill": 130000000,
+    "squadValue": 390000000,
+    "confidence": "medium"
+  },
+  "everton-ing": {
+    "balance": 40000000,
+    "revenue": 230000000,
+    "wageBill": 150000000,
+    "squadValue": 320000000,
+    "confidence": "medium"
+  },
+  "brentford-ing": {
+    "balance": 40000000,
+    "revenue": 230000000,
+    "wageBill": 120000000,
+    "squadValue": 420000000,
+    "confidence": "medium"
+  },
+  "crystalpalace-ing": {
+    "balance": 45000000,
+    "revenue": 240000000,
+    "wageBill": 140000000,
+    "squadValue": 420000000,
+    "confidence": "medium"
+  },
+  "fulham": {
+    "balance": 35000000,
+    "revenue": 230000000,
+    "wageBill": 140000000,
+    "squadValue": 320000000,
+    "confidence": "medium"
+  },
+  "ipswichtown-ing": {
+    "balance": 25000000,
+    "revenue": 120000000,
+    "wageBill": 85000000,
+    "squadValue": 180000000,
+    "confidence": "medium"
+  },
+  "leedsunited-ing": {
+    "balance": 40000000,
+    "revenue": 200000000,
+    "wageBill": 120000000,
+    "squadValue": 330000000,
+    "confidence": "medium"
+  },
+  "sunderland": {
+    "balance": 50000000,
+    "revenue": 180000000,
+    "wageBill": 110000000,
+    "squadValue": 360000000,
+    "confidence": "medium"
+  },
+  "burnley-ing": {
+    "balance": 30000000,
+    "revenue": 160000000,
+    "wageBill": 90000000,
+    "squadValue": 240000000,
+    "confidence": "medium"
+  },
+  "hullcity-ing": {
+    "balance": 8000000,
+    "revenue": 50000000,
+    "wageBill": 35000000,
+    "squadValue": 70000000,
+    "confidence": "low"
+  },
+  "westham-eng": {
+    "balance": 50000000,
+    "revenue": 300000000,
+    "wageBill": 170000000,
+    "squadValue": 400000000,
+    "confidence": "medium"
+  },
+  "leicestercity-ing": {
+    "balance": 10000000,
+    "revenue": 120000000,
+    "wageBill": 100000000,
+    "squadValue": 150000000,
+    "confidence": "medium"
+  },
+  "southampton-eng": {
+    "balance": 20000000,
+    "revenue": 150000000,
+    "wageBill": 90000000,
+    "squadValue": 200000000,
+    "confidence": "medium"
+  },
+  "wolverhampton-ing": {
+    "balance": 40000000,
+    "revenue": 230000000,
+    "wageBill": 120000000,
+    "squadValue": 280000000,
+    "confidence": "medium"
+  },
+  "bristolcity-eng": {
+    "balance": 6000000,
+    "revenue": 40000000,
+    "wageBill": 30000000,
+    "squadValue": 60000000,
+    "confidence": "low"
+  },
+  "coventry-ing": {
+    "balance": 15000000,
+    "revenue": 55000000,
+    "wageBill": 40000000,
+    "squadValue": 100000000,
+    "confidence": "low"
+  },
+  "sheffieldunited-ing": {
+    "balance": 12000000,
+    "revenue": 80000000,
+    "wageBill": 50000000,
+    "squadValue": 90000000,
+    "confidence": "low"
+  },
+  "middlesbrough-ing": {
+    "balance": 10000000,
+    "revenue": 55000000,
+    "wageBill": 45000000,
+    "squadValue": 90000000,
+    "confidence": "low"
+  },
+  "blackburn-ing": {
+    "balance": 5000000,
+    "revenue": 35000000,
+    "wageBill": 25000000,
+    "squadValue": 50000000,
+    "confidence": "low"
+  },
+  "millwall-ing": {
+    "balance": 6000000,
+    "revenue": 40000000,
+    "wageBill": 30000000,
+    "squadValue": 60000000,
+    "confidence": "low"
+  },
+  "westbromwich-ing": {
+    "balance": 10000000,
+    "revenue": 60000000,
+    "wageBill": 45000000,
+    "squadValue": 80000000,
+    "confidence": "low"
+  },
+  "birmingham-ing": {
+    "balance": 20000000,
+    "revenue": 70000000,
+    "wageBill": 50000000,
+    "squadValue": 120000000,
+    "confidence": "low"
+  },
+  "norwichcity-ing": {
+    "balance": 10000000,
+    "revenue": 65000000,
+    "wageBill": 45000000,
+    "squadValue": 90000000,
+    "confidence": "low"
+  },
+  "queenspark-ing": {
+    "balance": 4000000,
+    "revenue": 40000000,
+    "wageBill": 30000000,
+    "squadValue": 55000000,
+    "confidence": "low"
+  },
+  "watford-ing": {
+    "balance": 8000000,
+    "revenue": 60000000,
+    "wageBill": 40000000,
+    "squadValue": 80000000,
+    "confidence": "low"
+  },
+  "sheffield-ing": {
+    "balance": 1000000,
+    "revenue": 30000000,
+    "wageBill": 25000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "swansea-ing": {
+    "balance": 8000000,
+    "revenue": 45000000,
+    "wageBill": 30000000,
+    "squadValue": 60000000,
+    "confidence": "low"
+  },
+  "portsmouth-ing": {
+    "balance": 6000000,
+    "revenue": 40000000,
+    "wageBill": 25000000,
+    "squadValue": 50000000,
+    "confidence": "low"
+  },
+  "stokecity-ing": {
+    "balance": 8000000,
+    "revenue": 55000000,
+    "wageBill": 40000000,
+    "squadValue": 70000000,
+    "confidence": "low"
+  },
+  "charlton-eng": {
+    "balance": 5000000,
+    "revenue": 30000000,
+    "wageBill": 22000000,
+    "squadValue": 45000000,
+    "confidence": "low"
+  },
+  "barcelona-esp": {
+    "balance": 60000000,
+    "revenue": 975000000,
+    "wageBill": 550000000,
+    "squadValue": 1150000000,
+    "confidence": "high"
+  },
+  "realmadrid-esp": {
+    "balance": 180000000,
+    "revenue": 1161000000,
+    "wageBill": 600000000,
+    "squadValue": 1350000000,
+    "confidence": "high"
+  },
+  "villareal-esp": {
+    "balance": 30000000,
+    "revenue": 200000000,
+    "wageBill": 100000000,
+    "squadValue": 280000000,
+    "confidence": "medium"
+  },
+  "atleticomadrid-esp": {
+    "balance": 100000000,
+    "revenue": 450000000,
+    "wageBill": 270000000,
+    "squadValue": 650000000,
+    "confidence": "medium"
+  },
+  "atleticobilbao-esp": {
+    "balance": 40000000,
+    "revenue": 160000000,
+    "wageBill": 100000000,
+    "squadValue": 280000000,
+    "confidence": "medium"
+  },
+  "celtadevigo-esp": {
+    "balance": 20000000,
+    "revenue": 110000000,
+    "wageBill": 60000000,
+    "squadValue": 160000000,
+    "confidence": "medium"
+  },
+  "rayovallecano-esp": {
+    "balance": 8000000,
+    "revenue": 80000000,
+    "wageBill": 45000000,
+    "squadValue": 100000000,
+    "confidence": "medium"
+  },
+  "betis-esp": {
+    "balance": 20000000,
+    "revenue": 165000000,
+    "wageBill": 90000000,
+    "squadValue": 220000000,
+    "confidence": "medium"
+  },
+  "realsociedad-esp": {
+    "balance": 30000000,
+    "revenue": 160000000,
+    "wageBill": 95000000,
+    "squadValue": 260000000,
+    "confidence": "medium"
+  },
+  "valencia-esp": {
+    "balance": 15000000,
+    "revenue": 110000000,
+    "wageBill": 70000000,
+    "squadValue": 180000000,
+    "confidence": "medium"
+  },
+  "espanyol-esp": {
+    "balance": 8000000,
+    "revenue": 85000000,
+    "wageBill": 50000000,
+    "squadValue": 110000000,
+    "confidence": "medium"
+  },
+  "getafe-esp": {
+    "balance": 5000000,
+    "revenue": 80000000,
+    "wageBill": 45000000,
+    "squadValue": 90000000,
+    "confidence": "medium"
+  },
+  "osasuna-esp": {
+    "balance": 10000000,
+    "revenue": 85000000,
+    "wageBill": 50000000,
+    "squadValue": 100000000,
+    "confidence": "medium"
+  },
+  "levante-esp": {
+    "balance": 4000000,
+    "revenue": 60000000,
+    "wageBill": 35000000,
+    "squadValue": 70000000,
+    "confidence": "medium"
+  },
+  "sevilla-esp": {
+    "balance": 10000000,
+    "revenue": 170000000,
+    "wageBill": 90000000,
+    "squadValue": 150000000,
+    "confidence": "medium"
+  },
+  "deportivolacoruna-esp": {
+    "balance": 10000000,
+    "revenue": 35000000,
+    "wageBill": 18000000,
+    "squadValue": 70000000,
+    "confidence": "low"
+  },
+  "alaves-esp": {
+    "balance": 8000000,
+    "revenue": 75000000,
+    "wageBill": 45000000,
+    "squadValue": 90000000,
+    "confidence": "medium"
+  },
+  "malaga-esp": {
+    "balance": 5000000,
+    "revenue": 30000000,
+    "wageBill": 15000000,
+    "squadValue": 50000000,
+    "confidence": "low"
+  },
+  "racing-esp": {
+    "balance": 5000000,
+    "revenue": 30000000,
+    "wageBill": 15000000,
+    "squadValue": 55000000,
+    "confidence": "low"
+  },
+  "elche-esp": {
+    "balance": 6000000,
+    "revenue": 65000000,
+    "wageBill": 35000000,
+    "squadValue": 90000000,
+    "confidence": "medium"
+  },
+  "girona-esp": {
+    "balance": 15000000,
+    "revenue": 100000000,
+    "wageBill": 60000000,
+    "squadValue": 140000000,
+    "confidence": "medium"
+  },
+  "mallorca-esp": {
+    "balance": 12000000,
+    "revenue": 90000000,
+    "wageBill": 50000000,
+    "squadValue": 130000000,
+    "confidence": "medium"
+  },
+  "mirandes-esp": {
+    "balance": 1500000,
+    "revenue": 12000000,
+    "wageBill": 6000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "realoviedo-esp": {
+    "balance": 6000000,
+    "revenue": 65000000,
+    "wageBill": 30000000,
+    "squadValue": 70000000,
+    "confidence": "low"
+  },
+  "almeria-esp": {
+    "balance": 4000000,
+    "revenue": 35000000,
+    "wageBill": 18000000,
+    "squadValue": 60000000,
+    "confidence": "low"
+  },
+  "cadiz-esp": {
+    "balance": 3000000,
+    "revenue": 35000000,
+    "wageBill": 18000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "leganes-esp": {
+    "balance": 4000000,
+    "revenue": 40000000,
+    "wageBill": 18000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "sportinggijon-esp": {
+    "balance": 3000000,
+    "revenue": 30000000,
+    "wageBill": 15000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "eibar-esp": {
+    "balance": 2000000,
+    "revenue": 22000000,
+    "wageBill": 10000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "granada-esp": {
+    "balance": 3000000,
+    "revenue": 32000000,
+    "wageBill": 15000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "huesca-esp": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "laspalmas-esp": {
+    "balance": 4000000,
+    "revenue": 40000000,
+    "wageBill": 18000000,
+    "squadValue": 50000000,
+    "confidence": "low"
+  },
+  "albacete-esp": {
+    "balance": 1500000,
+    "revenue": 14000000,
+    "wageBill": 7000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "valladolid-esp": {
+    "balance": 4000000,
+    "revenue": 40000000,
+    "wageBill": 18000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "burgos-esp": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "leonesa-esp": {
+    "balance": 1000000,
+    "revenue": 10000000,
+    "wageBill": 5000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "adceuta-esp": {
+    "balance": 1000000,
+    "revenue": 9000000,
+    "wageBill": 4000000,
+    "squadValue": 12000000,
+    "confidence": "low"
+  },
+  "realzaragoza-esp": {
+    "balance": 2000000,
+    "revenue": 25000000,
+    "wageBill": 12000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "castellon-esp": {
+    "balance": 2000000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "cordoba-esp": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 22000000,
+    "confidence": "low"
+  }
+}

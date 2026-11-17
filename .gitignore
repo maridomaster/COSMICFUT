@@ -1,0 +1,21 @@
+# dependências e builds
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+
+# dados locais do servidor (salas, snapshots, link do túnel)
+.data/
+apps/server/.data/
+
+# segredos e ambiente
+.env
+.env.*
+*.pem
+*.key
+
+# sistema / editor
+.DS_Store
+Thumbs.db
+*.log
+.claude/settings.local.json

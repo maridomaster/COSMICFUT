@@ -1,0 +1,814 @@
+{
+  "inter-it": {
+    "balance": 60000000,
+    "revenue": 540000000,
+    "wageBill": 240000000,
+    "squadValue": 650000000,
+    "confidence": "high"
+  },
+  "juventus-it": {
+    "balance": 55000000,
+    "revenue": 450000000,
+    "wageBill": 250000000,
+    "squadValue": 560000000,
+    "confidence": "high"
+  },
+  "atalanta-it": {
+    "balance": 50000000,
+    "revenue": 260000000,
+    "wageBill": 110000000,
+    "squadValue": 450000000,
+    "confidence": "medium"
+  },
+  "como-ita": {
+    "balance": 80000000,
+    "revenue": 90000000,
+    "wageBill": 110000000,
+    "squadValue": 380000000,
+    "confidence": "medium"
+  },
+  "milan-it": {
+    "balance": 70000000,
+    "revenue": 420000000,
+    "wageBill": 190000000,
+    "squadValue": 560000000,
+    "confidence": "high"
+  },
+  "roma-it": {
+    "balance": 30000000,
+    "revenue": 290000000,
+    "wageBill": 170000000,
+    "squadValue": 380000000,
+    "confidence": "medium"
+  },
+  "bologna-it": {
+    "balance": 30000000,
+    "revenue": 170000000,
+    "wageBill": 75000000,
+    "squadValue": 300000000,
+    "confidence": "medium"
+  },
+  "fiorentina-ita": {
+    "balance": 30000000,
+    "revenue": 180000000,
+    "wageBill": 90000000,
+    "squadValue": 300000000,
+    "confidence": "medium"
+  },
+  "napoli-it": {
+    "balance": 70000000,
+    "revenue": 340000000,
+    "wageBill": 160000000,
+    "squadValue": 560000000,
+    "confidence": "high"
+  },
+  "lazio-it": {
+    "balance": 10000000,
+    "revenue": 160000000,
+    "wageBill": 95000000,
+    "squadValue": 260000000,
+    "confidence": "medium"
+  },
+  "genoa-it": {
+    "balance": 12000000,
+    "revenue": 85000000,
+    "wageBill": 45000000,
+    "squadValue": 180000000,
+    "confidence": "medium"
+  },
+  "torino-it": {
+    "balance": 15000000,
+    "revenue": 110000000,
+    "wageBill": 55000000,
+    "squadValue": 170000000,
+    "confidence": "medium"
+  },
+  "udinese-it": {
+    "balance": 15000000,
+    "revenue": 85000000,
+    "wageBill": 45000000,
+    "squadValue": 170000000,
+    "confidence": "medium"
+  },
+  "parma-ita": {
+    "balance": 20000000,
+    "revenue": 90000000,
+    "wageBill": 55000000,
+    "squadValue": 190000000,
+    "confidence": "medium"
+  },
+  "cagliari-it": {
+    "balance": 10000000,
+    "revenue": 80000000,
+    "wageBill": 40000000,
+    "squadValue": 130000000,
+    "confidence": "medium"
+  },
+  "frosinone-ita": {
+    "balance": 4000000,
+    "revenue": 25000000,
+    "wageBill": 15000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "lecce-ita": {
+    "balance": 8000000,
+    "revenue": 65000000,
+    "wageBill": 30000000,
+    "squadValue": 110000000,
+    "confidence": "medium"
+  },
+  "venezia-ita": {
+    "balance": 6000000,
+    "revenue": 30000000,
+    "wageBill": 25000000,
+    "squadValue": 70000000,
+    "confidence": "low"
+  },
+  "monza-ita": {
+    "balance": 6000000,
+    "revenue": 40000000,
+    "wageBill": 25000000,
+    "squadValue": 60000000,
+    "confidence": "low"
+  },
+  "sassuolo-ita": {
+    "balance": 15000000,
+    "revenue": 85000000,
+    "wageBill": 45000000,
+    "squadValue": 170000000,
+    "confidence": "medium"
+  },
+  "palermo-it": {
+    "balance": 10000000,
+    "revenue": 30000000,
+    "wageBill": 25000000,
+    "squadValue": 70000000,
+    "confidence": "medium"
+  },
+  "empoli-it": {
+    "balance": 5000000,
+    "revenue": 35000000,
+    "wageBill": 20000000,
+    "squadValue": 50000000,
+    "confidence": "low"
+  },
+  "verona-ita": {
+    "balance": 8000000,
+    "revenue": 70000000,
+    "wageBill": 30000000,
+    "squadValue": 120000000,
+    "confidence": "medium"
+  },
+  "pisa-ita": {
+    "balance": 15000000,
+    "revenue": 55000000,
+    "wageBill": 30000000,
+    "squadValue": 120000000,
+    "confidence": "medium"
+  },
+  "cremonese-ita": {
+    "balance": 10000000,
+    "revenue": 60000000,
+    "wageBill": 30000000,
+    "squadValue": 110000000,
+    "confidence": "medium"
+  },
+  "catanzaro-ita": {
+    "balance": 3000000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "cesena-ita": {
+    "balance": 3000000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "bari-ita": {
+    "balance": 4000000,
+    "revenue": 20000000,
+    "wageBill": 12000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "carrarese-ita": {
+    "balance": 2000000,
+    "revenue": 10000000,
+    "wageBill": 6000000,
+    "squadValue": 12000000,
+    "confidence": "low"
+  },
+  "modena-ita": {
+    "balance": 4000000,
+    "revenue": 20000000,
+    "wageBill": 12000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "spezia-ita": {
+    "balance": 5000000,
+    "revenue": 30000000,
+    "wageBill": 18000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "sudtirol-ita": {
+    "balance": 2000000,
+    "revenue": 12000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "sampdoria-ita": {
+    "balance": 5000000,
+    "revenue": 30000000,
+    "wageBill": 20000000,
+    "squadValue": 35000000,
+    "confidence": "low"
+  },
+  "brescia-it": {
+    "balance": 1000000,
+    "revenue": 8000000,
+    "wageBill": 5000000,
+    "squadValue": 8000000,
+    "confidence": "low"
+  },
+  "padova-ita": {
+    "balance": 3000000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "avellino-ita": {
+    "balance": 2000000,
+    "revenue": 10000000,
+    "wageBill": 6000000,
+    "squadValue": 12000000,
+    "confidence": "low"
+  },
+  "juvestabia-it": {
+    "balance": 2000000,
+    "revenue": 10000000,
+    "wageBill": 6000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "reggiana-ita": {
+    "balance": 2000000,
+    "revenue": 12000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "entella-ita": {
+    "balance": 1500000,
+    "revenue": 8000000,
+    "wageBill": 5000000,
+    "squadValue": 10000000,
+    "confidence": "low"
+  },
+  "mantova-ita": {
+    "balance": 2000000,
+    "revenue": 10000000,
+    "wageBill": 6000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "bayern-ale": {
+    "balance": 130000000,
+    "revenue": 860000000,
+    "wageBill": 400000000,
+    "squadValue": 950000000,
+    "confidence": "high"
+  },
+  "bayerleverkusen-ale": {
+    "balance": 80000000,
+    "revenue": 330000000,
+    "wageBill": 150000000,
+    "squadValue": 520000000,
+    "confidence": "high"
+  },
+  "borussia-ale": {
+    "balance": 70000000,
+    "revenue": 530000000,
+    "wageBill": 250000000,
+    "squadValue": 480000000,
+    "confidence": "high"
+  },
+  "fsvfrankfurt-ale": {
+    "balance": 60000000,
+    "revenue": 300000000,
+    "wageBill": 110000000,
+    "squadValue": 380000000,
+    "confidence": "high"
+  },
+  "sttutgart-ale": {
+    "balance": 40000000,
+    "revenue": 250000000,
+    "wageBill": 100000000,
+    "squadValue": 330000000,
+    "confidence": "medium"
+  },
+  "leipzig-ale": {
+    "balance": 70000000,
+    "revenue": 480000000,
+    "wageBill": 180000000,
+    "squadValue": 450000000,
+    "confidence": "medium"
+  },
+  "fsvmainz-ale": {
+    "balance": 15000000,
+    "revenue": 140000000,
+    "wageBill": 55000000,
+    "squadValue": 140000000,
+    "confidence": "medium"
+  },
+  "freiburg-ale": {
+    "balance": 25000000,
+    "revenue": 160000000,
+    "wageBill": 60000000,
+    "squadValue": 190000000,
+    "confidence": "medium"
+  },
+  "hoffebheim-ale": {
+    "balance": 25000000,
+    "revenue": 170000000,
+    "wageBill": 75000000,
+    "squadValue": 230000000,
+    "confidence": "medium"
+  },
+  "werderbremen-ale": {
+    "balance": 10000000,
+    "revenue": 150000000,
+    "wageBill": 60000000,
+    "squadValue": 150000000,
+    "confidence": "medium"
+  },
+  "augsburg-ale": {
+    "balance": 12000000,
+    "revenue": 110000000,
+    "wageBill": 45000000,
+    "squadValue": 130000000,
+    "confidence": "medium"
+  },
+  "fckoln-ale": {
+    "balance": 10000000,
+    "revenue": 170000000,
+    "wageBill": 60000000,
+    "squadValue": 150000000,
+    "confidence": "medium"
+  },
+  "hamburgo-ale": {
+    "balance": 8000000,
+    "revenue": 140000000,
+    "wageBill": 50000000,
+    "squadValue": 160000000,
+    "confidence": "medium"
+  },
+  "schalke04-ale": {
+    "balance": 3000000,
+    "revenue": 90000000,
+    "wageBill": 45000000,
+    "squadValue": 55000000,
+    "confidence": "medium"
+  },
+  "monchengladbach-ale": {
+    "balance": 15000000,
+    "revenue": 190000000,
+    "wageBill": 75000000,
+    "squadValue": 220000000,
+    "confidence": "medium"
+  },
+  "elversberg-ale": {
+    "balance": 2000000,
+    "revenue": 20000000,
+    "wageBill": 8000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "paderborn-ale": {
+    "balance": 2000000,
+    "revenue": 25000000,
+    "wageBill": 10000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "unionberlin-ale": {
+    "balance": 15000000,
+    "revenue": 190000000,
+    "wageBill": 75000000,
+    "squadValue": 140000000,
+    "confidence": "medium"
+  },
+  "stpauli-ale": {
+    "balance": 10000000,
+    "revenue": 110000000,
+    "wageBill": 40000000,
+    "squadValue": 110000000,
+    "confidence": "medium"
+  },
+  "wolfsburg-ale": {
+    "balance": 30000000,
+    "revenue": 250000000,
+    "wageBill": 110000000,
+    "squadValue": 270000000,
+    "confidence": "medium"
+  },
+  "heidenheim-ale": {
+    "balance": 8000000,
+    "revenue": 75000000,
+    "wageBill": 30000000,
+    "squadValue": 70000000,
+    "confidence": "medium"
+  },
+  "holsteinkiel-ale": {
+    "balance": 4000000,
+    "revenue": 45000000,
+    "wageBill": 20000000,
+    "squadValue": 45000000,
+    "confidence": "medium"
+  },
+  "bochum-ale": {
+    "balance": 4000000,
+    "revenue": 50000000,
+    "wageBill": 22000000,
+    "squadValue": 40000000,
+    "confidence": "medium"
+  },
+  "fortuna-ale": {
+    "balance": 4000000,
+    "revenue": 55000000,
+    "wageBill": 22000000,
+    "squadValue": 40000000,
+    "confidence": "medium"
+  },
+  "magdeburg-ale": {
+    "balance": 2000000,
+    "revenue": 35000000,
+    "wageBill": 15000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "herthaberlim-ale": {
+    "balance": 3000000,
+    "revenue": 90000000,
+    "wageBill": 35000000,
+    "squadValue": 55000000,
+    "confidence": "medium"
+  },
+  "greuther-ale": {
+    "balance": 3000000,
+    "revenue": 35000000,
+    "wageBill": 15000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "karlsruher-ale": {
+    "balance": 3000000,
+    "revenue": 40000000,
+    "wageBill": 15000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "nurnberg-ale": {
+    "balance": 3000000,
+    "revenue": 50000000,
+    "wageBill": 18000000,
+    "squadValue": 45000000,
+    "confidence": "low"
+  },
+  "arminia-ale": {
+    "balance": 3000000,
+    "revenue": 40000000,
+    "wageBill": 15000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "darmstadt98-ale": {
+    "balance": 3000000,
+    "revenue": 40000000,
+    "wageBill": 15000000,
+    "squadValue": 35000000,
+    "confidence": "low"
+  },
+  "dynamodresden-ale": {
+    "balance": 2000000,
+    "revenue": 35000000,
+    "wageBill": 12000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "hannover96-ale": {
+    "balance": 4000000,
+    "revenue": 55000000,
+    "wageBill": 22000000,
+    "squadValue": 50000000,
+    "confidence": "medium"
+  },
+  "kaiserslautern-ale": {
+    "balance": 4000000,
+    "revenue": 50000000,
+    "wageBill": 20000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "eintrachtbraunschweig-ale": {
+    "balance": 2000000,
+    "revenue": 35000000,
+    "wageBill": 13000000,
+    "squadValue": 25000000,
+    "confidence": "low"
+  },
+  "preussen06munster-ale": {
+    "balance": 2000000,
+    "revenue": 25000000,
+    "wageBill": 10000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "energiecottbus-ale": {
+    "balance": 1500000,
+    "revenue": 20000000,
+    "wageBill": 8000000,
+    "squadValue": 12000000,
+    "confidence": "low"
+  },
+  "hansarostock-ale": {
+    "balance": 2000000,
+    "revenue": 30000000,
+    "wageBill": 10000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "parissaintgermain-fr": {
+    "balance": 170000000,
+    "revenue": 840000000,
+    "wageBill": 600000000,
+    "squadValue": 1100000000,
+    "confidence": "high"
+  },
+  "monaco-fr": {
+    "balance": 50000000,
+    "revenue": 220000000,
+    "wageBill": 140000000,
+    "squadValue": 420000000,
+    "confidence": "medium"
+  },
+  "lyon": {
+    "balance": 20000000,
+    "revenue": 250000000,
+    "wageBill": 150000000,
+    "squadValue": 300000000,
+    "confidence": "medium"
+  },
+  "strasbourg-fra": {
+    "balance": 60000000,
+    "revenue": 110000000,
+    "wageBill": 70000000,
+    "squadValue": 330000000,
+    "confidence": "medium"
+  },
+  "olympiquemarseile-fra": {
+    "balance": 40000000,
+    "revenue": 330000000,
+    "wageBill": 170000000,
+    "squadValue": 330000000,
+    "confidence": "medium"
+  },
+  "lille-fra": {
+    "balance": 35000000,
+    "revenue": 180000000,
+    "wageBill": 100000000,
+    "squadValue": 270000000,
+    "confidence": "medium"
+  },
+  "nice-fra": {
+    "balance": 25000000,
+    "revenue": 140000000,
+    "wageBill": 75000000,
+    "squadValue": 210000000,
+    "confidence": "medium"
+  },
+  "rennes-fr": {
+    "balance": 30000000,
+    "revenue": 170000000,
+    "wageBill": 90000000,
+    "squadValue": 260000000,
+    "confidence": "medium"
+  },
+  "lens-fr": {
+    "balance": 25000000,
+    "revenue": 150000000,
+    "wageBill": 70000000,
+    "squadValue": 200000000,
+    "confidence": "medium"
+  },
+  "toulouse-fr": {
+    "balance": 15000000,
+    "revenue": 90000000,
+    "wageBill": 45000000,
+    "squadValue": 160000000,
+    "confidence": "medium"
+  },
+  "lorient-fr": {
+    "balance": 6000000,
+    "revenue": 55000000,
+    "wageBill": 30000000,
+    "squadValue": 90000000,
+    "confidence": "medium"
+  },
+  "paris-fra": {
+    "balance": 40000000,
+    "revenue": 60000000,
+    "wageBill": 50000000,
+    "squadValue": 140000000,
+    "confidence": "medium"
+  },
+  "brest-fr": {
+    "balance": 8000000,
+    "revenue": 80000000,
+    "wageBill": 45000000,
+    "squadValue": 100000000,
+    "confidence": "medium"
+  },
+  "angers-fr": {
+    "balance": 4000000,
+    "revenue": 50000000,
+    "wageBill": 25000000,
+    "squadValue": 80000000,
+    "confidence": "low"
+  },
+  "auxerre-fr": {
+    "balance": 6000000,
+    "revenue": 55000000,
+    "wageBill": 30000000,
+    "squadValue": 90000000,
+    "confidence": "low"
+  },
+  "lehavre-fr": {
+    "balance": 5000000,
+    "revenue": 55000000,
+    "wageBill": 28000000,
+    "squadValue": 80000000,
+    "confidence": "low"
+  },
+  "lemans-fra": {
+    "balance": 2000000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "troyes-fr": {
+    "balance": 2000000,
+    "revenue": 25000000,
+    "wageBill": 12000000,
+    "squadValue": 35000000,
+    "confidence": "low"
+  },
+  "st-ettiene-fr": {
+    "balance": 6000000,
+    "revenue": 60000000,
+    "wageBill": 35000000,
+    "squadValue": 70000000,
+    "confidence": "medium"
+  },
+  "metz-fr": {
+    "balance": 8000000,
+    "revenue": 60000000,
+    "wageBill": 30000000,
+    "squadValue": 85000000,
+    "confidence": "medium"
+  },
+  "nantes-fr": {
+    "balance": 8000000,
+    "revenue": 80000000,
+    "wageBill": 50000000,
+    "squadValue": 110000000,
+    "confidence": "medium"
+  },
+  "reims-fr": {
+    "balance": 6000000,
+    "revenue": 60000000,
+    "wageBill": 35000000,
+    "squadValue": 70000000,
+    "confidence": "medium"
+  },
+  "montpellier-fra": {
+    "balance": 3000000,
+    "revenue": 50000000,
+    "wageBill": 25000000,
+    "squadValue": 40000000,
+    "confidence": "low"
+  },
+  "guingamp-fr": {
+    "balance": 2000000,
+    "revenue": 20000000,
+    "wageBill": 10000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "dunkerque-fra": {
+    "balance": 2000000,
+    "revenue": 15000000,
+    "wageBill": 8000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "amiens-fra": {
+    "balance": 2000000,
+    "revenue": 20000000,
+    "wageBill": 10000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "annecy-fra": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "bastia-fra": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "grenoble-fra": {
+    "balance": 2000000,
+    "revenue": 18000000,
+    "wageBill": 8000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "laval-fr": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "ajaccio-fr": {
+    "balance": 1000000,
+    "revenue": 8000000,
+    "wageBill": 4000000,
+    "squadValue": 5000000,
+    "confidence": "low"
+  },
+  "clermont-fr": {
+    "balance": 2000000,
+    "revenue": 20000000,
+    "wageBill": 10000000,
+    "squadValue": 20000000,
+    "confidence": "low"
+  },
+  "nancy-fr": {
+    "balance": 2000000,
+    "revenue": 18000000,
+    "wageBill": 8000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "redstar-fr": {
+    "balance": 4000000,
+    "revenue": 25000000,
+    "wageBill": 12000000,
+    "squadValue": 30000000,
+    "confidence": "low"
+  },
+  "rodez-fra": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "pau-fra": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 7000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "caen-fr": {
+    "balance": 2000000,
+    "revenue": 20000000,
+    "wageBill": 8000000,
+    "squadValue": 15000000,
+    "confidence": "low"
+  },
+  "dijon-fr": {
+    "balance": 1500000,
+    "revenue": 15000000,
+    "wageBill": 6000000,
+    "squadValue": 10000000,
+    "confidence": "low"
+  }
+}
