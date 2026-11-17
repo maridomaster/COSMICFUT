@@ -16,6 +16,9 @@
     "play": "npm run build && npm run start --workspace @cosmicfut/server",
     "play:tunnel": "cloudflared tunnel --url http://localhost:8787",
     "server:test": "npm run test --workspace @cosmicfut/server",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "edge:dev": "npm run dev --workspace @cosmicfut/edge",
+    "edge:deploy": "npm run deploy --workspace @cosmicfut/edge",
+    "edge:test": "npm run test --workspace @cosmicfut/edge && npm run test --workspace @cosmicfut/online-core"
   }
 }

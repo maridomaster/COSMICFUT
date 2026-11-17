@@ -1,12 +1,27 @@
 /** Configuração do modo online. */
 
+/**
+ * Backend do modo online (escolhido no build):
+ *  - `server` (padrão): servidor Node (Fastify + Socket.io) — `npm run play`, VPS, túnel;
+ *  - `cloudflare`: online grátis — relay na Cloudflare (Durable Object) e a simulação no navegador de um dos
+ *    jogadores (o "anfitrião da simulação"). `VITE_EDGE_URL` = `wss://cosmicfut-edge.<conta>.workers.dev`.
+ */
+export const ONLINE_BACKEND: 'server' | 'cloudflare' = (import.meta.env.VITE_ONLINE_BACKEND as string | undefined) === 'cloudflare' ? 'cloudflare' : 'server';
+export const IS_EDGE = ONLINE_BACKEND === 'cloudflare';
+
+/** URL do relay da Cloudflare (http(s)://… ; o WebSocket usa ws(s)://). */
+const EDGE_RAW = ((import.meta.env.VITE_EDGE_URL as string | undefined) || 'ws://localhost:8788').trim().replace(/\/+$/, '');
+export const EDGE_HTTP = EDGE_RAW.replace(/^ws(s?):\/\//i, 'http$1://');
+export const EDGE_WS = EDGE_HTTP.replace(/^http(s?):\/\//i, 'ws$1://');
+
 /** URL do servidor (Fastify + Socket.io). Defina VITE_SERVER_URL no build/dev para apontar para um túnel ou deploy. */
 function defaultServerUrl(): string {
   // Servido pelo próprio servidor (npm run play / túnel): mesma origem. No dev do Vite (5173), servidor local.
   if (typeof window !== 'undefined' && window.location.port !== '5173' && /^https?:$/.test(window.location.protocol)) return window.location.origin;
   return 'http://localhost:8787';
 }
-export const SERVER_URL: string = ((import.meta.env.VITE_SERVER_URL as string | undefined) || defaultServerUrl()).replace(/\/+$/, '');
+/** Base HTTP do backend online (no modo Cloudflare, o relay: /rooms, /careers/status, /public-url…). */
+export const SERVER_URL: string = IS_EDGE ? EDGE_HTTP : ((import.meta.env.VITE_SERVER_URL as string | undefined) || defaultServerUrl()).replace(/\/+$/, '');
 
 /** Mesmo alfabeto do servidor (sem 0/O, 1/I). */
 export const ROOM_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';

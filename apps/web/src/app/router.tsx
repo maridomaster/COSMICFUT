@@ -86,4 +86,5 @@ export const router = createBrowserRouter([
       { path: '*', element: <RootRedirect /> },
     ],
   },
-]);
+  // GitHub Pages (projeto): o app vive em /COSMICFUT/ — as rotas são relativas ao base do Vite
+], { basename: import.meta.env.BASE_URL.replace(/\/+$/, '') || '/' });

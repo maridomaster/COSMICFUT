@@ -2,6 +2,7 @@
  * Fastify (HTTP: /health, /rooms/:code) + Socket.io (protocolo do jogo).
  * `createServer(opts)` não escuta porta; chame `listen()` (porta 0 = aleatória, usada nos testes).
  */
+import './node-platform.ts';
 import { randomInt } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { applySettingsPatch, fullSettings } from './lobby.ts';
@@ -13,13 +14,16 @@ import { defaultOptions, type ServerOptions } from './config.ts';
 import { GameData } from './data.ts';
 import { PersistStore, tokenHash } from './persist.ts';
 import type { CareerStatus, ServerEvents, ServerInboundEvents, SocketData } from './protocol.ts';
-import { DEFAULT_SETTINGS, GameError, newToken, Room, type IO, type PlayerRec, type RoomContext } from './room.ts';
+import { DEFAULT_SETTINGS, GameError, newToken, Room, type PlayerRec, type RoomContext } from './room.ts';
 import { makeBackup, parseBackup } from './backup.ts';
 import { countryPlayable } from './career-data.ts';
 import { createSimRunner, type SimRunner } from './sim-pool.ts';
 import * as V from './validate.ts';
+import { ROOM_INTENTS, roomIntent } from '@cosmicfut/online-core/dispatch';
+import type { CoreIO } from '@cosmicfut/online-core/io';
 
 type Sock = Socket<ServerInboundEvents, ServerEvents, Record<string, never>, SocketData>;
+type SocketServer = Server<ServerInboundEvents, ServerEvents, Record<string, never>, SocketData>;
 type AckFn = (r: { ok: true; data: unknown } | { ok: false; error: string }) => void;
 
 /** limite geral de eventos por socket (anti-flood) */
@@ -27,7 +31,7 @@ const EVENTS_PER_SEC = 40;
 
 export interface CosmicServer {
   app: FastifyInstance;
-  io: IO;
+  io: SocketServer;
   data: GameData;
   rooms: Map<string, Room>;
   opts: ServerOptions;
@@ -146,7 +150,8 @@ export function createServer(over: Partial<ServerOptions> = {}): CosmicServer {
     const p = r?.byToken(token);
     if (!r || !p) return reply.code(404).send({ ok: false, error: 'Sala não encontrada.' });
     if (p.id !== r.hostId) return reply.code(403).send({ ok: false, error: 'Só o host baixa o backup.' });
-    const buf = makeBackup(r.toSnapshot());
+    const bytes = makeBackup(r.toSnapshot());
+    const buf = Buffer.from(bytes.buffer, bytes.byteOffset, bytes.byteLength);
     const day = (r.career?.date ?? new Date().toISOString().slice(0, 10)).replace(/-/g, '');
     return reply
       .header('Content-Type', 'application/gzip')
@@ -216,7 +221,7 @@ export function createServer(over: Partial<ServerOptions> = {}): CosmicServer {
   }
 
   /* ───────── Socket.io ───────── */
-  const io: IO = new Server<ServerInboundEvents, ServerEvents, Record<string, never>, SocketData>({
+  const io: SocketServer = new Server<ServerInboundEvents, ServerEvents, Record<string, never>, SocketData>({
     cors: { origin: opts.corsOrigins === '*' ? true : opts.corsOrigins, methods: ['GET', 'POST'] },
     // season:snapshot passa de 100 KB: compacta mensagens grandes no WebSocket
     perMessageDeflate: { threshold: 4096 },
@@ -236,7 +241,7 @@ export function createServer(over: Partial<ServerOptions> = {}): CosmicServer {
   });
 
   const ctx: RoomContext = {
-    io, data, opts, log, sim,
+    io: io as unknown as CoreIO, data, opts, log, sim,
     persist: (room) => store?.schedule(room.code, () => room.toSnapshot()),
     destroy: (room) => {
       room.dispose();
@@ -456,35 +461,13 @@ export function createServer(over: Partial<ServerOptions> = {}): CosmicServer {
       log('career ended by host', { room: room.code });
       return true;
     }));
-    for (const type of ['apply', 'accept', 'decline'] as const) {
-      socket.on(`jobs:${type}`, handle(socket, async (_ack, raw) => {
-        const { room, player } = current(socket);
-        return room.jobsAction(player, type, raw);
-      }));
-    }
-
-    /* ── (17/11) online 6 jogadores ── */
-    const simple = (ev: string, fn: (room: Room, player: PlayerRec, raw: unknown) => unknown) => {
+    /* ── eventos dentro da sala: mesmo despacho do anfitrião do navegador (@cosmicfut/online-core/dispatch) ── */
+    for (const ev of ROOM_INTENTS) {
       (socket.on as (e: string, h: (...a: unknown[]) => void) => void)(ev, handle(socket, (_ack, raw) => {
         const { room, player } = current(socket);
-        const out = fn(room, player, raw);
-        return out === undefined ? true : out;
+        return roomIntent(room, player, ev, raw);
       }));
-    };
-    simple('room:set-color', (r, p, raw) => r.setColor(p, raw));
-    simple('room:kick', (r, p, raw) => r.kick(p, raw));
-    simple('room:transfer-host', (r, p, raw) => r.setHost(p, raw));
-    simple('room:react', (r, p, raw) => r.react(p, raw));
-    simple('draft:start', (r, p) => r.startDraft(p));
-    simple('lottery:run', (r, p) => r.runLottery(p));
-    simple('turn:end', (r, p) => r.endMyTurn(p));
-    simple('round:force', (r, p) => r.force(p));
-    simple('vote:propose', (r, p, raw) => r.propose(p, raw));
-    simple('vote:cast', (r, p, raw) => r.cast(p, raw));
-    simple('skip:cancel', (r, p) => r.cancelSkip(p));
-    simple('friends:get', (r) => r.friendsLeague());
-    simple('jobs:get', (r, p) => r.jobsPayload(p));
-    simple('room:seat-code', (r, p, raw) => r.makeSeatCode(p, raw));
+    }
     socket.on('room:list', handle(socket, () => publicRooms()));
 
     socket.on('room:rejoin', handle(socket, (ack, raw) => {
@@ -506,85 +489,6 @@ export function createServer(over: Partial<ServerOptions> = {}): CosmicServer {
 
     socket.on('room:leave', handle(socket, () => {
       leaveCurrent(socket);
-      return true;
-    }));
-
-    socket.on('room:update-settings', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.updateSettings(player, raw);
-      return true;
-    }));
-
-    socket.on('room:pick-club', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.pickClub(player, raw);
-      return true;
-    }));
-
-    socket.on('room:start', handle(socket, async () => {
-      const { room, player } = current(socket);
-      await room.start(player);
-      return true;
-    }));
-
-    socket.on('season:renew', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      return room.renew(player, raw);
-    }));
-
-    socket.on('season:sync', handle(socket, () => {
-      const { room, player } = current(socket);
-      if (!room.snap) throw new GameError('Sem temporada.');
-      room.sendSnapshot(player.socketId ?? undefined, true);
-      return true;
-    }));
-
-    socket.on('dev:advance', handle(socket, async (_ack, raw) => {
-      const { room, player } = current(socket);
-      return room.devAdvance(player, raw);
-    }));
-
-    // mercado online: ações sobre a carreira da sala (fase 'planning'); o ack traz a resposta da IA/do jogador
-    for (const type of ['offer', 'contract', 'respond', 'withdraw', 'list', 'release', 'counter', 'loanlist', 'option', 'recall', 'renew', 'budget'] as const) {
-      socket.on(`market:${type}`, handle(socket, async (_ack, raw) => {
-        const { room, player } = current(socket);
-        return room.marketAction(player, type, raw);
-      }));
-    }
-
-    socket.on('round:set-lineup', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.setLineup(player, raw);
-      return true;
-    }));
-
-    socket.on('round:ready', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.setReady(player, raw);
-      return true;
-    }));
-
-    socket.on('match:command', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.command(player, raw);
-      return true;
-    }));
-
-    socket.on('match:resume', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.resume(player, raw);
-      return true;
-    }));
-
-    socket.on('match:pause-request', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.pauseRequest(player, raw);
-      return true;
-    }));
-
-    socket.on('chat:send', handle(socket, (_ack, raw) => {
-      const { room, player } = current(socket);
-      room.chat(player, raw);
       return true;
     }));
 

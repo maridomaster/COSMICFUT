@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--workspace", "@cosmicfut/web"],
       "port": 5173
+    },
+    {
+      "name": "web-edge",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:edge", "--workspace", "@cosmicfut/web"],
+      "port": 5183
     }
   ]
 }

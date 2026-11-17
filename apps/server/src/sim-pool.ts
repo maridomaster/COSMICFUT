@@ -11,78 +11,19 @@
  * a ele recebem `onLost(room)` — a sala se reidrata com o último snapshot (gzip) que tem em memória.
  */
 import { Worker } from 'node:worker_threads';
+import { InlineSimRunner as CoreInlineSimRunner, SimCrashError, SimOpError, type SimCallEvents, type SimRunner } from '@cosmicfut/online-core/sim-runner';
 import { CareerSimulator, type DayPlayed, type PackedSnapshot, type SimRequest, type SimResponse } from './sim-core.ts';
 
-export interface SimCallEvents {
-  day?(d: DayPlayed): void;
-  snapshot?(s: PackedSnapshot): void;
-}
-
-export interface SimRunner {
-  readonly mode: 'inline' | 'worker';
-  readonly size: number;
-  call<T extends SimResponse = SimResponse>(room: string, req: SimRequest, ev?: SimCallEvents): Promise<T>;
-  /** sala encerrada: libera o estado no worker */
-  release(room: string): void;
-  onLost(fn: (room: string) => void): void;
-  close(): Promise<void>;
-}
-
-export class SimCrashError extends Error {}
-export class SimOpError extends Error {
-  readonly code: string;
-  constructor(message: string, code: string) {
-    super(message);
-    this.code = code;
-  }
-}
+export { SimCrashError, SimOpError, type SimCallEvents, type SimRunner };
 
 /* ───────────────────────── inline ───────────────────────── */
 
-export class InlineSimRunner implements SimRunner {
-  readonly mode = 'inline' as const;
-  readonly size = 0;
-  readonly sim: CareerSimulator;
-  private queue: Promise<unknown> = Promise.resolve();
-
+/** O simulador no thread principal (SIM_WORKERS=0), lendo a pasta de dados. */
+export class InlineSimRunner extends CoreInlineSimRunner {
   constructor(dataDir: string) {
-    this.sim = new CareerSimulator(dataDir);
-  }
-
-  call<T extends SimResponse = SimResponse>(_room: string, req: SimRequest, ev: SimCallEvents = {}): Promise<T> {
-    const run = () =>
-      new Promise<T>((resolve, reject) => {
-        setImmediate(() => {
-          try {
-            const res = this.sim.run(req, { day: ev.day }) as T;
-            resolve(res);
-            if (CareerSimulator.snapshotAfter(req, res)) {
-              const snap = this.sim.pack(req.room, req.op === 'hydrate');
-              setImmediate(() => ev.snapshot?.(snap));
-            }
-          } catch (e) {
-            reject(new SimOpError(e instanceof Error ? e.message : String(e), 'error'));
-          }
-        });
-      });
-    const p = this.queue.then(run, run);
-    this.queue = p.catch(() => undefined);
-    return p;
-  }
-
-  release(room: string): void {
-    this.sim.run({ op: 'drop', room });
-  }
-
-  onLost(): void {
-    // inline: nunca perde estado
-  }
-
-  async close(): Promise<void> {
-    await this.queue.catch(() => undefined);
+    super(new CareerSimulator(dataDir));
   }
 }
-
 /* ───────────────────────── pool de workers ───────────────────────── */
 
 interface Pending {

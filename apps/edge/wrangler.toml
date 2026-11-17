@@ -1,0 +1,28 @@
+# COSMICFUT — relay do modo online grátis (Cloudflare Workers + Durable Objects, plano Free).
+# Sem account_id/tokens aqui (repositório público): o `npx wrangler login` guarda a sessão na máquina e, em CI, use
+# as variáveis de ambiente CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN.
+name = "cosmicfut-edge"
+main = "src/index.ts"
+compatibility_date = "2025-11-01"
+# publica em https://cosmicfut-edge.<sua-conta>.workers.dev
+workers_dev = true
+
+[vars]
+# origens liberadas (vírgulas). Ex.: "https://maridomaster.github.io,http://localhost:5173". Vazio = todas.
+ALLOWED_ORIGINS = "https://maridomaster.github.io,http://localhost:5173,http://localhost:4173"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "RoomDO"
+
+[[durable_objects.bindings]]
+name = "REGISTRY"
+class_name = "Registry"
+
+# Durable Objects com SQLite (os únicos disponíveis no plano Free)
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RoomDO", "Registry"]
+
+[observability]
+enabled = true

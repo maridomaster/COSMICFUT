@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:edge": "vite --mode edge --port 5183 --strictPort",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
   "dependencies": {
+    "@cosmicfut/online-core": "^0.1.0",
     "@cosmicfut/shared": "^0.1.0",
     "@fontsource-variable/inter": "^5.3.0",
     "@radix-ui/react-slot": "^1.5.0",

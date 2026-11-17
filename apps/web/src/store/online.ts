@@ -31,7 +31,9 @@ import { careerBaseFor, loadMarketSquads } from '@/career/data';
 import { clubIndexEntry, ensureClubIndex, shortFromName } from '@/data/clubIndex';
 import { fmtMoney } from '@/lib/format';
 import { cachedBundle, ensureBundles, setCareerBase } from '@/data/squads';
-import { SERVER_URL } from '@/online/config';
+import { IS_EDGE, SERVER_URL } from '@/online/config';
+import type { EdgeSocket, SimHostInfo } from '@/online/edge/EdgeSocket';
+import type { HostStatus } from '@/online/edge/HostBridge';
 import { call, callWithTimeout, fetchRoomPreview, getSocket, hasSocket, loadNickname, loadSession, saveNickname, saveSession, type OnlineSession } from '@/online/socket';
 import { useOnlineGame } from './game';
 import { useMode } from './mode';
@@ -145,6 +147,11 @@ interface OnlineStore {
   /* ── (carreira online salva e entrada tardia) ── */
   /** Central de Empregos (vagas + as minhas propostas/candidaturas) */
   jobs: JobsPayload | null;
+  /* ── (online grátis: Cloudflare) ── */
+  /** quem roda a simulação da sala (um dos navegadores) e se caiu/está retomando */
+  simHost: SimHostInfo | null;
+  /** situação do anfitrião NESTE navegador (quando sou eu) */
+  hostStatus: HostStatus | null;
   /** volta a uma carreira da lista "Minhas carreiras online" (token salvo neste navegador) */
   resume: (code: string) => Promise<string | null>;
   /** assume uma vaga com o código do host (outro aparelho / vaga reatribuída) */
@@ -261,7 +268,7 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     resetCareer();
     set({
       session: null, playerId: null, room: null, infos: {}, live: null, matchPreview: null, results: [], chat: [], readyBusy: false, renewBusy: false, devBusy: false, lineupSync: 'idle',
-      feed: [], friends: null, reactions: [], skipEnd: null, spectator: false, jobs: null,
+      feed: [], friends: null, reactions: [], skipEnd: null, spectator: false, jobs: null, simHost: null, hostStatus: null,
     });
     useOnlineGame.getState().resetGame();
   };
@@ -296,6 +303,21 @@ export const useOnline = create<OnlineStore>()((set, get) => {
       else if (get().status !== 'replaced') set({ status: 'reconnecting' });
     });
     sock.on('connect_error', (e) => set({ status: get().status === 'replaced' ? 'replaced' : 'reconnecting', error: e.message }));
+    if (IS_EDGE) {
+      // (online grátis) anfitrião da simulação: quem é, caiu, retomando
+      const edge = sock as unknown as EdgeSocket;
+      edge.on('edge:host', (h: SimHostInfo) => {
+        const prev = get().simHost;
+        set({ simHost: h });
+        if (prev && prev.playerId && h.playerId && prev.playerId !== h.playerId && h.state !== 'lost') {
+          get().toast({ kind: 'info', title: h.me ? 'Você agora é o anfitrião da simulação' : `Anfitrião mudou para ${h.nickname ?? 'outro técnico'}`, text: h.state === 'resuming' ? 'Retomando a rodada a partir do último ponto salvo…' : undefined });
+        }
+      });
+      edge.on('edge:hoststatus', (s: HostStatus) => {
+        set({ hostStatus: s });
+        if (s.state === 'error') get().toast({ kind: 'error', title: 'Anfitrião da simulação', text: s.message ?? 'Falha ao carregar a sala neste navegador.' });
+      });
+    }
 
     sock.on('room:state', (room) => {
       const prev = get().room;
@@ -870,6 +892,8 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     skipEnd: null,
     spectator: false,
     jobs: null,
+    simHost: null,
+    hostStatus: null,
 
     resume: async (code) => {
       const c = savedCareer(code);
@@ -894,6 +918,16 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     },
 
     restoreBackup: async (file) => {
+      if (IS_EDGE) {
+        // (online grátis) a sala nasce no relay e ESTE navegador (anfitrião) valida e restaura o arquivo
+        get().connect();
+        resetRoomState();
+        const nickname = loadNickname() || 'Host';
+        const r = await callWithTimeout<{ code: string; playerId: string; token: string }>(120_000, 'room:restore' as 'room:create', { file, nickname });
+        if (!r.ok) return r.error;
+        enterRoom({ code: r.data.code, token: r.data.token, playerId: r.data.playerId });
+        return null;
+      }
       try {
         const res = await fetch(`${SERVER_URL}/rooms/restore`, { method: 'POST', headers: { 'Content-Type': 'application/octet-stream', Accept: 'application/json' }, body: file });
         const j = (await res.json()) as Ack<{ code: string; playerId: string; token: string }>;
@@ -912,6 +946,20 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     downloadBackup: async () => {
       const s = get().session;
       if (!s) return 'Sem sala.';
+      if (IS_EDGE) {
+        // (online grátis) o anfitrião gera o arquivo (sem tokens) e manda pelo relay
+        const r = await callWithTimeout<{ name: string; bytes: Uint8Array }>(60_000, 'room:backup' as 'room:end');
+        if (!r.ok) return r.error;
+        const url = URL.createObjectURL(new Blob([r.data.bytes as BlobPart], { type: 'application/gzip' }));
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = r.data.name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+        return null;
+      }
       try {
         const res = await fetch(`${SERVER_URL}/rooms/${s.code}/backup`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token: s.token }) });
         if (!res.ok) {

@@ -21,6 +21,8 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 COPY packages/shared/package.json packages/shared/
 COPY packages/engine/package.json packages/engine/
+COPY packages/online-core/package.json packages/online-core/
+COPY apps/edge/package.json apps/edge/
 COPY apps/server/package.json apps/server/
 COPY apps/web/package.json apps/web/
 RUN npm ci --omit=dev --workspace @cosmicfut/server --ignore-scripts && npm cache clean --force
@@ -28,6 +30,7 @@ RUN npm ci --omit=dev --workspace @cosmicfut/server --ignore-scripts && npm cach
 # código (TypeScript roda direto com o type stripping do Node) + dados do jogo (só JSON, sem assets)
 COPY packages/shared/src packages/shared/src
 COPY packages/engine/src packages/engine/src
+COPY packages/online-core/src packages/online-core/src
 COPY apps/server/src apps/server/src
 COPY apps/web/public/data apps/web/public/data
 

@@ -9,6 +9,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router';
 import { useIsOnline } from '@/store/mode';
 import { useOnline } from '@/store/online';
 import { OnlineToasts, ReconnectBanner } from './common';
+import { SimHostHint } from './SimHostHint';
 
 export function RootLayout() {
   return (
@@ -58,6 +59,7 @@ function OnlineRuntime() {
   return (
     <>
       <ReconnectBanner />
+      <SimHostHint />
       <OnlineToasts />
     </>
   );

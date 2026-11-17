@@ -7,7 +7,8 @@
  */
 import { io, type Socket } from 'socket.io-client';
 import type { Ack, ClientEvents, ServerEvents } from '@cosmicfut/shared';
-import { SERVER_URL } from './config';
+import { IS_EDGE, SERVER_URL } from './config';
+import { EdgeSocket } from './edge/EdgeSocket';
 
 export type GameSocket = Socket<ServerEvents, ClientEvents>;
 
@@ -65,8 +66,12 @@ export function saveNickname(nick: string): void {
 
 let socket: GameSocket | null = null;
 
-/** Socket único da aba (criado sob demanda; conecta sozinho). */
+/**
+ * Socket único da aba (criado sob demanda; conecta sozinho). No modo online grátis (VITE_ONLINE_BACKEND=cloudflare)
+ * é o EdgeSocket (mesma API usada pelo store, sobre o WebSocket do relay da Cloudflare).
+ */
 export function getSocket(): GameSocket {
+  if (!socket && IS_EDGE) socket = new EdgeSocket() as unknown as GameSocket;
   if (!socket) {
     socket = io(SERVER_URL, {
       transports: ['websocket', 'polling'],

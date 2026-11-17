@@ -13,6 +13,7 @@
  * Roda em Node puro (type stripping): registra o resolvedor de `.ts` antes de carregar a engine.
  */
 import './node-hooks.ts';
+import './node-platform.ts';
 import { parentPort, workerData } from 'node:worker_threads';
 import type { SimRequest } from './sim-core.ts';
 

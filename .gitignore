@@ -12,6 +12,11 @@ apps/server/.data/
 .env
 .env.*
 *.pem
+# (online grátis) ambiente de desenvolvimento sem segredos: relay local
+!apps/web/.env.edge
+# wrangler (Cloudflare): estado local do wrangler dev e segredos locais
+.wrangler/
+.dev.vars
 *.key
 
 # sistema / editor

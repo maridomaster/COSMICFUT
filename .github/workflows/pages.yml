@@ -1,0 +1,63 @@
+# COSMICFUT no GitHub Pages (modo online grátis: relay na Cloudflare, simulação no navegador do anfitrião).
+# Configuração do repositório (Settings):
+#   - Pages → Source: "GitHub Actions"
+#   - Secrets and variables → Actions → Variables:
+#       EDGE_URL  = wss://cosmicfut-edge.<sua-conta>.workers.dev   (obrigatória para o online)
+#       PAGES_BASE = /COSMICFUT/   (opcional; "/" com domínio próprio)
+name: GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build do web (online = Cloudflare)
+        env:
+          VITE_ONLINE_BACKEND: cloudflare
+          VITE_EDGE_URL: ${{ vars.EDGE_URL }}
+          VITE_BASE: ${{ vars.PAGES_BASE || format('/{0}/', github.event.repository.name) }}
+        run: |
+          if [ -z "$VITE_EDGE_URL" ]; then echo "::warning::Variável EDGE_URL não definida: o modo online não vai conectar (Settings → Secrets and variables → Actions → Variables)."; fi
+          npm run build --workspace @cosmicfut/web
+
+      - name: Fallback de SPA (rotas como /online/CODIGO)
+        run: cp apps/web/dist/index.html apps/web/dist/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

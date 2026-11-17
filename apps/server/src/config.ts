@@ -1,13 +1,15 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { availableParallelism } from 'node:os';
+import type { RoomOptions } from '@cosmicfut/online-core/options';
 
 /** min(4, núcleos − 1), no mínimo 1 */
 export const defaultWorkerCount = (): number => Math.max(1, Math.min(4, availableParallelism() - 1));
 
 const here = dirname(fileURLToPath(import.meta.url));
 
-export interface ServerOptions {
+/** Opções do servidor Node = opções da sala (núcleo online) + porta, CORS, pastas, workers. */
+export interface ServerOptions extends RoomOptions {
   port: number;
   host: string;
   /** origens liberadas no CORS (HTTP e Socket.io); '*' libera tudo */

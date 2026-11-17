@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@cosmicfut/engine": "^0.1.0",
+    "@cosmicfut/online-core": "^0.1.0",
     "@cosmicfut/shared": "^0.1.0",
     "@fastify/static": "^10.1.11",
     "fastify": "^5.12.8",
