@@ -63,6 +63,8 @@ export interface Attachment {
   /** entrada pendente (aguardando o anfitrião) */
   hello?: { mode: 'create' | 'join'; j: number; pid: string; nick: string; spec: boolean } | null;
   at: number;
+  /** saiu da sala (room:leave): ainda recebe o ack da saída, nada mais fala pela vaga */
+  lv?: 1;
 }
 
 export interface RelaySocket {
@@ -130,7 +132,12 @@ interface CkRec {
 }
 
 const hex = (b: Uint8Array) => Array.from(b, (x) => x.toString(16).padStart(2, '0')).join('');
-const b64url = (b: Uint8Array) => btoa(String.fromCharCode(...b)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+/** base64url sem spread (`String.fromCharCode(...b)` estoura a pilha com arrays grandes) */
+const b64url = (b: Uint8Array) => {
+  let s = '';
+  for (let i = 0; i < b.length; i++) s += String.fromCharCode(b[i]);
+  return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+};
 const NICK_RE = /^[^\u0000-\u001f<>]{1,20}$/u;
 const ID_RE = /^[A-Za-z0-9_-]{1,40}$/;
 
@@ -482,7 +489,8 @@ export class RoomRelay {
     }
     if (ev === 'room:leave') {
       // a vaga fica (carreira) ou sai (lobby) conforme o anfitrião informar; a conexão deixa de falar pela vaga
-      ws.setAtt({ ...ws.att, p: null });
+      // (o ack da saída ainda chega: `lv`; antes ele se perdia e o cliente ficava esperando)
+      ws.setAtt({ ...ws.att, p: null, lv: 1 });
     }
   }
 
@@ -530,7 +538,7 @@ export class RoomRelay {
         for (const c of o.to.slice(0, 32)) {
           if (typeof c !== 'string') continue;
           const s = this.sockByConn(c);
-          if (!s || (!s.att.p && !s.att.hello)) continue;
+          if (!s || (!s.att.p && !s.att.hello && !s.att.lv)) continue;
           try {
             s.send(body);
             this.stats.toClients++;
@@ -772,7 +780,9 @@ export class RoomRelay {
   private reschedule(): void {
     const st = this.env.storage;
     const times = [Number(st.get('electAt') ?? 0), Number(st.get('expireAt') ?? 0)].filter((x) => x > 0);
-    this.env.setAlarm(times.length ? Math.min(...times) : null);
+    let at: number | null = null;
+    for (const t of times) if (at === null || t < at) at = t;
+    this.env.setAlarm(at);
   }
 
   /** Apaga a sala (lobby expirado / carreira encerrada pelo host). */

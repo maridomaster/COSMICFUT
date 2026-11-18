@@ -167,6 +167,40 @@ describe('relay: roteamento', () => {
     expect(c.bins().length).toBe(0);
   });
 
+  it('room:leave: o ack da saída chega a quem saiu (antes se perdia), e a conexão não fala mais pela vaga', async () => {
+    const env = makeRoom();
+    const { a, socks } = await room(env, ['Bia']);
+    const [b] = socks;
+    await b.msg({ t: 'i', ev: 'room:leave', k: 9 });
+    expect(a.json<Msg>().filter((m) => m.t === 'i').pop()).toMatchObject({ ev: 'room:leave', k: 9 });
+    expect(b.att.p).toBeNull();
+    b.clear();
+    const ack = encodeBundle([{ ev: '@ack', a: { k: 9, r: { ok: true } } }]);
+    await a.bin(encodeHostFrame({ o: [{ to: [b.att.c], n: ack.byteLength }] }, [ack]));
+    expect(b.bins().length).toBe(1);
+    await b.msg({ t: 'i', ev: 'chat:send', a: { text: 'oi' }, k: 10 });
+    expect(b.last<Msg>('ack')!.r.error).toMatch(/não está em uma sala/);
+  });
+
+  it('Rodada ao vivo: um corpo para "todos" (técnicos + espectador) = 1 mensagem recebida pelo DO; o leque de saída é grátis', async () => {
+    const env = makeRoom();
+    const { a, socks } = await room(env, ['Bia', 'Caio']);
+    const spec = env.open();
+    await spec.msg({ t: 'hello', v: 1, mode: 'join', nickname: 'Espia', spectator: true });
+    await answerJoins(env, a);
+    expect(spec.last<Msg>('welcome')).toBeTruthy();
+    const all = [a, ...socks, spec];
+    for (const s of all) s.clear();
+    const before = env.relay.stats.hostFrames + env.relay.stats.clientMsgs;
+    const ticks = encodeBundle(Array.from({ length: 7 }, (_, i) => ({ ev: 'match:tick', a: { matchId: 'm1', minute: i }, dt: i * 150 })));
+    await a.bin(encodeHostFrame({ o: [{ to: all.map((s) => s.att.c), n: ticks.byteLength }] }, [ticks]));
+    expect(env.relay.stats.hostFrames + env.relay.stats.clientMsgs - before).toBe(1);
+    for (const s of all) {
+      expect(s.bins().length).toBe(1);
+      expect(decodeBundle(s.bins()[0]).length).toBe(7);
+    }
+  });
+
   it('expulsão: o anfitrião informa a saída e a vaga é revogada (token não vale mais)', async () => {
     const env = makeRoom();
     const { a, socks, pids, toks } = await room(env, ['Bia']);

@@ -65,7 +65,13 @@ export default {
     const url = new URL(req.url);
     const path = url.pathname.replace(/\/+$/, '') || '/';
     if (req.method === 'OPTIONS') return cors(env, req, new Response(null, { status: 204 }));
-    if (!originOk(env, req.headers.get('Origin'))) return json({ ok: false, error: 'Origem não permitida.' }, 403);
+    if (!originOk(env, req.headers.get('Origin'))) {
+      // a página consegue LER a recusa (só o erro) e mostrar uma mensagem clara (ex.: aberta por http:// em vez de https://)
+      const origin = req.headers.get('Origin') ?? '';
+      const res = json({ ok: false, error: origin.startsWith('http://') ? 'Origem não permitida: abra o jogo pelo endereço https://.' : 'Origem não permitida.' }, 403);
+      if (origin && req.headers.get('Upgrade') !== 'websocket') res.headers.set('Access-Control-Allow-Origin', origin);
+      return res;
+    }
     try {
       if (path === '/health') return cors(env, req, json({ ok: true, edge: true, version: VERSION }));
       if (path === '/public-url') return cors(env, req, json({ url: null }));

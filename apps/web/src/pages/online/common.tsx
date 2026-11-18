@@ -1,5 +1,5 @@
 /** Peças visuais do modo online (sala, chat, outros jogos, banners e toasts). */
-import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Check, Copy, Crown, Loader2, MessageCircle, Send, Trophy, Wifi, WifiOff, X } from 'lucide-react';
 import type { LiveMatchInfo, RoomPlayer } from '@cosmicfut/shared';
@@ -159,9 +159,13 @@ export function ChatBox({ className, compact }: { className?: string; compact?: 
 
 /* ───────── outros jogos (match:info) ───────── */
 
-const STATUS_LABEL: Record<LiveMatchInfo['status'], string> = { pending: 'a seguir', live: 'ao vivo', 'half-time': 'intervalo', finished: 'encerrado' };
+export const STATUS_LABEL: Record<LiveMatchInfo['status'], string> = { pending: 'a seguir', live: 'ao vivo', 'half-time': 'intervalo', finished: 'encerrado' };
 
-export function OtherGames({ excludeId, title = 'Outros jogos' }: { excludeId?: string | null; title?: string }) {
+/**
+ * Placar das partidas humanas da rodada (match:info). `onPick`: (Rodada ao vivo) cada jogo vira um botão para
+ * assistir; `activeId` marca o que está na tela.
+ */
+export function OtherGames({ excludeId, title = 'Outros jogos', onPick, activeId }: { excludeId?: string | null; title?: string; onPick?: (matchId: string) => void; activeId?: string | null }) {
   const infos = useOnline((s) => s.infos);
   const players = useOnline((s) => s.room?.players) ?? NO_PLAYERS;
   const name = useClubName();
@@ -180,7 +184,28 @@ export function OtherGames({ excludeId, title = 'Outros jogos' }: { excludeId?: 
             const live = m.status === 'live';
             const agg = m.aggregateBefore ? { home: m.aggregateBefore.home + m.score.home, away: m.aggregateBefore.away + m.score.away } : null;
             return (
-              <li key={m.matchId} className="rounded-xl border border-line bg-surface-2/40 px-2.5 py-2">
+              <li
+                key={m.matchId}
+                className={cn(
+                  'rounded-xl border bg-surface-2/40 px-2.5 py-2',
+                  activeId === m.matchId ? 'border-[#3b82f6] ring-1 ring-[#3b82f6]/50' : 'border-line',
+                  onPick && 'cursor-pointer transition-colors hover:border-[#3b82f6]/60 hover:bg-surface-2',
+                )}
+                {...(onPick
+                  ? {
+                      role: 'button',
+                      tabIndex: 0,
+                      'aria-label': `Assistir ${name(m.homeClubId, true)} x ${name(m.awayClubId, true)}`,
+                      onClick: () => onPick(m.matchId),
+                      onKeyDown: (e: KeyboardEvent) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          onPick(m.matchId);
+                        }
+                      },
+                    }
+                  : {})}
+              >
                 {m.label && (
                   <div className="mb-1 truncate text-center text-[10px] font-semibold tracking-wider text-fg-subtle uppercase" title={m.label}>
                     {m.label}

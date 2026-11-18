@@ -11,6 +11,7 @@ import { useMatch } from '@/store/match';
 import { useIsOnline } from '@/store/mode';
 import { useOnline } from '@/store/online';
 import { ReadyButton } from '@/pages/online/ReadyButton';
+import { LiveRoundButton } from '@/pages/online/LiveRound';
 import { ChatDock, ConnectionBadge } from '@/pages/online/common';
 import { TurnLayer, TurnStrip } from '@/pages/online/TurnLayer';
 import { HotseatEndTurnButton, HotseatPassScreen, HotseatStrip, useHotseat } from '@/pages/hotseat/Hotseat';
@@ -70,6 +71,7 @@ export function AppShell() {
   const online = useIsOnline();
   const session = useOnline((s) => s.session);
   const roomPhase = useOnline((s) => s.room?.phase);
+  const spectator = useOnline((s) => !!s.room?.players.find((p) => p.playerId === s.playerId)?.spectator);
   // (Fase 3) técnico desempregado: só Central de Empregos, Caixa de Entrada, Meu Técnico, Histórico e Competições
   const unemployed = useUnemployed();
   const switching = useSeason((s) => s.switching);
@@ -137,7 +139,7 @@ export function AppShell() {
           ) : seasonStatus !== 'ready' ? (
             <SeasonLoading />
           ) : jobless ? (
-            <Navigate to="/empregos" replace />
+            <Navigate to={spectator ? '/sala' : '/empregos'} replace />
           ) : (
             <EffectiveClub bundle={bundle} origin={origin ?? 'fixture'}>
               <LineupKeeper />
@@ -406,10 +408,11 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
   const leagues = useLeagueMap();
   const club = bundle?.club;
   const mainComp = useSeason((s) => (s.save?.world ? competitionOf(s.save.season, s.save.season.humanClubIds[0] ?? s.save.clubId)?.name : undefined));
-  const subtitle = unemployed ? 'Sem clube — procurando emprego' : undefined;
+  const spectator = useOnline((s) => !!s.room?.players.find((p) => p.playerId === s.playerId)?.spectator);
+  const subtitle = online && spectator ? 'Espectador — assiste às partidas e conversa' : unemployed ? 'Sem clube — procurando emprego' : undefined;
   const league = club?.leagueId ? leagues.get(club.leagueId) : undefined;
   // (carreira online) desempregado: o clube da visão é só referência de tema
-  const name = online && unemployed ? 'Sem clube' : (club?.name ?? preview?.name ?? '');
+  const name = online && spectator ? 'Espectador' : online && unemployed ? 'Sem clube' : (club?.name ?? preview?.name ?? '');
   const colors = club?.colors ?? preview?.colors ?? { primary: '#555', secondary: '#999' };
   // (Atualização 41) altura real do topo (faixas de turno/aviso mudam a altura) → --topbar-h para os elementos sticky
   const headerRef = useRef<HTMLElement>(null);
@@ -471,7 +474,10 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
             </div>
           </div>
           {online ? (
-            <ReadyButton showWaiting />
+            <>
+              <LiveRoundButton />
+              <ReadyButton showWaiting />
+            </>
           ) : (
           <>
             {import.meta.env.DEV && !over && !unemployed && (

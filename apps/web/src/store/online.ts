@@ -84,6 +84,8 @@ export interface OnlineLiveMatch {
   /** pedi pausa (aguardando o adversário concordar) */
   pauseRequested: boolean;
   toasts: MatchToast[];
+  /** (Rodada ao vivo) partida de outros técnicos, só para assistir (sem mudanças/táticas) */
+  readOnly?: boolean;
 }
 
 /** Resultado da última virada (season:end stage 'done'). */
@@ -124,6 +126,12 @@ interface OnlineStore {
   /** placar resumido das partidas humanas da rodada (match:info / room:state) */
   infos: Record<string, LiveMatchInfo>;
   live: OnlineLiveMatch | null;
+  /** (Rodada ao vivo) partidas humanas em que NÃO jogo, montadas pelos ticks (só leitura) */
+  others: Record<string, OnlineLiveMatch>;
+  /** (Rodada ao vivo) partida escolhida na tela "Rodada ao vivo" (null = a primeira disponível) */
+  watching: string | null;
+  /** (Rodada ao vivo) escolhe a partida a acompanhar */
+  watch: (matchId: string | null) => void;
   /** pré-jogo em curso (até o match:start) */
   matchPreview: OnlinePreview | null;
   results: RoundResults[];
@@ -267,16 +275,30 @@ export const useOnline = create<OnlineStore>()((set, get) => {
   const resetRoomState = () => {
     resetCareer();
     set({
-      session: null, playerId: null, room: null, infos: {}, live: null, matchPreview: null, results: [], chat: [], readyBusy: false, renewBusy: false, devBusy: false, lineupSync: 'idle',
+      session: null, playerId: null, room: null, infos: {}, live: null, others: {}, watching: null, matchPreview: null, results: [], chat: [], readyBusy: false, renewBusy: false, devBusy: false, lineupSync: 'idle',
       feed: [], friends: null, reactions: [], skipEnd: null, spectator: false, jobs: null, simHost: null, hostStatus: null,
     });
     useOnlineGame.getState().resetGame();
   };
 
+  /** criando/entrando/voltando a uma sala agora: o rejoin automático (evento 'connect') não disputa a conexão */
+  let entering = 0;
+  const entry = async <T,>(fn: () => Promise<T>): Promise<T> => {
+    entering++;
+    try {
+      return await fn();
+    } finally {
+      entering--;
+    }
+  };
+
   const rejoin = async () => {
+    if (entering) return;
     const s = loadSession();
     if (!s) return;
     const r = await call<{ playerId: string }>('room:rejoin', { code: s.code, token: s.token });
+    // outra conexão (criar/entrar em outra sala) assumiu enquanto isso: não é falha desta sala
+    if (!r.ok && (entering || r.error === 'Conexão substituída.' || loadSession()?.code !== s.code)) return;
     if (r.ok) {
       enterRoom({ ...s, playerId: r.data.playerId }, false);
     } else {
@@ -327,6 +349,8 @@ export const useOnline = create<OnlineStore>()((set, get) => {
         infos[m.matchId] = cur && isNewer(cur, m) ? cur : m;
       }
       set({ room, infos });
+      // (Rodada ao vivo) dia de jogo novo: esquece as partidas assistidas da rodada anterior
+      if (room.phase === 'matchday' && prev?.phase !== 'matchday' && (Object.keys(get().others).length || get().watching)) set({ others: {}, watching: null });
       // fui removido da sala (expirou no lobby)
       const me = get().playerId;
       if (me && !room.players.some((p) => p.playerId === me)) {
@@ -584,41 +608,51 @@ export const useOnline = create<OnlineStore>()((set, get) => {
   /* ───────── partida ───────── */
 
   const onMatchStart = (m: MatchStartPayload) => {
+    const me = get().playerId;
+    const mine = !!me && (m.homePlayerId === me || m.awayPlayerId === me);
+    // (Rodada ao vivo) side null = cópia só-leitura para a sala inteira assistir. Na MINHA partida a cópia é
+    // ignorada (a minha, com o lado, chega à parte); servidor antigo (sem o campo) = sempre a minha
+    if (m.side === null) {
+      if (mine) return;
+      set({ others: { ...get().others, [m.matchId]: buildLive(m, 'home', get().others[m.matchId] ?? null, true) } });
+      return;
+    }
     if (get().matchPreview) set({ matchPreview: null });
-    const config = m.config as MatchConfig;
-    const state = m.state as MatchState;
-    const prev = get().live;
-    const feed = state.events.map((e) => ({ ...e, key: ++feedKey }));
-    const side: Side = m.side ?? (m.homePlayerId === get().playerId ? 'home' : 'away');
-    set({
-      live: {
-        matchId: m.matchId,
-        config,
-        state,
-        side,
-        homePlayerId: m.homePlayerId ?? null,
-        awayPlayerId: m.awayPlayerId ?? null,
-        speedMs: m.speedMs ?? get().room?.settings.matchSpeedMs ?? 400,
-        // o snapshot do dia de jogo pode chegar DEPOIS do match:start: a data vem da fixture / sala
-        date: m.fixture?.date ?? get().room?.date ?? get().season?.date ?? null,
-        fixture: m.fixture ?? (prev?.matchId === m.matchId ? prev.fixture : null),
-        feed: feed.slice(-FEED_CAP),
-        batch: null,
-        phase: state.phase === 'finished' ? 'post' : 'live',
-        result: null,
-        pause: null,
-        // mesmo jogo (reconexão): mantém o painel aberto; o match:pause que vem em seguida reabre o intervalo
-        panel: prev?.matchId === m.matchId && prev.panel === 'changes' ? 'changes' : null,
-        resumeSent: false,
-        pauseRequested: false,
-        toasts: prev?.matchId === m.matchId ? prev.toasts : [],
-      },
-    });
+    const side: Side = m.side ?? (m.homePlayerId === me ? 'home' : 'away');
+    set({ live: buildLive(m, side, get().live, false) });
   };
 
-  const onTick = (t: MatchTickPayload) => {
-    const l = get().live;
-    if (!l || l.matchId !== t.matchId) return;
+  const buildLive = (m: MatchStartPayload, side: Side, prev: OnlineLiveMatch | null, readOnly: boolean): OnlineLiveMatch => {
+    const config = m.config as MatchConfig;
+    const state = m.state as MatchState;
+    const feed = state.events.map((e) => ({ ...e, key: ++feedKey }));
+    return {
+      matchId: m.matchId,
+      config,
+      state,
+      side,
+      homePlayerId: m.homePlayerId ?? null,
+      awayPlayerId: m.awayPlayerId ?? null,
+      speedMs: m.speedMs ?? get().room?.settings.matchSpeedMs ?? 400,
+      // o snapshot do dia de jogo pode chegar DEPOIS do match:start: a data vem da fixture / sala
+      date: m.fixture?.date ?? get().room?.date ?? get().season?.date ?? null,
+      fixture: m.fixture ?? (prev?.matchId === m.matchId ? prev.fixture : null),
+      feed: feed.slice(-FEED_CAP),
+      batch: null,
+      phase: state.phase === 'finished' ? 'post' : 'live',
+      result: null,
+      pause: null,
+      // mesmo jogo (reconexão): mantém o painel aberto; o match:pause que vem em seguida reabre o intervalo
+      panel: prev?.matchId === m.matchId && prev.panel === 'changes' ? 'changes' : null,
+      resumeSent: false,
+      pauseRequested: false,
+      toasts: prev?.matchId === m.matchId ? prev.toasts : [],
+      ...(readOnly ? { readOnly: true } : {}),
+    };
+  };
+
+  /** tick aplicado a uma partida (minha ou assistida) */
+  const tickLive = (l: OnlineLiveMatch, t: MatchTickPayload): OnlineLiveMatch => {
     const events = t.events as MatchEvent[];
     const state: MatchState = {
       ...l.state,
@@ -635,14 +669,31 @@ export const useOnline = create<OnlineStore>()((set, get) => {
       events: events.length ? l.state.events.concat(events) : l.state.events,
     };
     const items = events.map((e) => ({ ...e, key: ++feedKey }));
-    set({
-      live: {
-        ...l,
-        state,
-        feed: items.length ? [...l.feed, ...items].slice(-FEED_CAP) : l.feed,
-        batch: events.length ? { key: feedKey, events, silent: false } : l.batch,
-      },
-    });
+    return {
+      ...l,
+      state,
+      feed: items.length ? [...l.feed, ...items].slice(-FEED_CAP) : l.feed,
+      batch: events.length ? { key: feedKey, events, silent: false } : l.batch,
+    };
+  };
+
+  const patchOther = (matchId: string, fn: (l: OnlineLiveMatch) => Partial<OnlineLiveMatch> | null) => {
+    const o = get().others[matchId];
+    if (!o) return;
+    const p = fn(o);
+    if (p) set({ others: { ...get().others, [matchId]: { ...o, ...p } } });
+  };
+
+  const onTick = (t: MatchTickPayload) => {
+    const l = get().live;
+    if (!l || l.matchId !== t.matchId) {
+      // (Rodada ao vivo) partida de outros técnicos
+      const o = get().others[t.matchId];
+      if (o) set({ others: { ...get().others, [t.matchId]: tickLive(o, t) } });
+      return;
+    }
+    const events = t.events as MatchEvent[];
+    set({ live: tickLive(l, t) });
     // PvP: avisa as mudanças do adversário (substituições e postura)
     const pvp = !!l.homePlayerId && !!l.awayPlayerId;
     if (pvp) {
@@ -661,6 +712,10 @@ export const useOnline = create<OnlineStore>()((set, get) => {
   };
 
   const onPause = (p: MatchPausePayload) => {
+    if (get().live?.matchId !== p.matchId) {
+      patchOther(p.matchId, () => ({ pause: p.paused ? p : null }));
+      return;
+    }
     patchLive((l) => {
       if (l.matchId !== p.matchId) return null;
       if (!p.paused) return { pause: null, panel: l.panel === 'halftime' ? null : l.panel, resumeSent: false, pauseRequested: false };
@@ -672,18 +727,19 @@ export const useOnline = create<OnlineStore>()((set, get) => {
   };
 
   const onMatchEnd = (e: MatchEndPayload) => {
-    patchLive((l) => {
-      if (l.matchId !== e.matchId) return null;
-      const base = e.result as MatchResult;
-      // agregado / quem avança / pênaltis do confronto (o PostMatch lê do MatchResult)
-      const result: MatchResult = {
-        ...base,
-        ...(e.aggregate ? { aggregate: e.aggregate } : {}),
-        ...(e.advancing ? { advancing: e.advancing } : {}),
-        ...(e.penalties ? { penalties: e.penalties } : {}),
-      };
-      return { phase: l.phase === 'summary' ? 'summary' : 'post', result, pause: null, panel: null, state: { ...l.state, phase: 'finished' } };
-    });
+    const base = e.result as MatchResult;
+    // agregado / quem avança / pênaltis do confronto (o PostMatch lê do MatchResult)
+    const result: MatchResult = {
+      ...base,
+      ...(e.aggregate ? { aggregate: e.aggregate } : {}),
+      ...(e.advancing ? { advancing: e.advancing } : {}),
+      ...(e.penalties ? { penalties: e.penalties } : {}),
+    };
+    if (get().live?.matchId !== e.matchId) {
+      patchOther(e.matchId, (l) => ({ phase: 'post', result, pause: null, panel: null, state: { ...l.state, phase: 'finished' } }));
+      return;
+    }
+    patchLive((l) => ({ phase: l.phase === 'summary' ? 'summary' : 'post', result, pause: null, panel: null, state: { ...l.state, phase: 'finished' } }));
   };
 
   /* ───────── resultados ───────── */
@@ -768,7 +824,8 @@ export const useOnline = create<OnlineStore>()((set, get) => {
    */
   const joblessRef = (season: SeasonState, room: RoomSummary): string | null => {
     const me = room.players.find((p) => p.playerId === get().playerId);
-    if (!me || me.spectator || me.clubId || room.phase === 'lobby') return null;
+    // (Rodada ao vivo) o espectador também ganha a visão de referência (sem clube): tabelas, sala e partidas ao vivo
+    if (!me || me.clubId || room.phase === 'lobby') return null;
     const hist = get().jobs?.me?.history ?? [];
     const last = hist[hist.length - 1]?.clubId;
     if (last && season.clubs[last]) return last;
@@ -878,6 +935,9 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     seasonSummary: null,
     infos: {},
     live: null,
+    others: {},
+    watching: null,
+    watch: (matchId) => set({ watching: matchId }),
     matchPreview: null,
     results: [],
     chat: [],
@@ -895,27 +955,29 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     simHost: null,
     hostStatus: null,
 
-    resume: async (code) => {
-      const c = savedCareer(code);
-      if (!c) return 'Carreira não encontrada neste navegador.';
-      get().connect();
-      if (get().session?.code !== code) resetRoomState();
-      const r = await call<{ playerId: string }>('room:rejoin', { code: c.code, token: c.token });
-      if (!r.ok) return r.error;
-      saveNickname(c.nickname);
-      enterRoom({ code: c.code, token: c.token, playerId: r.data.playerId });
-      return null;
-    },
+    resume: async (code) =>
+      entry(async () => {
+        const c = savedCareer(code);
+        if (!c) return 'Carreira não encontrada neste navegador.';
+        get().connect();
+        if (get().session?.code !== code) resetRoomState();
+        const r = await call<{ playerId: string }>('room:rejoin', { code: c.code, token: c.token });
+        if (!r.ok) return r.error;
+        saveNickname(c.nickname);
+        enterRoom({ code: c.code, token: c.token, playerId: r.data.playerId });
+        return null;
+      }),
 
-    claimSeat: async (code, seatCode, nickname) => {
-      get().connect();
-      resetRoomState();
-      const r = await call<{ playerId: string; token: string }>('room:claim-seat', { code, seatCode, ...(nickname ? { nickname } : {}) });
-      if (!r.ok) return r.error;
-      if (nickname) saveNickname(nickname);
-      enterRoom({ code, token: r.data.token, playerId: r.data.playerId });
-      return null;
-    },
+    claimSeat: async (code, seatCode, nickname) =>
+      entry(async () => {
+        get().connect();
+        resetRoomState();
+        const r = await call<{ playerId: string; token: string }>('room:claim-seat', { code, seatCode, ...(nickname ? { nickname } : {}) });
+        if (!r.ok) return r.error;
+        if (nickname) saveNickname(nickname);
+        enterRoom({ code, token: r.data.token, playerId: r.data.playerId });
+        return null;
+      }),
 
     restoreBackup: async (file) => {
       if (IS_EDGE) {
@@ -1021,32 +1083,34 @@ export const useOnline = create<OnlineStore>()((set, get) => {
       else sock.connect();
     },
 
-    create: async (nickname, settings) => {
-      get().connect();
-      saveNickname(nickname);
-      // limpa ANTES: o room:state da sala nova chega antes do ack
-      resetRoomState();
-      const r = await call<{ code: string; playerId: string; token: string }>('room:create', { nickname, ...(settings ? { settings } : {}) });
-      if (!r.ok) return r.error;
-      enterRoom({ code: r.data.code, token: r.data.token, playerId: r.data.playerId });
-      return null;
-    },
+    create: async (nickname, settings) =>
+      entry(async () => {
+        get().connect();
+        saveNickname(nickname);
+        // limpa ANTES: o room:state da sala nova chega antes do ack
+        resetRoomState();
+        const r = await call<{ code: string; playerId: string; token: string }>('room:create', { nickname, ...(settings ? { settings } : {}) });
+        if (!r.ok) return r.error;
+        enterRoom({ code: r.data.code, token: r.data.token, playerId: r.data.playerId });
+        return null;
+      }),
 
-    join: async (code, nickname, spectator) => {
-      get().connect();
-      saveNickname(nickname);
-      const keep = { session: get().session, playerId: get().playerId };
-      const r0 = get().session;
-      resetRoomState();
-      const r = await call<{ playerId: string; token: string }>('room:join', { code, nickname, ...(spectator ? { spectator: true } : {}) });
-      if (!r.ok) {
-        // continua na sala anterior (se havia)
-        if (r0) set(keep);
-        return r.error;
-      }
-      enterRoom({ code, token: r.data.token, playerId: r.data.playerId });
-      return null;
-    },
+    join: async (code, nickname, spectator) =>
+      entry(async () => {
+        get().connect();
+        saveNickname(nickname);
+        const keep = { session: get().session, playerId: get().playerId };
+        const r0 = get().session;
+        resetRoomState();
+        const r = await call<{ playerId: string; token: string }>('room:join', { code, nickname, ...(spectator ? { spectator: true } : {}) });
+        if (!r.ok) {
+          // continua na sala anterior (se havia)
+          if (r0) set(keep);
+          return r.error;
+        }
+        enterRoom({ code, token: r.data.token, playerId: r.data.playerId });
+        return null;
+      }),
 
     preview: async (code) => {
       const r = await fetchRoomPreview<RoomPreview>(code);

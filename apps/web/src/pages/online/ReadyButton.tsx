@@ -4,6 +4,7 @@ import { Check, CheckCircle2, Eye, FastForward, FileSignature, Hourglass, Loader
 import { cn } from '@/lib/utils';
 import { useMe, useMyTurn, useOnline, useWaitingFor } from '@/store/online';
 import { Button } from '@/components/ui/button';
+import { useLiveRoundActive } from './LiveRound';
 
 export function ReadyButton({ size = 'md', className, showWaiting = false }: { size?: 'md' | 'lg'; className?: string; showWaiting?: boolean }) {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ export function ReadyButton({ size = 'md', className, showWaiting = false }: { s
   const waiting = useWaitingFor();
 
   const turn = useMyTurn();
+  const liveRound = useLiveRoundActive();
   let btn;
   if (phase === 'planning' && me?.spectator) {
     btn = (
@@ -58,6 +60,9 @@ export function ReadyButton({ size = 'md', className, showWaiting = false }: { s
         <Loader2 className="animate-spin" /> <span className="hidden min-[400px]:inline">Simulando…</span>
       </Button>
     );
+  } else if (phase === 'matchday' && !live && liveRound) {
+    // (Rodada ao vivo) sem jogo meu: o botão azul "Rodada ao vivo" ao lado já leva às partidas
+    btn = null;
   } else if (phase === 'matchday') {
     btn = (
       <Button variant="club" size={size} onClick={() => navigate('/partida')} className={cn('px-3 sm:px-4', className)}>

@@ -22,6 +22,7 @@ import { SeasonEndPage } from '@/pages/season-end/SeasonEndPage';
 import { StartMenuPage } from '@/pages/online/StartMenu';
 import { OnlineLobbyPage } from '@/pages/online/LobbyPage';
 import { OnlineMatchPage } from '@/pages/online/OnlineMatchPage';
+import { LiveRoundPage } from '@/pages/online/LiveRound';
 import { OnlineSeasonEndPage } from '@/pages/online/OnlineSeasonEndPage';
 import { RootLayout } from '@/pages/online/OnlineRuntime';
 import { FriendsPage } from '@/pages/online/FriendsPage';
@@ -72,6 +73,8 @@ export const router = createBrowserRouter([
             element: <ByMode solo={<SeasonEndPage />} online={<OnlineSeasonEndPage />} />,
           },
           { path: '/partida', element: <ByMode solo={<MatchPage />} online={<OnlineMatchPage />} /> },
+          // (Rodada ao vivo) todos da sala assistem às partidas dos técnicos (só leitura)
+          { path: '/rodada-ao-vivo', element: <ByMode solo={<Navigate to="/dashboard" replace />} online={<LiveRoundPage />} /> },
           // solo e online: as ações passam pelo adaptador (pages/market/actions.ts)
           { path: '/mercado', element: <MarketPage /> },
           // (Fase 3) carreira do técnico (solo)

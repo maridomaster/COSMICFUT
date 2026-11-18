@@ -33,4 +33,4 @@ export const NAV_ITEMS: NavItem[] = [
 export const JOBLESS_ROUTES = ['/empregos', '/inbox', '/tecnico', '/historico', '/competicoes', '/estatisticas'];
 
 /** (Carreira online) desempregado online: Central de Empregos, Liga dos Amigos, tabelas e a sala. */
-export const ONLINE_JOBLESS_ROUTES = ['/empregos', '/amigos', '/competicoes', '/estatisticas', '/historico', '/sala'];
+export const ONLINE_JOBLESS_ROUTES = ['/empregos', '/amigos', '/competicoes', '/estatisticas', '/historico', '/sala', '/rodada-ao-vivo'];

@@ -31,7 +31,11 @@ export function useCoachCareer(): CoachCareer | null {
 export function useUnemployed(): boolean {
   const cc = useCoachCareer();
   const online = useIsOnline();
-  const onlineJobless = useOnline((s) => !!s.room?.players.find((p) => p.playerId === s.playerId)?.unemployed);
+  // (Rodada ao vivo) espectador também não tem clube: mesma navegação restrita (tabelas, sala, rodada ao vivo)
+  const onlineJobless = useOnline((s) => {
+    const me = s.room?.players.find((p) => p.playerId === s.playerId);
+    return !!me?.unemployed || !!me?.spectator;
+  });
   return online ? onlineJobless : !!cc && !cc.coach.clubId;
 }
 

@@ -26,6 +26,7 @@ import { PostMatch } from '@/pages/match/PostMatch';
 import { PreMatch } from '@/pages/match/PreMatch';
 import { MatchViewProvider, type MatchView, type Scorer } from '@/pages/match/view';
 import { Countdown, OtherGames } from './common';
+import { LiveRoundButton } from './LiveRound';
 import { ReadyButton } from './ReadyButton';
 
 /** referência estável para o seletor (`?? []` no seletor criaria um array novo a cada leitura) */
@@ -49,9 +50,25 @@ export function OnlineMatchPage() {
       {live.phase === 'post' ? (
         <PostMatch top={top} />
       ) : (
-        <LiveMatch top={top} controls={<OnlineControls live={live} />} aside={<OtherGames excludeId={live.matchId} />} asideLabel="Outros" />
+        <LiveMatch top={top} controls={<OnlineControls live={live} />} aside={<PeekOthers excludeId={live.matchId} />} asideLabel="Outros" />
       )}
     </OnlineMatchView>
+  );
+}
+
+/** (Rodada ao vivo) outros jogos: clicar abre a partida na Rodada ao vivo (espiar sem largar o controle do meu). */
+function PeekOthers({ excludeId, title }: { excludeId?: string | null; title?: string }) {
+  const navigate = useNavigate();
+  const watch = useOnline((s) => s.watch);
+  return (
+    <OtherGames
+      excludeId={excludeId}
+      title={title}
+      onPick={(id) => {
+        watch(id);
+        navigate('/rodada-ao-vivo');
+      }}
+    />
   );
 }
 
@@ -107,7 +124,7 @@ function KickoffBar({ startsAt, note }: { startsAt: number; note: string }) {
 
 /* ───────── competição / fase / ida e volta (match:start.fixture + config) ───────── */
 
-function FixtureStrip({ live }: { live: OnlineLiveMatch }) {
+export function FixtureStrip({ live }: { live: OnlineLiveMatch }) {
   const season = useSeason((s) => s.save?.season);
   const nf = live.fixture;
   const info = useMemo(() => {
@@ -202,13 +219,13 @@ function OnlineMatchView({ live, children }: { live: OnlineLiveMatch; children: 
 }
 
 /** Quem já entrou em campo pelo lado: titulares + quem entrou nas substituições. */
-function appearedOf(live: OnlineLiveMatch, side: Side): string[] {
+export function appearedOf(live: OnlineLiveMatch, side: Side): string[] {
   const ids = new Set(live.config[side].lineup.starters);
   for (const e of live.state.events) if (e.type === 'substitution' && e.side === side && e.playerId) ids.add(e.playerId);
   return [...ids];
 }
 
-function scorersOf(live: OnlineLiveMatch): Scorer[] {
+export function scorersOf(live: OnlineLiveMatch): Scorer[] {
   return live.state.events
     .filter((e) => (e.type === 'goal' || e.type === 'own-goal') && e.side && e.playerId)
     .map((e) => ({ side: e.side!, playerId: e.playerId!, minute: e.minute, ownGoal: e.type === 'own-goal' || undefined }));
@@ -329,6 +346,7 @@ function NoLiveMatch() {
             <Loader2 className="mx-auto size-10 animate-spin text-club-accent" />
             <h1 className="mt-4 text-xl font-extrabold">{room.phase === 'simulating' ? 'Simulando a rodada…' : 'Partidas em andamento'}</h1>
             <p className="mt-1 text-sm text-fg-muted">{room.phase === 'simulating' ? 'O servidor está avançando os dias até o próximo jogo.' : 'Seu clube não joga hoje — acompanhe os outros jogos.'}</p>
+            {room.phase === 'matchday' && <LiveRoundButton className="mt-4" />}
           </>
         ) : (
           <>
@@ -367,7 +385,7 @@ function NoLiveMatch() {
       </motion.div>
       {infoCount > 0 && (
         <div className="cf-card p-4">
-          <OtherGames title="Jogos da rodada" />
+          <PeekOthers title="Jogos da rodada" />
         </div>
       )}
     </div>
@@ -411,7 +429,7 @@ function OnlineRoundSummary({ live }: { live: OnlineLiveMatch }) {
       </motion.header>
       {!processed && (
         <motion.div variants={fadeUp} className="cf-card p-4">
-          <OtherGames title="Partidas em andamento" />
+          <PeekOthers title="Partidas em andamento" />
         </motion.div>
       )}
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">

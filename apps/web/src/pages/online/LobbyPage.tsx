@@ -108,6 +108,15 @@ const PRESET_LABEL: Record<SettingsPreset, string> = { rapido: 'Rápido', classi
 
 /* ───────── criar / entrar ───────── */
 
+/** Exceções cruas do navegador (inglês, ex.: "Maximum call stack size exceeded") nunca chegam ao jogador. */
+function friendlyError(err: string): string {
+  if (/maximum call stack|is not a function|cannot read|undefined|null|failed to fetch|networkerror|load failed/i.test(err)) {
+    console.error('[online] erro técnico', err);
+    return 'Falha inesperada na conexão com a sala. Tente de novo.';
+  }
+  return err;
+}
+
 function EntryView({ initialCode, otherRoom }: { initialCode: string; otherRoom: string | null }) {
   const navigate = useNavigate();
   const [nick, setNick] = useState(() => loadNickname());
@@ -136,24 +145,46 @@ function EntryView({ initialCode, otherRoom }: { initialCode: string; otherRoom:
   }, [code]);
 
   const nickOk = nick.trim().length >= 2;
-  const create = async (e: FormEvent) => {
-    e.preventDefault();
+  /** última ação que falhou (botão "Tentar de novo" na caixa de erro) */
+  const [retryAction, setRetryAction] = useState<(() => void) | null>(null);
+  const showError = (err: string, retry: (() => void) | null) => {
+    setError(friendlyError(err));
+    setRetryAction(() => retry);
+  };
+  const doCreate = async () => {
     if (!nickOk) return setError('Escolha um apelido (2 a 20 letras).');
     setBusy('create');
     setError(null);
-    const err = await useOnline.getState().create(nick.trim(), { preset, turnMode, isPublic });
+    let err: string | null;
+    try {
+      err = await useOnline.getState().create(nick.trim(), { preset, turnMode, isPublic });
+    } catch (e) {
+      console.error('[online] criar sala', e);
+      err = 'Falha inesperada ao criar a sala.';
+    }
     setBusy(null);
-    if (err) return setError(err);
-    navigate(`/online/${useOnline.getState().session!.code}`, { replace: true });
+    if (err) return showError(err, () => void doCreate());
+    const code6 = useOnline.getState().session?.code;
+    if (code6) navigate(`/online/${code6}`, { replace: true });
+  };
+  const create = (e: FormEvent) => {
+    e.preventDefault();
+    void doCreate();
   };
   const joinCode = async (c: string, asSpectator = spectator) => {
     if (!nickOk) return setError('Escolha um apelido (2 a 20 letras).');
     if (c.length !== ROOM_CODE_LENGTH) return setError('O código tem 6 letras.');
     setBusy('join');
     setError(null);
-    const err = await useOnline.getState().join(c, nick.trim(), asSpectator);
+    let err: string | null;
+    try {
+      err = await useOnline.getState().join(c, nick.trim(), asSpectator);
+    } catch (e) {
+      console.error('[online] entrar na sala', e);
+      err = 'Falha inesperada ao entrar na sala.';
+    }
     setBusy(null);
-    if (err) return setError(err);
+    if (err) return showError(err, () => void joinCode(c, asSpectator));
     navigate(`/online/${c}`, { replace: true });
   };
 
@@ -255,9 +286,14 @@ function EntryView({ initialCode, otherRoom }: { initialCode: string; otherRoom:
         </motion.form>
       </div>
       {error && (
-        <p role="alert" className="mt-4 rounded-xl border border-danger/40 bg-danger/10 px-3 py-2 text-sm text-danger">
-          {error}
-        </p>
+        <div role="alert" className="mt-4 flex flex-wrap items-center gap-2 rounded-xl border border-danger/40 bg-danger/10 px-3 py-2 text-sm text-danger">
+          <span className="min-w-0 flex-1">{error}</span>
+          {retryAction && (
+            <Button size="sm" variant="outline" disabled={!!busy} onClick={() => retryAction()}>
+              <RefreshCw /> Tentar de novo
+            </Button>
+          )}
+        </div>
       )}
       <motion.div variants={fadeUp}>
         <MyCareersSection />

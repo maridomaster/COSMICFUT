@@ -14,6 +14,17 @@ const EDGE_RAW = ((import.meta.env.VITE_EDGE_URL as string | undefined) || 'ws:/
 export const EDGE_HTTP = EDGE_RAW.replace(/^ws(s?):\/\//i, 'http$1://');
 export const EDGE_WS = EDGE_HTTP.replace(/^http(s?):\/\//i, 'ws$1://');
 
+/**
+ * Página aberta por http:// (fora do localhost) com o relay em https: a origem não está liberada no relay e o
+ * navegador bloqueia a conexão. Devolve a mensagem pt-BR com o endereço seguro (ou null quando está tudo certo).
+ */
+export function insecurePageMessage(): string | null {
+  if (typeof window === 'undefined' || !IS_EDGE) return null;
+  const { protocol, host, pathname, search } = window.location;
+  if (protocol !== 'http:' || isLocalHost() || !/^https:/i.test(EDGE_HTTP)) return null;
+  return `Conexão recusada: o jogo online só funciona pelo endereço seguro. Abra https://${host}${pathname}${search}`;
+}
+
 /** URL do servidor (Fastify + Socket.io). Defina VITE_SERVER_URL no build/dev para apontar para um túnel ou deploy. */
 function defaultServerUrl(): string {
   // Servido pelo próprio servidor (npm run play / túnel): mesma origem. No dev do Vite (5173), servidor local.

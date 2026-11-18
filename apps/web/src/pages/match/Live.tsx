@@ -27,7 +27,7 @@ type MobileTab = 'feed' | 'stats' | 'pitch' | 'others';
  */
 export function LiveMatch({ top, controls, aside, asideLabel = 'Outros' }: { top?: ReactNode; controls?: ReactNode; aside?: ReactNode; asideLabel?: string } = {}) {
   const view = useMatchView();
-  const { state, config, humanSide, panel, feed } = view;
+  const { state, config, humanSide, panel, feed, readOnly } = view;
   const colors = useMatchColors(clubColors(config.home.clubId), clubColors(config.away.clubId));
   const players = usePlayerMap(config);
   const [tab, setTab] = useState<MobileTab>('feed');
@@ -90,12 +90,14 @@ export function LiveMatch({ top, controls, aside, asideLabel = 'Outros' }: { top
         </div>
       </div>
 
-      {/* botão flutuante de mudanças (mobile) */}
-      <div className="fixed right-4 bottom-4 z-30 lg:hidden">
-        <ChangesButton floating />
-      </div>
+      {/* botão flutuante de mudanças (mobile) — não existe só assistindo (Rodada ao vivo) */}
+      {!readOnly && (
+        <div className="fixed right-4 bottom-4 z-30 lg:hidden">
+          <ChangesButton floating />
+        </div>
+      )}
 
-      <AnimatePresence>{panel && <ChangesPanel key="panel" />}</AnimatePresence>
+      <AnimatePresence>{panel && !readOnly && <ChangesPanel key="panel" />}</AnimatePresence>
     </div>
   );
 }

@@ -14,7 +14,7 @@
  *    "Reconectando…").
  */
 import { decodeBundle, Reassembler, T_BUNDLE, T_CKPT, T_FRAG, WIRE_VERSION, type ClientHello, type RelayToHost } from '@cosmicfut/online-core/wire';
-import { EDGE_HTTP, EDGE_WS } from '../config';
+import { EDGE_HTTP, EDGE_WS, insecurePageMessage } from '../config';
 import { HostBridge, type HostStatus } from './HostBridge';
 
 type Listener = (...a: any[]) => void; // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -31,6 +31,23 @@ export interface SimHostInfo {
 
 const HOST_MSGS = new Set(['i', 'join', 'attach', 'detach', 'claim', 'ended', 'demoted']);
 const PING_MS = 25_000;
+/** espera máxima pelo ack do room:leave (o relay antigo não o entregava): depois fecha mesmo assim */
+const LEAVE_ACK_MS = 2500;
+
+/** Erro "nosso" (mensagem pt-BR pronta para a UI). Qualquer outro vira uma mensagem genérica. */
+export class EdgeError extends Error {}
+
+/** a tentativa de entrar foi trocada por outra (criar/entrar em outra sala) — não é um erro para a UI */
+export const REPLACED = 'Conexão substituída.';
+
+/** Mensagem para a UI: nossos erros como vieram; exceções inesperadas (RangeError…) viram texto amigável. */
+export function edgeErrorMessage(e: unknown, fallback = 'Falha inesperada na conexão com a sala. Tente de novo.'): string {
+  if (e instanceof EdgeError) return e.message;
+  console.error('[online] erro inesperado', e);
+  return fallback;
+}
+
+const noConnection = () => new EdgeError(insecurePageMessage() ?? 'Sem conexão com o servidor.');
 
 export class EdgeSocket {
   connected = false;
@@ -83,13 +100,25 @@ export class EdgeSocket {
     return this;
   }
 
+  private fireDepth = 0;
+
   private fire(ev: string, ...a: unknown[]): void {
-    for (const fn of [...(this.ls.get(ev) ?? [])]) {
-      try {
-        fn(...a);
-      } catch (e) {
-        console.error('[online] handler', ev, e);
+    // proteção contra laços de eventos (um handler que dispara o mesmo evento de novo, sem fim)
+    if (this.fireDepth > 16) {
+      console.error('[online] laço de eventos interrompido', ev);
+      return;
+    }
+    this.fireDepth++;
+    try {
+      for (const fn of [...(this.ls.get(ev) ?? [])]) {
+        try {
+          fn(...a);
+        } catch (e) {
+          console.error('[online] handler', ev, e);
+        }
       }
+    } finally {
+      this.fireDepth--;
     }
   }
 
@@ -118,14 +147,15 @@ export class EdgeSocket {
     if (typeof last === 'function') args.pop();
     const p = (args[0] ?? {}) as Record<string, unknown>;
     const fail = (error: string) => ack({ ok: false, error });
+    const failWith = (e: unknown) => fail(edgeErrorMessage(e));
     switch (ev) {
       case 'room:create':
       case 'room:restore':
-        void this.create(p, ev === 'room:restore').then((d) => ack({ ok: true, data: d }), (e: Error) => fail(e.message));
+        void this.create(p, ev === 'room:restore').then((d) => ack({ ok: true, data: d }), failWith);
         return this;
       case 'room:join':
         void this.open(String(p.code ?? ''), { mode: 'join', nickname: p.nickname as string, ...(p.spectator ? { spectator: true } : {}) })
-          .then((w) => ack({ ok: true, data: { ...(w.data as object), playerId: w.playerId, token: w.token } }), (e: Error) => fail(e.message));
+          .then((w) => ack({ ok: true, data: { ...(w.data as object), playerId: w.playerId, token: w.token } }), failWith);
         return this;
       case 'room:rejoin': {
         const code = String(p.code ?? '');
@@ -134,27 +164,40 @@ export class EdgeSocket {
           ack({ ok: true, data: { playerId: this.playerId } });
           return this;
         }
-        void this.open(code, { mode: 'rejoin', token }).then((w) => ack({ ok: true, data: { playerId: w.playerId } }), (e: Error) => fail(e.message));
+        void this.open(code, { mode: 'rejoin', token }).then((w) => ack({ ok: true, data: { playerId: w.playerId } }), failWith);
         return this;
       }
       case 'room:claim-seat':
         void this.open(String(p.code ?? ''), { mode: 'claim', seatCode: p.seatCode as string, ...(p.nickname ? { nickname: p.nickname as string } : {}) })
-          .then((w) => ack({ ok: true, data: { playerId: w.playerId, token: w.token } }), (e: Error) => fail(e.message));
+          .then((w) => ack({ ok: true, data: { playerId: w.playerId, token: w.token } }), failWith);
         return this;
-      case 'room:leave':
+      case 'room:leave': {
         if (!this.ws || !this.welcomed) {
-          ack({ ok: true, data: undefined });
+          queueMicrotask(() => ack({ ok: true, data: undefined }));
           return this;
         }
-        this.intent('room:leave', undefined, (r) => {
-          ack(r);
-          this.closeWs();
-          this.code = null;
-          this.token = null;
-        });
+        // (bug "Maximum call stack size exceeded") o relay antigo não entregava este ack (a conexão já tinha deixado
+        // a vaga): ele ficava pendurado e reentrava em closeWs ao criar/entrar em outra sala. Agora fecha depois de
+        // um tempo de qualquer jeito, e uma vez só.
+        const gen = this.generation;
+        let done = false;
+        const finish = (r: Parameters<AckFn>[0]) => {
+          if (done) return;
+          done = true;
+          clearTimeout(t);
+          if (gen === this.generation) {
+            this.closeWs();
+            this.code = null;
+            this.token = null;
+          }
+          ack(r.ok ? r : { ok: true, data: undefined });
+        };
+        const t = setTimeout(() => finish({ ok: true, data: undefined }), LEAVE_ACK_MS);
+        this.intent('room:leave', undefined, finish);
         return this;
+      }
       case 'room:list':
-        void fetch(`${EDGE_HTTP}/rooms`).then((r) => r.json()).then((j) => ack(j as { ok: true; data: unknown }), () => fail('Servidor indisponível.'));
+        void fetch(`${EDGE_HTTP}/rooms`).then((r) => r.json()).then((j) => ack(j as { ok: true; data: unknown }), () => fail(insecurePageMessage() ?? 'Servidor indisponível.'));
         return this;
       default:
         this.intent(ev, args.length ? args[0] : undefined, ack);
@@ -166,7 +209,11 @@ export class EdgeSocket {
 
   private intent(ev: string, a: unknown, ack: AckFn): void {
     const ws = this.ws;
-    if (!ws || ws.readyState !== WebSocket.OPEN || !this.welcomed) return ack({ ok: false, error: 'Sem conexão com a sala.' });
+    if (!ws || ws.readyState !== WebSocket.OPEN || !this.welcomed) {
+      // sempre assíncrono: um handler que tenta de novo na falha não vira recursão síncrona
+      queueMicrotask(() => ack({ ok: false, error: 'Sem conexão com a sala.' }));
+      return;
+    }
     const k = ++this.k;
     this.acks.set(k, ack);
     ws.send(JSON.stringify({ t: 'i', ev, ...(a !== undefined ? { a } : {}), k }));
@@ -179,13 +226,17 @@ export class EdgeSocket {
     try {
       res = await fetch(`${EDGE_HTTP}/rooms`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
     } catch {
-      throw new Error('Servidor indisponível.');
+      // CORS recusado (origem fora da lista, ex.: página aberta em http://) também cai aqui
+      throw new EdgeError(insecurePageMessage() ?? 'Servidor indisponível. Verifique sua internet e tente de novo.');
     }
     const j = (await res.json().catch(() => null)) as { ok: boolean; data?: { code: string }; error?: string } | null;
-    if (!j?.ok || !j.data) throw new Error(j?.error ?? 'Não foi possível criar a sala.');
+    if (!j?.ok || !j.data) {
+      const err = typeof j?.error === 'string' ? j.error : 'Não foi possível criar a sala.';
+      throw new EdgeError(/origem/i.test(err) ? (insecurePageMessage() ?? `${err} Abra o jogo pelo endereço oficial (https).`) : err);
+    }
     if (restore) {
       const file = p.file as Blob | undefined;
-      if (!file) throw new Error('Arquivo de backup não encontrado.');
+      if (!file) throw new EdgeError('Arquivo de backup não encontrado.');
       this.restoreBytes = new Uint8Array(await file.arrayBuffer());
     }
     const nickname = (p.nickname as string) || 'Host';
@@ -195,23 +246,43 @@ export class EdgeSocket {
 
   /** Abre o WebSocket da sala e espera o welcome. */
   private open(code: string, hello: Omit<ClientHello, 't' | 'v'>): Promise<Record<string, unknown> & { playerId: string; token?: string }> {
-    if (!/^[A-Z0-9]{6}$/.test(code)) return Promise.reject(new Error('Código inválido.'));
+    if (!/^[A-Z0-9]{6}$/.test(code)) return Promise.reject(new EdgeError('Código inválido.'));
     this.closeWs();
-    this.hello?.reject(new Error('Conexão substituída.'));
+    const prevHello = this.hello;
+    this.hello = null;
+    prevHello?.reject(new EdgeError(REPLACED));
     const gen = ++this.generation;
-    const ws = new WebSocket(`${EDGE_WS}/rooms/${code}/ws`);
+    let ws: WebSocket;
+    try {
+      ws = new WebSocket(`${EDGE_WS}/rooms/${code}/ws`);
+    } catch {
+      // URL bloqueada (conteúdo misto http/https, endereço inválido): erro claro, sem exceção crua
+      return Promise.reject(noConnection());
+    }
     ws.binaryType = 'arraybuffer';
     this.ws = ws;
     this.welcomed = false;
     this.code = code;
+    let own: { resolve: (w: Record<string, unknown>) => void; reject: (e: Error) => void } | null = null;
     const p = new Promise<Record<string, unknown> & { playerId: string; token?: string }>((resolve, reject) => {
-      this.hello = { resolve: resolve as (w: Record<string, unknown>) => void, reject };
+      own = { resolve: resolve as (w: Record<string, unknown>) => void, reject };
+      this.hello = own;
     });
-    const timer = setTimeout(() => this.hello?.reject(new Error('O servidor não respondeu a tempo.')), 20_000);
-    ws.onopen = () => ws.send(JSON.stringify({ t: 'hello', v: WIRE_VERSION, ...hello }));
+    // o tempo esgotado rejeita só ESTA tentativa (nunca a de uma conexão mais nova)
+    const timer = setTimeout(() => {
+      if (this.hello === own) this.hello = null;
+      own?.reject(new EdgeError('O servidor não respondeu a tempo.'));
+    }, 20_000);
+    ws.onopen = () => {
+      if (gen === this.generation) ws.send(JSON.stringify({ t: 'hello', v: WIRE_VERSION, ...hello }));
+    };
     ws.onmessage = (e) => {
       if (gen !== this.generation) return;
-      this.onData(e.data as string | ArrayBuffer);
+      try {
+        this.onData(e.data as string | ArrayBuffer);
+      } catch (err) {
+        console.error('[online] mensagem do relay', err);
+      }
     };
     ws.onerror = () => undefined;
     ws.onclose = (e) => {
@@ -229,7 +300,7 @@ export class EdgeSocket {
         this.startPing();
         return w;
       })
-      .catch((e: Error) => {
+      .catch((e: unknown) => {
         clearTimeout(timer);
         if (gen === this.generation) {
           this.closeWs();
@@ -253,18 +324,36 @@ export class EdgeSocket {
     this.pingTimer = null;
     if (this.retryTimer) clearTimeout(this.retryTimer);
     this.retryTimer = null;
-    this.stopHost();
     const ws = this.ws;
     this.ws = null;
     this.welcomed = false;
-    for (const ack of this.acks.values()) ack({ ok: false, error: 'Conexão encerrada.' });
-    this.acks.clear();
     if (ws && ws.readyState <= WebSocket.OPEN) {
       try {
         ws.close(1000, 'bye');
       } catch {
         /* ignore */
       }
+    }
+    this.stopHost();
+    this.failAcks('Conexão encerrada.');
+  }
+
+  /**
+   * Falha os acks pendentes. (bug "Maximum call stack size exceeded") a lista é ESVAZIADA antes, e cada ack roda à
+   * parte (microtarefa): um ack que fecha a conexão de novo (room:leave) ou tenta de novo não reentra aqui.
+   */
+  private failAcks(error: string): void {
+    if (!this.acks.size) return;
+    const list = [...this.acks.values()];
+    this.acks.clear();
+    for (const ack of list) {
+      queueMicrotask(() => {
+        try {
+          ack({ ok: false, error });
+        } catch (e) {
+          console.error('[online] ack', e);
+        }
+      });
     }
   }
 
@@ -281,13 +370,14 @@ export class EdgeSocket {
     this.ws = null;
     this.welcomed = false;
     if (this.pingTimer) clearInterval(this.pingTimer);
+    this.pingTimer = null;
     this.stopHost();
-    for (const ack of this.acks.values()) ack({ ok: false, error: 'Conexão perdida.' });
-    this.acks.clear();
+    this.failAcks('Conexão perdida.');
     if (this.hello || !wasWelcomed) {
       // ainda entrando: quem chamou open trata o erro (denied chega antes do fechamento)
-      this.hello?.reject(new Error(code === 4000 ? 'Recusado pelo servidor.' : 'Sem conexão com o servidor.'));
+      const h = this.hello;
       this.hello = null;
+      h?.reject(code === 4000 ? new EdgeError('Recusado pelo servidor.') : noConnection());
       return;
     }
     // 4000 recusado · 4001 substituído · 4002 encerrada · 4003 saiu/expulso: sem reconexão automática
@@ -301,18 +391,25 @@ export class EdgeSocket {
     this.scheduleReconnect(this.code, this.token);
   }
 
+  /** Reconexão SEMPRE assíncrona, com espera crescente (0,5 s → 4 s, com variação) e uma tentativa por vez. */
   private scheduleReconnect(code6: string, token: string): void {
-    const wait = Math.min(4000, 500 * 2 ** this.retries++);
+    if (this.retryTimer) clearTimeout(this.retryTimer);
+    const n = Math.min(this.retries++, 6);
+    const wait = Math.min(4000, 500 * 2 ** n) + Math.floor(Math.random() * 250);
     this.retryTimer = setTimeout(() => {
       this.retryTimer = null;
+      if (!this.active) return; // desconectou de vez enquanto esperava
       void this.open(code6, { mode: 'rejoin', token }).then(
         () => this.fire('connect'),
-        (e: Error) => {
-          if (/inválid|não encontrada|Recusado/i.test(e.message)) {
+        (e: unknown) => {
+          const msg = e instanceof Error ? e.message : String(e);
+          if (msg === REPLACED) return; // outra conexão (criar/entrar) assumiu: esta tentativa morre aqui
+          if (/inválid|não encontrada|Recusado/i.test(msg)) {
             this.connected = false;
             this.fire('error', { code: 'kicked', message: 'Não foi possível voltar à sala (vaga inválida ou sala encerrada).' });
           } else {
-            this.fire('connect_error', e);
+            this.fire('connect_error', e instanceof EdgeError ? e : new EdgeError(edgeErrorMessage(e)));
+            if (this.retryTimer || this.ws) return; // alguém já abriu outra conexão
             this.code = code6;
             this.token = token;
             this.scheduleReconnect(code6, token);
@@ -359,11 +456,13 @@ export class EdgeSocket {
     }
     const t = m.t as string;
     if (t === 'welcome') {
-      this.hello?.resolve(m);
+      const h = this.hello;
       this.hello = null;
+      h?.resolve(m);
     } else if (t === 'denied') {
-      this.hello?.reject(new Error(String(m.error ?? 'Recusado.')));
+      const h = this.hello;
       this.hello = null;
+      h?.reject(new EdgeError(String(m.error ?? 'Recusado.')));
     } else if (t === 'ack') {
       this.takeAck(m.k as number, m.r);
     } else if (t === 'ev') {
@@ -381,7 +480,11 @@ export class EdgeSocket {
     const fn = this.acks.get(k);
     if (!fn) return;
     this.acks.delete(k);
-    fn(r as { ok: true; data: unknown });
+    try {
+      fn(r as { ok: true; data: unknown });
+    } catch (e) {
+      console.error('[online] ack', e);
+    }
   }
 
   /** evento de controle do relay: entra na fila (não passa na frente dos lotes já agendados) */
@@ -395,10 +498,14 @@ export class EdgeSocket {
     const now = performance.now();
     while (this.queue.length && this.queue[0].at <= now + 1) {
       const m = this.queue.shift()!;
-      if (m.ev === '@ack') {
-        const x = m.a as { k: number; r: unknown };
-        this.takeAck(x.k, x.r);
-      } else this.fire(m.ev, m.a);
+      try {
+        if (m.ev === '@ack') {
+          const x = m.a as { k: number; r: unknown };
+          this.takeAck(x.k, x.r);
+        } else this.fire(m.ev, m.a);
+      } catch (e) {
+        console.error('[online] evento', m.ev, e);
+      }
     }
     if (this.queue.length) {
       this.pumpTimer = setTimeout(() => {

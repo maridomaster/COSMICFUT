@@ -44,6 +44,8 @@ export interface MatchView {
   resumeDisabled?: boolean;
   /** (Atualização 38) selo do painel aberto (padrão 'Partida pausada') */
   pausedLabel?: string;
+  /** (Rodada ao vivo) partida de outros técnicos: só assistir (sem Mudanças) */
+  readOnly?: boolean;
 }
 
 const Ctx = createContext<MatchView | null>(null);

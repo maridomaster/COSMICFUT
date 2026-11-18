@@ -852,12 +852,13 @@ export class Room {
     } else this.sendSnapshot(p.socketId, true);
     for (const m of this.matches.values()) {
       const side = m.sideOf(p.id);
-      if (!side || m.finished) continue;
+      if (m.finished) continue;
       // pré-jogo em curso: a partida ainda não começou
       if (!m.started) {
-        if (this.preview) io.to(p.socketId).emit('match:preview', this.previewPayload(m, side, this.preview.startsAt));
+        if (side && this.preview) io.to(p.socketId).emit('match:preview', this.previewPayload(m, side, this.preview.startsAt));
         continue;
       }
+      // (Rodada ao vivo) quem não joga recebe as partidas em andamento só para assistir (side null)
       io.to(p.socketId).emit('match:start', this.startPayload(m, side));
       const pause = m.pauseState();
       if (pause) io.to(p.socketId).emit('match:pause', pause);
@@ -1927,9 +1928,11 @@ export class Room {
         f as Fixture, config, { home: homeP?.id ?? null, away: awayP?.id ?? null },
         { speedMs: this.settings.matchSpeedMs, halfTimeTimeoutMs: this.ctx.opts.halfTimeTimeoutMs, pauseTimeoutMs: this.ctx.opts.pauseTimeoutMs },
         {
-          tick: (mm, t) => io.to(this.matchChannel(mm.id)).emit('match:tick', t),
+          // (Rodada ao vivo) ticks, pausas e fim vão para a SALA inteira (técnicos de folga, desempregados,
+          // espectadores): um lote por janela para "todos" — o relay replica a saída sem custo de requisição
+          tick: (_mm, t) => io.to(this.channel).emit('match:tick', t),
           info: (mm) => io.to(this.channel).emit('match:info', mm.info()),
-          pause: (mm, p) => io.to(this.matchChannel(mm.id)).emit('match:pause', p),
+          pause: (_mm, p) => io.to(this.channel).emit('match:pause', p),
           end: (mm, r) => this.onMatchEnd(mm, r),
           activeHumans: (mm) => [mm.homePlayerId, mm.awayPlayerId].filter((id): id is string => this.present(this.player(id))),
         },
@@ -1989,13 +1992,15 @@ export class Room {
         if (!p?.socketId) continue;
         io.to(p.socketId).emit('match:start', this.startPayload(m, m.sideOf(p.id)));
       }
+      // (Rodada ao vivo) a mesma partida, só leitura (side null), para a sala inteira assistir
+      io.to(this.channel).emit('match:start', this.startPayload(m, null));
     }
     for (const m of created) if (this.matches.has(m.id)) m.start();
   }
 
   private onMatchEnd(m: LiveMatch, result: MatchResult): void {
     this.playedResults[m.id] = result;
-    this.ctx.io.to(this.matchChannel(m.id)).emit('match:end', {
+    this.ctx.io.to(this.channel).emit('match:end', {
       matchId: m.id, result,
       ...(result.aggregate ? { aggregate: { ...result.aggregate } } : {}),
       ...(result.advancing ? { advancing: result.advancing } : {}),
