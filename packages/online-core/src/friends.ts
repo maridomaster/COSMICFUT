@@ -254,7 +254,7 @@ export function computeFriendsLeague(f: FriendsStore, players: { playerId: strin
       points: breakdown.league + breakdown.trophies + breakdown.cups + breakdown.profit + breakdown.h2h,
       breakdown,
       league: cur?.league ? { name: cur.league.name, pos: cur.league.pos, size: cur.league.size } : null,
-      titles: titles.map((t) => ({ season: t.season, name: t.name })),
+      titles: titles.map((t) => ({ season: t.season, name: t.name, id: t.id, clubId: t.clubId, type: t.type })),
       profit,
       h2h,
     };

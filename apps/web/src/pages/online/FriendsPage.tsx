@@ -11,6 +11,7 @@ import { fmtMoneySigned } from '@/lib/format';
 import { useIsOnline } from '@/store/mode';
 import { useOnline } from '@/store/online';
 import { IndexCrest, useClubName } from './common';
+import { FriendsTrophyRoom, TitleEmblems } from './FriendsTrophies';
 
 export function FriendsPage() {
   const online = useIsOnline();
@@ -44,6 +45,7 @@ export function FriendsLeaguePanel({ compact = false }: { compact?: boolean }) {
       <div className="space-y-4">
         <Ranking league={league} />
         {!compact && <Matrix league={league} />}
+        {!compact && <FriendsTrophyRoom league={league} />}
       </div>
       <Feed league={league} compact={compact} />
     </div>
@@ -97,8 +99,8 @@ function Ranking({ league }: { league: FriendsLeague }) {
                 </td>
                 <td className="tabular px-2 py-2 text-right text-base font-black">{r.points}</td>
                 <td className="tabular px-2 py-2 text-right">{r.breakdown.league}</td>
-                <td className="tabular px-2 py-2 text-right" title={r.titles.map((t) => `${t.name} (${t.season})`).join(', ')}>
-                  {r.titles.length ? `${r.titles.length} · ${r.breakdown.trophies}` : '0'}
+                <td className="px-2 py-2 text-right" title={r.titles.length ? `${r.titles.length} títulos · ${r.breakdown.trophies} pts\n${r.titles.map((t) => `${t.name} (${t.season})`).join('\n')}` : 'Nenhum título'}>
+                  <TitleEmblems titles={r.titles} />
                 </td>
                 <td className="tabular px-2 py-2 text-right">{r.breakdown.cups}</td>
                 <td className={cn('tabular px-2 py-2 text-right', r.profit >= 0 ? 'text-success' : 'text-danger')} title={`${r.breakdown.profit} pts`}>

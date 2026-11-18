@@ -249,7 +249,8 @@ export interface FriendsRow {
   points: number;
   breakdown: { league: number; trophies: number; cups: number; profit: number; h2h: number };
   league: { name: string; pos: number; size: number } | null;
-  titles: { season: number; name: string }[];
+  /** (18/11) id da competição, clube e tipo: emblemas e sala de troféus (ausentes em salas antigas sem o dado) */
+  titles: { season: number; name: string; id?: string; clubId?: string; type?: string }[];
   profit: number;
   h2h: { w: number; d: number; l: number };
 }
