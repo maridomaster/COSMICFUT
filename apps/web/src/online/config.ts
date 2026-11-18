@@ -74,6 +74,7 @@ export function inviteLink(code: string, publicUrl: string | null = null): strin
 
 /** Velocidades oferecidas ao host (ms por minuto simulado). */
 export const MATCH_SPEEDS: { ms: number; label: string; hint: string }[] = [
+  { ms: 60, label: 'Turbo', hint: '≈ 6 s por partida' },
   { ms: 150, label: 'Rápida', hint: '≈ 15 s por partida' },
   { ms: 400, label: 'Normal', hint: '≈ 40 s por partida' },
   { ms: 800, label: 'Lenta', hint: '≈ 1,3 min por partida' },

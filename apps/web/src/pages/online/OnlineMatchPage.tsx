@@ -6,7 +6,8 @@
 import { useMemo, type ReactNode } from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'motion/react';
-import { CalendarClock, ChevronRight, Hourglass, ListOrdered, Loader2, PauseCircle, Play, Radio, Swords, Timer, Volleyball } from 'lucide-react';
+import { MATCH_SPEEDS } from '@/online/config';
+import { CalendarClock, ChevronRight, Gauge, Hourglass, ListOrdered, Loader2, PauseCircle, Play, Radio, Swords, Timer, Volleyball } from 'lucide-react';
 import type { Competition, Fixture, MatchCommand, Side } from '@cosmicfut/engine';
 import { fmtDate } from '@/lib/format';
 import { fadeUp, staggerContainer } from '@/lib/motion';
@@ -278,6 +279,44 @@ function TagChip({ tag }: { tag: string }) {
 
 /* ───────── controles (sem relógio local) ───────── */
 
+/** Velocidade das partidas no meio do jogo: o host troca (vale na hora para todas as partidas); os outros só veem. */
+function SpeedControl() {
+  const speed = useOnline((s) => s.room?.settings.matchSpeedMs);
+  const isHost = useOnline((s) => !!s.room?.players.find((p) => p.playerId === s.playerId)?.isHost);
+  const update = useOnline((s) => s.updateSettings);
+  const toast = useOnline((s) => s.toast);
+  if (speed === undefined) return null;
+  if (!isHost) {
+    const cur = MATCH_SPEEDS.find((sp) => sp.ms === speed);
+    return (
+      <span className="flex items-center gap-1.5 rounded-xl border border-line px-2.5 py-1 text-xs text-fg-muted" title="Só o host muda a velocidade">
+        <Gauge className="size-3.5" /> {cur?.label ?? `${speed} ms`}
+      </span>
+    );
+  }
+  return (
+    <div role="radiogroup" aria-label="Velocidade da partida" data-testid="match-speed" className="flex items-center gap-0.5 rounded-xl border border-line bg-surface-2/60 p-0.5">
+      <Gauge className="mx-1 size-3.5 text-fg-muted" />
+      {MATCH_SPEEDS.map((sp) => (
+        <button
+          key={sp.ms}
+          type="button"
+          role="radio"
+          aria-checked={speed === sp.ms}
+          title={sp.hint}
+          onClick={async () => {
+            const err = await update({ matchSpeedMs: sp.ms });
+            if (err) toast({ kind: 'error', title: 'Velocidade', text: err });
+          }}
+          className={cn('h-7 rounded-lg px-2 text-xs font-bold transition-colors', speed === sp.ms ? 'bg-club-accent text-club-on-accent' : 'text-fg-muted hover:text-fg')}
+        >
+          {sp.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function OnlineControls({ live }: { live: OnlineLiveMatch }) {
   const resume = useOnline((s) => s.resumeMatch);
   const requestPause = useOnline((s) => s.requestPause);
@@ -297,6 +336,7 @@ function OnlineControls({ live }: { live: OnlineLiveMatch }) {
             <PauseCircle /> {live.pauseRequested ? (pvp ? 'Pausa pedida…' : 'Pausando…') : 'Pedir pausa'}
           </Button>
         )}
+        <SpeedControl />
         <div className="ml-auto hidden lg:block">
           <ChangesButton />
         </div>

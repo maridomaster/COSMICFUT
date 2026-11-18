@@ -1006,6 +1006,8 @@ export class Room {
     const changed = applySettingsPatch(this.settings, raw, this.phase === 'lobby');
     // mudou o modo de escolha: draft/sorteio em curso caem
     if (changed.includes('pickMode')) this.cancelDraft();
+    // velocidade: vale também para as partidas que já estão rolando
+    if (changed.includes('matchSpeedMs')) for (const m of this.matches.values()) m.setSpeed(this.settings.matchSpeedMs);
     if (changed.includes('timerSec') && this.phase === 'planning') {
       // vale a partir da próxima vez/rodada
     }

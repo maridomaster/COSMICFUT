@@ -1011,7 +1011,7 @@ function HostSettings() {
       )}
       <div>
         <span className="mb-1.5 block text-[11px] font-semibold tracking-wider text-fg-muted uppercase">Velocidade das partidas</span>
-        <div role="radiogroup" aria-label="Velocidade das partidas" className="grid grid-cols-3 gap-1 rounded-xl border border-line bg-surface-2/60 p-1">
+        <div role="radiogroup" aria-label="Velocidade das partidas" className="grid grid-cols-4 gap-1 rounded-xl border border-line bg-surface-2/60 p-1">
           {MATCH_SPEEDS.map((sp) => (
             <button
               key={sp.ms}

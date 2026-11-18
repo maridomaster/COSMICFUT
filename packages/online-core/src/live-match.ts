@@ -152,6 +152,17 @@ export class LiveMatch {
     this.gate = null;
   }
 
+  /** muda a velocidade no meio da partida (vale já no próximo minuto) */
+  setSpeed(ms: number): void {
+    if (ms === this.speedMs) return;
+    this.speedMs = ms;
+    if (this.timer) {
+      clearTimeout(this.timer);
+      this.timer = null;
+      this.schedule();
+    }
+  }
+
   private schedule(): void {
     if (!this.started || this.finished || this.gate || this.timer) return;
     this.timer = setTimeout(() => {
