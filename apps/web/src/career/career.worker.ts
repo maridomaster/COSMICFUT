@@ -451,7 +451,7 @@ async function handle(m: ToWorker): Promise<void> {
         meta = { slotId: m.slotId, clubId: save.clubId, startedAt: save.startedAt };
         // (Fase 2) migração idempotente: saves da Fase 1 ganham rev 2 (opções, finanças persistentes)
         // (Fase 3) a carreira solo liga a carreira do técnico: saves sem `world.coach` ganham o técnico do clube atual
-        const mig = migrateCareer(save.world, save.state, data ? { coachCareer: true, data } : {});
+        const mig = migrateCareer(save.world, save.state, data ? { coachCareer: true, data, ...(base ? { squads: base } : {}) } : {});
         world = mig.world;
         state = mig.state ?? save.state;
         history = save.history ?? [];
@@ -461,7 +461,7 @@ async function handle(m: ToWorker): Promise<void> {
         await ensureCoachPools();
         send({ t: 'loaded', id: m.id, save: payload(), meta: slotMeta, legacy: false, otherCareer: false, migrated: mig.migrated, coachCreated: !!mig.coachCreated, econMigrated: !!mig.econMigrated, ms: performance.now() - t0 });
         // grava o resultado da migração (o aviso aparece uma vez só)
-        if (mig.migrated || mig.coachCreated || mig.econMigrated || mig.recordsMigrated) await persistNow();
+        if (mig.migrated || mig.coachCreated || mig.econMigrated || mig.recordsMigrated || mig.dedupMigrated) await persistNow();
         return;
       }
       if (save && isCareerSave(save) && save.clubId !== m.clubId) throw new Error('o save deste slot é de outro clube');

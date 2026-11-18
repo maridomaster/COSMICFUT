@@ -1007,6 +1007,8 @@ export interface WorldPlayers {
    * liberação; o envelhecimento de 1º/07 remove quem foi liberado antes do envelhecimento anterior.
    */
   freeSince: Record<string, number>;
+  /** (dados) cópias duplicadas do mesmo jogador já aposentadas (ver season/dedupe.ts) — revisão aplicada */
+  dedup?: number;
   /** contador para ids de juniores */
   seq: number;
   /** (Etapa 1) empréstimos que atravessam uma virada (contrato completo; voltam ao mercado no trecho seguinte) */

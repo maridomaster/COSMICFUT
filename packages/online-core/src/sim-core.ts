@@ -547,7 +547,7 @@ export class CareerSimulator {
     const world0 = gunzipJson<WorldState>(req.worldGz);
     // (Etapa 1) carreira de revisão anterior (ano civil, um país): não migra — a sala vira "legado"
     if (isLegacyCareer(world0)) throw new LegacyCareerError(req.room);
-    const m = migrateCareer(world0, gunzipJson<SeasonState>(req.stateGz), { data: this.data });
+    const m = migrateCareer(world0, gunzipJson<SeasonState>(req.stateGz), { data: this.data, squads: base });
     const state = m.state!;
     for (const [clubId, setup] of Object.entries(req.setups ?? {})) {
       const club = state.clubs[clubId];
@@ -560,6 +560,11 @@ export class CareerSimulator {
       room: req.room, humanClubIds: req.humanClubIds.slice(), base, world: m.world, state, version: req.version,
       worldVersion: req.worldVersion, wb: worldSquads(m.world, base), worldDirty: false, jobs: emptyJobs(),
     };
+    // (dados) cópias duplicadas aposentadas agora: mundo novo para os clientes
+    if (m.dedupMigrated) {
+      c.worldVersion++;
+      c.worldDirty = true;
+    }
     this.initJobs(c, req.jobs, req.managers, req.firing);
     this.rebase(c);
     this.careers.set(req.room, c);

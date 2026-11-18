@@ -102,3 +102,4 @@ export {
   ANY_COMPETITION, YELLOW_LIMIT, suspensionGames, isSuspendedFor, suspendedPlayers, suspensionsOf, yellowsIn, applyMatchDiscipline,
   moveDiscipline, migrateDiscipline, type DisciplineEvent,
 } from './discipline';
+export { duplicateGroups, retireDuplicatePlayers, DEDUP_REV } from './dedupe';

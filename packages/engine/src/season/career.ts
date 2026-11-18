@@ -44,6 +44,7 @@ import { rolloverSeason } from './rollover';
 import { applyEconomyProfiles, ledgerDiff, pushMonth } from './econ';
 import { emptyRecords } from './records';
 import { migrateDiscipline } from './discipline';
+import { retireDuplicatePlayers } from './dedupe';
 
 export const DEFAULT_CAREER_OPTIONS: CareerOptions = {
   playStateLeagues: true,
@@ -332,7 +333,7 @@ export function isLegacyCareer(world: Pick<WorldState, 'rev'> | null | undefined
  */
 export function migrateCareer(
   world: WorldState, state?: SeasonState, opts: MigrateCareerOptions = {},
-): { world: WorldState; state?: SeasonState; migrated: boolean; coachCreated?: boolean; legacy?: boolean; econMigrated?: boolean; marketMigrated?: boolean; recordsMigrated?: boolean; budgetsMigrated?: boolean } {
+): { world: WorldState; state?: SeasonState; migrated: boolean; coachCreated?: boolean; legacy?: boolean; econMigrated?: boolean; marketMigrated?: boolean; recordsMigrated?: boolean; budgetsMigrated?: boolean; dedupMigrated?: number } {
   if (isLegacyCareer(world)) return { world, state, migrated: false, legacy: true };
   const w = JSON.parse(JSON.stringify(world)) as WorldState;
   const s = state ? (JSON.parse(JSON.stringify(state)) as SeasonState) : undefined;
@@ -390,6 +391,9 @@ export function migrateCareer(
   }
   // (Mercado e Orçamentos) saves anteriores: orçamentos de transferências e salarial definidos agora pela diretoria
   // (caixa e receita atuais; o salarial = teto da folha). As recusas de propostas começam vazias (campo opcional).
+  // (dados) saves anteriores: o mesmo jogador em dois clubes da base — sai a cópia que não foi mexida (dedupe.ts)
+  let dedupMigrated = 0;
+  if (opts.squads && opts.data) dedupMigrated = retireDuplicatePlayers(w, s, opts.data.clubs.map((c) => c.id), opts.squads);
   let budgetsMigrated = false;
   if (s?.career && ensureBudgets(s) > 0) budgetsMigrated = true;
   // (Fase 3) carreira do técnico: criada a partir do clube atual (opcional; o servidor online não pede)
@@ -401,7 +405,7 @@ export function migrateCareer(
   }
   return {
     world: w, state: s, migrated: false, ...(coachCreated ? { coachCreated } : {}), ...(econMigrated ? { econMigrated } : {}), ...(marketMigrated ? { marketMigrated } : {}),
-    ...(recordsMigrated ? { recordsMigrated } : {}), ...(budgetsMigrated ? { budgetsMigrated } : {}),
+    ...(recordsMigrated ? { recordsMigrated } : {}), ...(budgetsMigrated ? { budgetsMigrated } : {}), ...(dedupMigrated ? { dedupMigrated } : {}),
   };
 }
 
@@ -410,6 +414,8 @@ export interface MigrateCareerOptions {
   /** cria `world.coach` (carreira do técnico) se ainda não existir — exige `data` e a SeasonState */
   coachCareer?: boolean;
   data?: CareerData;
+  /** elencos base (os de `worldSquads`): com `data`, aposenta as cópias duplicadas da base (uma vez) */
+  squads?: (clubId: string) => readonly Player[];
   coach?: CreateCoachOptions;
 }
 
@@ -422,6 +428,8 @@ export function createCareer(o: CreateCareerOptions): { world: WorldState; state
   const start = o.startDate ?? careerStartDate(o.data, o.humanClubIds, o.season);
   const jan1 = `${o.season}-01-01`;
   let world = createWorld({ ...o, startDate: start });
+  // (dados) o mesmo jogador em dois clubes da base: fica uma cópia (ver dedupe.ts)
+  if (o.squads) retireDuplicatePlayers(world, undefined, o.data.clubs.map((c) => c.id), o.squads);
   let state: SeasonState;
   if (start > jan1) {
     const base: Squads = o.squads ?? (() => []);
