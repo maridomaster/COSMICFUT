@@ -19,6 +19,7 @@ import { hotseatAction } from '@/store/season';
 import { SEASON_START, SEASON_YEAR } from '@/season/setup';
 import { competitionOf, fixtureToday, humanSeasonLabel, upcomingFixtures, weekOf } from '@/season/view';
 import { compShort, fixtureInfo } from '@/season/comps';
+import { competitionTextClass } from '@/data/competitionIdentity';
 import { ClubCrest, clubLabel } from '@/components/game/status';
 import { useClubBundle, useLeagueMap } from '@/data/hooks';
 import { indexCrestPaths, type DataOrigin } from '@/data/source';
@@ -592,7 +593,8 @@ function NextMatchChip() {
     const home = f.homeId === clubId;
     const info = fixtureInfo(season, f);
     const comp = info.comp ? compShort(info.comp) : info.compName;
-    return { f, home, opp: home ? f.awayId : f.homeId, comp, phase: info.phase, today: f.date === season.date };
+    const compCls = competitionTextClass(f.competitionId, { name: info.comp?.name, type: info.comp?.type });
+    return { f, home, opp: home ? f.awayId : f.homeId, comp, compCls, phase: info.phase, today: f.date === season.date };
   }, [season, clubId]);
   if (!next) return null;
   return (
@@ -612,7 +614,11 @@ function NextMatchChip() {
         </div>
         <div className="max-w-[300px] truncate text-xs font-semibold">
           x {clubLabel(next.opp)}
-          <span className="font-normal text-fg-muted"> · {next.comp}{next.phase ? ` · ${next.phase}` : ''}</span>
+          <span className="font-normal text-fg-muted">
+            {' · '}
+            <span className={cn('font-semibold', next.compCls)}>{next.comp}</span>
+            {next.phase ? ` · ${next.phase}` : ''}
+          </span>
         </div>
       </div>
     </button>

@@ -433,3 +433,20 @@ export function winnableCompetitionIds(ctx: { country?: string | null; uf?: stri
   for (const id of [...(ctx.played ?? []), ...(ctx.won ?? [])]) out.add(id);
   return [...out].filter((id) => competitionIdentity(id).awardable);
 }
+
+/**
+ * (18/11) Cor de texto por tipo de competição (listas de jogos): cada tipo com a sua, sem amarelo/vermelho (que
+ * competem com as cores dos clubes e dos cartões). Classes Tailwind legíveis no tema escuro.
+ */
+export const KIND_TEXT: Record<CompetitionKind, string> = {
+  league: 'text-sky-400',
+  cup: 'text-violet-400',
+  continental: 'text-teal-300',
+  supercup: 'text-fuchsia-400',
+  state: 'text-emerald-400',
+  playoff: 'text-indigo-300',
+};
+
+export function competitionTextClass(id: string, hint?: { name?: string; type?: string }): string {
+  return KIND_TEXT[competitionIdentity(id, hint).kind];
+}

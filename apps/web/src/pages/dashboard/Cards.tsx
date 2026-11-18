@@ -16,6 +16,13 @@ import { StandingsTable, withQualZones, ZoneLegend, zonesIn } from '@/components
 import { ContinentalSeal } from '@/components/game/ContinentalSeal';
 import { clubTable, humanSeasonLabel, weekOf } from '@/season/view';
 import { clubStatusIn, compShort, fixtureCaption, myCompetitions } from '@/season/comps';
+import { competitionTextClass } from '@/data/competitionIdentity';
+
+/** (18/11) cor da competição do jogo (por tipo: liga, copa, continental, estadual…) */
+function compTextOf(season: SeasonState, f: Fixture): string {
+  const c = season.competitions.find((x) => x.id === f.competitionId);
+  return competitionTextClass(f.competitionId, { name: c?.name, type: c?.type });
+}
 import { compCategory, careerCountryOf } from '@/season/continental';
 import { ledgerTotals } from '@/season/ledger';
 import { useQualProjection } from '@/season/useContinental';
@@ -213,7 +220,7 @@ export function FixturesCard({ clubId, fixtures, today, compName, season }: { cl
                 <div className="truncate text-[11px] text-fg-muted">
                   {season && season.competitions.length > 1 ? (
                     <>
-                      <b className="font-semibold text-club-accent">{fixtureCaption(season, f)}</b> · {fmtDate(f.date, { weekday: 'short' })}
+                      <b className={cn('font-semibold', compTextOf(season, f))}>{fixtureCaption(season, f)}</b> · {fmtDate(f.date, { weekday: 'short' })}
                     </>
                   ) : (
                     <>
