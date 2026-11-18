@@ -242,7 +242,7 @@ function SquadRow({
     <tr className={cn(block && 'bg-danger/5', listed && !block && 'bg-warning/5')}>
       <td className="px-2 py-1">
         <button type="button" className="flex min-w-0 items-center gap-2 text-left" onClick={() => onOpen(p.id)}>
-          <PositionChip position={p.position} />
+          <PositionChip position={p.position} foot={p.side} />
           <span className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-0.5">
             <span className="truncate font-semibold">{p.name}</span>
             <span className="flex flex-wrap items-center gap-1 text-[10px] text-fg-muted">

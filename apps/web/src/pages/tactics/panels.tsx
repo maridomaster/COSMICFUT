@@ -319,7 +319,7 @@ function ListRow({ player: p, dnd, selected, compact, status }: { player: Player
         <span className="grid h-7 w-5 shrink-0 cursor-grab touch-none place-items-center rounded-md text-fg-subtle hover:text-fg-muted active:cursor-grabbing" aria-hidden>
           <GripVertical className="size-3.5" />
         </span>
-        <PositionChip position={p.position} />
+        <PositionChip position={p.position} foot={p.side} />
         <span className="min-w-0 flex-1 truncate text-[13px] font-medium" title={`${p.name} · ${p.age} anos`}>{p.name}</span>
         <PlayerFlags player={p} />
         <AvailabilityBadges status={status} compact />

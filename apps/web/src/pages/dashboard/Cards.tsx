@@ -82,7 +82,7 @@ export function SquadOverviewCard({ summary, onSelect }: { summary: SquadSummary
                   className="cf-row flex w-full items-center gap-2 px-1 text-left disabled:cursor-default"
                 >
                   <span className="tabular w-3 text-[10px] font-bold text-fg-subtle">{i + 1}</span>
-                  <PositionChip position={p.position} />
+                  <PositionChip position={p.position} foot={p.side} />
                   <span className="min-w-0 flex-1 truncate text-body font-semibold">{p.name}</span>
                   <AgeChip age={p.age} />
                   <OvrBadge value={p.overall} />

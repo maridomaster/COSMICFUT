@@ -43,10 +43,10 @@ const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: strin
 
 /** Grid compartilhado por cabeçalho e linhas (colunas somem por breakpoint). */
 const GRID =
-  'grid-cols-[2.25rem_minmax(0,1fr)_2.25rem_3.25rem] ' +
-  'md:grid-cols-[2.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_5.5rem] ' +
-  'lg:grid-cols-[2.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_4.75rem_4.75rem_5.5rem] ' +
-  'xl:grid-cols-[2.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_11rem_4.75rem_4.75rem_5.5rem]';
+  'grid-cols-[4.25rem_minmax(0,1fr)_2.25rem_3.25rem] ' +
+  'md:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_5.5rem] ' +
+  'lg:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_4.75rem_4.75rem_5.5rem] ' +
+  'xl:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_11rem_4.75rem_4.75rem_5.5rem]';
 
 const STATUS_ORDER: LineupStatus[] = ['starter', 'bench', 'out'];
 
@@ -376,7 +376,7 @@ function SquadRow({
         title={tip}
         className={cn('cf-row grid w-full cursor-pointer items-center gap-2 px-2 py-1 text-left transition-colors focus-visible:bg-surface-2/70 focus-visible:outline-none md:h-9 md:py-0', GRID)}
       >
-        <PositionChip position={p.position} />
+        <PositionChip position={p.position} foot={p.side} />
         <div className="min-w-0">
           <div className="flex min-w-0 items-center gap-1.5">
             <span className="truncate text-body font-semibold">{p.name}</span>

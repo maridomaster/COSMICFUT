@@ -33,7 +33,7 @@ function sortPlayers(players: Player[], key: SortKey, dir: Dir): Player[] {
   });
 }
 
-const COLS = 'grid-cols-[2.5rem_minmax(0,1fr)_5.5rem_3.25rem] md:grid-cols-[2.5rem_minmax(0,1fr)_7.5rem_3.5rem_11rem_3rem_5.5rem_5.5rem]';
+const COLS = 'grid-cols-[4.5rem_minmax(0,1fr)_5.5rem_3.25rem] md:grid-cols-[4.5rem_minmax(0,1fr)_7.5rem_3.5rem_11rem_3rem_5.5rem_5.5rem]';
 
 export function SquadTable({
   players,
@@ -120,7 +120,7 @@ export function SquadTable({
                   COLS,
                 )}
               >
-                <PositionChip position={p.position} />
+                <PositionChip position={p.position} foot={p.side} />
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <span className="truncate text-sm font-semibold">{p.name}</span>

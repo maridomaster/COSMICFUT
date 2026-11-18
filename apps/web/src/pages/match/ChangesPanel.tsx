@@ -212,7 +212,7 @@ function PlayerLine({
       )}
     >
       {role && <span className="w-8 shrink-0 text-[10px] font-bold text-fg-subtle">{role}</span>}
-      {p && <PositionChip position={p.position} className="hidden sm:inline-flex" />}
+      {p && <PositionChip position={p.position} foot={p.side} className="hidden sm:inline-flex" />}
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-1.5">
           <span className="truncate text-sm font-medium">{p?.name ?? l.id}</span>

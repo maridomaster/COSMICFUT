@@ -147,7 +147,7 @@ function PlayerCard({
           </motion.div>
           <div className="min-w-0 flex-1 pb-1">
             <div className="flex items-center gap-2">
-              <PositionChip position={p.position} />
+              <PositionChip position={p.position} foot={p.side} />
               {showLineupStatus && <StatusChip status={status} />}
             </div>
             <h2 className="mt-2 text-xl leading-tight font-extrabold tracking-tight">{p.name}</h2>

@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { motion } from 'motion/react';
-import { Star } from 'lucide-react';
-import type { Country, Position } from '@cosmicfut/shared';
+import { Footprints, Star } from 'lucide-react';
+import type { Country, Position, Side } from '@cosmicfut/shared';
 import { assetUrl } from '@/data/source';
 import { cardTier, cardTierMeta, overallColor, POSITION_META } from '@/lib/format';
 import { cn } from '@/lib/utils';
@@ -27,7 +27,36 @@ export function Stars({ value, max = 5, size = 14, className }: { value: number;
   );
 }
 
-export function PositionChip({ position, className }: { position: Position; className?: string }) {
+/** Pé bom do jogador: "D" (destro) ou "E" (canhoto). */
+export function FootChip({ side, className }: { side: Side; className?: string }) {
+  const left = side === 'L';
+  return (
+    <span
+      title={left ? 'Pé bom: esquerdo (canhoto)' : 'Pé bom: direito (destro)'}
+      aria-label={left ? 'Canhoto' : 'Destro'}
+      data-testid="foot-chip"
+      className={cn(
+        'inline-flex h-5 shrink-0 items-center gap-0.5 rounded-[var(--radius-chip)] px-1 text-[10px] font-bold',
+        left ? 'bg-sky-500/12 text-sky-400 ring-1 ring-sky-500/35 ring-inset' : 'bg-surface-3/60 text-fg-muted ring-1 ring-line ring-inset',
+        className,
+      )}
+    >
+      <Footprints className={cn('size-3', left && '-scale-x-100')} />
+      {left ? 'E' : 'D'}
+    </span>
+  );
+}
+
+/** Chip da posição; com `foot`, mostra também o pé bom ao lado. */
+export function PositionChip({ position, foot, className }: { position: Position; foot?: Side; className?: string }) {
+  if (foot) {
+    return (
+      <span className="inline-flex shrink-0 items-center gap-1">
+        <PositionChip position={position} className={className} />
+        <FootChip side={foot} className={className?.includes('h-4') ? 'h-4 text-[9px]' : undefined} />
+      </span>
+    );
+  }
   const meta = POSITION_META[position];
   return (
     <span

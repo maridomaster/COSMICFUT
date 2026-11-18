@@ -107,7 +107,7 @@ export function NegotiationsTab({ season, humanId, clubMeta, onContinue }: { sea
                 <ClubMini id={o.fromClubId} meta={clubMeta} size={32} />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5">
-                    <PositionChip position={o.player.position} className="h-4 w-8 text-[9px]" />
+                    <PositionChip position={o.player.position} foot={o.player.side} className="h-4 w-8 text-[9px]" />
                     <span className="truncate font-semibold">{o.player.name}</span>
                     <OvrBadge value={o.player.overall} />
                   </div>
@@ -213,7 +213,7 @@ export function IncomingTab({ season, humanId, clubMeta }: { season: SeasonState
                           {coach(o.toClubId) ? <><b className="text-club-accent">{coach(o.toClubId)}</b> ({o.toName})</> : o.toName} quer{o.kind === 'loan' ? ' emprestado' : ''}
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <PositionChip position={o.player.position} className="h-4 w-8 text-[9px]" />
+                          <PositionChip position={o.player.position} foot={o.player.side} className="h-4 w-8 text-[9px]" />
                           <span className="truncate font-semibold">{o.player.name}</span>
                           <OvrBadge value={o.player.overall} />
                         </div>
@@ -338,7 +338,7 @@ export function TransferListTab({ season, humanId, players, countries, onOpen }:
           const n = offersBy.get(p.id) ?? 0;
           return (
             <li key={p.id} className={cn('cf-row flex items-center gap-2 px-1.5 py-1', on && 'bg-warning/5')}>
-              <PositionChip position={p.position} />
+              <PositionChip position={p.position} foot={p.side} />
               <button className="flex min-w-0 flex-1 items-center gap-1.5 text-left" onClick={() => onOpen(p.id)} title={`${p.name} — ${p.age} anos · valor ${fmtMoney(p.value)} · ${fmtMoney(p.wage)}/mês`}>
                 <span className="truncate text-[13px] font-semibold">{p.name}</span>
                 <Flag country={countries.get(p.nationalityId)} />
@@ -500,7 +500,7 @@ function MiniRow({ p, country, onOpen, right }: { p: Player; country: Country | 
   return (
     <li>
       <button className="cf-row flex w-full items-center gap-2 px-1.5 py-1 text-left" onClick={() => onOpen(p.id)} title={`${p.name} — ${p.age} anos · valor ${fmtMoney(p.value)} · ${fmtMoney(p.wage)}/mês`}>
-        <PositionChip position={p.position} />
+        <PositionChip position={p.position} foot={p.side} />
         <span className="flex min-w-0 flex-1 items-center gap-1.5">
           <span className="truncate text-[13px] font-semibold">{p.name}</span>
           <Flag country={country} />
@@ -606,7 +606,7 @@ export function LoansTab({ season, humanId, clubMeta, players }: { season: Seaso
               return (
                 <li key={p.id} className="py-2">
                   <div className="flex flex-wrap items-center gap-2">
-                    <PositionChip position={p.position} />
+                    <PositionChip position={p.position} foot={p.side} />
                     <span className="min-w-0 flex-1 truncate font-semibold">{p.name}</span>
                     <OvrBadge value={p.overall} />
                     <span className={cn('tabular text-[11px]', months <= 6 ? 'font-semibold text-warning' : 'text-fg-muted')}>{months < 1 ? 'último mês' : `${Math.round(months)} meses`}</span>

@@ -327,7 +327,7 @@ function LineRow({ p, role, lineup, status, fitness }: { p: Player; role: string
   return (
     <div className="flex h-7 items-center gap-1.5 rounded-md px-1.5 odd:bg-surface-2/35">
       <span className="w-7 text-[10px] font-bold text-fg-subtle">{role}</span>
-      <PositionChip position={p.position} className="hidden sm:inline-flex" />
+      <PositionChip position={p.position} foot={p.side} className="hidden sm:inline-flex" />
       <span className="min-w-0 flex-1 truncate text-[13px] font-medium" title={p.name}>
         {p.name}
         {lineup.captainId === p.id && <span className="ml-1 rounded bg-club-accent/20 px-1 text-[9px] font-black text-club-accent">C</span>}
