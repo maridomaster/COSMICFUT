@@ -12,7 +12,7 @@
 import { useMemo } from 'react';
 import type { Player } from '@cosmicfut/shared';
 import {
-  counterIncoming, exercisePurchaseOption, makeOffer, proposeContract, rebalanceBudgets, recallLoan, releasePlayer, renewContract, respondToOffer,
+  counterIncoming, exercisePurchaseOption, makeOffer, promoteProspect, proposeContract, releaseProspect, rebalanceBudgets, recallLoan, releasePlayer, renewContract, respondToOffer,
   setLoanListed, setTransferListed, withdrawOffer,
   type ExternalClubInfo, type LoanTerms, type MarketResult, type PreContract, type SeasonState, type TransferOffer, type TransferRecord,
 } from '@cosmicfut/engine';
@@ -56,6 +56,10 @@ export interface MarketActions {
   renew(playerId: string, wage: number, years: number, releaseClause?: number): Promise<MarketOutcome>;
   /** (Mercado e Orçamentos) equilíbrio: move `toWage` € do orçamento de transferências para o salarial (negativo = o contrário) */
   budget(toWage: number): Promise<MarketOutcome>;
+  /** (Base) promove ao elenco principal um revelado da base */
+  promote(playerId: string): Promise<MarketOutcome>;
+  /** (Base) dispensa um revelado da base */
+  dismiss(playerId: string): Promise<MarketOutcome>;
 }
 
 /* ───────── solo ───────── */
@@ -96,6 +100,8 @@ const SOLO: MarketActions = {
   recall: async (playerId) => soloApply((s) => recallLoan(s, squads, soloHuman(), playerId)),
   renew: async (playerId, wage, years, releaseClause) => soloApply((s) => renewContract(s, squads, soloHuman(), playerId, wage, years, releaseClause)),
   budget: async (toWage) => soloApply((s) => rebalanceBudgets(s, squads, soloHuman(), toWage)),
+  promote: async (playerId) => soloApply((s) => promoteProspect(s, squads, soloHuman(), playerId)),
+  dismiss: async (playerId) => soloApply((s) => releaseProspect(s, soloHuman(), playerId)),
 };
 
 /* ───────── online ───────── */
@@ -126,6 +132,8 @@ function onlineActions(blocked: string | null): MarketActions {
     recall: guard((playerId) => net('recall', { playerId })),
     renew: guard((playerId, wage, years, releaseClause) => net('renew', { playerId, wage, years, ...(releaseClause ? { releaseClause } : {}) })),
     budget: guard((toWage) => net('budget', { toWage })),
+    promote: guard((playerId) => net('promote', { playerId })),
+    dismiss: guard((playerId) => net('dismiss', { playerId })),
   };
 }
 

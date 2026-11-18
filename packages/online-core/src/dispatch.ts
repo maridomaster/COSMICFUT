@@ -9,7 +9,7 @@ import * as V from './validate.ts';
 export type AckResult = { ok: true; data: unknown } | { ok: false; error: string };
 export type AckFn = (r: AckResult) => void;
 
-const MARKET = ['offer', 'contract', 'respond', 'withdraw', 'list', 'release', 'counter', 'loanlist', 'option', 'recall', 'renew', 'budget'] as const;
+const MARKET = ['offer', 'contract', 'respond', 'withdraw', 'list', 'release', 'counter', 'loanlist', 'option', 'recall', 'renew', 'budget', 'promote', 'dismiss'] as const;
 const JOBS = ['apply', 'accept', 'decline'] as const;
 
 /** Todos os eventos tratados por `roomIntent`. */

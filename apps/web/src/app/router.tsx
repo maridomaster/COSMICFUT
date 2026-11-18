@@ -15,6 +15,7 @@ import { CalendarPage } from '@/pages/calendar/CalendarPage';
 import { FinancePage } from '@/pages/finance/FinancePage';
 import { MatchPage } from '@/pages/match/MatchPage';
 import { MarketPage } from '@/pages/market/MarketPage';
+import { AcademyPage } from '@/pages/academy/AcademyPage';
 import { CompetitionsPage } from '@/pages/competitions/CompetitionsPage';
 import { HistoryPage } from '@/pages/history/HistoryPage';
 import { StatsPage } from '@/pages/stats/StatsPage';
@@ -77,6 +78,8 @@ export const router = createBrowserRouter([
           { path: '/rodada-ao-vivo', element: <ByMode solo={<Navigate to="/dashboard" replace />} online={<LiveRoundPage />} /> },
           // solo e online: as ações passam pelo adaptador (pages/market/actions.ts)
           { path: '/mercado', element: <MarketPage /> },
+          // (Base) categorias de base: revelações periódicas (solo e online)
+          { path: '/base', element: <AcademyPage /> },
           // (Fase 3) carreira do técnico (solo)
           { path: '/inbox', element: <InboxPage /> },
           // (carreira online) Central de Empregos online: vagas, propostas, diretoria

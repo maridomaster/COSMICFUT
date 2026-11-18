@@ -921,6 +921,8 @@ export function createSeasonFromWorld(world: WorldState, data: CareerData, o: Se
     state.market.history = carry.market.history.slice(0, MARKET.historyCap);
     state.market.transferList = carry.market.transferList.filter((pid) => state.market!.moves[pid] !== '');
     state.market.seq = carry.market.seq;
+    // (Base) as categorias de base atravessam a virada
+    if (carry.market.academy) state.market.academy = JSON.parse(JSON.stringify(carry.market.academy)) as typeof carry.market.academy;
     // (Etapa 5) lista de empréstimo e pré-contratos de jogadores que ainda não mudaram (região que não virou)
     if (carry.market.loanList?.length) state.market.loanList = carry.market.loanList.filter((pid) => state.market!.moves[pid] !== '');
     const pcs = Object.values(carry.market.preContracts ?? {}).filter((pc) => (world.players.club[pc.playerId] ?? baseClubOf(pc.playerId)) === pc.fromClubId);

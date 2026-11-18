@@ -98,7 +98,7 @@ export interface OnlineSeasonSummary {
 }
 
 /** Ações do mercado online (ver net.ts: market:*). */
-export type MarketCallType = 'offer' | 'contract' | 'respond' | 'withdraw' | 'list' | 'release' | 'counter' | 'loanlist' | 'option' | 'recall' | 'renew' | 'budget';
+export type MarketCallType = 'offer' | 'contract' | 'respond' | 'withdraw' | 'list' | 'release' | 'counter' | 'loanlist' | 'option' | 'recall' | 'renew' | 'budget' | 'promote' | 'dismiss';
 
 /** Pré-jogo online (match:preview): confronto e escalações até o apito. */
 export type OnlinePreview = MatchPreviewPayload & { config: MatchConfig };

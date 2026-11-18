@@ -1510,6 +1510,29 @@ export interface MarketState {
    * na janela do comprador. Na 3ª recusa o vendedor bloqueia novas negociações por 14 dias. Ausente ⇒ vazio.
    */
   rejections?: Record<string, OfferRejections>;
+  /**
+   * (Base) categorias de base dos clubes humanos (clubId → estado): de tempos em tempos revela um jogador, que o
+   * técnico promove ao elenco ou dispensa (ver season/academy.ts). Fica no mercado para ir junto no patch online e
+   * atravessa a virada. Ausente ⇒ base ainda não começou.
+   */
+  academy?: Record<string, AcademyState>;
+}
+
+/** (Base) estado da base de um clube. */
+export interface AcademyState {
+  /** próxima revelação (ISO) */
+  next: string;
+  /** contador (ids e sementes) */
+  seq: number;
+  prospects: AcademyProspect[];
+}
+
+/** (Base) jogador revelado esperando decisão do técnico. */
+export interface AcademyProspect {
+  player: Player;
+  revealedOn: string;
+  /** sem decisão até esta data, ele deixa o clube */
+  expiresOn: string;
 }
 
 /** (Mercado e Orçamentos) Recusas de propostas de um comprador por um jogador (ver transfers/cooldown.ts). */

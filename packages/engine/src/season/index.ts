@@ -103,3 +103,4 @@ export {
   moveDiscipline, migrateDiscipline, type DisciplineEvent,
 } from './discipline';
 export { duplicateGroups, retireDuplicatePlayers, DEDUP_REV } from './dedupe';
+export { ACADEMY, academyDay, academyWage, generateProspect, promoteProspect, releaseProspect, rollAcademyRatings } from './academy';

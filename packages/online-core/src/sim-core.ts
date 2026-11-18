@@ -13,7 +13,7 @@ import { fromUtf8, gunzip, gzip, utf8 } from './platform.ts';
 import type { ClubBundle, NamePool, Player } from '@cosmicfut/shared';
 import {
   advanceDay, applyTransfer, baseClubOf, buildTeamInput, careerNamePoolCodes, careerSquads, createCareer,
-  currentClubOf, expiringContracts, fixtureMatchRules, fmtMoneyShort, FREE, makeOffer, migrateCareer, nextSeason, proposeContract, releasePlayer,
+  currentClubOf, expiringContracts, fixtureMatchRules, fmtMoneyShort, FREE, makeOffer, migrateCareer, nextSeason, proposeContract, releasePlayer, promoteProspect, releaseProspect,
   renewalDemand, respondToOffer, rolloverSeason, seasonOver, setTransferListed, withdrawOffer, worldSquads,
   autoTurnoverDue, isLegacyCareer, marketWindow, scopeNamePoolCodes, turnoverDue,
   counterIncoming, exercisePurchaseOption, recallLoan, releaseClauseOf, renewContract, setLoanListed, computeStandings, TimeSkip,
@@ -124,6 +124,9 @@ export type MarketAction =
   | { type: 'renew'; playerId: string; wage: number; years: number; releaseClause?: number }
   | { type: 'list'; playerIds: string[]; listed: boolean }
   | { type: 'release'; playerId: string }
+  /** (Base) promove / dispensa um revelado da base do clube */
+  | { type: 'promote'; playerId: string }
+  | { type: 'dismiss'; playerId: string }
   /** (Mercado e Orçamentos) equilíbrio: move 	oWage € de transferências para a folha (negativo = o contrário) */
   | { type: 'budget'; toWage: number };
 
@@ -922,6 +925,11 @@ export class CareerSimulator {
         const r = releasePlayer(s0, sq, clubId, a.playerId);
         return this.commit(c, s0, r, [clubId]);
       }
+      /* ── (Base) ── */
+      case 'promote':
+        return this.commit(c, s0, promoteProspect(s0, sq, clubId, a.playerId), [clubId]);
+      case 'dismiss':
+        return this.commit(c, s0, releaseProspect(s0, clubId, a.playerId), [clubId]);
       /* ── (Etapa 5) ── */
       case 'counter': {
         const o = findOffer(a.offerId);

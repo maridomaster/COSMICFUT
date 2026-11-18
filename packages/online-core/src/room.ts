@@ -232,6 +232,10 @@ function parseMarketAction(type: MarketAction['type'], raw: unknown): MarketActi
     }
     case 'release':
       return { type, playerId: V.id(o.playerId, 'Jogador') };
+    /* (Base) promover / dispensar revelado da base */
+    case 'promote':
+    case 'dismiss':
+      return { type, playerId: V.id(o.playerId, 'Jogador') };
     /* (Mercado e Orçamentos) equilíbrio de orçamentos */
     case 'budget':
       return { type, toWage: money(o.toWage, 'Valor', -MAX_FEE, MAX_FEE) };
@@ -1627,6 +1631,9 @@ export class Room {
     } else if (type === 'list' || type === 'loanlist') {
       kind = 'list';
       text = `${p.nickname} mexeu na lista de ${type === 'list' ? 'transferências' : 'empréstimos'}.`;
+    } else if (type === 'promote') {
+      kind = 'signing';
+      text = `${p.nickname} promoveu um jogador da base.`;
     } else if (type === 'release') {
       kind = 'sale';
       text = `${p.nickname} rescindiu um contrato.`;

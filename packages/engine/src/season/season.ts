@@ -17,6 +17,7 @@ import { lightSimulate, type LightTeam } from './light';
 import { monthlyDelta } from './players';
 import { recordCompetitionGoals, recordLines } from './records';
 import { careerSquads } from './career';
+import { academyDay } from './academy';
 import { homeTicketDemand, processMonthlyFinance, processStadiumWorks, resultAttendance, ticketPriceOf } from './finance';
 import { continentalCountryOf, linkContinental } from './continental';
 import { linkCompetitions } from './confed';
@@ -243,6 +244,8 @@ export function advanceDay(
   const ms = state.market ? runMarketDay(state, squadsIn) : undefined;
   const squads = career ? careerSquads(state, ms ?? squadsIn, !!ms) : ms ?? squadsIn;
   const news = (text: string, clubId?: string) => state.news.push({ date, text, clubId });
+  // (Base) revelações das categorias de base dos humanos
+  if (career && state.market) for (const n of academyDay(state, squads)) news(n.text, n.clubId);
   const name = (id: string) => state.clubInfo?.[id]?.name ?? id;
   const isHuman = (id: string) => state.humanClubIds.includes(id);
   const fmtMoney = (v: number) => fmtMoneyShort(Math.round(v));

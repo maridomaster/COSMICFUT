@@ -49,6 +49,8 @@ export interface ServerInboundEvents {
   'market:withdraw': (p: unknown, ack?: AckFn) => void;
   'market:list': (p: unknown, ack?: AckFn) => void;
   'market:release': (p: unknown, ack?: AckFn) => void;
+  'market:promote': (p: unknown, ack?: AckFn) => void;
+  'market:dismiss': (p: unknown, ack?: AckFn) => void;
   /* (Etapa 5) */
   'market:counter': (p: unknown, ack?: AckFn) => void;
   'market:loanlist': (p: unknown, ack?: AckFn) => void;
