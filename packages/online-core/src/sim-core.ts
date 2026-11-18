@@ -62,6 +62,11 @@ export type RoundUntil =
   | { kind: 'match' }
   /** (dev) simula tudo, inclusive jogos humanos, e para no PRÓXIMO dia com jogo humano */
   | { kind: 'next-match' }
+  /**
+   * (18/11) depois do dia de jogo: fecha o dia e avança até o PRÓXIMO dia com jogo de um humano, parando nele SEM
+   * jogá-lo — o planejamento (escalação, físico) fica no próprio dia do jogo, não dias antes
+   */
+  | { kind: 'prep' }
   /** (dev) simula até o fim da temporada */
   | { kind: 'season-end' }
   /** (dev) simula até a data (ISO), parando antes de jogá-la */
@@ -630,7 +635,7 @@ export class CareerSimulator {
     // (carreira online) com técnico desempregado na sala a rodada anda no máximo 7 dias (propostas chegam e vencem
     // em dias; ele precisa ver a tempo)
     const jobless = Object.values(c.jobs.managers).some((m) => !m.clubId);
-    const maxDays = jobless && (u.kind === 'match' || u.kind === 'next-match') ? Math.min(req.maxDays, 7) : req.maxDays;
+    const maxDays = jobless && (u.kind === 'match' || u.kind === 'next-match' || u.kind === 'prep') ? Math.min(req.maxDays, 7) : req.maxDays;
     for (let i = 0; i < maxDays; i++) {
       // (Etapa 1) virada regional devida: sem humanos na região ⇒ automática (sem renovações); com ⇒ fim de temporada
       if (turnoverDue(s)) {
@@ -651,13 +656,15 @@ export class CareerSimulator {
             const sq = careerSquads(s, wb);
             return done('matchday', liveToday.map((f) => ({ fixture: { ...f }, config: careerMatchConfig(s, f, sq) })));
           }
+        } else if (u.kind === 'prep') {
+          return done('date');
         } else if (u.kind === 'next-match' && i > 0) {
           return done('date');
         }
       }
       step({});
       // (dev: avanço até data/fim de temporada não para)
-      if (jobsStop && (u.kind === 'match' || u.kind === 'next-match')) return done('jobs');
+      if (jobsStop && (u.kind === 'match' || u.kind === 'next-match' || u.kind === 'prep')) return done('jobs');
     }
     return done(seasonOver(s) ? 'season-over' : 'limit');
   }

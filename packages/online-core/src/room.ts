@@ -2026,7 +2026,8 @@ export class Room {
     try {
       res = await this.enqueue(() =>
         this.simCall<RoundResponse>(
-          { op: 'round', room: this.code, results, live: [], until: { kind: 'match' }, maxDays: 0, firing: this.settings.firing },
+          // (18/11) fecha o dia e já avança até o próximo dia de jogo de um humano: o planejamento é no dia do jogo
+          { op: 'round', room: this.code, results, live: [], until: { kind: 'prep' }, maxDays: MAX_SIM_DAYS, firing: this.settings.firing },
           (d) => this.emitResults(d),
         ),
       );

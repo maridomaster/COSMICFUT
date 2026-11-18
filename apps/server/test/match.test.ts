@@ -159,6 +159,9 @@ describe('PvP em mata-mata (Supercopa)', () => {
     expect(supComp.championId).toBe(rA.winner === 'home' ? sup.homeId : sup.awayId);
     const st = await ta.waitRoom((s) => s.phase === 'planning' && !!s.date && s.date > sup.date);
     expect(st.players.every((p) => !p.ready)).toBe(true);
+    // (18/11) o planejamento seguinte já é NO dia do próximo jogo de um humano (escalação no dia, não dias antes)
+    const plan = await ta.waitSnap((d) => d.state.date === st.date);
+    expect(todays(plan.state, [sup.homeId, sup.awayId]).length).toBeGreaterThan(0);
     console.log(`[métricas] PvP Supercopa: último ready→match:start ${advanceMs.toFixed(0)} ms (servidor: ${room.lastAdvanceMs.toFixed(0)} ms); snapshot gzip ${(room.lastSnapshotBytes / 1024).toFixed(0)} KB`);
   });
 });
