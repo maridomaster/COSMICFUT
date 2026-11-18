@@ -525,6 +525,16 @@ export function ageUntracked(p: Player, years: number): Player {
   return { ...p, age, overall, potential: realisticPotential(age, overall, Math.max(pot, overall)), value: revalue(p, age, overall, Math.max(pot, overall)), youth: p.youth && age < YOUTH.graduateAge };
 }
 
+/**
+ * (18/11) Amarelos acumulados que atravessam a virada: só os das competições ainda em andamento (`running`); os das
+ * competições que acabaram zeram (a nova edição começa sem pendurados). Suspensões (`bans`) seguem sempre.
+ */
+export function keepRunningCards(cards: Record<string, Record<string, number>>, running: Set<string>): { cards?: Record<string, Record<string, number>> } {
+  const out: Record<string, Record<string, number>> = {};
+  for (const [comp, m] of Object.entries(cards)) if (running.has(comp) && Object.keys(m).length) out[comp] = { ...m };
+  return Object.keys(out).length ? { cards: out } : {};
+}
+
 /** Elencos efetivos da temporada de carreira: mercado + evolução mensal (overall corrente). Idempotente. */
 export function careerSquads(state: SeasonState, base: Squads, marketApplied = false): Squads {
   // `marketApplied`: `base` já são os elencos efetivos do mercado desta SeasonState (ex.: o retorno de runMarketDay)
@@ -822,6 +832,7 @@ export function createSeasonFromWorld(world: WorldState, data: CareerData, o: Se
   const deep = <T,>(x: T): T => JSON.parse(JSON.stringify(x)) as T;
 
   const carried = (carry?.competitions ?? []).filter((c) => cycleOfCompetition(c) !== opens).map(deep);
+  const runningIds = new Set(carried.map((c) => c.id));
   const fresh = opens ? cycleCompetitions(world, data, opens, cycleSeasonFor(opens, startDate)) : [];
   const comps: Competition[] = [...carried, ...fresh];
 
@@ -852,7 +863,9 @@ export function createSeasonFromWorld(world: WorldState, data: CareerData, o: Se
       injuries: prev ? { ...prev.injuries } : {}, suspensions: prev ? { ...prev.suspensions } : {},
       yellowCards: prev ? { ...prev.yellowCards } : {}, fitness: prev ? { ...prev.fitness } : {},
       // (Atualização 38) disciplina por competição atravessa a virada (suspensão pendente vale na próxima edição)
-      ...(prev?.bans ? { bans: deep(prev.bans) } : {}), ...(prev?.cards ? { cards: deep(prev.cards) } : {}),
+      // (18/11) os AMARELOS acumulados zeram com o fim da competição (a próxima edição usa o mesmo id: BRA-1 de 2027
+      // herdava os pendurados de 2026); só seguem os de competições ainda em andamento (a outra região do calendário)
+      ...(prev?.bans ? { bans: deep(prev.bans) } : {}), ...(prev?.cards ? keepRunningCards(prev.cards, runningIds) : {}),
       finance: keepLedger ? { ...prev!.finance! } : emptyLedger(),
       ...(fin?.ticketPrice != null ? { ticketPrice: fin.ticketPrice } : {}),
       ...(fin?.loan ? { loan: fin.loan } : {}),
