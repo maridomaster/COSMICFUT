@@ -205,6 +205,8 @@ interface OnlineStore {
   marketCall: (type: MarketCallType, payload: Record<string, unknown>) => Promise<Ack<MarketActionResult>>;
   /** força uma nova tentativa de conexão (após 'replaced' ou servidor fora) */
   retry: () => void;
+  /** entrada travada (conectado, mas a sala não chegou): reabre a conexão com a sala */
+  rejoinFresh: () => void;
 
   command: (cmd: MatchCommand) => Promise<string | null>;
   resumeMatch: () => Promise<void>;
@@ -294,11 +296,12 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     }
   };
 
-  const rejoin = async () => {
+  /** `fresh`: abre uma conexão NOVA mesmo já estando na sala (entrada travada: o estado da sala não chegou) */
+  const rejoin = async (fresh = false) => {
     if (entering) return;
     const s = loadSession();
     if (!s) return;
-    const r = await call<{ playerId: string }>('room:rejoin', { code: s.code, token: s.token });
+    const r = await call<{ playerId: string }>('room:rejoin', { code: s.code, token: s.token, ...(fresh ? { fresh: true } : {}) });
     // outra conexão (criar/entrar em outra sala) assumiu enquanto isso: não é falha desta sala
     if (!r.ok && (entering || r.error === 'Conexão substituída.' || loadSession()?.code !== s.code)) return;
     if (r.ok) {
@@ -1087,6 +1090,12 @@ export const useOnline = create<OnlineStore>()((set, get) => {
       set({ status: 'connecting', error: null });
       if (sock.connected) void rejoin();
       else sock.connect();
+    },
+
+    rejoinFresh: () => {
+      const sock = getSocket();
+      if (!sock.connected) return get().retry();
+      void rejoin(true);
     },
 
     create: async (nickname, settings) =>

@@ -63,7 +63,7 @@ export function OnlineLobbyPage() {
   }, [running, navigate, location.key]);
   let body;
   if (inMyRoom) {
-    if (!room || room.code !== session.code || running) body = <Joining status={status} code={session.code} />;
+    if (!room || room.code !== session.code || running) body = <Joining status={status} code={session.code} running={running} />;
     else body = <RoomView />;
   } else {
     body = <EntryView initialCode={urlCode && isRoomCode(urlCode) ? urlCode : ''} otherRoom={session?.code ?? null} />;
@@ -83,16 +83,73 @@ export function OnlineLobbyPage() {
   );
 }
 
-function Joining({ status, code }: { status: string; code: string }) {
+/** conectado e a sala não chegou em tanto tempo: a entrada travou (o anfitrião não respondeu) */
+const JOIN_STUCK_MS = 12_000;
+const JOIN_AUTO_RETRIES = 3;
+
+function Joining({ status, code, running }: { status: string; code: string; running: boolean }) {
   const navigate = useNavigate();
+  const simHost = useOnline((s) => s.simHost);
+  const hostStatus = useOnline((s) => s.hostStatus);
+  const [tries, setTries] = useState(0);
+  const [stuck, setStuck] = useState(false);
+  // eu mesmo sou o anfitrião e estou carregando a carreira: pode demorar, não reconecta por cima
+  const loadingHere = !!simHost?.me && hostStatus?.state === 'loading';
+  useEffect(() => {
+    if (status !== 'connected' || loadingHere) return;
+    const t = setTimeout(() => {
+      setStuck(true);
+      if (running) navigate('/dashboard', { replace: true });
+      else if (tries < JOIN_AUTO_RETRIES) {
+        setTries((n) => n + 1);
+        useOnline.getState().rejoinFresh();
+      }
+    }, JOIN_STUCK_MS);
+    return () => clearTimeout(t);
+  }, [status, tries, running, loadingHere, navigate]);
+
+  const hostNick = simHost?.nickname && !simHost.me ? simHost.nickname : null;
+  const line =
+    status === 'reconnecting'
+      ? 'Servidor indisponível — tentando de novo.'
+      : loadingHere
+        ? 'Você é o anfitrião da simulação: carregando a carreira neste navegador…'
+        : simHost && simHost.state !== 'ok'
+          ? `O anfitrião da simulação${hostNick ? ` (${hostNick})` : ''} saiu — escolhendo outro…`
+          : status === 'connected' && hostNick
+            ? `Esperando o anfitrião da simulação (${hostNick}) mandar a sala.`
+            : 'Conectando ao servidor.';
   return (
-    <div className="cf-card mx-auto mt-16 max-w-md p-8 text-center" aria-busy>
+    <div className="cf-card mx-auto mt-16 max-w-md p-8 text-center" aria-busy data-testid="joining-room">
       <Loader2 className="mx-auto size-9 animate-spin text-club-accent" />
       <h2 className="mt-4 text-lg font-bold">Entrando na sala {code}…</h2>
-      <p className="mt-1 text-sm text-fg-muted">{status === 'reconnecting' ? 'Servidor indisponível — tentando de novo.' : 'Conectando ao servidor.'}</p>
-      <Button variant="ghost" className="mt-5" onClick={() => void useOnline.getState().leave().then(() => navigate('/online'))}>
-        Esquecer esta sala
-      </Button>
+      <p className="mt-1 text-sm text-fg-muted">{line}</p>
+      {stuck && (
+        <p className="mt-2 text-xs text-warning" data-testid="joining-stuck">
+          {tries >= JOIN_AUTO_RETRIES ? 'Está demorando mais que o normal. Tente de novo ou peça para o anfitrião dar F5.' : `Demorando mais que o normal — reconectando (${tries}/${JOIN_AUTO_RETRIES}).`}
+        </p>
+      )}
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+        {running ? (
+          <Button onClick={() => navigate('/dashboard', { replace: true })}>
+            <Play className="size-4" /> Ir para o jogo
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            data-testid="joining-retry"
+            onClick={() => {
+              setTries(0);
+              useOnline.getState().rejoinFresh();
+            }}
+          >
+            <RefreshCw className="size-4" /> Tentar de novo
+          </Button>
+        )}
+        <Button variant="ghost" onClick={() => void useOnline.getState().leave().then(() => navigate('/online'))}>
+          Esquecer esta sala
+        </Button>
+      </div>
     </div>
   );
 }

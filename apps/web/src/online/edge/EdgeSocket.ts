@@ -160,7 +160,8 @@ export class EdgeSocket {
       case 'room:rejoin': {
         const code = String(p.code ?? '');
         const token = String(p.token ?? '');
-        if (this.ws && this.welcomed && this.code === code && this.token === token) {
+        // `fresh`: a entrada travou (o anfitrião não mandou a sala): abre uma conexão nova (novo attach)
+        if (!p.fresh && this.ws && this.welcomed && this.code === code && this.token === token) {
           ack({ ok: true, data: { playerId: this.playerId } });
           return this;
         }
