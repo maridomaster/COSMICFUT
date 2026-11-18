@@ -5,10 +5,10 @@ import { useFitHeight } from '@/lib/useFitHeight';
 import { useSeason } from '@/store/season';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowLeftRight, BatteryCharging, IdCard, MousePointerClick, RotateCcw, Trophy, X } from 'lucide-react';
+import { ArrowLeftRight, BatteryCharging, IdCard, Shirt, MousePointerClick, RotateCcw, Trophy, X } from 'lucide-react';
 import type { Player } from '@cosmicfut/shared';
 import {
-  detectRole, FORMATIONS, improvisation, OUTFIELD_MIN_Y, pickBestXI, pickRestXI, shapeSlots, shapeStrength,
+  detectRole, FORMATIONS, improvisation, OUTFIELD_MIN_Y, pickBestXI, pickReserveXI, pickRestXI, shapeSlots, shapeStrength,
   type FormationSlot, type SlotPos, type Tactic,
 } from '@cosmicfut/engine';
 import { useCurrentClub } from '@/app/ClubContext';
@@ -194,12 +194,12 @@ export function TacticsPage() {
 
   const dnd = useDragSwap({ onDrop, onTap, onMove });
 
-  const pick = (mode: 'best' | 'rest') => {
-    const fn = mode === 'best' ? pickBestXI : pickRestXI;
+  const pick = (mode: 'best' | 'rest' | 'reserve') => {
+    const fn = mode === 'best' ? pickBestXI : mode === 'reserve' ? pickReserveXI : pickRestXI;
     const l = fn(players, shape, { unavailable, fitness, current: lineup });
     setLineup(l);
     setSelectedId(null);
-    notify(mode === 'best' ? 'Melhor Elenco: força máxima escalada' : 'Descansar Time: titulares cansados poupados');
+    notify(mode === 'best' ? 'Melhor Elenco: força máxima escalada' : mode === 'reserve' ? 'Time Reserva: os mais fracos de cada posição; titulares no banco' : 'Descansar Time: titulares cansados poupados');
   };
 
   const onFreeSlot = () => {
@@ -238,6 +238,9 @@ export function TacticsPage() {
               </Button>
               <Button variant="outline" size="sm" data-testid="btn-rest-xi" title="Prioriza a condição física: poupa os titulares cansados" onClick={() => pick('rest')}>
                 <BatteryCharging /> Descansar Time
+              </Button>
+              <Button variant="outline" size="sm" data-testid="btn-reserve-xi" title="O time mais fraco posição por posição (sem improvisar), com os titulares no banco" onClick={() => pick('reserve')}>
+                <Shirt /> Time Reserva
               </Button>
             </>
           }

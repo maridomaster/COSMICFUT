@@ -417,6 +417,27 @@ export function pickRestXI(players: Player[], slots: readonly FormationSlot[], o
   return finishLineup(xi, pool, opts, (p) => p.overall * staminaFactor(fit(p)));
 }
 
+/** Pesos do "Time Reserva". */
+export const RESERVE_COEF = { natural: 200, adapted: 100, notStarter: 60, fitTie: 40 } as const;
+
+/**
+ * (18/11) "Time Reserva": o time mais fraco POSIÇÃO POR POSIÇÃO, como um time reserva de verdade — cada vaga com um
+ * jogador da posição (natural > adaptado; improvisar só se faltar gente), de preferência quem não está no "Melhor
+ * Elenco", e entre esses o de MENOR overall. Os titulares vão para o banco. Lesionados/suspensos ficam de fora.
+ */
+export function pickReserveXI(players: Player[], slots: readonly FormationSlot[], opts: PickOptions = {}): Lineup {
+  const pool = sortedPool(players, opts.unavailable);
+  const best = new Set(pickBestXI(players, slots, opts).starters);
+  const C = RESERVE_COEF;
+  const xi = assignXI(pool, slots, (p, s) => {
+    const f = slotFit(p, s);
+    // + f×C.fitTie: entre arrumações equivalentes, cada um no seu lado (pé bom) — LD destro, LE canhoto
+    return (f >= 0.95 ? C.natural : f >= 0.85 ? C.adapted : 0) + (best.has(p.id) ? 0 : C.notStarter) - p.overall + f * C.fitTie;
+  });
+  const fit = (p: Player) => opts.fitness?.[p.id] ?? 100;
+  return finishLineup(xi, pool, opts, (p) => p.overall * staminaFactor(fit(p)));
+}
+
 /** Soma do overall efetivo do XI (para comparar escalações / testes). */
 export function lineupEffectiveSum(players: Player[], slots: readonly FormationSlot[], starters: readonly string[], fitness?: Record<string, number>): number {
   const byId = new Map(players.map((p) => [p.id, p]));
