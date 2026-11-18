@@ -536,6 +536,12 @@ writeJson('players-market.json', {
   clubs: marketClubIds,
   rows: marketRows,
 });
+// (18/11) pé bom de cada jogador da busca do mercado (o players-market não tem): por clube, uma string 'L'/'R' indexada
+// pelo playerIdx. Pode ser regerado sem o build completo: `node packages/data/src/feet.mjs`.
+{
+  const byId = new Map(bundles.map((b) => [b.club.id, b]));
+  writeJson('players-feet.json', { version: 1, clubs: marketClubIds, feet: marketClubIds.map((id) => (byId.get(id)?.players ?? []).map((p) => (p.side === 'L' ? 'L' : 'R')).join('')) });
+}
 writeJson('leagues.json', leagues);
 writeJson('states.json', states);
 writeJson('economy.json', economy);

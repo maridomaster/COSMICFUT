@@ -28,8 +28,24 @@ export function Stars({ value, max = 5, size = 14, className }: { value: number;
 }
 
 /** Pé bom do jogador: "D" (destro) ou "E" (canhoto). */
-export function FootChip({ side, className }: { side: Side; className?: string }) {
+export function FootChip({ side, compact, className }: { side: Side; compact?: boolean; className?: string }) {
   const left = side === 'L';
+  if (compact) {
+    return (
+      <span
+        title={left ? 'Pé bom: esquerdo (canhoto)' : 'Pé bom: direito (destro)'}
+        aria-label={left ? 'Canhoto' : 'Destro'}
+        data-testid="foot-chip"
+        className={cn(
+          'inline-grid h-5 w-4 shrink-0 place-items-center rounded-[var(--radius-chip)] text-[10px] font-bold',
+          left ? 'bg-sky-500/12 text-sky-400 ring-1 ring-sky-500/35 ring-inset' : 'bg-surface-3/60 text-fg-muted ring-1 ring-line ring-inset',
+          className,
+        )}
+      >
+        {left ? 'E' : 'D'}
+      </span>
+    );
+  }
   return (
     <span
       title={left ? 'Pé bom: esquerdo (canhoto)' : 'Pé bom: direito (destro)'}

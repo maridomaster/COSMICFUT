@@ -93,7 +93,15 @@ export function TacticsPage() {
     return { def: st.def, mid: st.mid, att: st.att, issues: st.balance.issues, improvised };
   }, [slots, byId, lineup, fitness]);
   const starters = useMemo(() => (lineup?.starters ?? []).map((id) => byId.get(id)).filter((p): p is Player => !!p), [lineup, byId]);
-  const bench = useMemo(() => (lineup?.bench ?? []).map((id) => byId.get(id)).filter((p): p is Player => !!p), [lineup, byId]);
+  // (18/11) banco sempre por posição (GOL, LAT, ZAG, MEI, ATA) e, dentro dela, por overall
+  const bench = useMemo(
+    () =>
+      (lineup?.bench ?? [])
+        .map((id) => byId.get(id))
+        .filter((p): p is Player => !!p)
+        .sort((a, b) => POSITION_ORDER.indexOf(a.position) - POSITION_ORDER.indexOf(b.position) || b.overall - a.overall),
+    [lineup, byId],
+  );
   const out = useMemo(
     () =>
       players

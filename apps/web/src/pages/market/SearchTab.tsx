@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input, NativeSelect } from '@/components/ui/input';
 import { DualRange } from '@/components/ui/range';
-import { Flag, OvrBadge, PositionChip } from '@/components/game/bits';
+import { Flag, FootChip, OvrBadge, PositionChip } from '@/components/game/bits';
 import { ClubMini, money, VALUE_STEPS } from './common';
 import { searchMarket, useSearchStatus } from './searchClient';
 import type { MarketRowOut, SearchQuery, SortDir, SortKey } from './searchTypes';
@@ -35,6 +35,8 @@ export interface SearchFilters {
   club: string | null;
   budget: boolean;
   freeOnly: boolean;
+  /** (18/11) pé bom: 'R' destro, 'L' canhoto */
+  foot: 'R' | 'L' | null;
   hideMine: boolean;
   sort: SortKey;
   dir: SortDir;
@@ -53,6 +55,7 @@ export const DEFAULT_FILTERS: SearchFilters = {
   club: null,
   budget: false,
   freeOnly: false,
+  foot: null,
   hideMine: true,
   sort: 'ovr',
   dir: 'desc',
@@ -70,7 +73,7 @@ const COLS: { key: SortKey; label: string; dir: SortDir; className?: string; rig
   { key: 'wage', label: 'Salário', dir: 'desc', right: true },
 ];
 
-export const ROW_GRID = 'md:grid-cols-[1.25rem_1.5rem_2.25rem_minmax(0,1fr)_2.25rem_2.75rem_2.25rem_4.75rem_4.5rem_2rem]';
+export const ROW_GRID = 'md:grid-cols-[1.25rem_1.5rem_3.5rem_minmax(0,1fr)_2.25rem_2.75rem_2.25rem_4.75rem_4.5rem_2rem]';
 
 export function SearchTab({
   filters,
@@ -112,6 +115,7 @@ export function SearchTab({
       club: filters.club,
       maxValue: filters.budget ? Math.max(0, balance) : null,
       freeOnly: filters.freeOnly,
+      foot: filters.foot ?? null,
       excludeClub: filters.hideMine ? humanId : null,
       sort: filters.sort,
       dir: filters.dir,
@@ -129,7 +133,8 @@ export function SearchTab({
     (filters.value.join() !== DEFAULT_FILTERS.value.join() ? 1 : 0) +
     [filters.clubCountry, filters.nat, filters.league, filters.club].filter((v) => v !== null).length +
     (filters.budget ? 1 : 0) +
-    (filters.freeOnly ? 1 : 0);
+    (filters.freeOnly ? 1 : 0) +
+    (filters.foot ? 1 : 0);
 
   const toggleSort = (key: SortKey) =>
     setFilters((f) => (f.sort === key ? { ...f, dir: f.dir === 'asc' ? 'desc' : 'asc' } : { ...f, sort: key, dir: COLS.find((c) => c.key === key)!.dir }));
@@ -454,6 +459,7 @@ export function ResultRow({
           <div className="min-w-0">
             <div className="flex items-center gap-1.5">
               <PositionChip position={r.pos} className="h-4 w-8 text-[9px]" />
+              {r.foot && <FootChip side={r.foot} compact className="h-4 text-[9px]" />}
               <span className="truncate text-sm font-semibold">{r.name}</span>
             </div>
             <div className="mt-1 flex min-w-0 items-center gap-1.5 text-[11px] text-fg-muted">
@@ -479,8 +485,9 @@ export function ResultRow({
         <span className="hidden md:block">
           <Flag country={country} />
         </span>
-        <span className="hidden md:block">
+        <span className="hidden items-center gap-1 md:flex">
           <PositionChip position={r.pos} />
+          {r.foot && <FootChip side={r.foot} compact />}
         </span>
         <span className="hidden min-w-0 md:block">
           <span className="flex items-center gap-1.5">
@@ -632,6 +639,12 @@ function FilterPanel({
         </Chip>
         <Chip on={f.freeOnly} onClick={() => set('freeOnly', !f.freeOnly)}>
           Só livres
+        </Chip>
+        <Chip on={f.foot === 'R'} onClick={() => set('foot', f.foot === 'R' ? null : 'R')}>
+          Destros
+        </Chip>
+        <Chip on={f.foot === 'L'} onClick={() => set('foot', f.foot === 'L' ? null : 'L')}>
+          Canhotos
         </Chip>
         <Chip on={!f.hideMine} onClick={() => set('hideMine', !f.hideMine)}>
           Incluir meu elenco

@@ -60,7 +60,7 @@ export function ensureWorker(): Worker {
     if (import.meta.env.DEV) console.warn('[mercado] worker:', e.message);
     useSearchStatus.setState({ status: 'error', error: 'a busca de jogadores parou de responder' });
   };
-  worker.postMessage({ t: 'init', marketUrl: dataUrl('players-market.json'), clubsUrl: dataUrl('clubs-index.json') } satisfies ToWorker);
+  worker.postMessage({ t: 'init', marketUrl: dataUrl('players-market.json'), clubsUrl: dataUrl('clubs-index.json'), feetUrl: dataUrl('players-feet.json') } satisfies ToWorker);
   return worker;
 }
 

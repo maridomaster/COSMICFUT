@@ -4,14 +4,14 @@ import { AlertOctagon, AlertTriangle, Armchair, Crown, Gauge, GripVertical, Info
 import type { Player } from '@cosmicfut/shared';
 import { getFormationSlots, type Formation, type Lineup, type Tactic } from '@cosmicfut/engine';
 import { overallColor } from '@/lib/format';
-import { MENTALITIES, PASSINGS, PRESSINGS, TEMPOS, type TeamIndicators } from '@/lib/lineup';
+import { MENTALITIES, PASSINGS, PRESSINGS, TEMPOS, shortName, type TeamIndicators } from '@/lib/lineup';
 import { EASE_OUT } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { MAX_BENCH } from '@/store/game';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { NativeSelect } from '@/components/ui/input';
 import { Segmented, StepSlider } from '@/components/ui/range';
-import { OvrBadge, PositionChip } from '@/components/game/bits';
+import { FootChip, OvrBadge, PositionChip } from '@/components/game/bits';
 import { PlayerFlags } from '@/components/game/player';
 import { AvailabilityBadges, type PlayerStatus } from '@/components/game/status';
 import { StaminaBar } from '@/components/game/StaminaBar';
@@ -316,14 +316,16 @@ function ListRow({ player: p, dnd, selected, compact, status }: { player: Player
         )}
       >
         {/* alça: no toque, arrastar começa por aqui (o resto da linha continua rolando a página) */}
-        <span className="grid h-7 w-5 shrink-0 cursor-grab touch-none place-items-center rounded-md text-fg-subtle hover:text-fg-muted active:cursor-grabbing" aria-hidden>
+        <span className="grid h-7 w-3.5 shrink-0 cursor-grab touch-none place-items-center rounded-md text-fg-subtle hover:text-fg-muted active:cursor-grabbing" aria-hidden>
           <GripVertical className="size-3.5" />
         </span>
-        <PositionChip position={p.position} foot={p.side} />
-        <span className="min-w-0 flex-1 truncate text-[13px] font-medium" title={`${p.name} · ${p.age} anos`}>{p.name}</span>
+        {/* (18/11) linha estreita: posição + pé compacto (só a letra), para sobrar espaço ao nome */}
+        <PositionChip position={p.position} className="w-8" />
+        <FootChip side={p.side} compact />
+        <span className="min-w-[4.5rem] flex-1 truncate text-[13px] font-medium" title={`${p.name} · ${p.age} anos`}>{shortName(p.name)}</span>
         <PlayerFlags player={p} />
         <AvailabilityBadges status={status} compact />
-        <StaminaBar value={status?.fitness ?? 100} className="w-10" />
+        <StaminaBar value={status?.fitness ?? 100} className="w-7" />
         <OvrBadge value={p.overall} />
       </div>
     </motion.li>

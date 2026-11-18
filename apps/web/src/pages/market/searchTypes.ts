@@ -20,6 +20,8 @@ export interface SearchQuery {
   /** "cabe no orçamento": valor ≤ caixa */
   maxValue: number | null;
   freeOnly: boolean;
+  /** (18/11) pé bom: 'R' destro, 'L' canhoto, null = todos */
+  foot?: 'R' | 'L' | null;
   /** esconde os jogadores deste clube (o seu) */
   excludeClub: string | null;
   sort: SortKey;
@@ -39,6 +41,8 @@ export interface MarketRowOut {
   /** clube atual efetivo ('' = livre) */
   clubId: string;
   youth: boolean;
+  /** (18/11) pé bom ('R'/'L'); ausente = desconhecido */
+  foot?: 'R' | 'L';
 }
 
 export interface Facets {
@@ -58,7 +62,7 @@ export interface MarketIndex {
   /** por jogador de `ids`, 6 números: idade, overall, potencial, valor, salário, júnior (0|1) */
   vals: Float64Array;
   /** por jogador de `ids`: [nome, posição, nacionalidade] — obrigatório para quem não está na base; `null` = usa a base */
-  info: ([string, Position, number] | null)[];
+  info: ([string, Position, number, ('R' | 'L')?] | null)[];
   /** overall corrente (evolução mensal) de quem não está em `ids` */
   ovr: Record<string, number>;
   /** clube atual de quem mudou ('' = livre) */
@@ -68,7 +72,7 @@ export interface MarketIndex {
 }
 
 export type ToWorker =
-  | { t: 'init'; marketUrl: string; clubsUrl: string }
+  | { t: 'init'; marketUrl: string; clubsUrl: string; feetUrl?: string }
   | { t: 'index'; index: MarketIndex }
   | { t: 'query'; id: number; q: SearchQuery; offset: number; limit: number }
   | { t: 'ids'; id: number; ids: string[] };

@@ -29,6 +29,8 @@ let bOvr: Uint8Array;
 let bPot: Uint8Array;
 let bNat: Uint16Array;
 let bYouth: Uint8Array;
+/** (18/11) pé bom: 0 desconhecido, 1 destro, 2 canhoto */
+let bFoot: Uint8Array;
 let bValue: Float64Array;
 let bWage: Float64Array;
 let bIds: string[] = [];
@@ -48,6 +50,7 @@ let ovr: Uint8Array;
 let pot: Uint8Array;
 let nat: Uint16Array;
 let youth: Uint8Array;
+let foot: Uint8Array;
 let value: Float64Array;
 let wage: Float64Array;
 let removed: Uint8Array;
@@ -63,9 +66,16 @@ let rev = 0;
 
 const normalize = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
-async function init(marketUrl: string, clubsUrl: string) {
+async function init(marketUrl: string, clubsUrl: string, feetUrl?: string) {
   const t0 = performance.now();
-  const [mres, cres] = await Promise.all([fetch(marketUrl), fetch(clubsUrl)]);
+  const [mres, cres, fres] = await Promise.all([fetch(marketUrl), fetch(clubsUrl), feetUrl ? fetch(feetUrl).catch(() => null) : Promise.resolve(null)]);
+  // (18/11) pé bom (opcional: sem o arquivo, a busca segue sem a informação)
+  let feet: string[] | null = null;
+  try {
+    if (fres?.ok && (fres.headers.get('content-type') ?? '').includes('json')) feet = ((await fres.json()) as { feet: string[] }).feet;
+  } catch {
+    feet = null;
+  }
   if (!mres.ok || !(mres.headers.get('content-type') ?? '').includes('json')) throw new Error('a base de jogadores não pôde ser carregada');
   const market = (await mres.json()) as PlayersMarket;
   const index = cres.ok ? ((await cres.json()) as ClubIndexEntry[]) : [];
@@ -100,6 +110,7 @@ async function init(marketUrl: string, clubsUrl: string) {
   bPot = new Uint8Array(n0);
   bNat = new Uint16Array(n0);
   bYouth = new Uint8Array(n0);
+  bFoot = new Uint8Array(n0);
   bValue = new Float64Array(n0);
   bWage = new Float64Array(n0);
   const bPos = new Uint8Array(n0);
@@ -120,6 +131,8 @@ async function init(marketUrl: string, clubsUrl: string) {
     bWage[i] = r[8];
     bNat[i] = r[9];
     bYouth[i] = r[10] ? 1 : 0;
+    const ft = feet?.[r[0]]?.[r[1]];
+    bFoot[i] = ft === 'L' ? 2 : ft === 'R' ? 1 : 0;
     baseRowByPid.set(bIds[i], i);
   }
   basePos = bPos;
@@ -149,6 +162,7 @@ function resetEffective(extra: number) {
   pot = grow(bPot, Uint8Array);
   nat = grow(bNat, Uint16Array);
   youth = grow(bYouth, Uint8Array);
+  foot = grow(bFoot, Uint8Array);
   value = grow(bValue, Float64Array);
   wage = grow(bWage, Float64Array);
   removed = new Uint8Array(n);
@@ -208,6 +222,7 @@ function applyIndex(ix: MarketIndex): number {
       const pi = positions.indexOf(info[1]);
       pos[i] = pi < 0 ? 0 : pi;
       nat[i] = info[2];
+      if (info[3]) foot[i] = info[3] === 'L' ? 2 : 1;
     }
     const o = k * 6;
     age[i] = ix.vals[o];
@@ -287,6 +302,7 @@ function toRow(i: number): MarketRowOut {
     nat: nat[i],
     clubId: c < 0 ? '' : clubs[c],
     youth: !!youth[i],
+    ...(foot[i] ? { foot: foot[i] === 2 ? ('L' as const) : ('R' as const) } : {}),
   };
 }
 
@@ -304,6 +320,7 @@ function query(q: SearchQuery, offset: number, limit: number) {
   const [p0, p1] = q.pot;
   const [a0, a1] = q.age;
   const v0 = q.value[0];
+  const footWant = q.foot === 'L' ? 2 : q.foot === 'R' ? 1 : 0;
 
   const pass = (i: number) => {
     if (removed[i]) return false;
@@ -322,6 +339,7 @@ function query(q: SearchQuery, offset: number, limit: number) {
     if (clubI !== -2 && c !== clubI) return false;
     if (leagueI !== -2 && (c < 0 || clubLeague[c] !== leagueI)) return false;
     if (q.clubCountry !== null && (c < 0 || clubCountry[c] !== q.clubCountry)) return false;
+    if (footWant && foot[i] !== footWant) return false;
     if (q.nat !== null && nat[i] !== q.nat) return false;
     if (tokens.length) {
       const s = norm[i];
@@ -382,7 +400,7 @@ ctx.onmessage = (e) => {
   const m = e.data;
   try {
     if (m.t === 'init') {
-      init(m.marketUrl, m.clubsUrl)
+      init(m.marketUrl, m.clubsUrl, m.feetUrl)
         .then(flushIndex)
         .catch((err: unknown) => ctx.postMessage({ t: 'error', message: err instanceof Error ? err.message : String(err) }));
     } else if (m.t === 'index') {

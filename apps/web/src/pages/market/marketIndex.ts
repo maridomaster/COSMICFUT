@@ -19,10 +19,10 @@ type Vals = [number, number, number, number, number, number];
 
 export function buildMarketIndex(state: SeasonState, world: WorldState | null): MarketIndex {
   const vals = new Map<string, Vals>();
-  const info = new Map<string, [string, Position, number]>();
+  const info = new Map<string, [string, Position, number, ('R' | 'L')?]>();
   const fromPlayer = (p: Player) => {
     vals.set(p.id, [p.age, p.overall, p.potential, p.value, p.wage, p.youth ? 1 : 0]);
-    info.set(p.id, [p.name, p.position, p.nationalityId]);
+    info.set(p.id, p.side ? [p.name, p.position, p.nationalityId, p.side] : [p.name, p.position, p.nationalityId]);
   };
   const wp = world?.players;
   if (wp) {
