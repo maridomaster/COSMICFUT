@@ -36,7 +36,7 @@ export const COEF = {
   chanceLost: 0.12,
   /** faltas por minuto do time sem a bola */
   foulBase: 0.235,
-  yellowPerFoul: 0.155,
+  yellowPerFoul: 0.095,
   redPerFoul: 0.002,
   penaltyPerFoul: 0.012,
   dangerousFoul: 0.1,
