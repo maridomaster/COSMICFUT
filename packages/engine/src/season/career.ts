@@ -29,7 +29,7 @@ import {
   type LeagueDivision, type StateDivision,
 } from './competitions';
 import { initCompetition } from './format';
-import { EVOLUTION, revalue, YOUTH } from './players';
+import { EVOLUTION, realisticPotential, revalue, YOUTH } from './players';
 import { continentalCompetitions, continentalCountryOf, continentalPots, qualifiedFrom, qualifyContinental, strengthSort } from './continental';
 import { afcCompetitions, guestRegion, initialTitleHolders, qualifyAfc, qualifyUefa, uefaCompetitions, worldCompetitions } from './confed';
 import type { CountryHolders } from '../contract';
@@ -521,7 +521,8 @@ export function ageUntracked(p: Player, years: number): Player {
     if (age >= 24) pot = Math.max(pot, Math.round(ovr));
   }
   const overall = Math.round(ovr);
-  return { ...p, age, overall, potential: Math.max(pot, overall), value: revalue(p, age, overall, Math.max(pot, overall)), youth: p.youth && age < YOUTH.graduateAge };
+  // valor calculado com o potencial "bruto" (economia inalterada); o potencial exibido é o real pela idade
+  return { ...p, age, overall, potential: realisticPotential(age, overall, Math.max(pot, overall)), value: revalue(p, age, overall, Math.max(pot, overall)), youth: p.youth && age < YOUTH.graduateAge };
 }
 
 /** Elencos efetivos da temporada de carreira: mercado + evolução mensal (overall corrente). Idempotente. */
@@ -539,8 +540,11 @@ export function careerSquads(state: SeasonState, base: Squads, marketApplied = f
         const ovr = e === undefined ? p.overall : Math.max(1, Math.min(99, Math.round(e)));
         const q = ovr === p.overall ? p : { ...p, overall: ovr };
         // (Etapa 5) valor de mercado dinâmico: overall atual, contrato restante, liga do clube e reputação
+        // (calculado com o potencial dos dados, para não mexer na economia calibrada)
         const value = careerValue(state, q, clubId);
-        return value === q.value ? q : { ...q, value };
+        // (18/11) potencial real pela idade: acompanha o overall de quem já passou do auge
+        const potential = realisticPotential(q.age, q.overall, q.potential);
+        return value === q.value && potential === q.potential ? q : { ...q, value, potential };
       });
       cache.set(clubId, s);
     }

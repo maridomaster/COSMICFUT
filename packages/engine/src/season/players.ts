@@ -124,9 +124,19 @@ export function yearEndBonus(age: number, games: number, avgRating: number): num
   return b;
 }
 
-/** Potencial no fim do ano (idade já incrementada): ruído ±2 até 23; aos 24+ = max(pot, overall). */
+/**
+ * (18/11) Potencial "real" = teto que o jogador ainda pode atingir, pela idade. Até 23 anos: o potencial dos dados
+ * (nunca abaixo do overall). 24–27: no máximo overall + o crescimento que ainda cabe na idade (`growthGap`: +4, +3,
+ * +2, +1). 28+: não cresce mais ⇒ potencial = overall atual (um veterano em declínio perde potencial junto).
+ */
+export function realisticPotential(age: number, overall: number, potential: number): number {
+  if (age <= 23) return Math.max(potential, overall);
+  return Math.max(overall, Math.min(potential, overall + growthGap(age)));
+}
+
+/** Potencial no fim do ano (idade já incrementada): ruído ±2 até 23; aos 24+ = `realisticPotential`. */
 export function nextPotential(newAge: number, potential: number, overall: number, rng: Rng): number {
-  if (newAge >= 24) return Math.max(potential, overall);
+  if (newAge >= 24) return realisticPotential(newAge, overall, potential);
   const noise = Math.round(rng.normal() * 1.2);
   return clamp(Math.max(overall, potential + clamp(noise, -2, 2)), 1, 99);
 }

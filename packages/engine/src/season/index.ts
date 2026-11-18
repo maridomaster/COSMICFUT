@@ -20,7 +20,7 @@ export { lightSimulate, LIGHT, type LightTeam } from './light';
 export {
   EVOLUTION, RETIREMENT, YOUTH, squadTarget, growthGap, marketValue, monthlyWage, monthlyDelta, yearEndBonus,
   VALUE_CURVE, ageValueMult, valueCurve, revalue, squadScales,
-  nextPotential, retireChance, randomName, neediestPosition, generateYouthPlayer, type YouthSpec,
+  nextPotential, realisticPotential, retireChance, randomName, neediestPosition, generateYouthPlayer, type YouthSpec,
 } from './players';
 export {
   createCareer, createWorld, createSeasonFromWorld, worldSquads, careerSquads, squadsFromMarket, seedMarket, seasonOver,
