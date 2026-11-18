@@ -224,6 +224,8 @@ interface OnlineStore {
 
 let toastId = 0;
 let feedKey = 0;
+/** identidade de um lance (minuto, acréscimo, tipo, jogador e texto narrado) */
+export const eventKey = (e: MatchEvent): string => `${e.minute}|${e.extra ?? 0}|${e.type}|${e.side ?? ''}|${e.playerId ?? ''}|${e.text}`;
 let reactionKey = 0;
 const FEED_ITEMS = 60;
 const FEED_CAP = 400;
@@ -653,7 +655,10 @@ export const useOnline = create<OnlineStore>()((set, get) => {
 
   /** tick aplicado a uma partida (minha ou assistida) */
   const tickLive = (l: OnlineLiveMatch, t: MatchTickPayload): OnlineLiveMatch => {
-    const events = t.events as MatchEvent[];
+    // (18/11) troca de anfitrião: o novo host refaz a partida a partir do último checkpoint e reenvia lances que já
+    // chegaram (a narração mostrava "0'"/"7'" duas vezes). A simulação é determinística: lance igual = repetido.
+    const seen = new Set(l.state.events.map(eventKey));
+    const events = (t.events as MatchEvent[]).filter((e) => !seen.has(eventKey(e)));
     const state: MatchState = {
       ...l.state,
       minute: t.minute,
@@ -692,7 +697,8 @@ export const useOnline = create<OnlineStore>()((set, get) => {
       if (o) set({ others: { ...get().others, [t.matchId]: tickLive(o, t) } });
       return;
     }
-    const events = t.events as MatchEvent[];
+    const seen = new Set(l.state.events.map(eventKey));
+    const events = (t.events as MatchEvent[]).filter((e) => !seen.has(eventKey(e)));
     set({ live: tickLive(l, t) });
     // PvP: avisa as mudanças do adversário (substituições e postura)
     const pvp = !!l.homePlayerId && !!l.awayPlayerId;

@@ -443,7 +443,8 @@ export function ChangesButton({ floating }: { floating?: boolean }) {
 const QUIET = new Set(['commentary', 'foul', 'chance', 'shot', 'corner', 'offside']);
 
 function Feed({ feed, config, colors, players }: { feed: FeedItem[]; config: MatchConfig; colors: Record<Side, SideTheme>; players: Map<string, Player> }) {
-  const [onlyKey, setOnlyKey] = useState(false);
+  // (18/11) "Só lances principais" começa sempre marcado
+  const [onlyKey, setOnlyKey] = useState(true);
   const items = useMemo(() => {
     const list = onlyKey ? feed.filter((e) => !QUIET.has(e.type)) : feed;
     return list.slice(-150).reverse();
