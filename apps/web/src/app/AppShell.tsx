@@ -17,7 +17,9 @@ import { TurnLayer, TurnStrip } from '@/pages/online/TurnLayer';
 import { HotseatEndTurnButton, HotseatPassScreen, HotseatStrip, useHotseat } from '@/pages/hotseat/Hotseat';
 import { hotseatAction } from '@/store/season';
 import { SEASON_START, SEASON_YEAR } from '@/season/setup';
-import { competitionOf, fixtureToday, humanSeasonLabel, weekOf } from '@/season/view';
+import { competitionOf, fixtureToday, humanSeasonLabel, upcomingFixtures, weekOf } from '@/season/view';
+import { compShort, fixtureInfo } from '@/season/comps';
+import { ClubCrest, clubLabel } from '@/components/game/status';
 import { useClubBundle, useLeagueMap } from '@/data/hooks';
 import { indexCrestPaths, type DataOrigin } from '@/data/source';
 import { applyClubTheme } from '@/lib/color';
@@ -446,6 +448,7 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
               {subtitle ?? mainComp ?? (league ? `${league.name} · ${league.divisionName}` : 'Temporada ' + season)}
             </div>
           </div>
+          {!subtitle && <NextMatchChip />}
         </div>
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-2 rounded-lg border border-line bg-surface-2/60 px-2.5 py-1">
@@ -577,6 +580,45 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
 }
 
 /** Sidebar (solo): "salvo há X min" + "Salvar agora". */
+/** Ao lado do nome do clube: sempre o próximo jogo (adversário, casa/fora, competição/fase e data). */
+function NextMatchChip() {
+  const season = useSeason((s) => s.save?.season);
+  const clubId = useSeason((s) => s.save?.season.humanClubIds[0] ?? s.save?.clubId);
+  const navigate = useNavigate();
+  const next = useMemo(() => {
+    if (!season || !clubId) return null;
+    const f = upcomingFixtures(season, clubId, 1)[0];
+    if (!f) return null;
+    const home = f.homeId === clubId;
+    const info = fixtureInfo(season, f);
+    const comp = info.comp ? compShort(info.comp) : info.compName;
+    return { f, home, opp: home ? f.awayId : f.homeId, comp, phase: info.phase, today: f.date === season.date };
+  }, [season, clubId]);
+  if (!next) return null;
+  return (
+    <button
+      type="button"
+      data-testid="next-match-chip"
+      onClick={() => navigate('/calendario')}
+      title={`Próximo jogo: ${clubLabel(next.opp)} (${next.home ? 'casa' : 'fora'}) · ${next.comp} · ${next.phase}`}
+      className="ml-1 hidden min-w-0 items-center gap-2 rounded-lg border border-line bg-surface-2/60 px-2.5 py-1 text-left transition-colors hover:border-club-accent/60 md:flex"
+    >
+      <ClubCrest id={next.opp} size={24} />
+      <div className="min-w-0 leading-tight">
+        <div className="truncate text-[11px] text-fg-muted">
+          <span className={cn('font-semibold', next.today ? 'text-club-accent' : 'text-fg-muted')}>{next.today ? 'Hoje' : fmtDate(next.f.date, { day: '2-digit', month: 'short' })}</span>
+          {' · '}
+          {next.home ? 'Casa' : 'Fora'}
+        </div>
+        <div className="max-w-[300px] truncate text-xs font-semibold">
+          x {clubLabel(next.opp)}
+          <span className="font-normal text-fg-muted"> · {next.comp}{next.phase ? ` · ${next.phase}` : ''}</span>
+        </div>
+      </div>
+    </button>
+  );
+}
+
 function SaveStatus() {
   const lastSavedAt = useSeason((s) => s.lastSavedAt);
   const saving = useSeason((s) => s.saving);
