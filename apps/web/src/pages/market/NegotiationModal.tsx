@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { MoneyField } from '@/components/ui/money-field';
 import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router';
 import { AnimatePresence, motion } from 'motion/react';
@@ -306,13 +307,15 @@ function Negotiation({ target, onClose, clubMeta }: { target: NegotiationTarget;
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-bold text-fg-muted" title="valores em euros">€</span>
-                  <Input
-                    inputMode="numeric"
-                    aria-label="Valor da proposta"
-                    value={fee.toLocaleString('pt-BR')}
-                    onChange={(e) => setFee(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))}
-                    className="tabular h-12 text-xl font-bold"
-                  />
+                  <MoneyField value={fee || 0} className="flex-1">
+                    <Input
+                      inputMode="numeric"
+                      aria-label="Valor da proposta"
+                      value={fee.toLocaleString('pt-BR')}
+                      onChange={(e) => setFee(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))}
+                      className="tabular h-12 text-xl font-bold"
+                    />
+                  </MoneyField>
                 </div>
                 <input
                   type="range"
@@ -356,7 +359,9 @@ function Negotiation({ target, onClose, clubMeta }: { target: NegotiationTarget;
                     {withOption && (
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-bold text-fg-muted">€</span>
-                        <Input inputMode="numeric" aria-label="Valor da opção de compra" value={option.toLocaleString('pt-BR')} onChange={(e) => setOption(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))} className="tabular h-10 font-bold" />
+                        <MoneyField value={option || 0} className="flex-1">
+                          <Input inputMode="numeric" aria-label="Valor da opção de compra" value={option.toLocaleString('pt-BR')} onChange={(e) => setOption(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))} className="tabular h-10 font-bold" />
+                        </MoneyField>
                       </div>
                     )}
                     <label className="flex items-center gap-2 text-sm">
@@ -392,7 +397,9 @@ function Negotiation({ target, onClose, clubMeta }: { target: NegotiationTarget;
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-bold text-fg-muted" title="valores em euros">€</span>
-                <Input inputMode="numeric" aria-label="Salário mensal" value={wage.toLocaleString('pt-BR')} onChange={(e) => setWage(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))} className="tabular h-12 text-xl font-bold" />
+                <MoneyField value={wage || 0} className="flex-1">
+                  <Input inputMode="numeric" aria-label="Salário mensal" value={wage.toLocaleString('pt-BR')} onChange={(e) => setWage(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))} className="tabular h-12 text-xl font-bold" />
+                </MoneyField>
               </div>
               <input type="range" aria-label="Ajustar salário" min={wageMin} max={wageMax} step={1000} value={Math.min(Math.max(wage, wageMin), wageMax)} onChange={(e) => setWage(Number(e.target.value))} className="mt-3 w-full accent-[var(--club-accent)]" />
               <div className="mt-2 flex flex-wrap gap-1.5">
@@ -426,7 +433,9 @@ function Negotiation({ target, onClose, clubMeta }: { target: NegotiationTarget;
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-bold text-fg-muted">€</span>
-                <Input inputMode="numeric" aria-label="Multa rescisória" value={clauseNew.toLocaleString('pt-BR')} onChange={(e) => setClauseNew(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))} className="tabular h-10 font-bold" />
+                <MoneyField value={clauseNew || 0} className="flex-1">
+                  <Input inputMode="numeric" aria-label="Multa rescisória" value={clauseNew.toLocaleString('pt-BR')} onChange={(e) => setClauseNew(Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))} className="tabular h-10 font-bold" />
+                </MoneyField>
               </div>
               <p className="mt-1 text-[11px] text-fg-subtle">Quem depositar esse valor leva o jogador sem negociar com você. Multa baixa agrada o jogador; muito alta, ele pede mais salário.</p>
             </div>

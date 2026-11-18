@@ -9,6 +9,7 @@
  *
  * As telas/cartões da carreira solo (pages/season-end) são reaproveitados com o `world`/`state` da sala.
  */
+import { MoneyField } from '@/components/ui/money-field';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
@@ -285,14 +286,16 @@ function Review({ state: full, world, clubId, review }: { state: SeasonState; wo
                       <div className="mt-2 flex flex-wrap items-center gap-2 pl-0 sm:pl-[4.75rem]">
                         <div className="flex items-center gap-1.5">
                           <span className="text-[11px] text-fg-muted" title="valores em euros">€</span>
-                          <Input
-                            inputMode="numeric"
-                            disabled={ready}
-                            aria-label={`Salário oferecido a ${p.name}`}
-                            value={t.wage.toLocaleString('pt-BR')}
-                            onChange={(e) => patch(p.playerId, { wage: Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0) })}
-                            className="tabular h-8 w-32 text-sm font-semibold"
-                          />
+                          <MoneyField value={t.wage || 0} className="w-44 shrink-0">
+                            <Input
+                              inputMode="numeric"
+                              disabled={ready}
+                              aria-label={`Salário oferecido a ${p.name}`}
+                              value={t.wage.toLocaleString('pt-BR')}
+                              onChange={(e) => patch(p.playerId, { wage: Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0) })}
+                              className="tabular h-8 w-32 text-sm font-semibold"
+                            />
+                          </MoneyField>
                           <span className="text-[11px] text-fg-subtle">/mês</span>
                         </div>
                         <NativeSelect

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { MoneyField } from '@/components/ui/money-field';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowRight, Check, Clock, FileClock, Handshake, Inbox, ListX, Star, Tag, UserPlus, X } from 'lucide-react';
 import type { ClubIndexEntry, Country, Player } from '@cosmicfut/shared';
@@ -221,6 +222,10 @@ export function IncomingTab({ season, humanId, clubMeta }: { season: SeasonState
                       <div className="text-right">
                         <div className="tabular text-lg font-black text-success">{o.kind === 'loan' ? `${o.loan?.wageShare ?? 100}%` : fmtMoney(o.fee)}</div>
                         <div className={cn('text-[10px] font-semibold', ratio >= 1 ? 'text-success' : 'text-fg-subtle')}>{o.kind === 'loan' ? 'do salário pago por eles' : `${Math.round(ratio * 100)}% do valor`}</div>
+                        {/* (18/11) quanto o jogador vale no mercado, para comparar com a oferta */}
+                        <div className="text-[11px] text-fg-muted" data-testid="offer-player-value">
+                          Vale <b className="tabular font-bold text-fg">{fmtMoney(o.player.value)}</b>
+                        </div>
                       </div>
                     </div>
                     {/* (Etapa 5) etapas: você (clube) → o jogador decide se vai */}
@@ -236,14 +241,16 @@ export function IncomingTab({ season, humanId, clubMeta }: { season: SeasonState
                     {o.kind !== 'loan' && !coach(o.toClubId) && (
                       <div className="mt-3 flex items-center gap-2">
                         <span className="text-xs font-bold text-fg-muted">€</span>
-                        <input
-                          inputMode="numeric"
-                          aria-label={`Contraproposta por ${o.player.name}`}
-                          placeholder={fmtMoney(Math.round((o.fee * 1.2) / 50_000) * 50_000)}
-                          value={counter[o.id] ? counter[o.id].toLocaleString('pt-BR') : ''}
-                          onChange={(e) => setCounter((c) => ({ ...c, [o.id]: Number(e.target.value.replace(/\D/g, '')) || 0 }))}
-                          className="tabular h-8 min-w-0 flex-1 rounded-lg border border-line bg-surface-2 px-2 text-sm"
-                        />
+                        <MoneyField value={counter[o.id] || 0} className="flex-1">
+                          <input
+                            inputMode="numeric"
+                            aria-label={`Contraproposta por ${o.player.name}`}
+                            placeholder={fmtMoney(Math.round((o.fee * 1.2) / 50_000) * 50_000)}
+                            value={counter[o.id] ? counter[o.id].toLocaleString('pt-BR') : ''}
+                            onChange={(e) => setCounter((c) => ({ ...c, [o.id]: Number(e.target.value.replace(/\D/g, '')) || 0 }))}
+                            className="tabular h-8 min-w-0 flex-1 rounded-lg border border-line bg-surface-2 px-2 text-sm"
+                          />
+                        </MoneyField>
                         <Button size="sm" variant="outline" disabled={busy === o.id || !!actions.blocked || !counter[o.id]} onClick={() => void sendCounter(o)}>
                           Contrapropor
                         </Button>
@@ -623,7 +630,9 @@ export function LoansTab({ season, humanId, clubMeta, players }: { season: Seaso
                     <div className="mt-2 flex flex-wrap items-end gap-2 rounded-xl border border-line bg-surface-2/40 p-3 text-xs">
                       <label className="grid gap-1">
                         <span className="text-fg-muted">Salário/mês (pede {fmtMoney(renewalAsk(season, squads, humanId, p, renew.years).wage)})</span>
-                        <input inputMode="numeric" aria-label="Salário da renovação" value={renew.wage.toLocaleString('pt-BR')} onChange={(e) => setRenew({ ...renew, wage: Number(e.target.value.replace(/\D/g, '')) || 0 })} className="tabular h-8 w-32 rounded-lg border border-line bg-surface px-2" />
+                        <MoneyField value={renew.wage || 0} className="w-44 shrink-0">
+                          <input inputMode="numeric" aria-label="Salário da renovação" value={renew.wage.toLocaleString('pt-BR')} onChange={(e) => setRenew({ ...renew, wage: Number(e.target.value.replace(/\D/g, '')) || 0 })} className="tabular h-8 w-32 rounded-lg border border-line bg-surface px-2" />
+                        </MoneyField>
                       </label>
                       <label className="grid gap-1">
                         <span className="text-fg-muted">Anos</span>
@@ -633,7 +642,9 @@ export function LoansTab({ season, humanId, clubMeta, players }: { season: Seaso
                       </label>
                       <label className="grid gap-1">
                         <span className="text-fg-muted">Multa rescisória</span>
-                        <input inputMode="numeric" aria-label="Multa da renovação" value={renew.clause.toLocaleString('pt-BR')} onChange={(e) => setRenew({ ...renew, clause: Number(e.target.value.replace(/\D/g, '')) || 0 })} className="tabular h-8 w-36 rounded-lg border border-line bg-surface px-2" />
+                        <MoneyField value={renew.clause || 0} className="w-44 shrink-0">
+                          <input inputMode="numeric" aria-label="Multa da renovação" value={renew.clause.toLocaleString('pt-BR')} onChange={(e) => setRenew({ ...renew, clause: Number(e.target.value.replace(/\D/g, '')) || 0 })} className="tabular h-8 w-36 rounded-lg border border-line bg-surface px-2" />
+                        </MoneyField>
                       </label>
                       <Button size="sm" variant="club" disabled={busy === p.id || !!actions.blocked} onClick={() => void run(p.id, () => actions.renew(p.id, renew.wage, renew.years, renew.clause || undefined), `${p.name} renovou por ${renew.years} ${renew.years > 1 ? 'anos' : 'ano'}.`).then(() => setRenew(null))}>
                         <Check /> Propor renovação

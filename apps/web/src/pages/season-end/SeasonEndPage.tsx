@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { MoneyField } from '@/components/ui/money-field';
 import { Link, useNavigate } from 'react-router';
 import { motion } from 'motion/react';
 import {
@@ -242,13 +243,15 @@ function SeasonOver({ state: full, world, clubId, onRolled }: { state: SeasonSta
                       <div className="mt-2 flex flex-wrap items-center gap-2 pl-0 sm:pl-[4.75rem]">
                         <div className="flex items-center gap-1.5">
                           <span className="text-[11px] text-fg-muted" title="valores em euros">€</span>
-                          <Input
-                            inputMode="numeric"
-                            aria-label={`Salário oferecido a ${p.name}`}
-                            value={t.wage.toLocaleString('pt-BR')}
-                            onChange={(e) => patch(p.id, { wage: Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0), edited: true })}
-                            className="tabular h-8 w-32 text-sm font-semibold"
-                          />
+                          <MoneyField value={t.wage || 0} className="w-44 shrink-0">
+                            <Input
+                              inputMode="numeric"
+                              aria-label={`Salário oferecido a ${p.name}`}
+                              value={t.wage.toLocaleString('pt-BR')}
+                              onChange={(e) => patch(p.id, { wage: Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0), edited: true })}
+                              className="tabular h-8 w-32 text-sm font-semibold"
+                            />
+                          </MoneyField>
                           <span className="text-[11px] text-fg-subtle">/mês</span>
                         </div>
                         <NativeSelect

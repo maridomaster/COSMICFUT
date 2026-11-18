@@ -70,10 +70,11 @@ const COLS: { key: SortKey; label: string; dir: SortDir; className?: string; rig
   { key: 'ovr', label: 'OVR', dir: 'desc' },
   { key: 'pot', label: 'Pot.', dir: 'desc', right: true },
   { key: 'value', label: 'Valor', dir: 'desc', right: true },
-  { key: 'wage', label: 'Salário', dir: 'desc', right: true },
+  { key: 'wage', label: 'Salário', dir: 'desc', right: true, className: 'hidden xl:flex' },
 ];
 
-export const ROW_GRID = 'md:grid-cols-[1.25rem_1.5rem_3.5rem_minmax(0,1fr)_2.25rem_2.75rem_2.25rem_4.75rem_4.5rem_2rem]';
+// (18/11) em telas médias o salário some (aparece no xl) para sobrar espaço ao nome do jogador
+export const ROW_GRID = 'md:grid-cols-[1.25rem_1.5rem_3.5rem_minmax(6rem,1fr)_2.25rem_2.75rem_2.25rem_4.75rem_2rem] xl:grid-cols-[1.25rem_1.5rem_3.5rem_minmax(0,1fr)_2.25rem_2.75rem_2.25rem_4.75rem_4.5rem_2rem]';
 
 export function SearchTab({
   filters,
@@ -237,7 +238,7 @@ export function SearchTab({
                   role="columnheader"
                   aria-sort={on ? (filters.dir === 'asc' ? 'ascending' : 'descending') : 'none'}
                   onClick={() => toggleSort(c.key)}
-                  className={cn('group flex items-center gap-0.5 uppercase hover:text-fg', c.right && 'justify-end', on && 'text-club-accent')}
+                  className={cn('group flex items-center gap-0.5 uppercase hover:text-fg', c.right && 'justify-end', on && 'text-club-accent', c.className)}
                   title={`Ordenar por ${c.label}`}
                 >
                   <span className="whitespace-nowrap">{c.key === 'club' ? '' : c.label}</span>
@@ -502,7 +503,7 @@ export function ResultRow({
         </span>
         <span className="tabular hidden text-right text-[13px] text-fg-muted md:block">{r.pot}</span>
         <span className="tabular hidden text-right text-[13px] whitespace-nowrap md:block">{money(r.value)}</span>
-        <span className="tabular hidden text-right text-[13px] whitespace-nowrap text-fg-muted md:block">{money(r.wage)}</span>
+        <span className="tabular hidden text-right text-[13px] whitespace-nowrap text-fg-muted xl:block">{money(r.wage)}</span>
         <span className="hidden md:block" />
       </button>
       <div className="absolute top-1/2 right-2 hidden -translate-y-1/2 items-center gap-1 md:flex">
