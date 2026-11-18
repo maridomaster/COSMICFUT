@@ -164,6 +164,19 @@ export function TacticsPage() {
     } else if (target.zone === 'out' && st === 'bench') unlistPlayer(src);
   };
 
+  /** (Táticas) modo clique: move o titular selecionado para o círculo tocado */
+  const moveSelected = (pos: SlotPos) => {
+    if (!selectedId) return;
+    const i = starterIndex(selectedId);
+    const p = byId.get(selectedId);
+    setSelectedId(null);
+    if (i < 0 || shape[i]?.role === 'GK') return;
+    setSlotPosition(i, pos);
+    const role = detectRole(pos.x, pos.y);
+    const pen = p ? improvisation(p, { role, x: pos.x, y: pos.y, natural: [] }).penalty : 0;
+    notify(`${p ? shortName(p.name) : 'Jogador'} → ${ROLE_LABEL[role]}${pen > 0 ? ` (improvisado −${pen})` : ''}`);
+  };
+
   const onTap = (id: string) => {
     if (!selectedId) return setSelectedId(id);
     if (selectedId === id) return setSelectedId(null);
@@ -233,7 +246,7 @@ export function TacticsPage() {
                 <PresetBar players={players} unavailable={unavailable} fitness={fitness} onNotify={notify} />
               </div>
               <div className="relative mt-2">
-                <Pitch ref={pitchRef} slots={slots} lineup={lineup} byId={byId} dnd={dnd} selectedId={selectedId} status={status} fitness={fitness} moved={moved} hoverSpot={preview?.pos ?? null} />
+                <Pitch ref={pitchRef} slots={slots} lineup={lineup} byId={byId} dnd={dnd} selectedId={selectedId} status={status} fitness={fitness} moved={moved} hoverSpot={preview?.pos ?? null} onMoveSelected={moveSelected} />
                 {/* (Atualização 41) aviso de formação personalizada sobre o campo (não empurra o campo para baixo) */}
                 {moved.size > 0 && (
                   <div className="absolute top-1.5 left-1.5 z-20 flex items-center gap-1 rounded-md border border-club-accent/40 bg-black/70 py-0.5 pr-0.5 pl-2 text-[11px] text-white backdrop-blur-sm" title={`Formação personalizada: ${moved.size} ${moved.size === 1 ? 'posição movida' : 'posições movidas'}`}>

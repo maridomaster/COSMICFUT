@@ -1,4 +1,5 @@
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
+import type React from 'react';
 import { motion } from 'motion/react';
 import type { Player } from '@cosmicfut/shared';
 import { detectRole, improvisation, slotFit, ZONE_BOUNDS, type FormationSlot, type Lineup, type SlotPos } from '@cosmicfut/engine';
@@ -51,9 +52,12 @@ function spotTone(penalty: number) {
 }
 
 /** (Táticas) círculos onde o jogador pode ser solto, coloridos pelo rendimento dele em cada ponto. */
-function DropSpots({ player, hover, occupied }: { player: Player; hover: SlotPos | null; occupied: readonly SlotPos[] }) {
+function DropSpots({ player, hover: dragHover, occupied, onPick }: { player: Player; hover: SlotPos | null; occupied: readonly SlotPos[]; onPick?: (pos: SlotPos) => void }) {
+  // modo clique: o jogador está selecionado e o técnico toca no círculo de destino
+  const [pickHover, setPickHover] = useState<SlotPos | null>(null);
+  const hover = onPick ? pickHover : dragHover;
   return (
-    <div className="pointer-events-none absolute inset-0 z-20" aria-hidden data-testid="drop-spots">
+    <div className="pointer-events-none absolute inset-0 z-20" aria-hidden={!onPick} data-testid="drop-spots">
       {/* área do goleiro: proibida para jogador de linha */}
       <div
         className="absolute grid -translate-1/2 place-items-center rounded-full border-2 border-dashed border-red-500/70 bg-red-500/15 text-red-300"
@@ -68,10 +72,29 @@ function DropSpots({ player, hover, occupied }: { player: Player; hover: SlotPos
         const tone = spotTone(pen);
         const isHover = sameSpot(hover, s);
         const taken = occupied.some((o) => Math.hypot((o.x - s.x) * 68, (o.y - s.y) * 88) < 4);
+        // ocupado: deixa o clique passar para o jogador que está ali (troca)
+        const clickable = !!onPick && !taken;
+        const Tag = clickable ? 'button' : 'div';
         return (
-          <div
+          <Tag
             key={`${s.x}-${s.y}`}
-            className="absolute flex -translate-1/2 flex-col items-center justify-center rounded-full border-2 transition-transform duration-100"
+            {...(clickable
+              ? {
+                  type: 'button' as const,
+                  onClick: (e: React.MouseEvent) => {
+                    e.stopPropagation();
+                    onPick!(s);
+                  },
+                  onPointerEnter: () => setPickHover(s),
+                  onPointerLeave: () => setPickHover((h) => (h && sameSpot(h, s) ? null : h)),
+                  'aria-label': `Mover para ${ROLE_LABEL[role]} (${tone.label}${pen > 0 ? `, −${pen}` : ''})`,
+                  'data-testid': 'move-spot',
+                }
+              : {})}
+            className={cn(
+              'absolute flex -translate-1/2 flex-col items-center justify-center rounded-full border-2 transition-transform duration-100',
+              clickable && 'pointer-events-auto cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-white',
+            )}
             style={{
               left: `${slotLeft(s.x)}%`,
               top: `${slotTop(s.y)}%`,
@@ -88,9 +111,14 @@ function DropSpots({ player, hover, occupied }: { player: Player; hover: SlotPos
           >
             <span className="text-[10px] leading-none font-black text-white drop-shadow">{ROLE_LABEL[role]}</span>
             {pen > 0 && <span className="mt-0.5 text-[9px] leading-none font-bold text-white/90">−{pen}</span>}
-          </div>
+          </Tag>
         );
       })}
+      {onPick && !hover && (
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 rounded-md bg-black/75 px-2 py-1 text-center text-[11px] font-semibold whitespace-nowrap text-white">
+          {shortName(player.name)}: toque num círculo para mover · noutro jogador para trocar
+        </div>
+      )}
       {hover && (
         <div className="absolute top-2 left-1/2 -translate-x-1/2 rounded-md bg-black/75 px-2 py-1 text-[11px] font-semibold text-white">
           {(() => {
@@ -195,10 +223,16 @@ export const Pitch = forwardRef<HTMLDivElement, {
   moved?: ReadonlySet<number>;
   /** ponto de encaixe sob o ponteiro durante o arrasto */
   hoverSpot?: SlotPos | null;
-}>(function Pitch({ slots, lineup, byId, dnd, selectedId, status, fitness, moved, hoverSpot }, ref) {
-  const dragIndex = dnd.dragId && lineup ? lineup.starters.indexOf(dnd.dragId) : -1;
-  const dragging = dragIndex >= 0;
-  const dragPlayer = dragging ? byId.get(dnd.dragId!) : undefined;
+  /** (Táticas) modo clique: titular selecionado → tocar num círculo move o jogador para lá */
+  onMoveSelected?: (pos: SlotPos) => void;
+}>(function Pitch({ slots, lineup, byId, dnd, selectedId, status, fitness, moved, hoverSpot, onMoveSelected }, ref) {
+  const dragIdx = dnd.dragId && lineup ? lineup.starters.indexOf(dnd.dragId) : -1;
+  const dragging = dragIdx >= 0;
+  // sem arrasto: o titular selecionado (por clique) também mostra os círculos, agora clicáveis
+  const selIdx = !dragging && selectedId && lineup && onMoveSelected ? lineup.starters.indexOf(selectedId) : -1;
+  const dragIndex = dragging ? dragIdx : selIdx;
+  const dragPlayer = dragIndex >= 0 ? byId.get(lineup!.starters[dragIndex]) : undefined;
+  const picking = !dragging && selIdx >= 0;
   const showSpots = !!dragPlayer && slots[dragIndex]?.role !== 'GK';
   const occupied = showSpots ? slots.filter((_, i) => i !== dragIndex).map((s) => ({ x: s.x, y: s.y })) : [];
   return (
@@ -211,7 +245,7 @@ export const Pitch = forwardRef<HTMLDivElement, {
     >
       <PitchSurface />
       {dragging && !showSpots && <ZoneGrid />}
-      {showSpots && <DropSpots player={dragPlayer!} hover={hoverSpot ?? null} occupied={occupied} />}
+      {showSpots && <DropSpots player={dragPlayer!} hover={hoverSpot ?? null} occupied={occupied} onPick={picking ? onMoveSelected : undefined} />}
       {/* rótulos fantasmas dos slots (aparecem se faltar jogador) */}
       {slots.map((slot, i) =>
         lineup?.starters[i] && byId.get(lineup.starters[i]) ? null : (
