@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { BatteryLow, Cross } from 'lucide-react';
+import { Cross } from 'lucide-react';
 import { isSuspendedFor as engineIsSuspendedFor, nextFixtureFor, suspendedPlayers, suspensionGames } from '@cosmicfut/engine';
 import { cachedBundle } from '@/data/squads';
 import { clubIndexEntry, shortFromName } from '@/data/clubIndex';
@@ -96,11 +96,10 @@ export function InjuryIcon({ className, title }: { className?: string; title?: s
 /** Badges de indisponibilidade/condição para listas de jogadores. */
 export function AvailabilityBadges({ status, compact, className, yellows = true }: { status: PlayerStatus | undefined; compact?: boolean; className?: string; yellows?: boolean }) {
   if (!status) return null;
-  // (Atualização 38) a barra de stamina mostra a faixa; o ícone de bateria só aparece abaixo de 50% (laranja/vermelho)
-  const tired = status.fitness !== undefined && status.fitness < 50;
+  // (18/11) sem ícone de bateria: a barra de stamina (sempre ao lado nas listas) já mostra o cansaço
   // (Atualização 41) amarelos pendurados (competição do próximo jogo) entram na mesma família de status
   const cards = yellows && !status.suspension ? (status.yellows ?? 0) : 0;
-  if (!status.injury && !status.suspension && !tired && !cards) return null;
+  if (!status.injury && !status.suspension && !cards) return null;
   return (
     <span className={cn('inline-flex shrink-0 items-center gap-1', className)}>
       {cards > 0 && <YellowsChip count={cards} />}
@@ -114,12 +113,6 @@ export function AvailabilityBadges({ status, compact, className, yellows = true 
         <span className="inline-flex items-center gap-0.5 text-[10px] font-bold text-danger">
           <CardIcon color="red" title={`Suspenso — ${status.suspension} ${status.suspension === 1 ? 'jogo' : 'jogos'}`} />
           {!compact && <span className="tabular">{status.suspension}j</span>}
-        </span>
-      )}
-      {tired && !status.injury && (
-        <span title={`Condição física ${status.fitness}%`} className="inline-flex items-center gap-0.5 text-[10px] font-bold text-warning">
-          <BatteryLow className="size-3.5" />
-          {!compact && <span className="tabular">{status.fitness}%</span>}
         </span>
       )}
     </span>
