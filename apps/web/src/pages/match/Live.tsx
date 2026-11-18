@@ -192,22 +192,22 @@ function GoalFlash({ flash }: { flash: { key: number; color: string; color2: str
 function Toasts({ colors }: { colors: Record<Side, SideTheme> }) {
   const { toasts, dismissToast: dismiss } = useMatchView();
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-44 z-50 flex flex-col items-center lg:top-24 gap-2 px-4" aria-live="polite">
+    <div className="pointer-events-none fixed right-3 bottom-3 z-50 flex max-w-[calc(100vw-1.5rem)] flex-col items-end gap-2 sm:right-5 sm:bottom-5" aria-live="polite" data-testid="match-toasts">
       <AnimatePresence>
         {toasts.map((t) =>
           t.kind === 'goal' ? (
             <motion.button
               key={t.id}
               onClick={() => dismiss(t.id)}
-              initial={{ opacity: 0, scale: 0.4, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: -10 }}
+              initial={{ opacity: 0, scale: 0.6, x: 24 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.9, x: 16 }}
               transition={{ type: 'spring', stiffness: 380, damping: 18 }}
-              className="pointer-events-auto rounded-2xl px-8 py-3 text-center shadow-2xl"
+              className="pointer-events-auto rounded-xl px-4 py-1.5 text-center shadow-xl"
               style={{ background: t.side ? colors[t.side].primary : 'var(--club-accent)', color: t.side ? colors[t.side].onAccent : 'var(--club-on-accent)' }}
             >
-              <div className="text-4xl leading-none font-black tracking-tight italic sm:text-5xl">{t.title}</div>
-              {t.text && <div className="mt-1 text-xs font-semibold opacity-90 sm:text-sm">{t.text}</div>}
+              <div className="text-xl leading-none font-black tracking-tight italic sm:text-2xl">{t.title}</div>
+              {t.text && <div className="mt-0.5 text-[11px] font-semibold opacity-90">{t.text}</div>}
             </motion.button>
           ) : (
             <motion.button
