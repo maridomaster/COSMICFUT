@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import { Rng } from '../src/rng';
-import { ACADEMY, academyWage, promoteProspect, releaseProspect, rollAcademyRatings } from '../src/season/academy';
+import { ACADEMY, academyWage, nameBank, promoteProspect, releaseProspect, rollAcademyRatings, uniqueName } from '../src/season/academy';
 import { careerSquads, createCareer, seasonOver, worldSquads } from '../src/season/career';
 import { nextSeason } from '../src/season/rollover';
 import { releasePlayer } from '../src/transfers/actions';
@@ -98,5 +98,40 @@ describe('base: carreira', () => {
     const n = nextSeason(world, state, base, data, pools, {});
     expect(worldSquads(n.world, base)(human).some((p) => p.id === promoted.id)).toBe(true);
     expect(n.state.market!.academy![human].seq).toBe(seqBefore);
+  }, 300_000);
+});
+
+describe('base: nomes', () => {
+  const pl = (name: string, nationalityId = 29) => ({ id: name, name, nationalityId }) as never;
+
+  it('nome aleatório nunca repete um jogador existente nem um revelado anterior', () => {
+    const bank = nameBank([pl('Pedro Silva'), pl('João Souza'), pl('Lucas Lima'), pl('Rafael Costa'), pl('Bruno Alves'), pl('Hans Müller', 4)], 29);
+    expect(bank.given).toEqual(['Bruno', 'João', 'Lucas', 'Pedro', 'Rafael']);
+    expect(bank.surnames).not.toContain('Müller');
+    const used = new Set<string>();
+    const r = new Rng('nomes');
+    for (let i = 0; i < 200; i++) {
+      const n = uniqueName(bank, used, r);
+      expect(bank.taken.has(n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase())).toBe(false);
+      expect(used.has(n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase())).toBe(false);
+      used.add(n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase());
+    }
+  });
+
+  it('na carreira: um ano de revelações, todos os nomes diferentes entre si e de qualquer jogador do jogo', () => {
+    const data = loadData();
+    const base = loadBase();
+    const pools = loadPools(data);
+    const human = 'santos';
+    const c = createCareer({ data, humanClubIds: [human], season: 2026, seed: 'nomes', squads: base });
+    const { world, state } = runCareer(c.world, c.state, base, data, pools, { until: '2026-12-20' });
+    const a = state.market!.academy![human];
+    const names = a.names ?? [];
+    expect(names.length).toBeGreaterThanOrEqual(4);
+    expect(new Set(names).size).toBe(names.length);
+    const sq = careerSquads(state, worldSquads(world, base));
+    const existing = new Set<string>();
+    for (const id of Object.keys(state.clubs)) for (const p of sq(id)) existing.add(p.name);
+    for (const n of names) expect(existing.has(n)).toBe(false);
   }, 300_000);
 });

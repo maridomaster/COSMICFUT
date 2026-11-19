@@ -1525,6 +1525,8 @@ export interface AcademyState {
   /** contador (ids e sementes) */
   seq: number;
   prospects: AcademyProspect[];
+  /** nomes já revelados (os últimos), para a base nunca repetir um nome. Ausente ⇒ nenhum ainda */
+  names?: string[];
 }
 
 /** (Base) jogador revelado esperando decisão do técnico. */

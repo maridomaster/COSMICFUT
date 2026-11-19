@@ -7,7 +7,8 @@
  *    (u, v uniformes) — metade dos revelados tem overall ≤ 65 e potencial ≤ 83; overall 80+ sai em ~4% e potencial
  *    93+ em ~4%. O potencial fica sempre pelo menos 3 acima do overall.
  *  - Salário sempre pequeno: € 800 + € 100 por ponto acima de 60 (no máximo € 3 mil por mês).
- *  - Nome: primeiro nome e sobrenome de jogadores do próprio elenco, da nacionalidade mais comum dele.
+ *  - Nome: totalmente aleatório e ÚNICO — primeiro nome e sobrenome sorteados (sem peso) entre TODOS os jogadores do
+ *    jogo da nacionalidade mais comum do elenco; nunca repete o nome de um jogador existente nem de um revelado antes.
  *
  * O estado fica em `state.market.academy` (vai junto no patch online do mercado e atravessa a virada). Tudo
  * determinístico (semente = clube + data + contador).
@@ -45,6 +46,8 @@ export const ACADEMY = {
    * e a base ficaria inútil nos clubes grandes
    */
   squadCap: 45,
+  /** nomes já revelados guardados por clube (para nunca repetir) */
+  namesKept: 300,
 } as const;
 
 const POSITIONS: Position[] = ['GK', 'FB', 'FB', 'CB', 'CB', 'MF', 'MF', 'MF', 'FW', 'FW'];
@@ -64,29 +67,71 @@ export function rollAcademyRatings(rng: Rng): { overall: number; potential: numb
   return { overall, potential };
 }
 
-/** Nome e nacionalidade a partir do elenco (nacionalidade mais comum; nome de um, sobrenome de outro). */
-function nameFrom(squad: readonly Player[], rng: Rng, fallbackNat: number): { name: string; nationalityId: number } {
+/** Nacionalidade mais comum do elenco. */
+export function mainNationality(squad: readonly Player[], fallbackNat = 29): number {
   const count = new Map<number, number>();
   for (const p of squad) count.set(p.nationalityId, (count.get(p.nationalityId) ?? 0) + 1);
   let nat = fallbackNat, best = -1;
   for (const [n, c] of count) if (c > best || (c === best && n < nat)) { nat = n; best = c; }
-  const words = squad.filter((p) => p.nationalityId === nat && p.name).map((p) => p.name.trim().split(/\s+/));
-  const full = words.filter((w) => w.length >= 2);
-  if (!full.length) {
-    const single = words.map((w) => w[0]).filter(Boolean);
-    return { name: single.length ? `${rng.pick(single)} Jr.` : 'Garoto da Base', nationalityId: nat };
+  return nat;
+}
+
+/** Banco de nomes de uma nacionalidade: primeiros nomes e sobrenomes distintos + nomes que já existem no jogo. */
+export interface NameBank {
+  given: string[];
+  surnames: string[];
+  taken: Set<string>;
+}
+
+const norm = (n: string) => n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+const WORD = /^\p{Lu}[\p{L}'-]*$/u;
+
+/** Monta o banco a partir dos jogadores (de todos os clubes) da nacionalidade (`-1` = todas). */
+export function nameBank(players: Iterable<Player>, nationalityId: number): NameBank {
+  const given = new Set<string>(), surnames = new Set<string>(), taken = new Set<string>();
+  for (const p of players) {
+    if (!p.name) continue;
+    taken.add(norm(p.name));
+    if (nationalityId >= 0 && p.nationalityId !== nationalityId) continue;
+    const w = p.name.trim().split(/\s+/);
+    if (w.length < 2) continue;
+    if (WORD.test(w[0]) && w[0].length >= 2) given.add(w[0]);
+    const last = w[w.length - 1];
+    if (WORD.test(last) && last.length >= 3) surnames.add(last);
   }
-  const given = rng.pick(full)[0];
-  const sur = rng.pick(full);
-  return { name: `${given} ${sur[sur.length - 1]}`, nationalityId: nat };
+  return { given: [...given].sort(), surnames: [...surnames].sort(), taken };
+}
+
+/**
+ * Nome aleatório e único: primeiro nome × sobrenome (sorteio uniforme entre os DISTINTOS, para não favorecer os
+ * comuns), às vezes com dois sobrenomes. Nunca igual a um nome já existente no jogo (`bank.taken`) nem a um já usado
+ * pela base (`used`).
+ */
+export function uniqueName(bank: NameBank, used: ReadonlySet<string>, rng: Rng): string {
+  const free = (n: string) => !bank.taken.has(norm(n)) && !used.has(norm(n));
+  if (bank.given.length && bank.surnames.length) {
+    for (let i = 0; i < 80; i++) {
+      const g = rng.pick(bank.given);
+      const s1 = rng.pick(bank.surnames);
+      const s2 = bank.surnames.length > 1 && rng.chance(0.25) ? rng.pick(bank.surnames) : '';
+      const n = s2 && s2 !== s1 ? `${g} ${s1} ${s2}` : `${g} ${s1}`;
+      if (g !== s1 && free(n)) return n;
+    }
+  }
+  // banco pequeno: a numeração garante que não repete
+  const g = bank.given.length ? rng.pick(bank.given) : 'Garoto';
+  const s = bank.surnames.length ? rng.pick(bank.surnames) : 'Base';
+  for (let k = 1; ; k++) {
+    const n = k === 1 ? `${g} ${s} Júnior` : `${g} ${s} ${k}`;
+    if (free(n)) return n;
+  }
 }
 
 /** Gera o revelado (determinístico pela semente do `rng`). */
-export function generateProspect(id: string, squad: readonly Player[], rng: Rng, rep = 2, fallbackNat = 29): Player {
+export function generateProspect(id: string, name: string, nationalityId: number, rng: Rng, rep = 2): Player {
   const { overall, potential } = rollAcademyRatings(rng);
   const age = rng.int(ACADEMY.age[0], ACADEMY.age[1]);
   const position = rng.pick(POSITIONS);
-  const { name, nationalityId } = nameFrom(squad, rng, fallbackNat);
   const traits = position === 'GK' ? [rng.int(0, 3)] : rng.chance(0.4) ? [rng.int(4, 13)] : [];
   return {
     id, name, position, age, nationalityId,
@@ -111,6 +156,21 @@ export function academyDay(state: SeasonState, squads: (clubId: string) => reado
   if (!m || !state.career) return [];
   const date = state.date;
   const out: { text: string; clubId: string }[] = [];
+  // banco de nomes: montado só em dia de revelação (todos os clubes da temporada), uma vez por nacionalidade
+  const banks = new Map<number, NameBank>();
+  const bankOf = (nat: number) => {
+    let b = banks.get(nat);
+    if (!b) {
+      const all: Player[] = [];
+      for (const c of Object.keys(state.clubs)) for (const p of squads(c)) all.push(p);
+      for (const p of Object.values(m.players)) all.push(p);
+      b = nameBank(all, nat);
+      // país com poucos nomes no jogo: usa nomes de todas as nacionalidades
+      if (b.given.length < 20 || b.surnames.length < 20) b = nameBank(all, -1);
+      banks.set(nat, b);
+    }
+    return b;
+  };
   for (const clubId of state.humanClubIds) {
     const all = (m.academy ??= {});
     let a: AcademyState | undefined = all[clubId];
@@ -132,7 +192,15 @@ export function academyDay(state: SeasonState, squads: (clubId: string) => reado
     // mesmo formato dos juniores gerados (`:g<n>-<n>`): a virada os guarda como jogadores do mundo, não da base de dados
     const id = `${clubId}:g${compact(date)}-${a.seq}`;
     const rep = state.clubInfo?.[clubId]?.reputation ?? 2;
-    const p = generateProspect(id, squads(clubId), r, rep);
+    const nat = mainNationality(squads(clubId));
+    // nomes já usados pela base (de qualquer clube humano): revelados atuais e anteriores
+    const used = new Set<string>();
+    for (const x of Object.values(m.academy)) {
+      for (const y of x.prospects) used.add(norm(y.player.name));
+      for (const n of x.names ?? []) used.add(norm(n));
+    }
+    const p = generateProspect(id, uniqueName(bankOf(nat), used, r), nat, r, rep);
+    a.names = [...(a.names ?? []), p.name].slice(-ACADEMY.namesKept);
     a.prospects.push({ player: p, revealedOn: date, expiresOn: addDays(date, ACADEMY.expireDays) });
     out.push({
       clubId,
