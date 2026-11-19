@@ -1,17 +1,23 @@
 /** Durable Object de mentira para os testes do relay (armazenamento em memória, sockets que gravam o que recebem). */
 import { RoomRelay, type Attachment, type RelayEnv, type RelaySocket, type RelayStorage } from '../src/relay.ts';
 
+/**
+ * Linhas gravadas como o SQLite do DO cobra (`rows_written`): inserir uma chave nova = 2 (linha + índice da chave
+ * primária), atualizar o valor de uma chave existente = 1, apagar = 2 por linha.
+ */
 export class MemStorage implements RelayStorage {
   kv = new Map<string, string>();
   blobs = new Map<string, Uint8Array>();
+  rowsWritten = 0;
   get(k: string) {
     return this.kv.get(k) ?? null;
   }
   put(k: string, v: string) {
+    this.rowsWritten += this.kv.has(k) ? 1 : 2;
     this.kv.set(k, v);
   }
   del(k: string) {
-    this.kv.delete(k);
+    if (this.kv.delete(k)) this.rowsWritten += 2;
   }
   keys(prefix: string) {
     return [...this.kv.keys()].filter((k) => k.startsWith(prefix)).sort();
@@ -20,15 +26,23 @@ export class MemStorage implements RelayStorage {
     return this.blobs.get(k) ?? null;
   }
   putBlob(k: string, v: Uint8Array) {
+    this.rowsWritten += this.blobs.has(k) ? 1 : 2;
     this.blobs.set(k, v);
   }
   delBlobs(prefix: string) {
-    for (const k of [...this.blobs.keys()]) if (k.startsWith(prefix)) this.blobs.delete(k);
+    for (const k of [...this.blobs.keys()]) if (k.startsWith(prefix)) {
+      this.blobs.delete(k);
+      this.rowsWritten += 2;
+    }
+  }
+  delBlob(k: string) {
+    if (this.blobs.delete(k)) this.rowsWritten += 2;
   }
   transaction(fn: () => void) {
     fn();
   }
   deleteAll() {
+    this.rowsWritten += 2 * (this.kv.size + this.blobs.size);
     this.kv.clear();
     this.blobs.clear();
   }

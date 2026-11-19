@@ -1,6 +1,6 @@
 /**
  * `RelayStorage` sobre o SQLite do Durable Object (API síncrona `ctx.storage.sql`). Duas tabelas: `kv` (texto) e
- * `blob` (bytes do checkpoint, um pedaço por linha — bem abaixo do limite de 2 MB por valor).
+ * `blob` (bytes do checkpoint em linhas de até 1,5 MB — abaixo do limite de 2 MB por valor).
  */
 import type { RelayStorage } from './relay.ts';
 
@@ -31,6 +31,9 @@ export function sqlStorage(storage: DurableObjectStorage): RelayStorage {
     },
     delBlobs(prefix) {
       sql.exec('DELETE FROM blob WHERE k >= ? AND k < ?', prefix, `${prefix}￿`);
+    },
+    delBlob(key) {
+      sql.exec('DELETE FROM blob WHERE k = ?', key);
     },
     transaction(fn) {
       storage.transactionSync(fn);

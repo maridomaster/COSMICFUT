@@ -83,6 +83,8 @@ export interface RelayStorage {
   getBlob(key: string): Uint8Array | null;
   putBlob(key: string, value: Uint8Array): void;
   delBlobs(prefix: string): void;
+  /** apaga uma linha de blob (chave exata) */
+  delBlob(key: string): void;
   transaction(fn: () => void): void;
   deleteAll(): void;
 }
@@ -126,10 +128,21 @@ interface HostRec {
 
 interface CkRec {
   id: string;
+  /** pedaços de CKPT_CHUNK enviados ao anfitrião eleito */
   n: number;
   size: number;
   at: number;
+  /** linhas `ck:k` no SQLite (de até CKPT_ROW bytes). Ausente = formato antigo: uma linha por pedaço (r = n). */
+  r?: number;
 }
+
+/**
+ * Bytes do checkpoint por linha do SQLite (o limite do DO é 2 MB por linha). Linhas grandes = menos `rows_written`
+ * (o plano Free permite 100 mil por dia): um checkpoint de 2,4 MB vira 2 linhas, não 10.
+ */
+export const CKPT_ROW = 1536 * 1024;
+/** `lastActivity` do resumo da sala: precisão de 10 min basta */
+const META_ACTIVITY_MS = 10 * 60_000;
 
 const hex = (b: Uint8Array) => Array.from(b, (x) => x.toString(16).padStart(2, '0')).join('');
 /** base64url sem spread (`String.fromCharCode(...b)` estoura a pilha com arrays grandes) */
@@ -157,6 +170,12 @@ export class RoomRelay {
   private readonly rl = new Map<string, { t: number; n: number; chat: number[]; react: number }>();
   /** contadores (testes / orçamento) */
   readonly stats = { clientMsgs: 0, hostFrames: 0, ckptChunks: 0, toClients: 0 };
+  /**
+   * Checkpoint chegando (pedaços em memória até o último: nada é gravado antes). Os pedaços de um checkpoint vêm
+   * em sequência, no mesmo flush do anfitrião; se o DO for despejado no meio, o checkpoint é ignorado e o anterior
+   * continua valendo (o anfitrião manda outro no próximo).
+   */
+  private staging: { id: string; n: number; size: number; parts: (Uint8Array | null)[]; got: number } | null = null;
 
   constructor(code: string, env: RelayEnv) {
     this.code = code;
@@ -600,31 +619,40 @@ export class RoomRelay {
     const size = Number(ck.size);
     if (!id || !Number.isInteger(n) || !Number.isInteger(i) || n < 1 || i < 0 || i >= n || size > MAX_CKPT_BYTES || n > Math.ceil(MAX_CKPT_BYTES / 1024)) return;
     if (bytes.byteLength !== Number(ck.len) || bytes.byteLength > CKPT_CHUNK * 4) return;
-    const st = this.env.storage;
-    const staging = this.getJson<{ id: string; n: number; size: number; got: number[] }>('cks');
-    let cur = staging && staging.id === id ? staging : null;
+    let cur = this.staging && this.staging.id === id && this.staging.n === n ? this.staging : null;
     if (!cur) {
-      st.delBlobs('cks:');
-      cur = { id, n, size, got: [] };
+      // um pedaço do meio sem o começo (DO despejado durante o envio): ignora este checkpoint
+      if (i !== 0) return;
+      cur = this.staging = { id, n, size, parts: new Array<Uint8Array | null>(n).fill(null), got: 0 };
     }
-    if (cur.got.includes(i)) return;
-    st.putBlob(`cks:${i}`, bytes.slice());
-    cur.got.push(i);
+    if (cur.parts[i]) return;
+    cur.parts[i] = bytes.slice();
+    cur.got++;
     this.stats.ckptChunks++;
-    if (cur.got.length < n) {
-      this.putJson('cks', cur);
-      return;
+    if (cur.got < n) return;
+    this.staging = null;
+    const all = new Uint8Array(cur.parts.reduce((s, p) => s + p!.byteLength, 0));
+    let at = 0;
+    for (const p of cur.parts) {
+      all.set(p!, at);
+      at += p!.byteLength;
     }
-    // completo: troca atômica (pedaços em staging → definitivos)
+    if (all.byteLength !== size) return;
+    // completo: troca atômica. Linhas grandes, regravadas no lugar (UPSERT de chave existente = 1 linha gravada);
+    // só as linhas que sobraram do checkpoint anterior são apagadas.
+    const st = this.env.storage;
+    const prev = this.ck();
+    const prevRows = prev ? prev.r ?? prev.n : 0;
+    const rows = Math.max(1, Math.ceil(size / CKPT_ROW));
     st.transaction(() => {
-      st.delBlobs('ck:');
-      for (let k = 0; k < n; k++) {
-        const b = st.getBlob(`cks:${k}`);
-        if (b) st.putBlob(`ck:${k}`, b);
+      for (let k = 0; k < rows; k++) st.putBlob(`ck:${k}`, all.slice(k * CKPT_ROW, Math.min(size, (k + 1) * CKPT_ROW)));
+      for (let k = rows; k < prevRows; k++) st.delBlob(`ck:${k}`);
+      // staging persistido da versão antiga do relay
+      if (st.get('cks') !== null) {
+        st.delBlobs('cks:');
+        st.del('cks');
       }
-      st.delBlobs('cks:');
-      st.del('cks');
-      this.putJson('ck', { id, n, size, at: this.env.now() } satisfies CkRec);
+      this.putJson('ck', { id, n: Math.max(1, Math.ceil(size / CKPT_CHUNK)), size, at: this.env.now(), r: rows } satisfies CkRec);
     });
   }
 
@@ -635,7 +663,11 @@ export class RoomRelay {
     const json = JSON.stringify(m);
     if (json.length > 16 * 1024) return;
     const prev = this.meta();
-    this.env.storage.put('meta', json);
+    // só a "última atividade" mudou (cada ação do planejamento): regrava no máximo a cada 10 min (é só o
+    // "atividade há X" de Minhas carreiras) — cada gravação é uma linha no orçamento diário do plano Free
+    const sameButActivity =
+      !!prev && JSON.stringify({ ...prev, lastActivity: 0 }) === JSON.stringify({ ...m, lastActivity: 0 }) && Math.abs((m.lastActivity ?? 0) - (prev.lastActivity ?? 0)) < META_ACTIVITY_MS;
+    if (!sameButActivity) this.env.storage.put('meta', json);
     // vagas que o anfitrião conhece e o relay não (sala restaurada de backup): sem dono até alguém usar um código
     const now = this.env.now();
     for (const p of m.players.slice(0, 12)) {
@@ -695,17 +727,43 @@ export class RoomRelay {
       ...(room?.state === 'init' && room.create ? { create: room.create } : {}),
       replay: !!(ck && meta?.advancing),
     });
-    if (ck) {
-      for (let i = 0; i < ck.n; i++) {
-        const b = this.env.storage.getBlob(`ck:${i}`);
-        if (b) ws.send(encodeCkptChunk(i, ck.n, b));
-      }
-    }
+    if (ck) for (const [i, b] of this.ckChunks(ck)) ws.send(encodeCkptChunk(i, ck.n, b));
     // entradas pendentes vão para o novo anfitrião (a do próprio anfitrião também)
     for (const s of socks) if (s.att.hello) this.toHost({ t: 'join', j: s.att.hello.j, c: s.att.c, p: s.att.hello.pid, nick: s.att.hello.nick, spec: s.att.hello.spec, ...(s.att.hello.mode === 'create' ? { create: true } : {}) });
     const failover = prev.epoch > 0 && (prev.c !== rec.c || !!prev.lostAt);
     for (const s of socks) if (s.att.p || s.att.hello) this.sendHostInfo(s, failover ? 'resuming' : 'ok');
     this.env.log?.('host elected', { room: this.code, c: rec.c, p: rec.p, epoch: rec.epoch, failover, ckpt: ck?.size ?? 0 });
+  }
+
+  /** Pedaços do checkpoint guardado, no tamanho do fio (formato antigo: uma linha por pedaço). */
+  private ckChunks(ck: CkRec): [number, Uint8Array][] {
+    const st = this.env.storage;
+    if (ck.r === undefined) {
+      const out: [number, Uint8Array][] = [];
+      for (let i = 0; i < ck.n; i++) {
+        const b = st.getBlob(`ck:${i}`);
+        if (b) out.push([i, b]);
+      }
+      return out;
+    }
+    const rows: Uint8Array[] = [];
+    for (let k = 0; k < ck.r; k++) {
+      const b = st.getBlob(`ck:${k}`);
+      if (!b) return [];
+      rows.push(b);
+    }
+    const all = rows.length === 1 ? rows[0] : new Uint8Array(rows.reduce((s, b) => s + b.byteLength, 0));
+    if (rows.length > 1) {
+      let at = 0;
+      for (const b of rows) {
+        all.set(b, at);
+        at += b.byteLength;
+      }
+    }
+    if (all.byteLength !== ck.size) return [];
+    const out: [number, Uint8Array][] = [];
+    for (let i = 0; i < ck.n; i++) out.push([i, all.subarray(i * CKPT_CHUNK, Math.min(ck.size, (i + 1) * CKPT_CHUNK))]);
+    return out;
   }
 
   private sendHostInfo(ws: RelaySocket, state: 'ok' | 'lost' | 'resuming' = 'ok'): void {

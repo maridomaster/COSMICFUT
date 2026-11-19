@@ -45,17 +45,31 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export class MemStorage implements RelayStorage {
   kv = new Map<string, string>();
   blobs = new Map<string, Uint8Array>();
+  /** linhas gravadas como o SQLite do DO cobra: chave nova 2, atualização 1, remoção 2 */
+  rowsWritten = 0;
   get = (k: string) => this.kv.get(k) ?? null;
-  put = (k: string, v: string) => void this.kv.set(k, v);
-  del = (k: string) => void this.kv.delete(k);
+  put = (k: string, v: string) => {
+    this.rowsWritten += this.kv.has(k) ? 1 : 2;
+    this.kv.set(k, v);
+  };
+  del = (k: string) => {
+    if (this.kv.delete(k)) this.rowsWritten += 2;
+  };
   keys = (p: string) => [...this.kv.keys()].filter((k) => k.startsWith(p)).sort();
   getBlob = (k: string) => this.blobs.get(k) ?? null;
-  putBlob = (k: string, v: Uint8Array) => void this.blobs.set(k, v);
+  putBlob = (k: string, v: Uint8Array) => {
+    this.rowsWritten += this.blobs.has(k) ? 1 : 2;
+    this.blobs.set(k, v.slice());
+  };
+  delBlob = (k: string) => {
+    if (this.blobs.delete(k)) this.rowsWritten += 2;
+  };
   delBlobs = (p: string) => {
-    for (const k of [...this.blobs.keys()]) if (k.startsWith(p)) this.blobs.delete(k);
+    for (const k of [...this.blobs.keys()]) if (k.startsWith(p)) this.delBlob(k);
   };
   transaction = (fn: () => void) => fn();
   deleteAll = () => {
+    this.rowsWritten += 2 * (this.kv.size + this.blobs.size);
     this.kv.clear();
     this.blobs.clear();
   };
@@ -136,6 +150,7 @@ export interface HostOpts {
   flushMs?: number;
   liveFlushMs?: number;
   ckptDelayMs?: number;
+  ckptFastMs?: number;
 }
 
 /** Cliente do protocolo de fio (o que o EdgeSocket do web faz), com o anfitrião embutido quando eleito. */
@@ -281,6 +296,7 @@ export class EdgeClient {
       flushMs: this.hostCfg.flushMs ?? 5,
       liveFlushMs: this.hostCfg.liveFlushMs ?? 200,
       ckptDelayMs: this.hostCfg.ckptDelayMs ?? 100,
+      ckptFastMs: this.hostCfg.ckptFastMs,
       send: (frame) => {
         if (process.env.DEBUG_EDGE) console.log(`[${this.name}] host -> ${frame.byteLength}`);
         if (sock.closed) return;

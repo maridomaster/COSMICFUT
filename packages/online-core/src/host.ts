@@ -42,11 +42,22 @@ export interface HostEnv {
   /** janela de lote (ms): normal e com partidas ao vivo (ticks em lote; o cliente reproduz no ritmo original) */
   flushMs?: number;
   liveFlushMs?: number;
-  /** debounce do checkpoint */
+  /** intervalo mínimo entre checkpoints no mesmo dia/fase (padrão CKPT_DELAY_MS) */
   ckptDelayMs?: number;
+  /** checkpoint logo depois de mudar de fase/dia (padrão CKPT_FAST_MS, nunca maior que ckptDelayMs) */
+  ckptFastMs?: number;
   /** avisos para a UI do anfitrião (carregando, pronto, erro) */
   status?(s: { state: 'loading' | 'ready' | 'error' | 'stopped'; message?: string }): void;
 }
+
+/**
+ * Checkpoint (cada um custa linhas gravadas no SQLite do Durable Object; o plano Free permite 100 mil por dia):
+ * no mesmo dia/fase, no máximo um a cada CKPT_DELAY_MS — mexer na escalação o tempo todo não vira um checkpoint a
+ * cada 1,5 s. Mudou de fase ou de dia (carreira começou, rodada terminou, virada): sai em CKPT_FAST_MS. Antes de
+ * simular o dia (`beforeAdvance`) ele sai na hora, então uma queda do anfitrião perde no máximo isso do planejamento.
+ */
+export const CKPT_DELAY_MS = 20_000;
+export const CKPT_FAST_MS = 1500;
 
 interface OutItem {
   to: string[];
@@ -130,6 +141,12 @@ export class HostRuntime {
   private flushTimer: ReturnType<typeof setTimeout> | null = null;
   private ckptTimer: ReturnType<typeof setTimeout> | null = null;
   private ckptDirty = false;
+  /** quando o timer do checkpoint vence (ms) */
+  private ckptDue = 0;
+  /** fase/temporada/dia do último checkpoint */
+  private ckptKey = '';
+  /** impressão digital do último checkpoint (sem horários): estado igual não é regravado */
+  private ckptFp: { small: string; state: string | null; world: string | null; advancing: boolean } | null = null;
   private pendingCkpt: { id: string; size: number; chunks: Uint8Array[] } | null = null;
   /** a rodada começou a simular e o checkpoint pós-rodada ainda não saiu: failover rejoga o dia */
   private advancedSinceCkpt = false;
@@ -144,7 +161,7 @@ export class HostRuntime {
   private ckptBytes: Promise<Uint8Array> | null = null;
   private fragSeq = Math.floor(Math.random() * 1e9);
   /** métricas (testes / orçamento de requisições) */
-  readonly stats = { frames: 0, bytes: 0, ckptFrames: 0, ckptBytes: 0 };
+  readonly stats = { frames: 0, bytes: 0, ckptFrames: 0, ckptBytes: 0, ckpts: 0, ckptSkipped: 0 };
 
   constructor(env: HostEnv) {
     this.env = env;
@@ -549,13 +566,26 @@ export class HostRuntime {
 
   /* ── checkpoint ── */
 
+  private stageKey(): string {
+    const r = this.room;
+    return r ? `${r.phase}|${r.career?.season ?? ''}|${r.career?.date ?? ''}` : '';
+  }
+
   private markDirty(): void {
     this.ckptDirty = true;
-    if (this.ckptTimer || this.stopped) return;
+    if (this.stopped) return;
+    const slow = this.env.ckptDelayMs ?? CKPT_DELAY_MS;
+    const delay = this.stageKey() !== this.ckptKey ? Math.min(slow, this.env.ckptFastMs ?? CKPT_FAST_MS) : slow;
+    const due = Date.now() + delay;
+    if (this.ckptTimer) {
+      if (this.ckptDue <= due) return;
+      clearTimeout(this.ckptTimer);
+    }
+    this.ckptDue = due;
     this.ckptTimer = setTimeout(() => {
       this.ckptTimer = null;
       this.checkpointIfStable();
-    }, this.env.ckptDelayMs ?? 1500);
+    }, delay);
     this.scheduleFlush();
   }
 
@@ -576,12 +606,33 @@ export class HostRuntime {
     const r = this.room;
     if (!r || this.stopped || this.destroyed) return;
     const t0 = performance.now();
-    const bytes = gzip(utf8(JSON.stringify(r.toSnapshot())), 6);
+    const snap = r.toSnapshot();
+    // o mesmo estado (só os horários mudaram) não é regravado
+    const { savedAt: _savedAt, players, career, ...rest } = snap;
+    const fp = {
+      small: JSON.stringify({
+        ...rest,
+        players: players.map((p) => ({ ...p, lastSeen: null })),
+        career: career ? { ...career, stateGz: career.stateGz.length, worldGz: career.worldGz.length } : null,
+      }),
+      state: career?.stateGz ?? null,
+      world: career?.worldGz ?? null,
+      advancing,
+    };
+    this.ckptDirty = false;
+    this.ckptKey = this.stageKey();
+    const prev = this.ckptFp;
+    if (prev && prev.advancing === advancing && prev.small === fp.small && prev.state === fp.state && prev.world === fp.world) {
+      this.stats.ckptSkipped++;
+      return;
+    }
+    const bytes = gzip(utf8(JSON.stringify(snap)), 6);
     const chunks: Uint8Array[] = [];
     for (let i = 0; i < bytes.byteLength; i += CKPT_CHUNK) chunks.push(bytes.subarray(i, Math.min(bytes.byteLength, i + CKPT_CHUNK)));
     this.pendingCkpt = { id: toHex(randomBytes(6)), size: bytes.byteLength, chunks };
-    this.ckptDirty = false;
+    this.ckptFp = fp;
     this.advancedSinceCkpt = advancing;
+    this.stats.ckpts++;
     this.log('host: checkpoint', { bytes: bytes.byteLength, chunks: chunks.length, advancing, ms: Math.round(performance.now() - t0) });
     this.scheduleFlush(0);
   }
