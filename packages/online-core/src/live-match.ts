@@ -9,6 +9,9 @@ import type { LiveMatchInfo } from '@cosmicfut/shared';
 import type { MatchPausePayload, MatchTickPayload } from './protocol.ts';
 import { publicConfig } from './match-config.ts';
 
+/** (19/11) disputa de pênaltis sempre devagar (uma cobrança a cada 1,5 s), mesmo na velocidade rápida — tem que ter emoção */
+export const PENALTY_TICK_MS = 1500; // só nas velocidades reais (≥ 50 ms; os testes usam 1–20 ms)
+
 export interface LiveMatchHooks {
   tick(m: LiveMatch, t: MatchTickPayload): void;
   info(m: LiveMatch): void;
@@ -168,7 +171,7 @@ export class LiveMatch {
     this.timer = setTimeout(() => {
       this.timer = null;
       this.step();
-    }, Math.max(0, this.speedMs));
+    }, Math.max(0, this.sim.state.phase === 'penalties' && this.speedMs >= 50 ? Math.max(this.speedMs, PENALTY_TICK_MS) : this.speedMs));
   }
 
   private step(): void {

@@ -65,7 +65,8 @@ interface MatchStore {
 let timer: ReturnType<typeof setInterval> | null = null;
 let timerMs = 0;
 /** intervalo entre cobranças na disputa de pênaltis (1x) */
-const PENALTY_INTERVAL_MS = 1100;
+/** (19/11) pênaltis sempre devagar, para ter emoção — não acelera com a velocidade escolhida */
+const PENALTY_INTERVAL_MS = 1500;
 let feedKey = 0;
 let toastId = 0;
 const FEED_CAP = 400;
@@ -110,7 +111,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
     return true;
   };
 
-  const intervalFor = (phase: string | undefined, speed: Speed) => (phase === 'penalties' ? PENALTY_INTERVAL_MS / Math.sqrt(speed) : BASE_INTERVAL_MS / speed);
+  const intervalFor = (phase: string | undefined, speed: Speed) => (phase === 'penalties' ? PENALTY_INTERVAL_MS : BASE_INTERVAL_MS / speed);
 
   const startTimer = () => {
     stopTimer();
