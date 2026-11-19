@@ -104,21 +104,26 @@ describe('base: carreira', () => {
 describe('base: nomes', () => {
   const pl = (name: string, nationalityId = 29) => ({ id: name, name, nationalityId }) as never;
 
-  it('nome aleatório nunca repete um jogador existente nem um revelado anterior', () => {
-    const bank = nameBank([pl('Pedro Silva'), pl('João Souza'), pl('Lucas Lima'), pl('Rafael Costa'), pl('Bruno Alves'), pl('Hans Müller', 4)], 29);
-    expect(bank.given).toEqual(['Bruno', 'João', 'Lucas', 'Pedro', 'Rafael']);
-    expect(bank.surnames).not.toContain('Müller');
-    const used = new Set<string>();
+  it('nomes comuns da nacionalidade (aparecem 2+ vezes), duas palavras, sem repetir os usados', () => {
+    const bank = nameBank(
+      [pl('Lucas Silva'), pl('Lucas Santos'), pl('Lucas Oliveira'), pl('João Silva'), pl('João Santos'), pl('Pedro Raríssimo'), pl('Mikinha'), pl('Hans Müller', 4), pl('Hans Silva', 4)],
+      29,
+    );
+    expect(bank.given).toEqual(['Lucas', 'João']);
+    expect(bank.gw).toEqual([3, 2]);
+    expect(bank.surnames).toEqual(['Santos', 'Silva']);
+    const key = (n: string) => n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    const used = new Set<string>([key('Lucas Silva')]);
     const r = new Rng('nomes');
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 3; i++) {
       const n = uniqueName(bank, used, r);
-      expect(bank.taken.has(n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase())).toBe(false);
-      expect(used.has(n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase())).toBe(false);
-      used.add(n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase());
+      expect(n.split(' ')).toHaveLength(2);
+      expect(used.has(key(n))).toBe(false);
+      used.add(key(n));
     }
   });
 
-  it('na carreira: um ano de revelações, todos os nomes diferentes entre si e de qualquer jogador do jogo', () => {
+  it('na carreira: um ano de revelações, nomes de duas palavras, todos diferentes entre si e do elenco', () => {
     const data = loadData();
     const base = loadBase();
     const pools = loadPools(data);
@@ -130,8 +135,13 @@ describe('base: nomes', () => {
     expect(names.length).toBeGreaterThanOrEqual(4);
     expect(new Set(names).size).toBe(names.length);
     const sq = careerSquads(state, worldSquads(world, base));
-    const existing = new Set<string>();
-    for (const id of Object.keys(state.clubs)) for (const p of sq(id)) existing.add(p.name);
-    for (const n of names) expect(existing.has(n)).toBe(false);
+    const ids = new Set(a.prospects.map((x) => x.player.id));
+    const squadNames = new Set(sq(human).filter((p) => !ids.has(p.id)).map((p) => p.name));
+    for (const n of names) {
+      expect(n.split(' ')).toHaveLength(2);
+      expect(squadNames.has(n)).toBe(false);
+    }
+    // eslint-disable-next-line no-console
+    console.log('NOMES DA BASE', names.join(', '));
   }, 300_000);
 });

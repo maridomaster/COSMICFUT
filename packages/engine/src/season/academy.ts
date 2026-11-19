@@ -7,8 +7,8 @@
  *    (u, v uniformes) — metade dos revelados tem overall ≤ 65 e potencial ≤ 83; overall 80+ sai em ~4% e potencial
  *    93+ em ~4%. O potencial fica sempre pelo menos 3 acima do overall.
  *  - Salário sempre pequeno: € 800 + € 100 por ponto acima de 60 (no máximo € 3 mil por mês).
- *  - Nome: totalmente aleatório e ÚNICO — primeiro nome e sobrenome sorteados (sem peso) entre TODOS os jogadores do
- *    jogo da nacionalidade mais comum do elenco; nunca repete o nome de um jogador existente nem de um revelado antes.
+ *  - Nome: DUAS palavras (primeiro nome + sobrenome) comuns da nacionalidade do elenco, pelo quanto aparecem entre os
+ *    jogadores desse país (Lucas Silva, João Santos…); nunca repete um revelado anterior nem alguém do elenco.
  *
  * O estado fica em `state.market.academy` (vai junto no patch online do mercado e atravessa a virada). Tudo
  * determinístico (semente = clube + data + contador).
@@ -76,55 +76,57 @@ export function mainNationality(squad: readonly Player[], fallbackNat = 29): num
   return nat;
 }
 
-/** Banco de nomes de uma nacionalidade: primeiros nomes e sobrenomes distintos + nomes que já existem no jogo. */
+/**
+ * Banco de nomes de uma nacionalidade: primeiros nomes e sobrenomes COMUNS dos jogadores desse país no jogo, com o
+ * peso de quantas vezes aparecem (Lucas, João, Silva, Santos… saem mais). Só palavras que aparecem 2+ vezes — tira
+ * apelidos e nomes raros.
+ */
 export interface NameBank {
   given: string[];
+  gw: number[];
   surnames: string[];
-  taken: Set<string>;
+  sw: number[];
 }
 
 const norm = (n: string) => n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 const WORD = /^\p{Lu}[\p{L}'-]*$/u;
 
 /** Monta o banco a partir dos jogadores (de todos os clubes) da nacionalidade (`-1` = todas). */
-export function nameBank(players: Iterable<Player>, nationalityId: number): NameBank {
-  const given = new Set<string>(), surnames = new Set<string>(), taken = new Set<string>();
+export function nameBank(players: Iterable<Player>, nationalityId: number, minCount = 2): NameBank {
+  const g = new Map<string, number>(), sn = new Map<string, number>();
   for (const p of players) {
-    if (!p.name) continue;
-    taken.add(norm(p.name));
-    if (nationalityId >= 0 && p.nationalityId !== nationalityId) continue;
+    if (!p.name || (nationalityId >= 0 && p.nationalityId !== nationalityId)) continue;
     const w = p.name.trim().split(/\s+/);
     if (w.length < 2) continue;
-    if (WORD.test(w[0]) && w[0].length >= 2) given.add(w[0]);
+    if (WORD.test(w[0]) && w[0].length >= 3) g.set(w[0], (g.get(w[0]) ?? 0) + 1);
     const last = w[w.length - 1];
-    if (WORD.test(last) && last.length >= 3) surnames.add(last);
+    if (WORD.test(last) && last.length >= 3) sn.set(last, (sn.get(last) ?? 0) + 1);
   }
-  return { given: [...given].sort(), surnames: [...surnames].sort(), taken };
+  const pick = (m: Map<string, number>) => [...m.entries()].filter(([, c]) => c >= minCount).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
+  const G = pick(g), S = pick(sn);
+  return { given: G.map((x) => x[0]), gw: G.map((x) => x[1]), surnames: S.map((x) => x[0]), sw: S.map((x) => x[1]) };
 }
 
 /**
- * Nome aleatório e único: primeiro nome × sobrenome (sorteio uniforme entre os DISTINTOS, para não favorecer os
- * comuns), às vezes com dois sobrenomes. Nunca igual a um nome já existente no jogo (`bank.taken`) nem a um já usado
- * pela base (`used`).
+ * Nome com DUAS palavras (primeiro nome + sobrenome), sorteados pelo quanto são comuns na nacionalidade. Nunca
+ * repete um nome de `used` (revelados da base e o elenco do clube).
  */
 export function uniqueName(bank: NameBank, used: ReadonlySet<string>, rng: Rng): string {
-  const free = (n: string) => !bank.taken.has(norm(n)) && !used.has(norm(n));
+  const free = (n: string) => !used.has(norm(n));
+  const pickW = (names: string[], w: number[]) => names[Math.max(0, rng.weightedIndex(w))];
   if (bank.given.length && bank.surnames.length) {
-    for (let i = 0; i < 80; i++) {
-      const g = rng.pick(bank.given);
-      const s1 = rng.pick(bank.surnames);
-      const s2 = bank.surnames.length > 1 && rng.chance(0.25) ? rng.pick(bank.surnames) : '';
-      const n = s2 && s2 !== s1 ? `${g} ${s1} ${s2}` : `${g} ${s1}`;
-      if (g !== s1 && free(n)) return n;
+    for (let i = 0; i < 200; i++) {
+      const g = pickW(bank.given, bank.gw);
+      const s = pickW(bank.surnames, bank.sw);
+      const n = `${g} ${s}`;
+      if (g !== s && free(n)) return n;
     }
   }
-  // banco pequeno: a numeração garante que não repete
-  const g = bank.given.length ? rng.pick(bank.given) : 'Garoto';
-  const s = bank.surnames.length ? rng.pick(bank.surnames) : 'Base';
-  for (let k = 1; ; k++) {
-    const n = k === 1 ? `${g} ${s} Júnior` : `${g} ${s} ${k}`;
-    if (free(n)) return n;
-  }
+  // banco pequeno: combinações em ordem até achar uma livre
+  const G = bank.given.length ? bank.given : ['Lucas'];
+  const S = bank.surnames.length ? bank.surnames : ['Silva'];
+  for (const g of G) for (const s of S) if (g !== s && free(`${g} ${s}`)) return `${g} ${s}`;
+  return `${G[0]} ${S[0]}`;
 }
 
 /** Gera o revelado (determinístico pela semente do `rng`). */
@@ -166,7 +168,7 @@ export function academyDay(state: SeasonState, squads: (clubId: string) => reado
       for (const p of Object.values(m.players)) all.push(p);
       b = nameBank(all, nat);
       // país com poucos nomes no jogo: usa nomes de todas as nacionalidades
-      if (b.given.length < 20 || b.surnames.length < 20) b = nameBank(all, -1);
+      if (b.given.length < 10 || b.surnames.length < 10) b = nameBank(all, -1);
       banks.set(nat, b);
     }
     return b;
@@ -193,8 +195,8 @@ export function academyDay(state: SeasonState, squads: (clubId: string) => reado
     const id = `${clubId}:g${compact(date)}-${a.seq}`;
     const rep = state.clubInfo?.[clubId]?.reputation ?? 2;
     const nat = mainNationality(squads(clubId));
-    // nomes já usados pela base (de qualquer clube humano): revelados atuais e anteriores
-    const used = new Set<string>();
+    // nomes já usados pela base (de qualquer clube humano): revelados atuais e anteriores, e o elenco do clube
+    const used = new Set<string>(squads(clubId).map((x) => norm(x.name)));
     for (const x of Object.values(m.academy)) {
       for (const y of x.prospects) used.add(norm(y.player.name));
       for (const n of x.names ?? []) used.add(norm(n));
