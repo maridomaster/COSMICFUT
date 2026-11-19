@@ -15,7 +15,7 @@ import { cn } from '@/lib/utils';
 import { useSeasonState } from '@/store/season';
 import { Button } from '@/components/ui/button';
 import { PageHeader } from '@/components/ui/page-header';
-import { OvrBadge, PositionChip, potentialClass } from '@/components/game/bits';
+import { DeclineArrow, OvrBadge, PositionChip, potentialClass } from '@/components/game/bits';
 import { useMarketActions } from '@/pages/market/actions';
 
 export function TrainingPage() {
@@ -103,7 +103,7 @@ export function TrainingPage() {
                   <div className="flex items-center gap-1.5 text-xs text-fg-muted">
                     <PositionChip position={p.position} foot={p.side} />
                     <span>{p.age} anos</span>
-                    <span>· pot <b className={potentialClass(p.age, p.overall, pot, 'text-fg')}>{pot}</b></span>
+                    <span>· pot <b className={potentialClass(p.age, p.overall, pot, 'text-fg')}>{pot}</b><DeclineArrow age={p.age} className="ml-0.5" /></span>
                   </div>
                 </div>
                 <Button variant="ghost" size="icon" aria-label={`Tirar ${p.name} do treino`} disabled={busy || !!actions.blocked} onClick={() => remove(p)}>
@@ -139,7 +139,7 @@ export function TrainingPage() {
                 <PositionChip position={p.position} />
                 <OvrBadge value={p.overall} />
                 <span className="min-w-0 flex-1 truncate text-sm font-medium">{p.name}</span>
-                <span className="tabular text-[11px] text-fg-subtle">{p.age}a · pot <span className={potentialClass(p.age, p.overall, pot, '')}>{pot}</span></span>
+                <span className="tabular text-[11px] text-fg-subtle">{p.age}a · pot <span className={potentialClass(p.age, p.overall, pot, '')}>{pot}</span><DeclineArrow age={p.age} className="ml-0.5" /></span>
                 <Button variant="outline" size="sm" disabled={busy || full || !!actions.blocked} onClick={() => add(p)} aria-label={`Treinar ${p.name}`} data-testid="train-add">
                   <Plus /> Treinar
                 </Button>

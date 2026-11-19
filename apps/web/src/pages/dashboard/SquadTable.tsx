@@ -7,7 +7,7 @@ import { fmtMoney, POSITION_ORDER } from '@/lib/format';
 import { EASE_OUT } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { Card, CardHeader } from '@/components/ui/card';
-import { Flag, OverallBar, PositionChip, potentialClass } from '@/components/game/bits';
+import { DeclineArrow, Flag, OverallBar, PositionChip, potentialClass } from '@/components/game/bits';
 import { PlayerFlags, StatusChip } from '@/components/game/player';
 import { statusOf } from '@/lib/lineup';
 import { useGame } from '@/store/game';
@@ -140,7 +140,7 @@ export function SquadTable({
                 </span>
                 <span className="tabular hidden text-right text-sm md:block">{p.age}</span>
                 <OverallBar value={p.overall} delay={Math.min(i, 20) * 0.02} />
-                <span className={cn('tabular hidden text-right text-sm md:block', potentialClass(p.age, p.overall, p.potential))}>{p.potential}</span>
+                <span className={cn('tabular hidden text-right text-sm md:block', potentialClass(p.age, p.overall, p.potential))}>{p.potential}<DeclineArrow age={p.age} className="ml-0.5" /></span>
                 <span className="tabular hidden text-right text-sm text-fg-muted md:block">{fmtMoney(p.wage)}</span>
                 <span className="flex justify-end">
                   <StatusChip status={statusOf(lineup, p.id)} compact className="md:hidden" />

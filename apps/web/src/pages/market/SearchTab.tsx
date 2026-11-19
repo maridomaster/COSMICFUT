@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input, NativeSelect } from '@/components/ui/input';
 import { DualRange } from '@/components/ui/range';
-import { Flag, FootChip, OvrBadge, PositionChip, potentialClass, potentialMaxed } from '@/components/game/bits';
+import { DeclineArrow, Flag, FootChip, OvrBadge, PositionChip, potentialClass, potentialMaxed } from '@/components/game/bits';
 import { PlayerTierStar } from '@/components/game/TierStar';
 import { ClubMini, money, VALUE_STEPS } from './common';
 import { searchMarket, useSearchStatus } from './searchClient';
@@ -475,7 +475,7 @@ export function ResultRow({
         <div className="text-right md:hidden">
           <div className="tabular flex items-center justify-end leading-none font-black">
             <OvrBadge value={r.ovr} size="md" />
-            <span className={cn('ml-1 text-[10px] font-semibold', potentialClass(r.age, r.ovr, r.pot, 'text-fg-subtle'))} title={potentialMaxed(r.age, r.ovr, r.pot) ? 'Potencial esgotado' : undefined}>/{r.pot}</span>
+            <span className={cn('ml-1 text-[10px] font-semibold', potentialClass(r.age, r.ovr, r.pot, 'text-fg-subtle'))} title={potentialMaxed(r.age, r.ovr, r.pot) ? 'Potencial esgotado' : undefined}>/{r.pot}</span><DeclineArrow age={r.age} className="ml-0.5" />
           </div>
           <div className="tabular mt-1 text-[11px] text-fg-muted">{money(r.value)}</div>
         </div>
@@ -503,7 +503,7 @@ export function ResultRow({
         <span className="hidden md:flex">
           <OvrBadge value={r.ovr} />
         </span>
-        <span className={cn('tabular hidden text-right text-[13px] md:block', potentialClass(r.age, r.ovr, r.pot))} title={potentialMaxed(r.age, r.ovr, r.pot) ? 'Potencial esgotado' : undefined}>{r.pot}</span>
+        <span className={cn('tabular hidden text-right text-[13px] md:block', potentialClass(r.age, r.ovr, r.pot))} title={potentialMaxed(r.age, r.ovr, r.pot) ? 'Potencial esgotado' : undefined}>{r.pot}<DeclineArrow age={r.age} className="ml-0.5" /></span>
         <span className="tabular hidden text-right text-[13px] whitespace-nowrap md:block">{money(r.value)}</span>
         <span className="tabular hidden text-right text-[13px] whitespace-nowrap text-fg-muted xl:block">{money(r.wage)}</span>
         <span className="hidden md:block" />

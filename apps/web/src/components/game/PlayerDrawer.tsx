@@ -15,7 +15,7 @@ import { EASE_OUT } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { useGame } from '@/store/game';
 import { Badge } from '@/components/ui/badge';
-import { Flag, PositionChip, potentialClass, StatTile } from './bits';
+import { DeclineArrow, Flag, PositionChip, potentialClass, StatTile } from './bits';
 import { StatusChip, TraitChips } from './player';
 
 export interface PlayerDrawerExtras {
@@ -253,6 +253,7 @@ function PlayerCard({
           </h3>
           <span className="tabular font-semibold text-fg">
             {p.overall} → <span className={potentialClass(p.age, p.overall, p.potential, 'text-club-accent')}>{p.potential}</span>
+            <DeclineArrow age={p.age} className="ml-1" />
             {growth > 0 && <span className="text-success"> (+{growth})</span>}
           </span>
         </div>

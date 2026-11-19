@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { motion } from 'motion/react';
-import { Footprints, Star } from 'lucide-react';
+import { ArrowDown, Footprints, Star } from 'lucide-react';
+import { EVOLUTION } from '@cosmicfut/engine';
 import type { Country, Position, Side } from '@cosmicfut/shared';
 import { assetUrl } from '@/data/source';
 import { cardTier, cardTierMeta, overallColor, POSITION_META } from '@/lib/format';
@@ -177,6 +178,25 @@ export function StatTile({ label, value, hint, className }: { label: string; val
  */
 export function potentialMaxed(age: number, overall: number, potential: number): boolean {
   return potential <= overall || age >= 30;
+}
+
+/** (18/11) Queda de overall por ano pela idade (0 = ainda não está em declínio). Segue a evolução mensal da engine. */
+export function declinePerYear(age: number): number {
+  let d = 0;
+  for (const [a, v] of EVOLUTION.decline) if (age >= a) d = v;
+  return -d * 12;
+}
+
+/** (18/11) Seta para baixo ao lado do potencial: jogador em declínio por causa da idade. */
+export function DeclineArrow({ age, className }: { age: number; className?: string }) {
+  const d = declinePerYear(age);
+  if (d <= 0) return null;
+  const label = `Em declínio pela idade: perde ~${d.toLocaleString('pt-BR', { maximumFractionDigits: 1 })} de overall por ano`;
+  return (
+    <span title={label} aria-label={label} data-testid="decline-arrow" className={cn('inline-flex shrink-0 align-[-1px] text-danger', className)}>
+      <ArrowDown className="size-3" strokeWidth={3} />
+    </span>
+  );
 }
 
 /** Classe do número de potencial (vermelho quando esgotado). */

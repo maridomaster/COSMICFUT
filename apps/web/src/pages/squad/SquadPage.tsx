@@ -14,7 +14,7 @@ import { Card } from '@/components/ui/card';
 import { Input, NativeSelect } from '@/components/ui/input';
 import { DualRange } from '@/components/ui/range';
 import { Button } from '@/components/ui/button';
-import { Flag, OvrBadge, PositionChip, potentialClass } from '@/components/game/bits';
+import { DeclineArrow, Flag, OvrBadge, PositionChip, potentialClass } from '@/components/game/bits';
 import { MoraleChip } from '@/components/game/chips';
 import { PageHeader } from '@/components/ui/page-header';
 import { useFitHeight } from '@/lib/useFitHeight';
@@ -392,7 +392,7 @@ function SquadRow({
           </div>
           {/* mobile: idade, país e stamina numa 2ª linha curta */}
           <div className="mt-0.5 flex items-center gap-1.5 text-[11px] text-fg-muted md:hidden">
-            <Flag country={country} /> <span className="tabular">{p.age}a</span> · pot <span className={potentialClass(p.age, p.overall, p.potential, '')}>{p.potential}</span>
+            <Flag country={country} /> <span className="tabular">{p.age}a</span> · pot <span className={potentialClass(p.age, p.overall, p.potential, '')}>{p.potential}</span><DeclineArrow age={p.age} className="ml-0.5" />
             <StaminaBar value={availability?.fitness ?? 100} className="w-12 shrink-0" />
           </div>
         </div>
@@ -403,7 +403,7 @@ function SquadRow({
         <span className="flex justify-end md:justify-start">
           <OvrBadge value={p.overall} size="sm" />
         </span>
-        <span className={cn('tabular hidden text-right text-[13px] md:block', potentialClass(p.age, p.overall, p.potential))}>{p.potential}</span>
+        <span className={cn('tabular hidden text-right text-[13px] md:block', potentialClass(p.age, p.overall, p.potential))}>{p.potential}<DeclineArrow age={p.age} className="ml-0.5" /></span>
         <TraitChips player={p} traits={traits} className="hidden flex-nowrap overflow-hidden xl:flex" />
         <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block">{fmtMoney(p.wage)}</span>
         <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block">{fmtMoney(p.value)}</span>
