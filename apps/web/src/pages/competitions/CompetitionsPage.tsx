@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { motion } from 'motion/react';
-import { ArrowRight, Award, CalendarDays, Crown, GitBranch, Info, ListOrdered, Medal, Ticket, Trophy, Volleyball } from 'lucide-react';
+import { ArrowRight, Award, Banknote, CalendarDays, Check, Crown, GitBranch, Info, ListOrdered, Medal, Ticket, Trophy, Volleyball } from 'lucide-react';
 import type { KnockoutStageDef } from '@cosmicfut/shared';
-import type { Competition, SeasonState } from '@cosmicfut/engine';
+import { prizeTable, type Competition, type SeasonState } from '@cosmicfut/engine';
+import { fmtMoney } from '@/lib/format';
 import { squads } from '@/data/squads';
 import { useCountryMap } from '@/data/hooks';
 import { fadeUp, staggerContainer } from '@/lib/motion';
@@ -364,6 +365,9 @@ function CompetitionView({
             <LeagueVagasCard comp={comp} zones={vagas} human={human} rows={comp.division === 1 ? confedRows(world, careerData, comp.countryId) : { season: null, rows: [] }} />
           </motion.div>
         )}
+        <motion.div variants={fadeUp}>
+          <PrizesCard comp={comp} human={human} season={season} />
+        </motion.div>
         <motion.div variants={fadeUp}>
           <TitlesCard comp={comp} />
         </motion.div>
@@ -767,6 +771,57 @@ function ScorersCard({ comp, human }: { comp: Competition; human: string }) {
             <span className="tabular text-sm font-extrabold">{s.goals}</span>
           </div>
         ))}
+      </CardContent>
+    </Card>
+  );
+}
+
+/** (Premiação) quanto a competição paga: por fase alcançada, por posição final ou só ao campeão. */
+function PrizesCard({ comp, human, season }: { comp: Competition; human: string; season: SeasonState }) {
+  const t = useMemo(() => prizeTable(season, comp, human), [season, comp, human]);
+  if (t.kind === 'none') return null;
+  const inComp = comp.clubIds.includes(human);
+  const subtitle = t.kind === 'phases' ? 'Por fase alcançada' : t.kind === 'merit' ? 'Pela posição final' : 'Só para o campeão';
+  const merit = t.kind === 'merit';
+  return (
+    <Card data-testid="prizes-card">
+      <CardHeader icon={<Banknote />} title="Premiação" subtitle={subtitle} />
+      <CardContent className="space-y-2">
+        {inComp && t.kind === 'phases' && (
+          <div className="flex items-baseline justify-between rounded-xl border border-line/70 bg-surface-2/40 px-3 py-2">
+            <span className="text-xs text-fg-muted">Você já recebeu</span>
+            <span className="tabular text-base font-extrabold text-success" data-testid="prizes-earned">{fmtMoney(t.earned)}</span>
+          </div>
+        )}
+        {inComp && merit && t.position && (
+          <div className="flex items-baseline justify-between rounded-xl border border-line/70 bg-surface-2/40 px-3 py-2">
+            <span className="text-xs text-fg-muted">{comp.finished ? `Você terminou em ${t.position}º` : `Hoje você está em ${t.position}º`}</span>
+            <span className="tabular text-base font-extrabold text-success">{fmtMoney(t.rows[t.position - 1]?.value ?? 0)}</span>
+          </div>
+        )}
+        {t.perMatch && (
+          <p className="text-[11px] text-fg-muted">
+            Por jogo na fase de liga/grupos:{t.perMatch.win ? <> vitória <b className="text-fg">{fmtMoney(t.perMatch.win)}</b></> : null}
+            {t.perMatch.draw ? <> · empate <b className="text-fg">{fmtMoney(t.perMatch.draw)}</b></> : null}
+          </p>
+        )}
+        <div className={cn('gap-1', merit && t.rows.length > 8 ? 'grid grid-cols-2' : 'space-y-1')}>
+          {t.rows.map((r) => (
+            <div
+              key={r.key}
+              className={cn(
+                'flex items-center gap-2 rounded-lg px-2 py-1 text-[11px]',
+                r.mine ? 'bg-club-accent/15 font-semibold text-fg ring-1 ring-club-accent/40' : 'text-fg-muted',
+              )}
+            >
+              {!merit && (r.mine ? <Check className="size-3.5 shrink-0 text-success" /> : <Medal className="size-3.5 shrink-0 text-fg-subtle" />)}
+              <span className="min-w-0 flex-1 truncate">{r.label}</span>
+              <span className="tabular font-semibold text-fg">{fmtMoney(r.value)}</span>
+            </div>
+          ))}
+        </div>
+        {t.kind === 'phases' && <p className="text-[10px] text-fg-subtle">Cada valor é pago ao chegar na fase; o bônus do título é somado ao do campeão.</p>}
+        {merit && !comp.finished && <p className="text-[10px] text-fg-subtle">Pago no fim da competição, pela posição final.</p>}
       </CardContent>
     </Card>
   );
