@@ -20,6 +20,18 @@ const ctx = self as unknown as Ctx;
 /** idade mínima no jogo (= MIN_PLAYER_AGE da engine; o worker não carrega a engine) */
 const MIN_AGE = 17;
 
+/** margem de evolução pela idade (= growthGap da engine) */
+const GAP: Record<number, number> = { 15: 22, 16: 20, 17: 18, 18: 16, 19: 14, 20: 12, 21: 10, 22: 8, 23: 6, 24: 4, 25: 3, 26: 2, 27: 1 };
+/** potencial real pela idade (= realisticPotential da engine): quem passou do auge não cresce mais */
+function realPot(a: number, o: number, p: number): number {
+  if (a <= 23) return Math.max(p, o);
+  return Math.max(o, Math.min(p, o + (GAP[a] ?? 0)));
+}
+/** aplica o potencial real a todas as linhas (idempotente) */
+function applyRealPotential(): void {
+  for (let i = 0; i < n; i++) pot[i] = realPot(age[i], ovr[i], pot[i]);
+}
+
 /* ── base (JSON) ── */
 let n0 = 0;
 let positions: Position[] = [];
@@ -140,6 +152,7 @@ async function init(marketUrl: string, clubsUrl: string, feetUrl?: string) {
   }
   basePos = bPos;
   resetEffective(0);
+  applyRealPotential();
 
   const natSet = new Set<number>();
   for (let i = 0; i < n0; i++) natSet.add(bNat[i]);
@@ -249,6 +262,7 @@ function applyIndex(ix: MarketIndex): number {
     const i = rowByPid.get(pid);
     if (i !== undefined) removed[i] = 1;
   }
+  applyRealPotential();
   rev++;
   return performance.now() - t0;
 }

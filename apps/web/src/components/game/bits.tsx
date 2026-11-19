@@ -170,3 +170,16 @@ export function StatTile({ label, value, hint, className }: { label: string; val
     </div>
   );
 }
+
+/**
+ * (18/11) Potencial esgotado: já chegou ao máximo (potencial ≤ overall) ou velho demais para crescer (30+). A UI
+ * mostra o número em vermelho.
+ */
+export function potentialMaxed(age: number, overall: number, potential: number): boolean {
+  return potential <= overall || age >= 30;
+}
+
+/** Classe do número de potencial (vermelho quando esgotado). */
+export function potentialClass(age: number, overall: number, potential: number, base = 'text-fg-muted'): string {
+  return potentialMaxed(age, overall, potential) ? 'font-semibold text-danger' : base;
+}
