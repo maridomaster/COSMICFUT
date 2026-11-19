@@ -44,7 +44,7 @@ export {
 } from './finance';
 export { drawGroups, forceFinishCompetition } from './format';
 /* 13/11: confronto consultável */
-export { tieSummary, tieSummaryOf, type TieSummary } from './format';
+export { tieSummary, tieSummaryOf, isFinalFixture, type TieSummary } from './format';
 export { migrateCareer, careerNamePoolCodes, ageUntracked, CAREER_REV, isLegacyCareer, careerStartDate, cycleCompetitions, scopeNamePoolCodes } from './career';
 /* Etapa 1: linha do tempo global, calendário duplo e escopo geográfico */
 export {

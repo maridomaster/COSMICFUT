@@ -956,3 +956,15 @@ export function validateFormat(fmt: FormatDef): string[] {
   for (const s of fmt.stages) for (const d of stageDeps(s)) if (!ids.has(d)) errs.push(`${s.id}: depende de ${d} (inexistente)`);
   return errs;
 }
+
+/**
+ * (19/11) O jogo é uma FINAL (ida, volta ou jogo único; não vale a disputa de 3º lugar)?
+ * As finais rodam sempre na velocidade Normal, para ter suspense.
+ */
+export function isFinalFixture(s: Pick<SeasonState, 'competitions'>, f: Fixture): boolean {
+  if (!f.tieId) return false;
+  const comp = s.competitions.find((c) => c.id === f.competitionId);
+  const tie = comp?.stages?.[f.stageId ?? '']?.ties?.find((t) => t.id === f.tieId)
+    ?? Object.values(comp?.stages ?? {}).flatMap((st) => st.ties ?? []).find((t) => t.id === f.tieId);
+  return !!tie && !tie.thirdPlace && tie.roundName === 'Final';
+}

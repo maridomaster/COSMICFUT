@@ -5,7 +5,7 @@
  * A engine muta `sim.state` no lugar; a UI re-renderiza pelo contador `version`.
  */
 import { create } from 'zustand';
-import { MatchSimulation, type MatchCommand, type MatchConfig, type MatchEvent, type MatchResult, type Side } from '@cosmicfut/engine';
+import { isFinalFixture, MatchSimulation, type MatchCommand, type MatchConfig, type MatchEvent, type MatchResult, type Side } from '@cosmicfut/engine';
 import { useSoloSeason, type DaySummary } from './season';
 
 export type MatchPhase = 'idle' | 'live' | 'post' | 'done';
@@ -32,6 +32,8 @@ interface MatchStore {
   humanSide: Side;
   running: boolean;
   speed: Speed;
+  /** (19/11) final de competição: velocidade travada no Normal (1x), para ter suspense */
+  isFinal: boolean;
   version: number;
   feed: FeedItem[];
   /** último lote de eventos (efeitos: som, flash, toasts) */
@@ -111,7 +113,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
     return true;
   };
 
-  const intervalFor = (phase: string | undefined, speed: Speed) => (phase === 'penalties' ? PENALTY_INTERVAL_MS : BASE_INTERVAL_MS / speed);
+  const intervalFor = (phase: string | undefined, speed: Speed) => (phase === 'penalties' ? PENALTY_INTERVAL_MS : BASE_INTERVAL_MS / (get().isFinal ? 1 : speed));
 
   const startTimer = () => {
     stopTimer();
@@ -130,6 +132,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
     humanSide: 'home',
     running: false,
     speed: 1,
+    isFinal: false,
     version: 0,
     feed: [],
     batch: null,
@@ -144,9 +147,13 @@ export const useMatch = create<MatchStore>()((set, get) => {
     start: (config, fixtureId, humanSide) => {
       stopTimer();
       const sim = new MatchSimulation(config);
+      const season = useSoloSeason.getState().save?.season;
+      const fx = season?.competitions.flatMap((c) => c.fixtures).find((f) => f.id === fixtureId);
+      const isFinal = !!season && !!fx && isFinalFixture(season, fx);
       set({
         phase: 'live',
         fixtureId,
+        isFinal,
         sim,
         config,
         humanSide,
@@ -174,6 +181,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
       set({ running: false });
     },
     setSpeed: (speed) => {
+      if (get().isFinal) return;
       set({ speed });
       if (get().running) startTimer();
     },
@@ -231,6 +239,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
       set({
         phase: 'idle',
         fixtureId: null,
+        isFinal: false,
         sim: null,
         config: null,
         running: false,

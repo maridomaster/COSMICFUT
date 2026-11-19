@@ -17,7 +17,7 @@ import {
   renewalDemand, respondToOffer, rolloverSeason, seasonOver, setTransferListed, withdrawOffer, worldSquads,
   autoTurnoverDue, isLegacyCareer, marketWindow, scopeNamePoolCodes, turnoverDue,
   counterIncoming, exercisePurchaseOption, recallLoan, releaseClauseOf, renewContract, setLoanListed, computeStandings, TimeSkip,
-  rebalanceBudgets, transferBudgetError, negotiationBlock, blockMessage, noteRejection,
+  rebalanceBudgets, transferBudgetError, isFinalFixture, negotiationBlock, blockMessage, noteRejection,
   type CareerData, type CareerOptions, type ContractDecision, type ExternalClubInfo, type Fixture, type Lineup, type TacticPreset, type LoanTerms, type MarketResult,
   type MatchConfig, type MatchResult, type OfferDecision, type RenewTerms, type SeasonState, type SeasonSummary, type Tactic,
   type TransferOffer, type TransferRecord, type WorldState,
@@ -224,6 +224,8 @@ export type StopReason = 'matchday' | 'season-over' | 'date' | 'limit' | 'jobs';
 export interface LiveFixture {
   fixture: Fixture;
   config: MatchConfig;
+  /** (19/11) final de competição: roda no mínimo na velocidade Normal */
+  final?: boolean;
 }
 
 export interface RoundResponse {
@@ -656,7 +658,7 @@ export class CareerSimulator {
           const liveToday = today.filter((f) => live.has(f.homeId) || live.has(f.awayId));
           if (liveToday.length) {
             const sq = careerSquads(s, wb);
-            return done('matchday', liveToday.map((f) => ({ fixture: { ...f }, config: careerMatchConfig(s, f, sq) })));
+            return done('matchday', liveToday.map((f) => ({ fixture: { ...f }, config: careerMatchConfig(s, f, sq), final: isFinalFixture(s, f) })));
           }
         } else if (u.kind === 'prep') {
           return done('date');

@@ -1934,14 +1934,14 @@ export class Room {
     this.matches.clear();
     const io = this.ctx.io;
     const created: LiveMatch[] = [];
-    for (const { fixture: f, config } of fixtures) {
+    for (const { fixture: f, config, final } of fixtures) {
       const homeP = this.ownerOf(f.homeId) ?? null;
       const awayP = this.ownerOf(f.awayId) ?? null;
       config.home.control = this.present(homeP) ? 'human' : 'ai';
       config.away.control = this.present(awayP) ? 'human' : 'ai';
       const m = new LiveMatch(
         f as Fixture, config, { home: homeP?.id ?? null, away: awayP?.id ?? null },
-        { speedMs: this.settings.matchSpeedMs, halfTimeTimeoutMs: this.ctx.opts.halfTimeTimeoutMs, pauseTimeoutMs: this.ctx.opts.pauseTimeoutMs },
+        { speedMs: this.settings.matchSpeedMs, halfTimeTimeoutMs: this.ctx.opts.halfTimeTimeoutMs, pauseTimeoutMs: this.ctx.opts.pauseTimeoutMs, final },
         {
           // (Rodada ao vivo) ticks, pausas e fim vão para a SALA inteira (técnicos de folga, desempregados,
           // espectadores): um lote por janela para "todos" — o relay replica a saída sem custo de requisição

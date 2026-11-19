@@ -11,6 +11,8 @@ import { publicConfig } from './match-config.ts';
 
 /** (19/11) disputa de pênaltis sempre devagar (uma cobrança a cada 1,5 s), mesmo na velocidade rápida — tem que ter emoção */
 export const PENALTY_TICK_MS = 1500; // só nas velocidades reais (≥ 50 ms; os testes usam 1–20 ms)
+/** (19/11) velocidade Normal: as finais nunca rodam mais rápido que isso (suspense) */
+export const FINAL_MIN_TICK_MS = 400;
 
 export interface LiveMatchHooks {
   tick(m: LiveMatch, t: MatchTickPayload): void;
@@ -29,6 +31,8 @@ export interface LiveMatchOptions {
   changesPerHalf?: number;
   /** (Atualização 38) duração máxima de uma pausa de mudanças (padrão `pauseTimeoutMs`) */
   changesPauseMs?: number;
+  /** (19/11) final de competição: nunca mais rápida que a velocidade Normal */
+  final?: boolean;
 }
 
 /**
@@ -79,7 +83,7 @@ export class LiveMatch {
     this.homePlayerId = players.home;
     this.awayPlayerId = players.away;
     this.opts = opts;
-    this.speedMs = opts.speedMs;
+    this.speedMs = this.clampSpeed(opts.speedMs);
     this.hooks = hooks;
   }
 
@@ -155,8 +159,14 @@ export class LiveMatch {
     this.gate = null;
   }
 
+  /** (19/11) final: no mínimo a velocidade Normal (só nas velocidades reais, ≥ 50 ms; os testes usam 1–20 ms) */
+  private clampSpeed(ms: number): number {
+    return this.opts.final && ms >= 50 ? Math.max(ms, FINAL_MIN_TICK_MS) : ms;
+  }
+
   /** muda a velocidade no meio da partida (vale já no próximo minuto) */
-  setSpeed(ms: number): void {
+  setSpeed(ms0: number): void {
+    const ms = this.clampSpeed(ms0);
     if (ms === this.speedMs) return;
     this.speedMs = ms;
     if (this.timer) {
