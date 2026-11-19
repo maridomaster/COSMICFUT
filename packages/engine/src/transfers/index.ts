@@ -29,3 +29,4 @@ export {
   reputationFactor, roundMoney, valueFormula, rep0Of, monthsBetween, contractEndDate, ownerContractEnd, monthsLeftOf, clubLeagueMult,
   dataLeagueMult, seasonsElapsed, careerValue, careerWorth, defaultReleaseClause, releaseClauseOf, type ValueInput,
 } from './value';
+export { wageFloor, withWageFloor } from './wage-floor';

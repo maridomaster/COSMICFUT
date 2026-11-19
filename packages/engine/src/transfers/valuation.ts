@@ -16,6 +16,7 @@ import { fmtMoneyShort } from '../money';
 import { autoPickLineup, DEFAULT_TACTIC } from '../tactics';
 import { clubName, contractEnd, contractSeasonOf, countByPosition, FREE, isHumanClub, MARKET, type Squads } from './market';
 import { careerValue, careerWorth, clubLeagueMult, leagueMultiplier, monthsLeftOf, releaseClauseOf } from './value';
+import { wageFloor } from './wage-floor';
 
 /** Informação de um clube fora da temporada (ex.: comprar de um clube estrangeiro). */
 export interface ExternalClubInfo extends ClubEconomyInfo {
@@ -345,7 +346,8 @@ export function contractDemand(state: SeasonState, input: ContractInput, years?:
   const [minYears, maxYears] = p.age <= 23 ? [3, 5] : p.age <= 28 ? [2, 5] : p.age <= 31 ? [2, 4] : [1, 2];
   const dist = years === undefined ? 0 : years < minYears ? minYears - years : years > maxYears ? years - maxYears : 0;
   const noise = new Rng(`${state.seed ?? 'season'}:wage:${p.id}:${buyer.clubId}`).range(0.95, 1.05);
-  const wage = round1k(Math.max(1_000, p.wage) * raise * rep * div * amb * age * league * roleF * continental * clause * noise * (1 + 0.06 * dist));
+  // (18/11) base nunca abaixo do piso do overall (ligas que pagam pouco: Portugal, Holanda, Bélgica)
+  const wage = round1k(Math.max(1_000, p.wage, wageFloor(p.age, p.overall)) * raise * rep * div * amb * age * league * roleF * continental * clause * noise * (1 + 0.06 * dist));
   return { wage, minYears, maxYears, role, factors: { raise, reputation: rep, division: div, ambition: amb, age, league, role: roleF, continental, clause } };
 }
 

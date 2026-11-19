@@ -20,6 +20,7 @@ import type { CareerData, ChampionRecord, Competition, PlayerContract, SeasonSta
 import { Rng } from '../rng';
 import { baseClubOf, defaultContractEnd, MARKET, type Squads } from '../transfers/market';
 import { clubView, contractDemand, evaluateContract, type ContractDemand } from '../transfers/valuation';
+import { withWageFloor } from '../transfers/wage-floor';
 import { AI_MARKET } from '../transfers/ai';
 import { CAREER_REV, careerSquads, createSeasonFromWorld, worldSquads, type NamePools } from './career';
 import { finalRanking, forceFinishCompetition } from './format';
@@ -563,6 +564,8 @@ export function rolloverSeason(
         // (Etapa 5) IA: salário de mercado no patamar do clube (corrige a queda das folhas da IA ao longo dos anos)
         if (!human) wage = Math.max(wage, Math.round((monthlyWage(np.age, np.overall, rep) * wScaleClub) / 100) * 100);
         if (renew && !human && aiTarget > 0 && wage > p.wage && (wageNow + wage - p.wage) * 12 > aiTarget) wage = p.wage;
+        // (18/11) contrato renovado nunca abaixo do piso salarial do overall
+        wage = withWageFloor(wage, np.age, np.overall);
         if (renew && terms && terms !== true && (terms.wage !== undefined || terms.years !== undefined)) {
           // renovação detalhada: o jogador avalia (regra de evaluateContract, última rodada)
           const y = Math.round(terms.years ?? years);
@@ -637,7 +640,7 @@ export function rolloverSeason(
       // reposição de elenco: jogadores até o nível do time titular (não reforços)
       if (taken.has(p.id) || p.overall > lvl) continue;
       taken.add(p.id);
-      const np = { ...p, wage: Math.max(300, Math.round((monthlyWage(p.age, p.overall, rep) * wScale) / 100) * 100) };
+      const np = { ...p, wage: withWageFloor(Math.max(300, Math.round((monthlyWage(p.age, p.overall, rep) * wScale) / 100) * 100), p.age, p.overall) };
       wp.club[p.id] = clubId;
       wp.data[p.id] = np;
       wp.contractEnd[p.id] = p.age >= 31 ? cs : cs + 1;

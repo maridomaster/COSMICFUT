@@ -29,6 +29,7 @@ import { careerWorth, dataLeagueMult, monthsLeftOf, ownerContractEnd, releaseCla
 import { chargeLuva, FINANCE } from '../season/finance';
 import { bumpFans, ceilingError, checkWageCeiling, FANS } from '../season/econ';
 import { monthlyWage } from '../season/players';
+import { withWageFloor } from './wage-floor';
 import { moveDiscipline } from '../season/discipline';
 import { budgetOnTransfer, transferBudgetError } from './budget';
 import { blockMessage, negotiationBlock, noteRejection } from './cooldown';
@@ -127,7 +128,9 @@ export function applyTransfer(state: SeasonState, a: ApplyTransferArgs): Transfe
   const p = a.player;
   const pid = p.id;
   const date = state.date;
-  const wage = Math.round(a.wage);
+  // (18/11) contrato novo (transferência, livre, pré-contrato) respeita o piso salarial do overall
+  const newContract = a.kind === 'transfer' || a.kind === 'free' || a.kind === 'precontract';
+  const wage = newContract ? withWageFloor(a.wage, p.age, p.overall) : Math.round(a.wage);
   const prev = m.contracts[pid];
 
   // (Etapa 5) contrato com o dono, antes de o empréstimo substituí-lo
@@ -849,8 +852,10 @@ export function renewContract(input: SeasonState, squads: Squads, clubId: string
 }
 
 /** Renovação (MUTA): contrato novo no mesmo clube. Usada pelo humano e pela IA (contratos-chave). */
-export function renewInPlace(state: SeasonState, clubId: string, p: Player, wage: number, years: number, releaseClause?: number): void {
+export function renewInPlace(state: SeasonState, clubId: string, p: Player, wage0: number, years: number, releaseClause?: number): void {
   const m = state.market!;
+  // (18/11) renovação respeita o piso salarial do overall
+  const wage = withWageFloor(wage0, p.age, p.overall);
   const prev = m.contracts[p.id];
   // a renovação nunca encurta o contrato vigente
   const current = ownerContractEnd(state, p).endsSeason;
