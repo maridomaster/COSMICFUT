@@ -19,6 +19,7 @@ import { AcademyPage } from '@/pages/academy/AcademyPage';
 import { TrainingPage } from '@/pages/training/TrainingPage';
 import { CompetitionsPage } from '@/pages/competitions/CompetitionsPage';
 import { HistoryPage } from '@/pages/history/HistoryPage';
+import { BallonPage } from '@/pages/ballon/BallonPage';
 import { StatsPage } from '@/pages/stats/StatsPage';
 import { SeasonEndPage } from '@/pages/season-end/SeasonEndPage';
 import { StartMenuPage } from '@/pages/online/StartMenu';
@@ -68,6 +69,7 @@ export const router = createBrowserRouter([
           { path: '/financas', element: <FinancePage /> },
           { path: '/competicoes', element: <CompetitionsPage /> },
           { path: '/historico', element: <HistoryPage /> },
+          { path: '/bola-de-ouro', element: <BallonPage /> },
           { path: '/estatisticas', element: <StatsPage /> },
           { path: '/amigos', element: <FriendsPage /> },
           {

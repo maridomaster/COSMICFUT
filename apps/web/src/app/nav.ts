@@ -1,4 +1,4 @@
-import { Medal, ArrowLeftRight, Dumbbell, BarChart3, Briefcase, CalendarDays, History, Inbox, LayoutDashboard, PlayCircle, Shirt, Sprout, Trophy, UserRound, Users, Wallet, type LucideIcon } from 'lucide-react';
+import { Crown, Medal, ArrowLeftRight, Dumbbell, BarChart3, Briefcase, CalendarDays, History, Inbox, LayoutDashboard, PlayCircle, Shirt, Sprout, Trophy, UserRound, Users, Wallet, type LucideIcon } from 'lucide-react';
 
 export interface NavItem {
   to: string;
@@ -24,6 +24,7 @@ export const NAV_ITEMS: NavItem[] = [
   { to: '/calendario', label: 'Calendário', icon: CalendarDays, ready: true, blurb: 'Rodadas, resultados e classificação.' },
   { to: '/competicoes', label: 'Competições', icon: Trophy, ready: true, blurb: 'Tabelas por fase e grupo, chaves do mata-mata e artilharia.' },
   { to: '/estatisticas', label: 'Estatísticas', icon: BarChart3, ready: true, blurb: 'Artilharia e assistências de todas as competições, por temporada.' },
+  { to: '/bola-de-ouro', label: 'Bola de Ouro', icon: Crown, ready: true, blurb: 'Corrida da temporada pelo melhor do mundo, última premiação e os vencedores de cada ano.' },
   { to: '/historico', label: 'Histórico', icon: History, ready: true, blurb: 'Títulos do clube, campanhas, campeões e artilheiros de cada temporada.' },
   { to: '/amigos', label: 'Liga dos Amigos', icon: Medal, ready: true, blurb: 'Ranking entre os técnicos da sala, confrontos diretos e o que cada um anda fazendo.', online: true },
   { to: '/financas', label: 'Finanças', icon: Wallet, ready: true, blurb: 'Receitas, folha, patrocínios, bilheteria e orçamento.' },
@@ -32,7 +33,7 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 /** (Fase 3) Rotas disponíveis para o técnico desempregado (o resto leva à Central de Empregos). */
-export const JOBLESS_ROUTES = ['/empregos', '/inbox', '/tecnico', '/historico', '/competicoes', '/estatisticas'];
+export const JOBLESS_ROUTES = ['/empregos', '/inbox', '/tecnico', '/historico', '/bola-de-ouro', '/competicoes', '/estatisticas'];
 
 /** (Carreira online) desempregado online: Central de Empregos, Liga dos Amigos, tabelas e a sala. */
-export const ONLINE_JOBLESS_ROUTES = ['/empregos', '/amigos', '/competicoes', '/estatisticas', '/historico', '/sala', '/rodada-ao-vivo'];
+export const ONLINE_JOBLESS_ROUTES = ['/empregos', '/amigos', '/competicoes', '/estatisticas', '/historico', '/bola-de-ouro', '/sala', '/rodada-ao-vivo'];

@@ -14,9 +14,10 @@
  * Mínimo de jogos: 18 no mundo, 12 no campeonato. Formação 4-3-3 (GOL, 2 LAT, 2 ZAG, 3 MEI, 3 ATA).
  */
 import type { Player, Position } from '@cosmicfut/shared';
-import type { AwardPlayer, ChampionRecord, PlayerSeasonLine, SeasonAwards, WorldState } from '../contract';
+import type { AwardPlayer, CareerRecords, ChampionRecord, PlayerSeasonLine, SeasonAwards, SeasonState, WorldState } from '../contract';
+import { flushLines } from './records';
 import { baseClubOf } from '../transfers/market';
-import { seasonLabel, type Cycle } from './timeline';
+import { cycleSeason, seasonLabel, type Cycle } from './timeline';
 
 export const AWARDS = {
   minGamesWorld: 18,
@@ -136,4 +137,52 @@ export function computeSeasonAwards(
       xi: pickTeam(leagueCands[i]),
     })),
   };
+}
+
+/** (19/11) Temporadas em andamento na data: a do calendário (ano) e a europeia (jul–jun). */
+export function raceLabels(date: string): string[] {
+  return (['calendar', 'split'] as Cycle[]).map((c) => seasonLabel(c, cycleSeason(c, date)));
+}
+
+/**
+ * (19/11) CORRIDA da Bola de Ouro, no meio da temporada: a mesma nota da premiação, com os números já gravados
+ * (`world.records`) + os da temporada em curso (`state.career.lines`, ainda não despejados). Não muta nada.
+ * Mínimo de jogos proporcional (40% de quem mais jogou, até o mínimo da premiação), para valer desde o começo.
+ * Janela: as temporadas EM ANDAMENTO nos dois calendários na data do jogo (ex.: "2026" + "2025/26").
+ */
+export function ballonRace(
+  world: Pick<WorldState, 'records' | 'history'>,
+  state: SeasonState,
+  squads: (clubId: string) => readonly Player[],
+  clubIds: readonly string[],
+  o: { top?: number } = {},
+): AwardPlayer[] {
+  const labels = new Set(raceLabels(state.date));
+  const records: CareerRecords = { ...(world.records ?? { players: {} }), players: { ...(world.records?.players ?? {}) } } as CareerRecords;
+  // copia só as listas que a temporada em curso vai somar (flushLines muta)
+  for (const k of Object.keys(state.career?.lines ?? {})) {
+    const pid = k.slice(0, k.lastIndexOf('|'));
+    const cur = records.players[pid];
+    if (cur && world.records?.players?.[pid] === cur) records.players[pid] = cur.map((l) => l.slice() as PlayerSeasonLine);
+  }
+  flushLines(records, state, state.date);
+  const cands: { p: Player; clubId: string; a: Agg }[] = [];
+  const seen = new Set<string>();
+  let maxGames = 0;
+  for (const clubId of clubIds) {
+    for (const p of squads(clubId)) {
+      if (seen.has(p.id)) continue;
+      seen.add(p.id);
+      const a = aggregate(records.players[p.id], p.id, (label) => labels.has(label));
+      if (!a || a.rt <= 0) continue;
+      maxGames = Math.max(maxGames, a.games);
+      cands.push({ p, clubId, a });
+    }
+  }
+  const minGames = Math.max(1, Math.min(AWARDS.minGamesWorld, Math.floor(maxGames * 0.4)));
+  return cands
+    .filter((c) => c.a.games >= minGames)
+    .map((c) => award(c.p, c.clubId, c.a, titleBonus(world.history, labels, c.a.clubs)))
+    .sort(byScore)
+    .slice(0, o.top ?? 10);
 }
