@@ -10,6 +10,7 @@ import type {
   MatchResult, MatchSimulationApi, MatchState, MatchTeamInput, Mentality, Side, Tactic, TeamLiveStats,
 } from '../contract';
 import { Rng } from '../rng';
+import { isAttacking, isDefensive, matchOverall, STARS, starTier } from '../stars';
 import { autoPickLineup, FORMATIONS, formationSlotsRef, slotFit } from '../tactics';
 import {
   ASSIST_W, COEF, FOUL_W, HEAD_W, MENT_ATT, MENT_OPP, MENT_POSS, MENTALITIES, MENTALITY_IDX, NORM,
@@ -29,6 +30,8 @@ interface PInfo {
   tDef: number; tMid: number; tAtt: number;
   fin: number; head: number; pass: number; cross: number;
   gkBonus: number; penSave: number; drain: number;
+  /** (Estrelas) bônus de conversão (meio/ataque), multiplicador de cartões e bônus de nota (defesa) */
+  goal: number; cardMul: number; ratingBonus: number;
 }
 
 interface Team {
@@ -71,7 +74,11 @@ function emptyStats(): TeamLiveStats {
   };
 }
 
-function pinfo(p: Player): PInfo {
+function pinfo(p0: Player): PInfo {
+  // (Estrelas) Top Mundial / Destaque: status +10% / +5% na partida (overall efetivo)
+  const tier = starTier(p0);
+  const p = tier ? { ...p0, overall: matchOverall(p0) } : p0;
+  const def = !!tier && isDefensive(p0.position);
   const t = new Set(p.traits);
   const has = (id: number) => (t.has(id) ? 1 : 0);
   return {
@@ -85,7 +92,10 @@ function pinfo(p: Player): PInfo {
     cross: has(6),
     gkBonus: 0.04 * has(2) + 0.03 * has(0) + 0.02 * has(3),
     penSave: has(1),
-    drain: (t.has(12) ? 0.75 : 1) * (p.age >= 32 ? STAMINA.veteranDrain : p.age <= 22 ? STAMINA.youngDrain : 1),
+    drain: (t.has(12) ? 0.75 : 1) * (p.age >= 32 ? STAMINA.veteranDrain : p.age <= 22 ? STAMINA.youngDrain : 1) * (def ? STARS.drain[tier!] : 1),
+    goal: tier && isAttacking(p0.position) ? STARS.goal[tier] : 0,
+    cardMul: def ? STARS.cards[tier!] : 1,
+    ratingBonus: def ? STARS.rating[tier!] : 0,
   };
 }
 
@@ -421,7 +431,7 @@ export class MatchSimulation implements MatchSimulationApi {
       for (const l of t.live) {
         if (!t.appeared.has(l.id)) continue;
         const inf = t.info.get(l.id)!;
-        let r = l.rating + resAdj + clamp(xgDiff, -2, 2) * 0.15 + (inf.p.overall - 72) * 0.012 + this.rng.normal() * 0.22;
+        let r = l.rating + resAdj + clamp(xgDiff, -2, 2) * 0.15 + (inf.p.overall - 72) * 0.012 + inf.ratingBonus + this.rng.normal() * 0.22;
         const role = this.roleOfPlayer(t, l);
         if (ga === 0 && (role === 'GK' || (role && ROLE_W[role].def >= 0.6))) r += role === 'GK' ? 0.5 : 0.3;
         l.rating = clamp(r, 3, 10);
@@ -606,7 +616,7 @@ export class MatchSimulation implements MatchSimulationApi {
     P.stats.shots++;
     P.stats.xg = Math.round((P.stats.xg + xg) * 100) / 100;
     this.momentum(P, 0.1);
-    const finish = 1 + (inf.p.overall - 75) * COEF.finishK + (kind === 'header' ? inf.head : inf.fin) + (inf.p.star ? 0.04 : 0) + (inf.p.worldClass ? 0.05 : 0);
+    const finish = 1 + (inf.p.overall - 75) * COEF.finishK + (kind === 'header' ? inf.head : inf.fin) + inf.goal;
     const gkMod = clamp(1 - (D.gk - 75) * COEF.gkK, 0.55, 1.6);
     const pGoal = clamp(xg * finish * gkMod, 0.005, 0.92);
     const pOn = clamp(Math.max(pGoal + 0.08, 0.27 + 0.8 * xg + (inf.p.overall - 75) * 0.004), 0, 0.97);
@@ -710,8 +720,10 @@ export class MatchSimulation implements MatchSimulationApi {
     const dangerous = r.next() < COEF.dangerousFoul;
     this.emit('foul', dangerous ? 'foul-dangerous' : 'foul', {}, D, fouler.id);
     const late = s.minute > 70 ? 1.15 : 1;
-    const yellow = r.next() < COEF.yellowPerFoul * late * (dangerous ? 1.6 : 1) * (fouler.yellow > 0 ? COEF.bookedYellowMul : 1);
-    const red = r.next() < COEF.redPerFoul;
+    // (Estrelas) defensor Top Mundial / Destaque leva menos cartões
+    const cardMul = D.info.get(fouler.id)?.cardMul ?? 1;
+    const yellow = r.next() < COEF.yellowPerFoul * late * (dangerous ? 1.6 : 1) * (fouler.yellow > 0 ? COEF.bookedYellowMul : 1) * cardMul;
+    const red = r.next() < COEF.redPerFoul * cardMul;
     if (yellow || red) this.card(D, fouler, yellow, red);
     if (dangerous && r.next() < COEF.freeKickShot) {
       const taker = this.pickWeighted(P, (l, inf) => (inf.fin + 0.04 * inf.pass + 0.02) * (inf.p.overall / 70) ** 3 * (this.role(P, l) === 'GK' ? 0 : 1));

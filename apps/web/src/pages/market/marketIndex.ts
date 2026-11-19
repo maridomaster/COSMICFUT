@@ -42,15 +42,13 @@ export function buildMarketIndex(state: SeasonState, world: WorldState | null): 
       else evoOnly.set(pid, o);
     }
   }
-  // (Etapa 5) valor de mercado dinâmico (contrato, liga, idade, reputação): os elencos efetivos da carreira já trazem
-  // o valor recalculado — vale para os clubes com divisão nacional (os só estaduais ficam com o valor da base)
+  // (Etapa 5 / 18/11) valor de mercado dinâmico (overall, potencial real, idade, estrela, contrato, liga, reputação):
+  // os elencos efetivos da carreira já trazem o valor recalculado — de TODOS os clubes da temporada, a cada rodada
   if (wp && state.career) {
     for (const clubId of Object.keys(state.clubs)) {
-      const info = state.clubInfo?.[clubId];
-      if (info?.division === undefined && !state.humanClubIds.includes(clubId)) continue;
       for (const p of squads(clubId)) {
         const v = vals.get(p.id);
-        if (v) { v[1] = p.overall; v[3] = p.value; v[4] = p.wage; evoOnly.delete(p.id); }
+        if (v) { v[1] = p.overall; v[2] = p.potential; v[3] = p.value; v[4] = p.wage; evoOnly.delete(p.id); }
         else { vals.set(p.id, [p.age, p.overall, p.potential, p.value, p.wage, p.youth ? 1 : 0]); evoOnly.delete(p.id); }
       }
     }

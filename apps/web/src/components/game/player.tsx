@@ -1,7 +1,7 @@
-import { Gem, Sparkles, Star } from 'lucide-react';
 import type { Player, Trait } from '@cosmicfut/shared';
 import { STATUS_META, type LineupStatus } from '@/lib/lineup';
 import { cn } from '@/lib/utils';
+import { PlayerTierStar } from './TierStar';
 
 /** Chips com os nomes das características (traits) do jogador. */
 export function TraitChips({ player, traits, className, max }: { player: Player; traits: Map<number, Trait>; className?: string; max?: number }) {
@@ -39,25 +39,11 @@ export function StatusChip({ status, compact, className }: { status: LineupStatu
   );
 }
 
-/** Ícones de craque / elite mundial / destaque ao lado do nome. */
+/** (18/11) Estrela 3D ao lado do nome: vermelha = Top Mundial (91+), amarela = Destaque (88–90). */
 export function PlayerFlags({ player, className }: { player: Player; className?: string }) {
   return (
     <span className={cn('inline-flex shrink-0 items-center gap-1', className)}>
-      {player.worldClass && (
-        <span title="Elite mundial">
-          <Sparkles className="size-3.5 text-club-accent" />
-        </span>
-      )}
-      {player.star && (
-        <span title="Craque">
-          <Star className="size-3.5 text-warning" fill="currentColor" />
-        </span>
-      )}
-      {player.highlight && !player.star && (
-        <span title="Destaque">
-          <Gem className="size-3.5 text-brand-2" />
-        </span>
-      )}
+      <PlayerTierStar overall={player.overall} size={15} />
     </span>
   );
 }

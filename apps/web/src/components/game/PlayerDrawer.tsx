@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { Crown, Gem, History, Sparkles, Sprout, Star, Target, TrendingUp, X, Zap } from 'lucide-react';
-import { playerCareer } from '@cosmicfut/engine';
+import { Crown, History, Sprout, Target, TrendingUp, X, Zap } from 'lucide-react';
+import { playerCareer, STARS, starTier } from '@cosmicfut/engine';
+import { TierStarIcon } from './TierStar';
 import { useSeason, useWorld } from '@/store/season';
 import { Segmented } from '@/components/ui/range';
 import { ClubCrest, clubLabel } from './status';
@@ -164,21 +165,11 @@ function PlayerCard({
             {context && <div className="mt-1.5 text-xs text-fg-muted">{context}</div>}
           </div>
         </div>
-        {(p.worldClass || p.star || p.highlight || (p.youth && p.age <= 20) || lineup?.captainId === p.id || lineup?.penaltyTakerId === p.id) && (
+        {(starTier(p) || (p.youth && p.age <= 20) || lineup?.captainId === p.id || lineup?.penaltyTakerId === p.id) && (
           <div className="relative mt-4 flex flex-wrap gap-1.5">
-            {p.worldClass && (
-              <Badge variant="club">
-                <Sparkles className="size-3" /> Elite mundial
-              </Badge>
-            )}
-            {p.star && (
-              <Badge variant="warning">
-                <Star className="size-3" fill="currentColor" /> Craque
-              </Badge>
-            )}
-            {p.highlight && (
-              <Badge>
-                <Gem className="size-3" /> Destaque
+            {starTier(p) && (
+              <Badge variant={starTier(p) === 'top' ? 'club' : 'warning'} data-testid="tier-badge">
+                <TierStarIcon tier={starTier(p)!} size={14} /> {STARS.label[starTier(p)!]}
               </Badge>
             )}
             {p.youth && p.age <= 20 && (

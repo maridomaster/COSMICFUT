@@ -15,6 +15,7 @@ import { Card } from '@/components/ui/card';
 import { Input, NativeSelect } from '@/components/ui/input';
 import { DualRange } from '@/components/ui/range';
 import { Flag, FootChip, OvrBadge, PositionChip, potentialClass, potentialMaxed } from '@/components/game/bits';
+import { PlayerTierStar } from '@/components/game/TierStar';
 import { ClubMini, money, VALUE_STEPS } from './common';
 import { searchMarket, useSearchStatus } from './searchClient';
 import type { MarketRowOut, SearchQuery, SortDir, SortKey } from './searchTypes';
@@ -493,6 +494,7 @@ export function ResultRow({
         <span className="hidden min-w-0 md:block">
           <span className="flex items-center gap-1.5">
             <span className="truncate text-[13px] leading-4 font-semibold">{r.name}</span>
+            <PlayerTierStar overall={r.ovr} size={14} />
             {r.youth && r.age <= 20 && <span className="rounded bg-success/15 px-1 text-[9px] font-bold text-success">BASE</span>}
           </span>
           <span className="block truncate text-[10.5px] leading-3.5 text-fg-subtle">{r.clubId ? (clubMeta.get(r.clubId)?.name ?? r.clubId) : 'Sem clube'}</span>

@@ -24,6 +24,8 @@ import type { Player } from '@cosmicfut/shared';
 import type { SeasonState } from '../contract';
 import { cycleEnd, cycleOfRegion, regionOfClub } from '../season/timeline';
 import { baseClubOf, contractEnd, defaultContractEnd } from './market';
+import { realisticPotential } from '../season/players';
+import { starValueMult } from '../stars';
 
 const clamp = (v: number, a: number, b: number) => (v < a ? a : v > b ? b : v);
 
@@ -231,11 +233,12 @@ function freeLeague(state: SeasonState, p: Player): number {
 function careerRaw(state: SeasonState, p: Player, clubId: string | null | undefined, withContract: boolean): number {
   const L = clubId ? clubLeagueMult(state, clubId) : freeLeague(state, p);
   const L0 = dataLeagueMult(state, baseClubOf(p.id)) ?? L;
-  return valueFormula({
-    age: p.age, overall: p.overall, potential: p.potential, league: L,
+  // (18/11) potencial real pela idade (veterano não carrega potencial alto) e estrela (Top Mundial +20%, Destaque +10%)
+  return roundMoney(starValueMult(p) * valueFormula({
+    age: p.age, overall: p.overall, potential: realisticPotential(p.age, p.overall, p.potential), league: L,
     months: withContract ? monthsLeftOf(state, p, clubId) : null,
     reputation: reputationFactor(p.rep0, L0, seasonsElapsed(state)),
-  });
+  }));
 }
 
 /**
