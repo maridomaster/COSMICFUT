@@ -104,6 +104,6 @@ export {
 } from './discipline';
 export { duplicateGroups, retireDuplicatePlayers, DEDUP_REV } from './dedupe';
 export { ACADEMY, academyDay, academyWage, generateProspect, promoteProspect, releaseProspect, rollAcademyRatings } from './academy';
-export { AWARDS, awardWindow, ballonRace, raceLabels, HONOR, honorBonus, honorsOf, silverRanking, computeSilverBalls, computeSeasonAwards, pickTeam } from './awards';
+export { AWARDS, awardWindow, awardCycleOf, leagueLevel, ballonRace, raceLabels, HONOR, honorBonus, honorsOf, silverRanking, computeSilverBalls, computeSeasonAwards, pickTeam } from './awards';
 export { prizeTable, type PrizeRow, type PrizeTableView } from './prizes';
 export { TRAINING, daysToNextMatch, setTraining, trainingAgeFactor, trainingCost, trainingDay, trainingEta, trainingRate } from './training';

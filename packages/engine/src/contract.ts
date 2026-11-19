@@ -812,6 +812,8 @@ export interface WorldState {
   awards?: SeasonAwards[];
   /** (19/11) ícones vigentes (cópia em `SeasonState.career.honors` para as partidas) */
   honors?: Honors;
+  /** (19/11) revisão das premiações já recalculadas (1 = 1ª Bola de Ouro com os 12 meses de todo o mundo) */
+  awardsRev?: number;
   /** (19/11) Bolas de Prata entregues (as mais recentes) */
   silverBalls?: SilverBall[];
   /**

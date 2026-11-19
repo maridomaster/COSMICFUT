@@ -25,7 +25,7 @@ import { AI_MARKET } from '../transfers/ai';
 import { CAREER_REV, careerSquads, createSeasonFromWorld, worldSquads, type NamePools } from './career';
 import { finalRanking, forceFinishCompetition } from './format';
 import { competitionRecord, emptyRecords, flushLines, isNationalLeague, pruneRetired } from './records';
-import { AWARDS, computeSeasonAwards, computeSilverBalls } from './awards';
+import { AWARDS, computeSeasonAwards, computeSilverBalls, leagueLevel } from './awards';
 import { ordersFromSeason, qualifiedFrom, qualifyContinental } from './continental';
 import { qualifyAfc, qualifyUefa } from './confed';
 import {
@@ -236,7 +236,7 @@ export function rolloverSeason(
     const leagues = closing
       .filter((c) => c.type === 'league' && c.countryId !== undefined && c.clubIds.some((id) => humansNow.has(id)))
       .map((c) => ({ competitionId: c.id, name: c.name, seasonLabel: ti.label, clubIds: c.clubIds.slice() }));
-    summary.awards = computeSeasonAwards(w, squads, Object.keys(state.clubs), { cycle, season, date: turnoverDate, leagues });
+    summary.awards = computeSeasonAwards(w, squads, Object.keys(state.clubs), { cycle, season, date: turnoverDate, leagues, level: (id) => leagueLevel(state, id) });
     w.awards = [...(w.awards ?? []), summary.awards].slice(-AWARDS.keep);
     // (19/11) ícone da Bola de Ouro: vale até a próxima premiação
     w.honors ??= {};

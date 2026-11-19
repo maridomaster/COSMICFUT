@@ -46,6 +46,7 @@ import { emptyRecords } from './records';
 import { migrateDiscipline } from './discipline';
 import { Rng } from '../rng';
 import { retireDuplicatePlayers } from './dedupe';
+import { awardCycleOf, awardWindow, computeSeasonAwards, leagueLevel } from './awards';
 
 export const DEFAULT_CAREER_OPTIONS: CareerOptions = {
   playStateLeagues: true,
@@ -334,7 +335,7 @@ export function isLegacyCareer(world: Pick<WorldState, 'rev'> | null | undefined
  */
 export function migrateCareer(
   world: WorldState, state?: SeasonState, opts: MigrateCareerOptions = {},
-): { world: WorldState; state?: SeasonState; migrated: boolean; coachCreated?: boolean; legacy?: boolean; econMigrated?: boolean; marketMigrated?: boolean; recordsMigrated?: boolean; budgetsMigrated?: boolean; dedupMigrated?: number } {
+): { world: WorldState; state?: SeasonState; migrated: boolean; coachCreated?: boolean; legacy?: boolean; econMigrated?: boolean; marketMigrated?: boolean; recordsMigrated?: boolean; budgetsMigrated?: boolean; dedupMigrated?: number; awardsMigrated?: boolean } {
   if (isLegacyCareer(world)) return { world, state, migrated: false, legacy: true };
   const w = JSON.parse(JSON.stringify(world)) as WorldState;
   const s = state ? (JSON.parse(JSON.stringify(state)) as SeasonState) : undefined;
@@ -402,6 +403,13 @@ export function migrateCareer(
   // (dados) saves anteriores: o mesmo jogador em dois clubes da base — sai a cópia que não foi mexida (dedupe.ts)
   let dedupMigrated = 0;
   if (opts.squads && opts.data) dedupMigrated = retireDuplicatePlayers(w, s, opts.data.clubs.map((c) => c.id), opts.squads);
+  // (19/11) 1ª Bola de Ouro dos saves antigos: a janela deixava de fora o 2º semestre europeu (só sul-americanos
+  // disputavam). Refaz o pódio e a Seleção do Mundo das premiações afetadas; o ícone vai para o novo vencedor.
+  let awardsMigrated = false;
+  if (opts.squads && opts.data && s && (w.awardsRev ?? 0) < 1) {
+    if (w.awards?.length) awardsMigrated = recomputeFirstAwards(w, s, opts.data.clubs.map((c) => c.id), careerSquads(s, worldSquads(w, opts.squads as Squads)));
+    w.awardsRev = 1;
+  }
   let budgetsMigrated = false;
   if (s?.career && ensureBudgets(s) > 0) budgetsMigrated = true;
   // (Fase 3) carreira do técnico: criada a partir do clube atual (opcional; o servidor online não pede)
@@ -414,7 +422,33 @@ export function migrateCareer(
   return {
     world: w, state: s, migrated: false, ...(coachCreated ? { coachCreated } : {}), ...(econMigrated ? { econMigrated } : {}), ...(marketMigrated ? { marketMigrated } : {}),
     ...(recordsMigrated ? { recordsMigrated } : {}), ...(budgetsMigrated ? { budgetsMigrated } : {}), ...(dedupMigrated ? { dedupMigrated } : {}),
+    ...(awardsMigrated ? { awardsMigrated } : {}),
   };
+}
+
+/** (19/11) Recalcula as premiações cuja janela mudou com a correção da 1ª temporada (ver `awardWindow`). */
+function recomputeFirstAwards(w: WorldState, s: SeasonState, clubIds: string[], squads: Squads): boolean {
+  let changed = false;
+  w.awards = (w.awards ?? []).map((a) => {
+    const { cycle, season } = awardCycleOf(a.label);
+    if (awardWindow(cycle, season, w.startDate).length === awardWindow(cycle, season).length) return a;
+    const fresh = computeSeasonAwards(w, squads, clubIds, { cycle, season, date: a.date, leagues: [], level: (id) => leagueLevel(s, id) });
+    changed = true;
+    return { ...a, ballonDor: fresh.ballonDor, world: fresh.world };
+  });
+  if (!changed) return false;
+  const last = w.awards.at(-1)!;
+  const g = last.ballonDor[0];
+  // o ícone só troca se a premiação vigente (a última) foi refeita
+  if (w.honors?.world?.label === last.label || (!w.honors?.world && g)) {
+    w.honors ??= {};
+    if (g) w.honors.world = { kind: 'world', playerId: g.playerId, name: g.name, clubId: g.clubId, label: last.label };
+    if (s.career) {
+      s.career.honors = { ...(s.career.honors ?? {}) };
+      if (g) s.career.honors.world = w.honors.world;
+    }
+  }
+  return true;
 }
 
 /** (Fase 3) Opções de `migrateCareer` (acréscimo; sem elas o comportamento é o da Fase 2). */

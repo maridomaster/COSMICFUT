@@ -10,6 +10,7 @@
  *
  * Nota de cada jogador (determinística):
  *   (nota média − 6) × 14 + gols × peso da posição + assistências × 0,35 + jogos × 0,06 (até 50) + overall × 0,3
+ *   (gols/assistências/jogos sem sofrer gol no ritmo por jogo sobre no máximo 40 jogos — `volumeCap`)
  *   + títulos do clube na janela (continental +5, liga da 1ª divisão +3, copa nacional +1,5)
  * Mínimo de jogos: 18 no mundo, 12 no campeonato. Formação 4-3-3 (GOL, 2 LAT, 2 ZAG, 3 MEI, 3 ATA).
  */
@@ -17,6 +18,7 @@ import type { Player, Position } from '@cosmicfut/shared';
 import type { AwardPlayer, CareerRecords, ChampionRecord, Competition, Honor, Honors, PlayerSeasonLine, SeasonAwards, SeasonState, SilverBall, WorldState } from '../contract';
 import { flushLines } from './records';
 import { baseClubOf } from '../transfers/market';
+import { clubLeagueMult } from '../transfers/value';
 import { cycleSeason, seasonLabel, type Cycle } from './timeline';
 
 export const AWARDS = {
@@ -28,6 +30,12 @@ export const AWARDS = {
   ratingWeight: 14,
   gamesWeight: 0.06,
   gamesCap: 50,
+  /**
+   * (19/11) gols, assistências e jogos sem sofrer gol contam no RITMO do jogador (por jogo) sobre no máximo 40 jogos:
+   * os clubes sul-americanos jogam ~70 partidas no ano (estaduais + copas) e os europeus ~40 — sem isso só
+   * sul-americanos ganhavam a Bola de Ouro pelo volume.
+   */
+  volumeCap: 40,
   overallWeight: 0.3,
   /** (19/11) jogos sem sofrer gol: o que mais pesa para os defensores */
   cleanSheetWeight: { GK: 0.6, CB: 0.4, FB: 0.3, MF: 0, FW: 0 } as Record<Position, number>,
@@ -39,10 +47,21 @@ export const AWARDS = {
 };
 
 /** Temporadas consideradas: a que fechou + a do outro calendário encerrada nos 12 meses anteriores. */
-export function awardWindow(cycle: Cycle, season: number): string[] {
-  return cycle === 'calendar'
+export function awardWindow(cycle: Cycle, season: number, startDate?: string): string[] {
+  const out = cycle === 'calendar'
     ? [seasonLabel('calendar', season), seasonLabel('split', season - 1)]
     : [seasonLabel('split', season), seasonLabel('calendar', season)];
+  // (19/11) 1ª premiação: a temporada do outro calendário começou ANTES da carreira (ex.: carreira em 01/01/2026, a
+  // europeia 2025/26 só teve jan–jun no jogo). Entra também a seguinte, para os 12 meses completos de todo o mundo
+  // (senão os europeus chegavam com metade dos jogos e dos gols e só os sul-americanos disputavam).
+  const otherStart = cycle === 'calendar' ? `${season - 1}-07-01` : `${season}-01-01`;
+  if (startDate && startDate > otherStart) out.push(cycle === 'calendar' ? seasonLabel('split', season) : seasonLabel('calendar', season + 1));
+  return out;
+}
+
+/** (19/11) Ciclo e temporada a partir do rótulo da premiação ("2026" → ano civil 2026; "2026/27" → europeia 2026). */
+export function awardCycleOf(label: string): { cycle: Cycle; season: number } {
+  return { cycle: label.includes('/') ? 'split' : 'calendar', season: Number(label.slice(0, 4)) };
 }
 
 type Agg = { games: number; goals: number; assists: number; rt: number; cs: number; clubs: Set<string> };
@@ -78,11 +97,22 @@ function titleBonus(history: readonly ChampionRecord[], labels: Set<string>, clu
   return b;
 }
 
-function award(p: Player, clubId: string, a: Agg, bonus: number): AwardPlayer {
+/**
+ * (19/11) Peso do nível da liga no desempenho da Bola de Ouro (±10%): Premier League ~1,08, top-5 ~1,02, Brasil ~0,94,
+ * Argentina ~0,91, resto da América do Sul ~0,87 — gol na Premier vale um pouco mais que no Argentino.
+ */
+export function leagueLevel(state: SeasonState, clubId: string): number {
+  return Math.min(1.1, Math.max(0.85, 0.8 + 0.2 * clubLeagueMult(state, clubId)));
+}
+
+function award(p: Player, clubId: string, a: Agg, bonus: number, level = 1): AwardPlayer {
   const avg = a.rt / a.games / 10;
+  const k = Math.min(a.games, AWARDS.volumeCap) / a.games;
+  const perf =
+    (avg - 6) * AWARDS.ratingWeight + a.goals * k * AWARDS.goalWeight[p.position] + a.assists * k * AWARDS.assistWeight +
+    a.cs * k * AWARDS.cleanSheetWeight[p.position];
   const score =
-    (avg - 6) * AWARDS.ratingWeight + a.goals * AWARDS.goalWeight[p.position] + a.assists * AWARDS.assistWeight +
-    a.cs * AWARDS.cleanSheetWeight[p.position] +
+    perf * (perf > 0 ? level : 1) +
     Math.min(a.games, AWARDS.gamesCap) * AWARDS.gamesWeight + p.overall * AWARDS.overallWeight + bonus;
   return {
     playerId: p.id, name: p.name, clubId, position: p.position, age: p.age, overall: p.overall, nationalityId: p.nationalityId,
@@ -106,12 +136,12 @@ export function pickTeam(cands: readonly AwardPlayer[]): AwardPlayer[] {
  * `leagues`: os campeonatos premiados (com os clubes e o rótulo da temporada deles).
  */
 export function computeSeasonAwards(
-  world: Pick<WorldState, 'records' | 'history'>,
+  world: Pick<WorldState, 'records' | 'history'> & { startDate?: string },
   squads: (clubId: string) => readonly Player[],
   clubIds: readonly string[],
-  o: { cycle: Cycle; season: number; date: string; leagues: { competitionId: string; name: string; seasonLabel: string; clubIds: string[] }[] },
+  o: { cycle: Cycle; season: number; date: string; leagues: { competitionId: string; name: string; seasonLabel: string; clubIds: string[] }[]; level?: (clubId: string) => number },
 ): SeasonAwards {
-  const labels = new Set(awardWindow(o.cycle, o.season));
+  const labels = new Set(awardWindow(o.cycle, o.season, world.startDate));
   const recs = world.records?.players ?? {};
   const worldCands: AwardPlayer[] = [];
   const leagueCands = o.leagues.map(() => [] as AwardPlayer[]);
@@ -124,7 +154,7 @@ export function computeSeasonAwards(
       const lines = recs[p.id];
       if (!lines) continue;
       const a = aggregate(lines, p.id, (label) => labels.has(label));
-      if (a && a.games >= AWARDS.minGamesWorld && a.rt > 0) worldCands.push(award(p, clubId, a, titleBonus(world.history, labels, a.clubs)));
+      if (a && a.games >= AWARDS.minGamesWorld && a.rt > 0) worldCands.push(award(p, clubId, a, titleBonus(world.history, labels, a.clubs), o.level?.(clubId)));
       o.leagues.forEach((lg, i) => {
         const la = aggregate(lines, p.id, (label, club) => label === lg.seasonLabel && leagueSets[i].has(club));
         if (!la || la.games < AWARDS.minGamesLeague || la.rt <= 0) return;
@@ -189,7 +219,7 @@ export function ballonRace(
   const minGames = Math.max(1, Math.min(AWARDS.minGamesWorld, Math.floor(maxGames * 0.4)));
   return cands
     .filter((c) => c.a.games >= minGames)
-    .map((c) => award(c.p, c.clubId, c.a, titleBonus(world.history, labels, c.a.clubs)))
+    .map((c) => award(c.p, c.clubId, c.a, titleBonus(world.history, labels, c.a.clubs), leagueLevel(state, c.clubId)))
     .sort(byScore)
     .slice(0, o.top ?? 10);
 }
