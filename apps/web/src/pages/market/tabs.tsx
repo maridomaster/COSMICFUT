@@ -3,7 +3,7 @@ import { MoneyField } from '@/components/ui/money-field';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowRight, Check, Clock, FileClock, Handshake, Inbox, ListX, Star, Tag, UserPlus, X } from 'lucide-react';
 import type { ClubIndexEntry, Country, Player } from '@cosmicfut/shared';
-import { loansOf, monthsLeftOf, preContractOpen, releaseClauseOf, renewalAsk, type SeasonState, type TransferOffer, type TransferRecord } from '@cosmicfut/engine';
+import { loansOf, monthsLeftOf, preContractOpen, releaseClauseOf, type SeasonState, type TransferOffer, type TransferRecord } from '@cosmicfut/engine';
 import { squads } from '@/data/squads';
 import { fmtDate, fmtMoney } from '@/lib/format';
 import { EASE_OUT } from '@/lib/motion';
@@ -18,6 +18,7 @@ import { Flag, OvrBadge, PositionChip } from '@/components/game/bits';
 import { AgeChip } from '@/components/game/chips';
 import { FitScroll } from '@/components/ui/fit-scroll';
 import { useMarketActions } from './actions';
+import { RenewForm } from '@/components/game/market';
 import { ClubMini } from './common';
 import { ResultRow } from './SearchTab';
 import { fetchRows, useSearchStatus } from './searchClient';
@@ -530,7 +531,7 @@ export function LoansTab({ season, humanId, clubMeta, players }: { season: Seaso
   const actions = useMarketActions();
   const [busy, setBusy] = useState<string | null>(null);
   const [msg, setMsg] = useState<{ text: string; ok: boolean } | null>(null);
-  const [renew, setRenew] = useState<{ id: string; wage: number; years: number; clause: number } | null>(null);
+  const [renew, setRenew] = useState<{ id: string } | null>(null);
   const m = season.market;
   const { incoming, outgoing } = loansOf(season, humanId);
   const all = (id: string) => players.find((p) => p.id === id) ?? m?.players[id];
@@ -544,10 +545,7 @@ export function LoansTab({ season, humanId, clubMeta, players }: { season: Seaso
     .map((p) => ({ p, months: monthsLeftOf(season, p, humanId) ?? 99 }))
     .filter((x) => x.months <= 18 && m?.contracts[x.p.id]?.kind !== 'loan')
     .sort((a, b) => a.months - b.months);
-  const openRenew = (p: Player) => {
-    const ask = renewalAsk(season, squads, humanId, p, 3);
-    setRenew({ id: p.id, wage: ask.wage, years: Math.min(ask.maxYears, Math.max(ask.minYears, 3)), clause: Math.round((releaseClauseOf(season, p, humanId) || p.value * 3) / 100_000) * 100_000 });
-  };
+  const openRenew = (p: Player) => setRenew({ id: p.id });
   return (
     <div className="space-y-2.5">
       <AnimatePresence>
@@ -629,31 +627,7 @@ export function LoansTab({ season, humanId, clubMeta, players }: { season: Seaso
                       </Button>
                     )}
                   </div>
-                  {open && renew && (
-                    <div className="mt-2 flex flex-wrap items-end gap-2 rounded-xl border border-line bg-surface-2/40 p-3 text-xs">
-                      <label className="grid gap-1">
-                        <span className="text-fg-muted">Salário/mês (pede {fmtMoney(renewalAsk(season, squads, humanId, p, renew.years).wage)})</span>
-                        <MoneyField value={renew.wage || 0} className="w-44 shrink-0">
-                          <input inputMode="numeric" aria-label="Salário da renovação" value={renew.wage.toLocaleString('pt-BR')} onChange={(e) => setRenew({ ...renew, wage: Number(e.target.value.replace(/\D/g, '')) || 0 })} className="tabular h-8 w-32 rounded-lg border border-line bg-surface px-2" />
-                        </MoneyField>
-                      </label>
-                      <label className="grid gap-1">
-                        <span className="text-fg-muted">Anos</span>
-                        <select aria-label="Anos da renovação" value={renew.years} onChange={(e) => setRenew({ ...renew, years: Number(e.target.value) })} className="h-8 rounded-lg border border-line bg-surface px-2">
-                          {[1, 2, 3, 4, 5].map((y) => <option key={y} value={y}>{y}</option>)}
-                        </select>
-                      </label>
-                      <label className="grid gap-1">
-                        <span className="text-fg-muted">Multa rescisória</span>
-                        <MoneyField value={renew.clause || 0} className="w-44 shrink-0">
-                          <input inputMode="numeric" aria-label="Multa da renovação" value={renew.clause.toLocaleString('pt-BR')} onChange={(e) => setRenew({ ...renew, clause: Number(e.target.value.replace(/\D/g, '')) || 0 })} className="tabular h-8 w-36 rounded-lg border border-line bg-surface px-2" />
-                        </MoneyField>
-                      </label>
-                      <Button size="sm" variant="club" disabled={busy === p.id || !!actions.blocked} onClick={() => void run(p.id, () => actions.renew(p.id, renew.wage, renew.years, renew.clause || undefined), `${p.name} renovou por ${renew.years} ${renew.years > 1 ? 'anos' : 'ano'}.`).then(() => setRenew(null))}>
-                        <Check /> Propor renovação
-                      </Button>
-                    </div>
-                  )}
+                  {open && <RenewForm player={p} clubId={humanId} className="mt-2" onDone={(r) => { setMsg(r); setRenew(null); }} />}
                 </li>
               );
             })}

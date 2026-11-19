@@ -23,11 +23,11 @@ import { PlayerFlags, StatusChip, TraitChips } from '@/components/game/player';
 import { PlayerDrawer } from '@/components/game/PlayerDrawer';
 import { AvailabilityBadges, useHumanStatus, type PlayerStatus } from '@/components/game/status';
 import { StaminaBar } from '@/components/game/StaminaBar';
-import { ForSaleBadge, ListForSaleButton, LoanListBadge, LoanOfferButton, useLoanListed, useTransferListed } from '@/components/game/market';
+import { contractInfo, contractTone, ContractRenew, ForSaleBadge, ListForSaleButton, LoanListBadge, LoanOfferButton, monthsLabel, useLoanListed, useTransferListed } from '@/components/game/market';
 import { ClubMini, useClubMeta } from '@/pages/market/common';
 import { loansOf } from '@cosmicfut/engine';
 
-type SortKey = 'position' | 'name' | 'age' | 'nationality' | 'overall' | 'potential' | 'traits' | 'wage' | 'value' | 'status';
+type SortKey = 'position' | 'name' | 'age' | 'nationality' | 'overall' | 'potential' | 'traits' | 'wage' | 'value' | 'contract' | 'status';
 type Dir = 'asc' | 'desc';
 
 const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: string; align?: 'right' }[] = [
@@ -40,6 +40,7 @@ const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: strin
   { key: 'traits', label: 'Características', defaultDir: 'desc', className: 'hidden xl:flex' },
   { key: 'wage', label: 'Salário', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
   { key: 'value', label: 'Valor', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
+  { key: 'contract', label: 'Contrato', defaultDir: 'asc', className: 'hidden lg:flex', align: 'right' },
   { key: 'status', label: 'Status', defaultDir: 'asc' },
 ];
 
@@ -47,8 +48,8 @@ const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: strin
 const GRID =
   'grid-cols-[4.25rem_minmax(0,1fr)_2.25rem_3.25rem] ' +
   'md:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_5.5rem] ' +
-  'lg:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_4.75rem_4.75rem_5.5rem] ' +
-  'xl:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_11rem_4.75rem_4.75rem_5.5rem]';
+  'lg:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_4.75rem_4.75rem_5rem_5.5rem] ' +
+  'xl:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_11rem_4.75rem_4.75rem_5rem_5.5rem]';
 
 const STATUS_ORDER: LineupStatus[] = ['starter', 'bench', 'out'];
 
@@ -62,6 +63,9 @@ export function SquadPage() {
   const statusMap = useHumanStatus();
   const listed = useTransferListed();
   const loanListed = useLoanListed();
+  const season = useSeason((s) => s.save?.season);
+  // (19/11) fim do contrato de cada jogador (null = emprestado ao clube)
+  const contracts = useMemo(() => new Map(players.map((p) => [p.id, season ? contractInfo(season, p, bundle.club.id) : null])), [players, season, bundle.club.id]);
   const outCount = [...statusMap.values()].filter((s) => s.injury || s.suspension).length;
   const morale = useSeason((s) => s.save?.season.clubs[bundle.club.id]?.morale);
   const tableRef = useRef<HTMLDivElement>(null);
@@ -107,8 +111,8 @@ export function SquadPage() {
         p.age >= age[0] &&
         p.age <= age[1],
     );
-    return sortPlayers(filtered, sort.key, sort.dir, { lineup, countries, traits });
-  }, [players, query, positions, statuses, ovr, age, sort, lineup, countries, traits]);
+    return sortPlayers(filtered, sort.key, sort.dir, { lineup, countries, traits, contracts });
+  }, [players, query, positions, statuses, ovr, age, sort, lineup, countries, traits, contracts]);
 
   const toggleSort = (key: SortKey) =>
     setSort((s) => (s.key === key ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: COLUMNS.find((c) => c.key === key)!.defaultDir }));
@@ -311,6 +315,7 @@ export function SquadPage() {
                       traits={traits}
                       availability={statusMap.get(p.id)}
                       forSale={listed.has(p.id)}
+                      contract={contracts.get(p.id)}
                       loanMonths={loanListed.ids.has(p.id) ? (loanListed.months[p.id] ?? 0) : undefined}
                       onOpen={() => setSelectedId(p.id)}
                     />
@@ -331,6 +336,7 @@ export function SquadPage() {
           <div className="flex flex-wrap items-center gap-2">
             <ListForSaleButton playerId={selected.id} />
             <LoanOfferButton playerId={selected.id} />
+            <ContractRenew player={selected} clubId={bundle.club.id} />
           </div>
         ) : undefined}
       />
@@ -357,6 +363,7 @@ function SquadRow({
   availability,
   forSale,
   loanMonths,
+  contract,
   onOpen,
 }: {
   player: Player;
@@ -368,6 +375,7 @@ function SquadRow({
   forSale?: boolean;
   /** na lista de empréstimo (duração pedida; 0 = sem prazo) */
   loanMonths?: number;
+  contract?: { end: string; months: number } | null;
   onOpen: () => void;
 }) {
   const delay = Math.min(index, 18) * 0.012;
@@ -417,6 +425,9 @@ function SquadRow({
         <TraitChips player={p} traits={traits} className="hidden flex-nowrap overflow-hidden xl:flex" />
         <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block">{fmtMoney(p.wage)}</span>
         <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block">{fmtMoney(p.value)}</span>
+        <span className={cn('tabular hidden text-right text-[12px] lg:block', contract ? contractTone(contract.months) : 'text-fg-subtle')} title={contract ? `Contrato até ${fmtDate(contract.end)} (${monthsLabel(contract.months)})` : 'Emprestado ao seu clube'} data-testid="squad-contract">
+          {contract ? fmtDate(contract.end, { month: 'short', year: 'numeric' }).replace(' de ', '/').replace('.', '') : 'empr.'}
+        </span>
         <span className="flex justify-end md:justify-start">
           <StatusChip status={status} compact className="md:hidden" />
           <StatusChip status={status} className="hidden md:inline-flex" />
@@ -429,7 +440,7 @@ function sortPlayers(
   players: Player[],
   key: SortKey,
   dir: Dir,
-  ctx: { lineup: ReturnType<typeof useGame.getState>['lineup']; countries: Map<number, Country>; traits: Map<number, Trait> },
+  ctx: { lineup: ReturnType<typeof useGame.getState>['lineup']; countries: Map<number, Country>; traits: Map<number, Trait>; contracts: Map<string, { end: string; months: number } | null> },
 ): Player[] {
   const m = dir === 'asc' ? 1 : -1;
   const statusRank = (p: Player) => {
@@ -458,6 +469,8 @@ function sortPlayers(
         return p.wage;
       case 'value':
         return p.value;
+      case 'contract':
+        return ctx.contracts.get(p.id)?.months ?? 999;
       case 'status':
         return statusRank(p);
     }
