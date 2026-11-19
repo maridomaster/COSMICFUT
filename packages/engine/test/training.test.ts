@@ -30,6 +30,11 @@ describe('Centro de Treinamento', () => {
     expect(setTraining(state, sq(), human, ['outro-clube:1']).error).toBeTruthy();
     const picked = young.slice(0, 3);
     state = setTraining(state, sq(), human, picked.map((p) => p.id)).state;
+    // jogador emprestado/vendido que ainda está na lista não trava o treino: sai em silêncio
+    const gone = (id: string) => (cid: string) => sq()(cid).filter((p) => p.id !== id);
+    const swap = setTraining(state, gone(picked[0].id), human, [...picked.map((p) => p.id), young[3].id]);
+    expect(swap.error).toBeUndefined();
+    expect(swap.state.market!.training![human].players).toEqual([picked[1].id, picked[2].id, young[3].id]);
     const before = new Map(picked.map((p) => [p.id, p.overall]));
     let tiredOnMatchDay = false;
     const w = worldSquads(world, base);

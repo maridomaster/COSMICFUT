@@ -110,9 +110,11 @@ const clone = <T,>(v: T): T => JSON.parse(JSON.stringify(v)) as T;
 /** Define os jogadores em treino (até 3, do elenco do clube). */
 export function setTraining(input: SeasonState, squads: (clubId: string) => readonly Player[], clubId: string, playerIds: string[]): MarketResult {
   if (!input.market) return { state: input, error: 'Mercado não inicializado.' };
-  const ids = [...new Set(playerIds)];
-  if (ids.length > TRAINING.maxPlayers) return { state: input, error: `No máximo ${TRAINING.maxPlayers} jogadores no Centro de Treinamento.` };
   const squad = new Set(squads(clubId).map((p) => p.id));
+  // quem já treinava e saiu do elenco (vendido/emprestado) sai da lista em silêncio
+  const before = new Set(input.market.training?.[clubId]?.players ?? []);
+  const ids = [...new Set(playerIds)].filter((id) => squad.has(id) || !before.has(id));
+  if (ids.length > TRAINING.maxPlayers) return { state: input, error: `No máximo ${TRAINING.maxPlayers} jogadores no Centro de Treinamento.` };
   if (ids.some((id) => !squad.has(id))) return { state: input, error: 'Só jogadores do seu elenco podem treinar.' };
   const state = clone(input);
   const all = (state.market!.training ??= {});

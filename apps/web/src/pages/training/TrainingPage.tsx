@@ -24,7 +24,8 @@ export function TrainingPage() {
   const clubId = bundle.club.id;
   const players = bundle.players;
   const t = season.market?.training?.[clubId];
-  const selected = t?.players ?? [];
+  // quem saiu do elenco (vendido/emprestado) ainda pode estar na lista até o próximo dia: ignora
+  const selected = (t?.players ?? []).filter((id) => players.some((p) => p.id === id));
   const progress = t?.progress ?? {};
   const actions = useMarketActions();
   const [busy, setBusy] = useState(false);
