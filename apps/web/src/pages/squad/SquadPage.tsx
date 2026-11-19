@@ -5,7 +5,7 @@ import type { Country, Player, Position, Trait } from '@cosmicfut/shared';
 import { useCurrentClub } from '@/app/ClubContext';
 import { useCountryMap, useTraitMap } from '@/data/hooks';
 import { summarizeSquad } from '@/data/derive';
-import { fmtMoney, POSITION_META, POSITION_ORDER } from '@/lib/format';
+import { fmtDate, fmtMoney, POSITION_META, POSITION_ORDER } from '@/lib/format';
 import { STATUS_META, statusOf, type LineupStatus } from '@/lib/lineup';
 import { EASE_OUT, fadeUp, staggerContainer } from '@/lib/motion';
 import { cn, normalizeSearch } from '@/lib/utils';
@@ -23,7 +23,9 @@ import { PlayerFlags, StatusChip, TraitChips } from '@/components/game/player';
 import { PlayerDrawer } from '@/components/game/PlayerDrawer';
 import { AvailabilityBadges, useHumanStatus, type PlayerStatus } from '@/components/game/status';
 import { StaminaBar } from '@/components/game/StaminaBar';
-import { ForSaleBadge, ListForSaleButton, LoanOfferButton, useTransferListed } from '@/components/game/market';
+import { ForSaleBadge, ListForSaleButton, LoanListBadge, LoanOfferButton, useLoanListed, useTransferListed } from '@/components/game/market';
+import { ClubMini, useClubMeta } from '@/pages/market/common';
+import { loansOf } from '@cosmicfut/engine';
 
 type SortKey = 'position' | 'name' | 'age' | 'nationality' | 'overall' | 'potential' | 'traits' | 'wage' | 'value' | 'status';
 type Dir = 'asc' | 'desc';
@@ -59,6 +61,7 @@ export function SquadPage() {
   const summary = useMemo(() => summarizeSquad(players), [players]);
   const statusMap = useHumanStatus();
   const listed = useTransferListed();
+  const loanListed = useLoanListed();
   const outCount = [...statusMap.values()].filter((s) => s.injury || s.suspension).length;
   const morale = useSeason((s) => s.save?.season.clubs[bundle.club.id]?.morale);
   const tableRef = useRef<HTMLDivElement>(null);
@@ -252,6 +255,8 @@ export function SquadPage() {
       </motion.div>
 
       {/* Tabela */}
+      <LoanedOut clubId={bundle.club.id} />
+
       <motion.div variants={fadeUp}>
         <Card className="overflow-hidden px-1.5 sm:px-2">
           <div ref={tableRef} className="scrollbar-thin overflow-y-auto" data-testid="squad-table">
@@ -306,6 +311,7 @@ export function SquadPage() {
                       traits={traits}
                       availability={statusMap.get(p.id)}
                       forSale={listed.has(p.id)}
+                      loanMonths={loanListed.ids.has(p.id) ? (loanListed.months[p.id] ?? 0) : undefined}
                       onOpen={() => setSelectedId(p.id)}
                     />
                   ))}
@@ -350,6 +356,7 @@ function SquadRow({
   traits,
   availability,
   forSale,
+  loanMonths,
   onOpen,
 }: {
   player: Player;
@@ -359,6 +366,8 @@ function SquadRow({
   traits: Map<number, Trait>;
   availability?: PlayerStatus;
   forSale?: boolean;
+  /** na lista de empréstimo (duração pedida; 0 = sem prazo) */
+  loanMonths?: number;
   onOpen: () => void;
 }) {
   const delay = Math.min(index, 18) * 0.012;
@@ -388,6 +397,7 @@ function SquadRow({
             <PlayerFlags player={p} />
             <AvailabilityBadges status={availability} />
             {forSale && <ForSaleBadge />}
+            {loanMonths !== undefined && <LoanListBadge months={loanMonths || undefined} />}
             <StaminaBar value={availability?.fitness ?? 100} className="ml-auto hidden w-12 shrink-0 md:inline-flex" />
           </div>
           {/* mobile: idade, país e stamina numa 2ª linha curta */}
@@ -458,4 +468,35 @@ function sortPlayers(
     const d = typeof va === 'string' ? va.localeCompare(vb as string, 'pt-BR') : va - (vb as number);
     return d * m || b.overall - a.overall || a.name.localeCompare(b.name, 'pt-BR');
   });
+}
+
+/** (19/11) Seus jogadores emprestados a outros clubes e quando voltam (some se não houver nenhum). */
+function LoanedOut({ clubId }: { clubId: string }) {
+  const season = useSeason((s) => s.save?.season);
+  const clubMeta = useClubMeta();
+  const m = season?.market;
+  const out = useMemo(
+    () => (season ? loansOf(season, clubId).outgoing : [])
+      .map((id) => ({ id, c: m!.contracts[id], name: m!.players[id]?.name ?? id, holder: m!.moves[id] }))
+      .sort((a, b) => (a.c.loanUntil ?? '').localeCompare(b.c.loanUntil ?? '')),
+    [season, clubId, m],
+  );
+  if (!out.length) return null;
+  return (
+    <motion.div variants={fadeUp}>
+      <Card className="px-3 py-2" data-testid="loaned-out">
+        <div className="mb-1 text-[11px] font-semibold tracking-wider text-fg-muted uppercase">Emprestados ({out.length})</div>
+        <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          {out.map(({ id, c, name, holder }) => (
+            <li key={id} className="flex min-w-0 items-center gap-1.5" data-testid="loaned-out-row">
+              <span className="truncate font-semibold">{name}</span>
+              <span className="text-fg-subtle">→</span>
+              {holder ? <ClubMini id={holder} meta={clubMeta} withName className="max-w-[10rem] text-[12px]" /> : null}
+              <span className="text-[11px] whitespace-nowrap text-fg-muted">volta em {c.loanUntil ? fmtDate(c.loanUntil) : '—'}</span>
+            </li>
+          ))}
+        </ul>
+      </Card>
+    </motion.div>
+  );
 }

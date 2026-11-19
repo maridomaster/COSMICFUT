@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Handshake, Tag, Tags } from 'lucide-react';
+import { ArrowRightLeft, Handshake, Tag, Tags } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useSeason } from '@/store/season';
 import { useMarketActions } from '@/pages/market/actions';
@@ -42,6 +42,19 @@ export function ForSaleBadge({ className }: { className?: string }) {
       className={cn('inline-flex h-4 shrink-0 items-center gap-0.5 rounded-md bg-warning/15 px-1 text-[9px] font-black tracking-wider text-warning uppercase', className)}
     >
       <Tag className="size-2.5" /> venda
+    </span>
+  );
+}
+
+/** (19/11) Selo "empréstimo" (lista de empréstimo), ao lado do nome como o de venda. */
+export function LoanListBadge({ months, className }: { months?: number; className?: string }) {
+  return (
+    <span
+      title={`Na lista de empréstimo${months ? ` (${loanLabel(months)})` : ''}`}
+      className={cn('inline-flex h-4 shrink-0 items-center gap-0.5 rounded-md bg-brand/15 px-1 text-[9px] font-black tracking-wider text-brand uppercase', className)}
+      data-testid="loan-list-badge"
+    >
+      <ArrowRightLeft className="size-2.5" /> empréstimo
     </span>
   );
 }
