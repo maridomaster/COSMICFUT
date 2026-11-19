@@ -36,7 +36,7 @@ export const ACADEMY = {
   potCurve: 2.4,
   /** o potencial fica pelo menos isto acima do overall */
   minGrowth: 3,
-  age: [16, 18] as const,
+  age: [17, 19] as const,
   /** salário mensal: base + por ponto de overall acima do mínimo */
   wageBase: 800,
   wagePerPoint: 100,

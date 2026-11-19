@@ -160,7 +160,7 @@ describe('virada de temporada (sul-americana, 31/12)', () => {
     const sq = careerSquads(next.state, worldSquads(next.world, base));
     const y = next.summary.youth.find((x) => next.state.clubs[x.clubId])!;
     expect(sq(y.clubId).some((p) => p.id === y.playerId)).toBe(true);
-    expect(sq(y.clubId).find((p) => p.id === y.playerId)!.age).toBeLessThanOrEqual(17);
+    expect(sq(y.clubId).find((p) => p.id === y.playerId)!.age).toBeLessThanOrEqual(18);
   });
 
   it('envelhecimento em 1º/07: +1 ano para quem fica; aposentados somem do elenco', () => {

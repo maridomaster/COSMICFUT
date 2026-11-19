@@ -47,7 +47,7 @@ export const DEFAULT_FILTERS: SearchFilters = {
   positions: [],
   ovr: [40, 99],
   pot: [40, 99],
-  age: [15, 45],
+  age: [17, 45],
   value: [0, VALUE_STEPS.length - 1],
   clubCountry: null,
   nat: null,
@@ -493,7 +493,7 @@ export function ResultRow({
         <span className="hidden min-w-0 md:block">
           <span className="flex items-center gap-1.5">
             <span className="truncate text-[13px] leading-4 font-semibold">{r.name}</span>
-            {r.youth && <span className="rounded bg-success/15 px-1 text-[9px] font-bold text-success">BASE</span>}
+            {r.youth && r.age <= 20 && <span className="rounded bg-success/15 px-1 text-[9px] font-bold text-success">BASE</span>}
           </span>
           <span className="block truncate text-[10.5px] leading-3.5 text-fg-subtle">{r.clubId ? (clubMeta.get(r.clubId)?.name ?? r.clubId) : 'Sem clube'}</span>
         </span>
@@ -590,7 +590,7 @@ function FilterPanel({
       </div>
       <DualRange label="Overall" min={40} max={99} value={f.ovr} onChange={(v) => set('ovr', v)} />
       <DualRange label="Potencial" min={40} max={99} value={f.pot} onChange={(v) => set('pot', v)} />
-      <DualRange label="Idade" min={15} max={45} value={f.age} onChange={(v) => set('age', v)} />
+      <DualRange label="Idade" min={17} max={45} value={f.age} onChange={(v) => set('age', v)} />
       <DualRange label="Valor" min={0} max={VALUE_STEPS.length - 1} value={f.value} onChange={(v) => set('value', v)} format={vfmt} />
 
       <div className="space-y-2">

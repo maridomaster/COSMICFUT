@@ -29,7 +29,7 @@ import {
   type LeagueDivision, type StateDivision,
 } from './competitions';
 import { initCompetition } from './format';
-import { EVOLUTION, realisticPotential, revalue, YOUTH } from './players';
+import { EVOLUTION, MIN_PLAYER_AGE, realisticPotential, revalue, YOUTH } from './players';
 import { continentalCompetitions, continentalCountryOf, continentalPots, qualifiedFrom, qualifyContinental, strengthSort } from './continental';
 import { afcCompetitions, guestRegion, initialTitleHolders, qualifyAfc, qualifyUefa, uefaCompetitions, worldCompetitions } from './confed';
 import type { CountryHolders } from '../contract';
@@ -562,7 +562,9 @@ export function careerSquads(state: SeasonState, base: Squads, marketApplied = f
         const value = careerValue(state, q, clubId);
         // (18/11) potencial real pela idade: acompanha o overall de quem já passou do auge
         const potential = realisticPotential(q.age, q.overall, q.potential);
-        return value === q.value && potential === q.potential ? q : { ...q, value, potential };
+        // (18/11) ninguém abaixo da idade mínima (juniores de 15–16 anos do banco original contam como 17)
+        const age = Math.max(MIN_PLAYER_AGE, q.age);
+        return value === q.value && potential === q.potential && age === q.age ? q : { ...q, value, potential, age };
       });
       cache.set(clubId, s);
     }

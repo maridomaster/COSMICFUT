@@ -167,9 +167,12 @@ export function retireChance(p: Pick<Player, 'age' | 'overall' | 'position'>, ga
 
 /* ───────────── juniores ───────────── */
 
+/** (18/11) idade mínima de qualquer jogador no jogo (o banco do original tem juniores de 15–16 anos) */
+export const MIN_PLAYER_AGE = 17;
+
 export const YOUTH = {
-  minAge: 15,
-  maxAge: 17,
+  minAge: MIN_PLAYER_AGE,
+  maxAge: 18,
   /** overall inicial = squadTarget − offset ± spread (spec §4.5: −22 ± 6) */
   offset: 22,
   spread: 6,

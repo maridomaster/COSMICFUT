@@ -164,7 +164,7 @@ function PlayerCard({
             {context && <div className="mt-1.5 text-xs text-fg-muted">{context}</div>}
           </div>
         </div>
-        {(p.worldClass || p.star || p.highlight || p.youth || lineup?.captainId === p.id || lineup?.penaltyTakerId === p.id) && (
+        {(p.worldClass || p.star || p.highlight || (p.youth && p.age <= 20) || lineup?.captainId === p.id || lineup?.penaltyTakerId === p.id) && (
           <div className="relative mt-4 flex flex-wrap gap-1.5">
             {p.worldClass && (
               <Badge variant="club">
@@ -181,7 +181,7 @@ function PlayerCard({
                 <Gem className="size-3" /> Destaque
               </Badge>
             )}
-            {p.youth && (
+            {p.youth && p.age <= 20 && (
               <Badge variant="success">
                 <Sprout className="size-3" /> Base
               </Badge>

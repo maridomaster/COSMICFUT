@@ -17,6 +17,8 @@ interface Ctx {
   onmessage: ((e: MessageEvent<ToWorker>) => void) | null;
 }
 const ctx = self as unknown as Ctx;
+/** idade mínima no jogo (= MIN_PLAYER_AGE da engine; o worker não carrega a engine) */
+const MIN_AGE = 17;
 
 /* ── base (JSON) ── */
 let n0 = 0;
@@ -124,7 +126,8 @@ async function init(marketUrl: string, clubsUrl: string, feetUrl?: string) {
     bNames[i] = r[2];
     bNorm[i] = normalize(r[2]);
     bPos[i] = r[3];
-    bAge[i] = r[4];
+    // (18/11) idade mínima de 17 (o banco do original tem juniores de 15–16)
+    bAge[i] = Math.max(MIN_AGE, r[4]);
     bOvr[i] = r[5];
     bPot[i] = r[6];
     bValue[i] = r[7];
@@ -225,7 +228,7 @@ function applyIndex(ix: MarketIndex): number {
       if (info[3]) foot[i] = info[3] === 'L' ? 2 : 1;
     }
     const o = k * 6;
-    age[i] = ix.vals[o];
+    age[i] = Math.max(MIN_AGE, ix.vals[o]);
     ovr[i] = ix.vals[o + 1];
     pot[i] = ix.vals[o + 2];
     value[i] = ix.vals[o + 3];
