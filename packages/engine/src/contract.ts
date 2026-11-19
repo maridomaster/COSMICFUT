@@ -1395,6 +1395,8 @@ export interface LoanTerms {
   purchaseOption?: number;
   /** o dono pode chamar o jogador de volta na janela de inverno/meio de ano */
   recall?: boolean;
+  /** (18/11) duração em meses (6–24); ausente = até o fim da temporada de quem recebe */
+  months?: number;
 }
 
 /** Contrato vigente de um jogador que mudou de clube (ou renovou). */
@@ -1559,6 +1561,8 @@ export interface MarketState {
    * atravessa a virada. Ausente ⇒ base ainda não começou.
    */
   academy?: Record<string, AcademyState>;
+  /** (18/11) duração pedida (meses) para os jogadores na lista de empréstimo dos humanos */
+  loanMonths?: Record<string, number>;
   /** (Treino) Centro de Treinamento dos clubes humanos (clubId → estado). Ver season/training.ts */
   training?: Record<string, TrainingState>;
 }

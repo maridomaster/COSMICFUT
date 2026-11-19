@@ -626,7 +626,7 @@ export interface ClientEvents extends Omit<ClientToServer, 'round:ready' | 'chat
   /** contraproposta a uma oferta recebida da IA (o comprador aceita até o teto dele, melhora ou desiste) */
   'market:counter': (p: { offerId: string; fee: number }, ack?: (r: Ack<MarketActionResult>) => void) => void;
   /** coloca/retira jogadores do próprio elenco da lista de empréstimo */
-  'market:loanlist': (p: { playerIds: string[]; listed: boolean }, ack?: (r: Ack<MarketActionResult>) => void) => void;
+  'market:loanlist': (p: { playerIds: string[]; listed: boolean; months?: number }, ack?: (r: Ack<MarketActionResult>) => void) => void;
   /** exerce a opção de compra de um emprestado ao clube */
   'market:option': (p: { playerId: string }, ack?: (r: Ack<MarketActionResult>) => void) => void;
   /** chama de volta um jogador emprestado (retorno antecipado previsto no contrato; janela aberta) */

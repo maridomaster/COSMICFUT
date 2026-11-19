@@ -13,7 +13,7 @@ import { useSeasonState, useSeason, useWorld } from '@/store/season';
 import { Button } from '@/components/ui/button';
 import { PlayerDrawer } from '@/components/game/PlayerDrawer';
 import { PageHeader } from '@/components/ui/page-header';
-import { ListForSaleButton } from '@/components/game/market';
+import { ListForSaleButton, LoanOfferButton } from '@/components/game/market';
 import { useMarketActions } from './actions';
 import { ClubMini, CompareBar, resolvePlayer, useClubMeta, type ResolvedPlayer } from './common';
 import { NegotiationModal, type NegotiationTarget } from './NegotiationModal';
@@ -257,15 +257,7 @@ export function MarketPage() {
           (mine ? (
             <>
               <ListForSaleButton playerId={detail.player.id} />
-              <Button
-                variant="outline"
-                size="sm"
-                disabled={!!actions.blocked}
-                aria-pressed={(market?.loanList ?? []).includes(detail.player.id)}
-                onClick={() => void actions.setLoanListed([detail.player.id], !(market?.loanList ?? []).includes(detail.player.id))}
-              >
-                {(market?.loanList ?? []).includes(detail.player.id) ? 'Tirar da lista de empréstimo' : 'Oferecer por empréstimo'}
-              </Button>
+              <LoanOfferButton playerId={detail.player.id} />
             </>
           ) : (
             <>

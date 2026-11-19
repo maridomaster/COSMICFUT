@@ -12,7 +12,7 @@ export {
 export {
   POS_PT, applyTransfer, transferHeadline, makeOffer, proposeContract, suggestContract, suggestAppeal, respondToOffer, counterIncoming,
   withdrawOffer, setTransferListed, setLoanListed, releasePlayer, incomingOffers, contractYearsLeft, exercisePurchaseOption, recallLoan,
-  renewContract, renewalAsk, renewInPlace, signingBonus, preContractOpen, loanEndDate, contractEndsSeason, loansOf,
+  renewContract, renewalAsk, renewInPlace, signingBonus, preContractOpen, loanEndDate, loanEndByMonths, LOAN_MONTHS, contractEndsSeason, loansOf,
   type MarketResult, type ApplyTransferArgs, type OfferRequest, type ContractRequest,
 } from './actions';
 export {

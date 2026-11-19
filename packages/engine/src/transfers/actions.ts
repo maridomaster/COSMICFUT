@@ -77,6 +77,29 @@ export interface ApplyTransferArgs {
   via?: 'clause' | 'option' | 'recall';
 }
 
+/** (18/11) Durações de empréstimo oferecidas (meses). */
+export const LOAN_MONTHS = [6, 12, 18, 24] as const;
+
+/** Data ISO + n meses (dia limitado ao fim do mês). */
+function addMonthsIso(iso: string, n: number): string {
+  const [y, m, d] = iso.split('-').map(Number);
+  const t = new Date(Date.UTC(y, m - 1 + n, 1));
+  const last = new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth() + 1, 0)).getUTCDate();
+  return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), Math.min(d, last))).toISOString().slice(0, 10);
+}
+
+/**
+ * (18/11) Fim de um empréstimo de `months` meses: a data combinada, nunca depois do fim do contrato do jogador com o
+ * dono (temporada final do contrato, no calendário da região do dono).
+ */
+export function loanEndByMonths(state: SeasonState, p: Player, ownerId: string, months: number): string {
+  const want = addMonthsIso(state.date, Math.max(1, Math.round(months)));
+  const r = regionOfClub(state, ownerId);
+  const cyc = cycleOfRegion(r ?? null);
+  const ownerEnd = cycleEnd(cyc, ownerContractEnd(state, p).endsSeason);
+  return want < ownerEnd ? want : ownerEnd;
+}
+
 /** (Etapa 5) Fim do empréstimo: último dia da temporada da região de quem recebe (volta na virada dela). */
 export function loanEndDate(state: SeasonState, toClubId: string): string {
   const r = regionOfClub(state, toClubId);
@@ -123,7 +146,7 @@ export function applyTransfer(state: SeasonState, a: ApplyTransferArgs): Transfe
     const terms = a.loan ?? { wageShare: 100 };
     m.contracts[pid] = {
       wage, endsSeason: cs, since: date, fee: a.fee, kind: 'loan',
-      loanFrom: a.fromClubId, loanUntil: a.loanUntil ?? loanEndDate(state, a.toClubId),
+      loanFrom: a.fromClubId, loanUntil: a.loanUntil ?? (terms.months ? loanEndByMonths(state, p, a.fromClubId, terms.months) : loanEndDate(state, a.toClubId)),
       wageShare: Math.max(0, Math.min(100, Math.round(terms.wageShare))),
       ...(terms.purchaseOption !== undefined ? { purchaseOption: Math.round(terms.purchaseOption) } : {}),
       ...(terms.recall ? { recall: true } : {}),
@@ -452,7 +475,7 @@ export function makeOffer(input: SeasonState, squads: Squads, req: OfferRequest)
 }
 
 function loanText(l: LoanTerms): string {
-  return `Empréstimo: ${l.wageShare}% do salário${l.purchaseOption ? `, opção de compra ${fmtMoneyPt(l.purchaseOption)}` : ''}${l.recall ? ', com retorno antecipado' : ''}.`;
+  return `Empréstimo${l.months ? ` de ${l.months} meses` : ''}: ${l.wageShare}% do salário${l.purchaseOption ? `, opção de compra ${fmtMoneyPt(l.purchaseOption)}` : ''}${l.recall ? ', com retorno antecipado' : ''}.`;
 }
 
 function monthsText(m: number | null): string {
@@ -709,14 +732,19 @@ export function setTransferListed(input: SeasonState, playerId: string, listed: 
 }
 
 /** (Etapa 5) Coloca/retira um jogador da lista de empréstimo (a IA faz propostas de empréstimo na janela). */
-export function setLoanListed(input: SeasonState, playerId: string, listed: boolean): SeasonState {
+export function setLoanListed(input: SeasonState, playerId: string, listed: boolean, months?: number): SeasonState {
   const m = input.market;
   if (!m) return input;
   const cur = m.loanList ?? [];
   const has = cur.includes(playerId);
-  if (has === listed) return input;
-  const loanList = listed ? [...cur, playerId] : cur.filter((id) => id !== playerId);
-  return { ...input, market: { ...m, loanList } };
+  // (18/11) duração pedida (6–24 meses); o clube que recebe paga o salário inteiro
+  const mo = months !== undefined ? Math.min(24, Math.max(6, Math.round(months / 6) * 6)) : undefined;
+  if (has === listed && (mo === undefined || m.loanMonths?.[playerId] === mo)) return input;
+  const loanList = listed ? (has ? cur : [...cur, playerId]) : cur.filter((id) => id !== playerId);
+  const loanMonths = { ...(m.loanMonths ?? {}) };
+  if (listed && mo !== undefined) loanMonths[playerId] = mo;
+  if (!listed) delete loanMonths[playerId];
+  return { ...input, market: { ...m, loanList, loanMonths } };
 }
 
 /**

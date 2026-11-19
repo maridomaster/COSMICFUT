@@ -733,8 +733,8 @@ function aiOffersForHuman(c: Ctx, human: string): void {
     const buyerId = cands[rng.weightedIndex(cands.map((id) => 1 + Math.max(0, state.clubs[id].balance) / 5e6))];
     const buyer = clubView(state, c.squads, buyerId);
     if (loan) {
-      const share = rng.chance(0.5) ? 100 : 75;
-      pushIncoming(c, human, buyerId, p, 0, 'loan', { wageShare: share }, 0);
+      // (18/11) quem pega emprestado paga o salário inteiro, pelo prazo que o dono pediu (padrão 1 ano)
+      pushIncoming(c, human, buyerId, p, 0, 'loan', { wageShare: 100, months: m.loanMonths?.[p.id] ?? 12 }, 0);
       continue;
     }
     const ask = askingPrice(state, p, seller, buyer).ask;

@@ -123,7 +123,7 @@ export type MarketAction =
   | { type: 'withdraw'; offerId: string }
   /* (Etapa 5) */
   | { type: 'counter'; offerId: string; fee: number }
-  | { type: 'loanlist'; playerIds: string[]; listed: boolean }
+  | { type: 'loanlist'; playerIds: string[]; listed: boolean; months?: number }
   | { type: 'option'; playerId: string }
   | { type: 'recall'; playerId: string }
   | { type: 'renew'; playerId: string; wage: number; years: number; releaseClause?: number }
@@ -953,7 +953,7 @@ export class CareerSimulator {
       case 'loanlist': {
         const mine = new Set(sq(clubId).map((p) => p.id));
         if (a.playerIds.some((id) => !mine.has(id))) return fail('Só jogadores do seu elenco podem ir para a lista de empréstimo.');
-        const next = a.playerIds.reduce((st, id) => setLoanListed(st, id, a.listed), s0);
+        const next = a.playerIds.reduce((st, id) => setLoanListed(st, id, a.listed, a.months), s0);
         return this.commit(c, s0, { state: next }, [clubId]);
       }
       case 'option': {

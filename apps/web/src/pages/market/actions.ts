@@ -46,7 +46,8 @@ export interface MarketActions {
   withdraw(offerId: string): Promise<MarketOutcome>;
   setListed(playerIds: string[], listed: boolean): Promise<MarketOutcome>;
   /** (Etapa 5) lista de empréstimo */
-  setLoanListed(playerIds: string[], listed: boolean): Promise<MarketOutcome>;
+  /** (18/11) `months`: duração pedida do empréstimo (6–24); o clube que recebe paga o salário inteiro */
+  setLoanListed(playerIds: string[], listed: boolean, months?: number): Promise<MarketOutcome>;
   release(playerId: string): Promise<MarketOutcome>;
   /** (Etapa 5) exerce a opção de compra de um emprestado ao clube */
   option(playerId: string): Promise<MarketOutcome>;
@@ -96,7 +97,7 @@ const SOLO: MarketActions = {
   counter: async (offerId, fee) => soloApply((s) => counterIncoming(s, squads, offerId, fee)),
   withdraw: async (offerId) => soloApply((s) => withdrawOffer(s, offerId)),
   setListed: async (ids, listed) => soloApply((s) => ids.reduce((st, id) => setTransferListed(st, id, listed), s)),
-  setLoanListed: async (ids, listed) => soloApply((s) => ids.reduce((st, id) => setLoanListed(st, id, listed), s)),
+  setLoanListed: async (ids, listed, months) => soloApply((s) => ids.reduce((st, id) => setLoanListed(st, id, listed, months), s)),
   release: async (playerId) => soloApply((s) => releasePlayer(s, squads, soloHuman(), playerId)),
   option: async (playerId) => soloApply((s) => exercisePurchaseOption(s, squads, soloHuman(), playerId)),
   recall: async (playerId) => soloApply((s) => recallLoan(s, squads, soloHuman(), playerId)),
@@ -129,7 +130,7 @@ function onlineActions(blocked: string | null): MarketActions {
     counter: guard((offerId, fee) => net('counter', { offerId, fee })),
     withdraw: guard((offerId) => net('withdraw', { offerId })),
     setListed: guard((playerIds, listed) => net('list', { playerIds, listed })),
-    setLoanListed: guard((playerIds, listed) => net('loanlist', { playerIds, listed })),
+    setLoanListed: guard((playerIds, listed, months) => net('loanlist', { playerIds, listed, ...(months ? { months } : {}) })),
     release: guard((playerId) => net('release', { playerId })),
     option: guard((playerId) => net('option', { playerId })),
     recall: guard((playerId) => net('recall', { playerId })),

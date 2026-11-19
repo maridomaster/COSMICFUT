@@ -23,7 +23,7 @@ import { PlayerFlags, StatusChip, TraitChips } from '@/components/game/player';
 import { PlayerDrawer } from '@/components/game/PlayerDrawer';
 import { AvailabilityBadges, useHumanStatus, type PlayerStatus } from '@/components/game/status';
 import { StaminaBar } from '@/components/game/StaminaBar';
-import { ForSaleBadge, ListForSaleButton, useTransferListed } from '@/components/game/market';
+import { ForSaleBadge, ListForSaleButton, LoanOfferButton, useTransferListed } from '@/components/game/market';
 
 type SortKey = 'position' | 'name' | 'age' | 'nationality' | 'overall' | 'potential' | 'traits' | 'wage' | 'value' | 'status';
 type Dir = 'asc' | 'desc';
@@ -321,7 +321,12 @@ export function SquadPage() {
         onClose={closeDrawer}
         countries={countries}
         traits={traits}
-        actions={selected ? <ListForSaleButton playerId={selected.id} /> : undefined}
+        actions={selected ? (
+          <div className="flex flex-wrap items-center gap-2">
+            <ListForSaleButton playerId={selected.id} />
+            <LoanOfferButton playerId={selected.id} />
+          </div>
+        ) : undefined}
       />
     </motion.div>
   );

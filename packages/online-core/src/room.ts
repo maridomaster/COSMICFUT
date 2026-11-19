@@ -210,7 +210,8 @@ function parseMarketAction(type: MarketAction['type'], raw: unknown): MarketActi
       const ids = Array.isArray(o.playerIds) ? o.playerIds : o.playerId !== undefined ? [o.playerId] : fail('playerIds inválido.');
       if (!ids.length || ids.length > 60) fail('Lista de jogadores inválida.');
       if (typeof o.listed !== 'boolean') fail('listed inválido.');
-      return { type, playerIds: ids.map((x) => V.id(x, 'Jogador')), listed: o.listed as boolean };
+      const months = o.months === undefined || o.months === null ? undefined : V.intIn(o.months, 'Meses', 6, 24);
+      return { type, playerIds: ids.map((x) => V.id(x, 'Jogador')), listed: o.listed as boolean, ...(months ? { months } : {}) };
     }
     case 'option':
     case 'recall':
