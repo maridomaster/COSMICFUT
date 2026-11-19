@@ -148,7 +148,7 @@ function Kv({ k, v }: { k: string; v: ReactNode }) {
 
 /* ───────────── Ofertas recebidas ───────────── */
 
-export function IncomingTab({ season, humanId, clubMeta }: { season: SeasonState; humanId: string; clubMeta: Map<string, ClubIndexEntry> }) {
+export function IncomingTab({ season, humanId, clubMeta, onOpen }: { season: SeasonState; humanId: string; clubMeta: Map<string, ClubIndexEntry>; onOpen?: (id: string) => void }) {
   const actions = useMarketActions();
   const players = useOnline((s) => s.room?.players);
   const [msg, setMsg] = useState<{ id: string; text: string; ok: boolean } | null>(null);
@@ -215,7 +215,10 @@ export function IncomingTab({ season, humanId, clubMeta }: { season: SeasonState
                         </div>
                         <div className="flex items-center gap-1.5">
                           <PositionChip position={o.player.position} foot={o.player.side} className="h-4 w-8 text-[9px]" />
-                          <span className="truncate font-semibold">{o.player.name}</span>
+                          {/* (19/11) clicar no nome abre a ficha com as estatísticas */}
+                          <button type="button" className="cursor-pointer truncate font-semibold underline-offset-2 hover:text-club-accent hover:underline" onClick={() => onOpen?.(o.playerId)} title={`Ver ficha de ${o.player.name}`} data-testid="incoming-player">
+                            {o.player.name}
+                          </button>
                           <OvrBadge value={o.player.overall} />
                         </div>
                       </div>

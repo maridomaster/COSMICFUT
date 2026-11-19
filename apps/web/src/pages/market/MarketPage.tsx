@@ -207,7 +207,7 @@ export function MarketPage() {
         {tab === 'clube' && <ClubSearchTab season={season} humanId={humanId} clubMeta={clubMeta} countries={countries} onOpen={openPlayer} onPropose={proposeById} />}
         {tab === 'observados' && <ShortlistTab onOpen={openPlayer} countries={countries} clubMeta={clubMeta} moves={market?.moves} />}
         {tab === 'negociacoes' && <NegotiationsTab season={season} humanId={humanId} clubMeta={clubMeta} onContinue={continueOffer} />}
-        {tab === 'recebidas' && <IncomingTab season={season} humanId={humanId} clubMeta={clubMeta} />}
+        {tab === 'recebidas' && <IncomingTab season={season} humanId={humanId} clubMeta={clubMeta} onOpen={openPlayer} />}
         {tab === 'venda' && <TransferListTab season={season} humanId={humanId} players={players} countries={countries} onOpen={openPlayer} />}
         {tab === 'livres' && <FreeAgentsTab season={season} humanId={humanId} clubMeta={clubMeta} countries={countries} onOpen={openPlayer} />}
         {tab === 'emprestimos' && <LoansTab season={season} humanId={humanId} clubMeta={clubMeta} players={players} />}
