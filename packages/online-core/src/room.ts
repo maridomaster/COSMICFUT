@@ -1985,6 +1985,8 @@ export class Room {
     return {
       matchId: m.id, fixture: fixtureInfo(m.fixture), config: m.publicConfig(), side,
       homePlayerId: m.homePlayerId, awayPlayerId: m.awayPlayerId, startsAt,
+      // quanto falta no envio: o relógio de quem simula (anfitrião no navegador) não é o do cliente
+      inMs: Math.max(0, startsAt - Date.now()),
     };
   }
 

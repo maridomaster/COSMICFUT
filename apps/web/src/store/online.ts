@@ -404,7 +404,9 @@ export const useOnline = create<OnlineStore>()((set, get) => {
     sock.on('match:preview', (p) => {
       // reconexão no meio da partida já começada: ignora
       if (get().live?.matchId === p.matchId && get().live?.phase === 'live') return;
-      set({ matchPreview: { ...p, config: p.config as MatchConfig } });
+      // (18/11) relógio do cliente: o startsAt vem do relógio do anfitrião (no navegador de outro técnico)
+      const startsAt = p.inMs !== undefined ? Date.now() + p.inMs : p.startsAt;
+      set({ matchPreview: { ...p, startsAt, config: p.config as MatchConfig } });
     });
 
     sock.on('round:results', (r) => {

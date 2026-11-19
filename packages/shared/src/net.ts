@@ -827,8 +827,10 @@ export interface MatchPreviewPayload {
   side: NetSide | null;
   homePlayerId: string | null;
   awayPlayerId: string | null;
-  /** epoch ms do pontapé inicial (match:start) */
+  /** epoch ms do pontapé inicial (match:start), no relógio de quem simula */
   startsAt: number;
+  /** ms até o pontapé inicial no momento do envio (o cliente usa o próprio relógio: Date.now() + inMs) */
+  inMs?: number;
 }
 
 /** GET /rooms/:code (data do Ack) — prévia pública para a tela de "entrar". */
