@@ -549,6 +549,7 @@ export function careerSquads(state: SeasonState, base: Squads, marketApplied = f
   // `marketApplied`: `base` já são os elencos efetivos do mercado desta SeasonState (ex.: o retorno de runMarketDay)
   const ms = state.market && !marketApplied ? marketSquads(state, base) : base;
   const evo = state.career?.evo;
+  const potNow = state.career?.potNow;
   if (!evo) return ms;
   const cache = new Map<string, Player[]>();
   return (clubId: string) => {
@@ -562,7 +563,10 @@ export function careerSquads(state: SeasonState, base: Squads, marketApplied = f
         // (calculado com o potencial dos dados, para não mexer na economia calibrada)
         const value = careerValue(state, q, clubId);
         // (18/11) potencial real pela idade: acompanha o overall de quem já passou do auge
-        const potential = realisticPotential(q.age, q.overall, q.potential);
+        // (18/11) banco por muito tempo: o potencial cai (ajuste do trecho), nunca abaixo do overall
+        const pn = potNow?.[p.id];
+        const pot0 = pn !== undefined ? Math.max(q.overall, Math.min(q.potential, Math.round(pn))) : q.potential;
+        const potential = realisticPotential(q.age, q.overall, pot0);
         // (18/11) ninguém abaixo da idade mínima (juniores de 15–16 anos do banco original contam como 17)
         const age = Math.max(MIN_PLAYER_AGE, q.age);
         // (18/11) juniores gerados/revelados antes sem características: 2, fixas pelo id (determinístico)
@@ -908,6 +912,7 @@ export function createSeasonFromWorld(world: WorldState, data: CareerData, o: Se
       countryId: world.countryId, startSeason: world.startSeason,
       evo: keepProgress ? { ...carry!.career!.evo } : {}, stats: keepProgress ? { ...carry!.career!.stats } : {},
       clubGames: keepProgress ? { ...carry!.career!.clubGames } : {},
+      ...(keepProgress && carry!.career!.potNow ? { potNow: { ...carry!.career!.potNow } } : {}),
       prizeMode: opts.prizeMode, prizes: { ...data.economy.prizes }, light: opts.light,
       contractEnds: world.players.contractEnd, rescheduled: carry?.career?.rescheduled ?? 0, agedYears: world.agedYears ?? 0,
       ...(econ ? { econ } : {}),

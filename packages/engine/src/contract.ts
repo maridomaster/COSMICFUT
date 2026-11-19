@@ -580,6 +580,11 @@ export interface CareerSeasonInfo {
   startSeason: number;
   /** overall fracionário corrente (evolução mensal) — absoluto, aplicado por careerSquads */
   evo: Record<string, number>;
+  /**
+   * (18/11) potencial corrente (fracionário, ABSOLUTO como `evo`) de quem perdeu potencial por ficar no banco;
+   * aplicado por careerSquads (nunca sobe acima do potencial dos dados) e gravado no mundo na virada. Ausente ⇒ nenhum.
+   */
+  potNow?: Record<string, number>;
   /** estatísticas por jogador na temporada: [jogos, gols, soma das notas × 10] */
   stats: Record<string, [number, number, number]>;
   /** jogos disputados por clube na temporada */

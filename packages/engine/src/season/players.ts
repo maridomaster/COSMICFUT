@@ -105,11 +105,46 @@ export const EVOLUTION = {
   standoutMinGames: 10,
 };
 
-/** Δ de overall num mês (fracionário). `playedShare` = jogos do jogador / jogos do clube no ano. */
-export function monthlyDelta(age: number, overall: number, potential: number, playedShare: number, rng: Rng): number {
+/**
+ * (18/11) Minutos e treino no crescimento: quem joga (ou está no Centro de Treinamento) chega ao potencial mais
+ * rápido; quem fica no banco cresce devagar. Só vale com o clube tendo jogado `PLAY.minGames` jogos no trecho.
+ */
+export const PLAY = {
+  minGames: 4,
+  /** [participação mínima, multiplicador do crescimento] (a 1ª que servir) */
+  growth: [[0.6, 1.5], [0.35, 1.2], [0.15, 0.85], [0, 0.55]] as [number, number][],
+  /** em treino especial: crescimento pelo menos isto */
+  trainingGrowth: 1.25,
+  /** potencial cai quem fica no banco: participação abaixo disto, com o clube tendo jogado `decayMinGames` jogos */
+  decayShare: 0.15,
+  decayMinGames: 8,
+  /** queda do potencial por mês (≈ −2,5 numa temporada inteira encostado) */
+  decayPerMonth: 0.25,
+  /** até esta idade o potencial ainda importa (depois disso ele já acompanha o overall) */
+  decayMaxAge: 27,
+};
+
+/** Multiplicador do crescimento pelos minutos (1 = neutro, no começo da temporada). */
+export function playGrowthFactor(playedShare: number, clubGames: number, training = false): number {
+  let f = 1;
+  if (clubGames >= PLAY.minGames) f = PLAY.growth.find(([min]) => playedShare >= min)?.[1] ?? 1;
+  return training ? Math.max(f, PLAY.trainingGrowth) : f;
+}
+
+/** Queda do potencial no mês por falta de jogos (0 = não cai). */
+export function benchPotentialLoss(age: number, playedShare: number, clubGames: number, training = false): number {
+  if (training || age > PLAY.decayMaxAge || clubGames < PLAY.decayMinGames || playedShare >= PLAY.decayShare) return 0;
+  return PLAY.decayPerMonth;
+}
+
+/**
+ * Δ de overall num mês (fracionário). `playedShare` = jogos do jogador / jogos do clube no ano. (18/11) `growth` =
+ * multiplicador pelos minutos/treino (playGrowthFactor; 1 = antigo).
+ */
+export function monthlyDelta(age: number, overall: number, potential: number, playedShare: number, rng: Rng, growth = 1): number {
   const gap = Math.max(0, potential - overall);
-  if (age <= 21) return gap * EVOLUTION.youngRate + (playedShare >= 0.5 ? EVOLUTION.playedBonus : 0) * (gap > 0 ? 1 : 0.3);
-  if (age <= 25) return gap * EVOLUTION.midRate;
+  if (age <= 21) return (gap * EVOLUTION.youngRate + (playedShare >= 0.5 ? EVOLUTION.playedBonus : 0) * (gap > 0 ? 1 : 0.3)) * growth;
+  if (age <= 25) return gap * EVOLUTION.midRate * growth;
   if (age <= 29) return (rng.next() * 2 - 1) * EVOLUTION.peakNoise;
   let d = 0;
   for (const [a, v] of EVOLUTION.decline) if (age >= a) d = v;

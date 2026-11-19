@@ -14,7 +14,7 @@ import { clubWageBill, loanOutWages } from '../transfers/market';
 import { aggregateBefore, finalRanking, forceFinishCompetition, progressCompetition, stageStandings } from './format';
 import { resolveConflicts } from './calendar';
 import { lightSimulate, type LightTeam } from './light';
-import { monthlyDelta } from './players';
+import { benchPotentialLoss, monthlyDelta, playGrowthFactor } from './players';
 import { recordCompetitionGoals, recordLines } from './records';
 import { careerSquads } from './career';
 import { academyDay } from './academy';
@@ -623,17 +623,30 @@ function recordStats(state: SeasonState, f: Fixture, r: MatchResult): void {
 /** applyMonthlyEvolution: Δ mensal de overall (fracionário) para todos os jogadores dos clubes da carreira. */
 function monthlyEvolution(state: SeasonState, squads: (clubId: string) => Player[]): void {
   const c = state.career!;
+  // (18/11) potencial: cai para quem fica muito tempo no banco (cópia nova: o estado do dia é raso)
+  const potNow: Record<string, number> = { ...(c.potNow ?? {}) };
+  const training = state.market?.training;
   for (const clubId of Object.keys(state.clubs)) {
     const games = c.clubGames[clubId] ?? 0;
+    const inTraining = new Set(training?.[clubId]?.players ?? []);
     for (const p of squads(clubId)) {
       const cur = c.evo[p.id] ?? p.overall;
       const st = c.stats[p.id];
       const share = games > 0 ? (st?.[0] ?? 0) / games : 0;
+      const trains = inTraining.has(p.id);
       const rng = new Rng(`${state.seed ?? 'season'}:${state.date}:evo:${p.id}`);
-      const next = Math.max(1, Math.min(99, cur + monthlyDelta(p.age, cur, p.potential, share, rng)));
+      const next = Math.max(1, Math.min(99, cur + monthlyDelta(p.age, cur, p.potential, share, rng, playGrowthFactor(share, games, trains))));
       c.evo[p.id] = Math.round(next * 1000) / 1000;
+      const loss = benchPotentialLoss(p.age, share, games, trains);
+      if (loss > 0) {
+        // p.potential já vem ajustado (careerSquads); nunca abaixo do overall atual
+        const cur0 = Math.min(potNow[p.id] ?? p.potential, p.potential + 0.499);
+        const v = Math.max(Math.ceil(next), cur0 - loss);
+        if (v < cur0) potNow[p.id] = Math.round(v * 1000) / 1000;
+      }
     }
   }
+  if (Object.keys(potNow).length) c.potNow = potNow;
 }
 
 /** Fim de competição com formato: campeão, prêmio (só campeão no modo fiel), notícias. */
