@@ -39,6 +39,7 @@ export function closingView(state: SeasonState): SeasonState {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Flag, PositionChip } from '@/components/game/bits';
+import { AwardsSection } from './AwardsSection';
 import { ClubCrest, clubLabel } from '@/components/game/status';
 
 const TYPE_ORDER: Record<string, number> = { league: 0, cup: 1, supercup: 2, state: 3, continental: 4 };
@@ -577,6 +578,12 @@ export function RolloverSummary({
           </Button>
         </div>
       </motion.section>
+
+      {summary.awards && (
+        <motion.div variants={fadeUp}>
+          <AwardsSection awards={summary.awards} clubIds={state.humanClubIds} />
+        </motion.div>
+      )}
 
       {cont && (
         <motion.div variants={fadeUp}>

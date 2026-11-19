@@ -765,6 +765,8 @@ export interface WorldState {
   fans?: Record<string, number>;
   /** (Registros) carreiras dos jogadores (temporada × clube). Ausente ⇒ save antigo (migrateCareer cria vazio). */
   records?: CareerRecords;
+  /** (Prêmios) premiações de fim de temporada (Bola de Ouro, Seleção do Mundo, times dos campeonatos), as mais recentes */
+  awards?: SeasonAwards[];
   /**
    * (17/11) "Vários técnicos no mesmo computador" (hot-seat, como no Brasfoot): técnicos locais da carreira solo, na
    * ordem das vezes; `active` = quem está com o controle (o clube dele é `humanClubIds[0]`). A engine não usa.
@@ -1190,6 +1192,47 @@ export interface SeasonSummary {
   fromStates?: Record<string, string[]>;
   /** (Fase 3) o técnico humano saiu deste clube na virada (demitido ou contrato não renovado) */
   coachLeft?: string;
+  /** (Prêmios) premiação desta virada (só nas viradas dos clubes humanos) */
+  awards?: SeasonAwards;
+}
+
+/* (Prêmios) ver season/awards.ts */
+/** Jogador premiado. */
+export interface AwardPlayer {
+  playerId: string;
+  name: string;
+  clubId: string;
+  position: Position;
+  age: number;
+  overall: number;
+  nationalityId: number;
+  games: number;
+  goals: number;
+  assists: number;
+  /** nota média (1 casa) */
+  rating: number;
+  score: number;
+}
+
+/** Time e craque de um campeonato. */
+export interface LeagueAwards {
+  competitionId: string;
+  name: string;
+  seasonLabel: string;
+  best: AwardPlayer | null;
+  xi: AwardPlayer[];
+}
+
+/** Premiação de uma virada. */
+export interface SeasonAwards {
+  /** rótulo da temporada que fechou ("2026" ou "2026/27") */
+  label: string;
+  date: string;
+  /** Bola de Ouro: 1º, 2º e 3º */
+  ballonDor: AwardPlayer[];
+  /** Seleção do Mundo (4-3-3) */
+  world: AwardPlayer[];
+  leagues: LeagueAwards[];
 }
 
 /**

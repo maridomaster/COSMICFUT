@@ -24,6 +24,7 @@ import { AI_MARKET } from '../transfers/ai';
 import { CAREER_REV, careerSquads, createSeasonFromWorld, worldSquads, type NamePools } from './career';
 import { finalRanking, forceFinishCompetition } from './format';
 import { competitionRecord, emptyRecords, flushLines, pruneRetired } from './records';
+import { AWARDS, computeSeasonAwards } from './awards';
 import { ordersFromSeason, qualifiedFrom, qualifyContinental } from './continental';
 import { qualifyAfc, qualifyUefa } from './confed';
 import {
@@ -228,6 +229,15 @@ export function rolloverSeason(
   // (Registros) carreiras dos jogadores: todas as linhas do trecho (de todas as regiões) vão para o mundo
   w.records ??= emptyRecords();
   flushLines(w.records, state, state.segment?.start ?? state.date);
+  // (Prêmios) Bola de Ouro, Seleção do Mundo e time do campeonato de cada humano — só nas viradas dos humanos
+  if (state.humanClubIds.some(inClosing)) {
+    const humansNow = new Set(state.humanClubIds);
+    const leagues = closing
+      .filter((c) => c.type === 'league' && c.countryId !== undefined && c.clubIds.some((id) => humansNow.has(id)))
+      .map((c) => ({ competitionId: c.id, name: c.name, seasonLabel: ti.label, clubIds: c.clubIds.slice() }));
+    summary.awards = computeSeasonAwards(w, squads, Object.keys(state.clubs), { cycle, season, date: turnoverDate, leagues });
+    w.awards = [...(w.awards ?? []), summary.awards].slice(-AWARDS.keep);
+  }
   for (const c of closing) w.lastRanking[c.id] = rankingOf(c);
   // campeões por país (copa e liga): Supercopa e pote 1 do ano seguinte
   w.holders ??= {};

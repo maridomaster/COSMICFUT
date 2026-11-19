@@ -16,6 +16,7 @@ import { ClubCrest, clubLabel } from '@/components/game/status';
 import { CompetitionEmblem } from '@/components/game/CompetitionEmblem';
 import { TrophyArt } from '@/components/game/TrophyArt';
 import { CampaignIcon, TrophyRoom, campaignText } from './TrophyRoom';
+import { AwardsSection, BallonHistory } from '@/pages/season-end/AwardsSection';
 
 const TYPE_ORDER: Record<string, number> = { continental: 0, league: 1, cup: 2, supercup: 3, state: 4 };
 const divOf = (r: ChampionRecord) => Number(/-(\d+)$/.exec(r.competitionId)?.[1] ?? 0);
@@ -120,6 +121,13 @@ export function HistoryPage() {
           />
         </div>
       </motion.header>
+
+      {(world.awards?.length ?? 0) > 0 && (
+        <motion.div variants={fadeUp} className="space-y-3">
+          <AwardsSection awards={world.awards!.at(-1)!} clubIds={world.humanClubIds} />
+          {world.awards!.length > 1 && <BallonHistory awards={world.awards!} />}
+        </motion.div>
+      )}
 
       {view !== 'clube' && (
         <motion.div variants={fadeUp}>
