@@ -16,7 +16,7 @@
 import type { Player, Position } from '@cosmicfut/shared';
 import type { AcademyProspect, AcademyState, SeasonState } from '../contract';
 import { Rng } from '../rng';
-import { marketValue } from './players';
+import { marketValue, rollTraits } from './players';
 import { addDays } from './schedule';
 import { contractEndsSeason, type MarketResult } from '../transfers/actions';
 
@@ -132,7 +132,7 @@ export function generateProspect(id: string, name: string, nationalityId: number
   const { overall, potential } = rollAcademyRatings(rng);
   const age = rng.int(ACADEMY.age[0], ACADEMY.age[1]);
   const position = rng.pick(POSITIONS);
-  const traits = position === 'GK' ? [rng.int(0, 3)] : rng.chance(0.4) ? [rng.int(4, 13)] : [];
+  const traits = rollTraits(position, rng);
   return {
     id, name, position, age, nationalityId,
     side: rng.chance(0.25) ? 'L' : 'R',

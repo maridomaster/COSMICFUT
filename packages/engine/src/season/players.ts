@@ -249,7 +249,37 @@ export function squadScales(squad: Pick<Player, 'age' | 'overall' | 'potential' 
   };
 }
 
-/** Gera um júnior (15–17 anos). */
+/**
+ * (18/11) Duas características, como os jogadores reais do banco (sempre 2): goleiro só as de goleiro (0–3); na linha,
+ * sorteio ponderado pela posição (zagueiro: cabeceio/desarme/marcação; atacante: finalização/drible/velocidade…).
+ */
+const TRAIT_WEIGHTS: Record<Exclude<Position, 'GK'>, Record<number, number>> = {
+  // 4 Armação · 5 Cabeceio · 6 Cruzamento · 7 Desarme · 8 Drible · 9 Finalização · 10 Marcação · 11 Passe · 12 Resistência · 13 Velocidade
+  CB: { 5: 5, 7: 5, 10: 5, 11: 2, 12: 2, 13: 1 },
+  FB: { 6: 5, 13: 4, 7: 3, 10: 3, 12: 3, 8: 2 },
+  MF: { 4: 5, 11: 5, 8: 3, 7: 3, 12: 3, 9: 2, 13: 1 },
+  FW: { 9: 6, 8: 4, 13: 4, 5: 3, 4: 2 },
+};
+
+export function rollTraits(position: Position, rng: Rng): number[] {
+  if (position === 'GK') {
+    const a = rng.int(0, 3);
+    let b = rng.int(0, 2);
+    if (b >= a) b++;
+    return [a, b];
+  }
+  const w = TRAIT_WEIGHTS[position];
+  const ids = Object.keys(w).map(Number);
+  const out: number[] = [];
+  while (out.length < 2) {
+    const left = ids.filter((id) => !out.includes(id));
+    const i = rng.weightedIndex(left.map((id) => w[id]));
+    out.push(left[i < 0 ? 0 : i]);
+  }
+  return out;
+}
+
+/** Gera um júnior (17–18 anos). */
 export function generateYouthPlayer(s: YouthSpec): Player {
   const r = s.rng;
   const age = r.int(YOUTH.minAge, YOUTH.maxAge);
@@ -260,7 +290,7 @@ export function generateYouthPlayer(s: YouthSpec): Player {
   const promise = r.chance(YOUTH.worldPromise);
   if (promise) potential = r.int(88, 95);
   potential = clamp(Math.max(potential, overall + 2), 1, 99);
-  const traits = s.position === 'GK' ? [r.int(0, 3)] : r.chance(0.4) ? [r.int(4, 13)] : [];
+  const traits = rollTraits(s.position, r);
   return {
     id: s.id,
     name: randomName(s.pool, r, s.brazilStyle),

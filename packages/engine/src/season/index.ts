@@ -18,7 +18,7 @@ export {
 } from './competitions';
 export { lightSimulate, LIGHT, type LightTeam } from './light';
 export {
-  EVOLUTION, MIN_PLAYER_AGE, RETIREMENT, YOUTH, squadTarget, growthGap, marketValue, monthlyWage, monthlyDelta, yearEndBonus,
+  EVOLUTION, MIN_PLAYER_AGE, RETIREMENT, YOUTH, rollTraits, squadTarget, growthGap, marketValue, monthlyWage, monthlyDelta, yearEndBonus,
   VALUE_CURVE, ageValueMult, valueCurve, revalue, squadScales,
   nextPotential, realisticPotential, retireChance, randomName, neediestPosition, generateYouthPlayer, type YouthSpec,
 } from './players';

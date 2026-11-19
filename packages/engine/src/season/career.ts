@@ -29,7 +29,7 @@ import {
   type LeagueDivision, type StateDivision,
 } from './competitions';
 import { initCompetition } from './format';
-import { EVOLUTION, MIN_PLAYER_AGE, realisticPotential, revalue, YOUTH } from './players';
+import { EVOLUTION, MIN_PLAYER_AGE, realisticPotential, revalue, rollTraits, YOUTH } from './players';
 import { continentalCompetitions, continentalCountryOf, continentalPots, qualifiedFrom, qualifyContinental, strengthSort } from './continental';
 import { afcCompetitions, guestRegion, initialTitleHolders, qualifyAfc, qualifyUefa, uefaCompetitions, worldCompetitions } from './confed';
 import type { CountryHolders } from '../contract';
@@ -44,6 +44,7 @@ import { rolloverSeason } from './rollover';
 import { applyEconomyProfiles, ledgerDiff, pushMonth } from './econ';
 import { emptyRecords } from './records';
 import { migrateDiscipline } from './discipline';
+import { Rng } from '../rng';
 import { retireDuplicatePlayers } from './dedupe';
 
 export const DEFAULT_CAREER_OPTIONS: CareerOptions = {
@@ -564,7 +565,9 @@ export function careerSquads(state: SeasonState, base: Squads, marketApplied = f
         const potential = realisticPotential(q.age, q.overall, q.potential);
         // (18/11) ninguém abaixo da idade mínima (juniores de 15–16 anos do banco original contam como 17)
         const age = Math.max(MIN_PLAYER_AGE, q.age);
-        return value === q.value && potential === q.potential && age === q.age ? q : { ...q, value, potential, age };
+        // (18/11) juniores gerados/revelados antes sem características: 2, fixas pelo id (determinístico)
+        const traits = q.traits.length || !/:g\d+-\d+$/.test(q.id) ? q.traits : rollTraits(q.position, new Rng(`traits:${q.id}`));
+        return value === q.value && potential === q.potential && age === q.age && traits === q.traits ? q : { ...q, value, potential, age, traits };
       });
       cache.set(clubId, s);
     }
