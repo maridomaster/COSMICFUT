@@ -74,7 +74,9 @@ function emptyStats(): TeamLiveStats {
   };
 }
 
-function pinfo(p0: Player): PInfo {
+function pinfo(pBase: Player, honor?: { overall: number; drain: number }): PInfo {
+  // (19/11) ícone da Bola de Ouro/Prata: overall a mais na partida (antes das estrelas) e menos cansaço
+  const p0 = honor ? { ...pBase, overall: Math.min(99, pBase.overall + honor.overall) } : pBase;
   // (Estrelas) Top Mundial / Destaque: status +10% / +5% na partida (overall efetivo)
   const tier = starTier(p0);
   const p = tier ? { ...p0, overall: matchOverall(p0) } : p0;
@@ -92,7 +94,7 @@ function pinfo(p0: Player): PInfo {
     cross: has(6),
     gkBonus: 0.04 * has(2) + 0.03 * has(0) + 0.02 * has(3),
     penSave: has(1),
-    drain: (t.has(12) ? 0.75 : 1) * (p.age >= 32 ? STAMINA.veteranDrain : p.age <= 22 ? STAMINA.youngDrain : 1) * (def ? STARS.drain[tier!] : 1),
+    drain: (t.has(12) ? 0.75 : 1) * (p.age >= 32 ? STAMINA.veteranDrain : p.age <= 22 ? STAMINA.youngDrain : 1) * (def ? STARS.drain[tier!] : 1) * (honor?.drain ?? 1),
     goal: tier && isAttacking(p0.position) ? STARS.goal[tier] : 0,
     cardMul: def ? STARS.cards[tier!] : 1,
     ratingBonus: def ? STARS.rating[tier!] : 0,
@@ -187,13 +189,13 @@ export class MatchSimulation implements MatchSimulationApi {
     const fit = input.fitness ?? {};
     lineup.starters.forEach((id, i) => {
       const p = byId.get(id)!;
-      info.set(id, pinfo(p));
+      info.set(id, pinfo(p, input.honors?.[id]));
       live.push(this.mkLive(id, true, i, fit[id]));
     });
     for (const id of (lineup.bench ?? []).slice(0, 12)) {
       const p = byId.get(id);
       if (!p || info.has(id)) continue;
-      info.set(id, pinfo(p));
+      info.set(id, pinfo(p, input.honors?.[id]));
       live.push(this.mkLive(id, false, null, fit[id]));
       benchIds.add(id);
     }

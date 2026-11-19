@@ -65,23 +65,33 @@ export function recordCompetitionGoals(comp: Competition, homeId: string, awayId
  * Linhas de carreira do jogo (jogos, gols, assistências, nota). `copy`: substitui os arrays em vez de mutar (o
  * advanceDay sem `inPlace` compartilha o objeto `lines` raso com a entrada). MUTA `state.career.lines`.
  */
-export function recordLines(state: SeasonState, homeId: string, awayId: string, r: MatchResult): void {
+export function recordLines(state: SeasonState, homeId: string, awayId: string, r: MatchResult, comp?: Competition): void {
   const c = state.career;
   if (!c) return;
   const lines = (c.lines ??= {});
   const contracts = state.market?.contracts;
-  const bump = (pid: string, club: string, g: number, gl: number, a: number, rt: number) => {
+  // (19/11) Bola de Prata: o campeonato nacional (liga da 1ª divisão de um país) também tem linhas próprias
+  const league = comp && isNationalLeague(comp) ? comp.id : null;
+  const ll = league ? (c.leagueLines ??= {}) : null;
+  const bump = (pid: string, club: string, g: number, gl: number, a: number, rt: number, cs = 0) => {
     const k = `${pid}|${club}`;
     const prev = lines[k];
-    if (prev) lines[k] = [prev[0] + g, prev[1] + gl, prev[2] + a, prev[3] + rt, prev[4]];
+    if (prev) lines[k] = [prev[0] + g, prev[1] + gl, prev[2] + a, prev[3] + rt, prev[4], (prev[5] ?? 0) + cs];
     else {
       const ct = contracts?.[pid];
-      lines[k] = [g, gl, a, rt, ct?.kind === 'loan' && ct.loanFrom && ct.loanFrom !== club ? 1 : 0];
+      lines[k] = [g, gl, a, rt, ct?.kind === 'loan' && ct.loanFrom && ct.loanFrom !== club ? 1 : 0, cs];
+    }
+    if (ll) {
+      const lk = `${pid}|${league}`;
+      const lp = ll[lk];
+      ll[lk] = lp ? [lp[0] + g, lp[1] + gl, lp[2] + a, lp[3] + rt, lp[4] + cs, club] : [g, gl, a, rt, cs, club];
     }
   };
   for (const [side, clubId] of [['home', homeId], ['away', awayId]] as [Side, string][]) {
     if (!state.clubs[clubId]) continue;
-    for (const pid of r.appearances?.[side] ?? []) bump(pid, clubId, 1, 0, 0, Math.round((r.ratings[pid] ?? 6.2) * 10));
+    // jogo sem sofrer gol: conta para quem entrou em campo (o placar final do time)
+    const cs = (side === 'home' ? r.awayGoals : r.homeGoals) === 0 ? 1 : 0;
+    for (const pid of r.appearances?.[side] ?? []) bump(pid, clubId, 1, 0, 0, Math.round((r.ratings[pid] ?? 6.2) * 10), cs);
   }
   for (const s of r.scorers) {
     if (s.ownGoal) continue;
@@ -90,6 +100,11 @@ export function recordLines(state: SeasonState, homeId: string, awayId: string, 
     if (lines[`${s.playerId}|${club}`]) bump(s.playerId, club, 0, 1, 0, 0);
     if (s.assistId && lines[`${s.assistId}|${club}`]) bump(s.assistId, club, 0, 0, 1, 0);
   }
+}
+
+/** (19/11) Campeonato nacional da Bola de Prata: liga da 1ª divisão de um país. */
+export function isNationalLeague(comp: Pick<Competition, 'type' | 'countryId' | 'division' | 'id'>): boolean {
+  return comp.type === 'league' && comp.countryId !== undefined && (comp.division ?? 1) === 1;
 }
 
 /* ═════════════════════ virada ═════════════════════ */
@@ -113,7 +128,7 @@ export function flushLines(records: CareerRecords, state: SeasonState, date: str
   const labels = new Map<string, string>();
   let n = 0;
   for (const k of Object.keys(lines).sort()) {
-    const [g, gl, a, rt, loan] = lines[k];
+    const [g, gl, a, rt, loan, cs = 0] = lines[k];
     if (g <= 0) continue;
     const bar = k.lastIndexOf('|');
     const pid = k.slice(0, bar), club = k.slice(bar + 1);
@@ -127,9 +142,11 @@ export function flushLines(records: CareerRecords, state: SeasonState, date: str
       prev[5] = Math.round((prev[5] * prev[2] + rt) / games);
       prev[2] = games; prev[3] += gl; prev[4] += a;
       if (loan && !prev[6]) prev[6] = 1;
+      if (cs) { prev[6] ??= 0; prev[7] = (prev[7] ?? 0) + cs; }
     } else {
       const line: PlayerSeasonLine = [label, stored, g, gl, a, Math.round(rt / g)];
-      if (loan) line.push(1);
+      if (loan || cs) line.push(loan ? 1 : 0);
+      if (cs) line.push(cs);
       list.push(line);
     }
     n++;

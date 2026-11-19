@@ -86,7 +86,7 @@ export {
 export { econTables } from './career';
 /* Registros: gols/assistências de todos os jogos, artilharia, campanhas, troféus e carreira dos jogadores */
 export {
-  RECORDS, emptyRecords, recordCompetitionGoals, recordLines, clubSeasonLabelAt, flushLines, pruneRetired, topRows, campaignReach,
+  RECORDS, emptyRecords, isNationalLeague, recordCompetitionGoals, recordLines, clubSeasonLabelAt, flushLines, pruneRetired, topRows, campaignReach,
   competitionRecord, playerCareer, clubHistory, clubTrophies, championsOf, type PlayerCareerRow, type ClubCampaign,
 } from './records';
 export { LIGHT_ASSIST } from './light';
@@ -104,6 +104,6 @@ export {
 } from './discipline';
 export { duplicateGroups, retireDuplicatePlayers, DEDUP_REV } from './dedupe';
 export { ACADEMY, academyDay, academyWage, generateProspect, promoteProspect, releaseProspect, rollAcademyRatings } from './academy';
-export { AWARDS, awardWindow, ballonRace, raceLabels, computeSeasonAwards, pickTeam } from './awards';
+export { AWARDS, awardWindow, ballonRace, raceLabels, HONOR, honorBonus, honorsOf, silverRanking, computeSilverBalls, computeSeasonAwards, pickTeam } from './awards';
 export { prizeTable, type PrizeRow, type PrizeTableView } from './prizes';
 export { TRAINING, daysToNextMatch, setTraining, trainingAgeFactor, trainingCost, trainingDay, trainingEta, trainingRate } from './training';

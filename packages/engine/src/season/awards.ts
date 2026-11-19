@@ -14,7 +14,7 @@
  * Mínimo de jogos: 18 no mundo, 12 no campeonato. Formação 4-3-3 (GOL, 2 LAT, 2 ZAG, 3 MEI, 3 ATA).
  */
 import type { Player, Position } from '@cosmicfut/shared';
-import type { AwardPlayer, CareerRecords, ChampionRecord, PlayerSeasonLine, SeasonAwards, SeasonState, WorldState } from '../contract';
+import type { AwardPlayer, CareerRecords, ChampionRecord, Competition, Honor, Honors, PlayerSeasonLine, SeasonAwards, SeasonState, SilverBall, WorldState } from '../contract';
 import { flushLines } from './records';
 import { baseClubOf } from '../transfers/market';
 import { cycleSeason, seasonLabel, type Cycle } from './timeline';
@@ -29,9 +29,13 @@ export const AWARDS = {
   gamesWeight: 0.06,
   gamesCap: 50,
   overallWeight: 0.3,
+  /** (19/11) jogos sem sofrer gol: o que mais pesa para os defensores */
+  cleanSheetWeight: { GK: 0.6, CB: 0.4, FB: 0.3, MF: 0, FW: 0 } as Record<Position, number>,
   title: { continental: 5, league: 3, cup: 1.5 },
   /** premiações guardadas no mundo (as mais recentes) */
   keep: 30,
+  /** (19/11) Bolas de Prata guardadas (todas as ligas nacionais, as mais recentes) */
+  silverKeep: 400,
 };
 
 /** Temporadas consideradas: a que fechou + a do outro calendário encerrada nos 12 meses anteriores. */
@@ -41,7 +45,7 @@ export function awardWindow(cycle: Cycle, season: number): string[] {
     : [seasonLabel('split', season), seasonLabel('calendar', season)];
 }
 
-type Agg = { games: number; goals: number; assists: number; rt: number; clubs: Set<string> };
+type Agg = { games: number; goals: number; assists: number; rt: number; cs: number; clubs: Set<string> };
 
 function aggregate(lines: readonly PlayerSeasonLine[] | undefined, pid: string, ok: (label: string, club: string) => boolean): Agg | null {
   if (!lines) return null;
@@ -49,10 +53,11 @@ function aggregate(lines: readonly PlayerSeasonLine[] | undefined, pid: string, 
   for (const l of lines) {
     const club = l[1] === '' ? baseClubOf(pid) : l[1];
     if (!ok(l[0], club) || l[2] <= 0) continue;
-    a ??= { games: 0, goals: 0, assists: 0, rt: 0, clubs: new Set() };
+    a ??= { games: 0, goals: 0, assists: 0, rt: 0, cs: 0, clubs: new Set() };
     a.games += l[2];
     a.goals += l[3];
     a.assists += l[4];
+    a.cs += l[7] ?? 0;
     a.rt += l[5] * l[2];
     a.clubs.add(club);
   }
@@ -77,10 +82,12 @@ function award(p: Player, clubId: string, a: Agg, bonus: number): AwardPlayer {
   const avg = a.rt / a.games / 10;
   const score =
     (avg - 6) * AWARDS.ratingWeight + a.goals * AWARDS.goalWeight[p.position] + a.assists * AWARDS.assistWeight +
+    a.cs * AWARDS.cleanSheetWeight[p.position] +
     Math.min(a.games, AWARDS.gamesCap) * AWARDS.gamesWeight + p.overall * AWARDS.overallWeight + bonus;
   return {
     playerId: p.id, name: p.name, clubId, position: p.position, age: p.age, overall: p.overall, nationalityId: p.nationalityId,
-    games: a.games, goals: a.goals, assists: a.assists, rating: Math.round(avg * 10) / 10, score: Math.round(score * 100) / 100,
+    games: a.games, goals: a.goals, assists: a.assists, ...(a.cs ? { cleanSheets: a.cs } : {}),
+    rating: Math.round(avg * 10) / 10, score: Math.round(score * 100) / 100,
   };
 }
 
@@ -185,4 +192,83 @@ export function ballonRace(
     .map((c) => award(c.p, c.clubId, c.a, titleBonus(world.history, labels, c.a.clubs)))
     .sort(byScore)
     .slice(0, o.top ?? 10);
+}
+
+/* ═════════════════════ (19/11) Bola de Prata e ícones ═════════════════════ */
+
+/** Bônus de quem tem o ícone, nas partidas, até a próxima premiação: overall a mais e fator do cansaço. */
+export const HONOR = {
+  world: { overall: 2, drain: 0.8 },
+  national: { overall: 1, drain: 0.9 },
+};
+
+/** Bônus somados dos ícones do jogador (Bola de Ouro e/ou Prata); null se não tem nenhum. */
+export function honorBonus(honors: Honors | undefined, pid: string): { overall: number; drain: number } | null {
+  if (!honors) return null;
+  let overall = 0, drain = 1;
+  if (honors.world?.playerId === pid) { overall += HONOR.world.overall; drain *= HONOR.world.drain; }
+  for (const h of Object.values(honors.national ?? {})) if (h.playerId === pid) { overall += HONOR.national.overall; drain *= HONOR.national.drain; }
+  return overall ? { overall, drain } : null;
+}
+
+/** Ícones de um jogador (para a interface). */
+export function honorsOf(honors: Honors | undefined, pid: string): Honor[] {
+  if (!honors) return [];
+  const out: Honor[] = [];
+  if (honors.world?.playerId === pid) out.push(honors.world);
+  for (const h of Object.values(honors.national ?? {})) if (h.playerId === pid) out.push(h);
+  return out;
+}
+
+/**
+ * Candidatos da Bola de Prata de um campeonato nacional (só os jogos dele, `state.career.leagueLines`), ordenados.
+ * `minGames`: ausente ⇒ proporcional (40% de quem mais jogou, até `AWARDS.minGamesLeague`).
+ */
+export function silverRanking(
+  state: SeasonState, squads: (clubId: string) => readonly Player[], competitionId: string, history: readonly ChampionRecord[] = [], minGames?: number,
+): AwardPlayer[] {
+  const suffix = `|${competitionId}`;
+  const ll = state.career?.leagueLines ?? {};
+  const byClub = new Map<string, Map<string, Player>>();
+  const playerOf = (club: string, pid: string) => {
+    let m = byClub.get(club);
+    if (!m) byClub.set(club, (m = new Map(squads(club).map((p) => [p.id, p]))));
+    return m.get(pid);
+  };
+  const cands: { p: Player; club: string; a: Agg }[] = [];
+  let maxGames = 0;
+  for (const [k, v] of Object.entries(ll)) {
+    if (!k.endsWith(suffix)) continue;
+    const pid = k.slice(0, k.length - suffix.length);
+    const [g, gl, as, rt, cs, club] = v;
+    if (g <= 0 || rt <= 0) continue;
+    const p = playerOf(club, pid);
+    if (!p) continue;
+    maxGames = Math.max(maxGames, g);
+    cands.push({ p, club, a: { games: g, goals: gl, assists: as, rt, cs, clubs: new Set([club]) } });
+  }
+  const min = minGames ?? Math.max(1, Math.min(AWARDS.minGamesLeague, Math.floor(maxGames * 0.4)));
+  const label = new Set<string>();
+  return cands
+    .filter((c) => c.a.games >= min)
+    .map((c) => award(c.p, c.club, c.a, titleBonus(history, label, c.a.clubs)))
+    .sort(byScore);
+}
+
+/**
+ * Bolas de Prata das ligas nacionais que fecham na virada. Mínimo de jogos: `AWARDS.minGamesLeague` (ou a metade dos
+ * jogos de quem mais jogou, em ligas curtas).
+ */
+export function computeSilverBalls(
+  state: SeasonState, squads: (clubId: string) => readonly Player[], leagues: readonly Competition[], label: string, date: string,
+): SilverBall[] {
+  const out: SilverBall[] = [];
+  for (const c of leagues) {
+    const all = silverRanking(state, squads, c.id, [], 1);
+    const maxGames = all.reduce((m, x) => Math.max(m, x.games), 0);
+    const min = Math.min(AWARDS.minGamesLeague, Math.max(1, Math.floor(maxGames / 2)));
+    const best = all.find((x) => x.games >= min);
+    if (best) out.push({ label, date, competitionId: c.id, name: c.name, best });
+  }
+  return out;
 }

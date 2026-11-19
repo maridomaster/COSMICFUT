@@ -85,6 +85,19 @@ describe('prêmios: carreira', () => {
       expect(x.rating).toBeGreaterThan(5);
     }
     expect(n.world.awards?.at(-1)).toEqual(aw);
+    // (19/11) ícone da Bola de Ouro e Bola de Prata do Brasileirão (só os jogos da liga); passam para o trecho seguinte
+    expect(n.world.honors?.world?.playerId).toBe(aw.ballonDor[0].playerId);
+    const silver = n.summary.silver?.find((s) => s.competitionId === 'BRA-1');
+    expect(silver).toBeDefined();
+    expect(silver!.best.games).toBeGreaterThanOrEqual(AWARDS.minGamesLeague);
+    expect(n.world.honors?.national?.['BRA-1']?.playerId).toBe(silver!.best.playerId);
+    expect(n.state.career?.honors?.world?.playerId).toBe(aw.ballonDor[0].playerId);
+    // todas as ligas nacionais (1ª divisão) que fecham ganham a sua Bola de Prata, não só a do humano
+    expect(n.summary.silver?.some((s) => s.competitionId === 'ARG-1')).toBe(true);
+    expect(n.summary.silver?.some((s) => s.competitionId === 'BRA-2')).toBe(false);
+    // goleiros com jogos sem sofrer gol nas linhas
+    const gks = aw.world.filter((x) => x.position === 'GK');
+    expect(gks.every((x) => (x.cleanSheets ?? 0) > 0)).toBe(true);
     // eslint-disable-next-line no-console
     console.log('PREMIOS', JSON.stringify({ ouro: aw.ballonDor.map((x) => `${x.name} (${x.clubId}) ${x.rating} ${x.goals}g`), craque: lg.best && `${lg.best.name} ${lg.best.rating}`, mundo: aw.world.map((x) => `${x.position} ${x.name} ${x.clubId}`) }));
   }, 400_000);

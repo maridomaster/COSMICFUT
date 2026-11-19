@@ -17,7 +17,7 @@
 import type { NamePool, PickRule, Player, PlayersMarket } from '@cosmicfut/shared';
 import type {
   CareerData, CareerOptions, ClubEconomyInfo, ClubSeasonState, Competition, CompetitionType, EconTables, FinanceLedger,
-  MarketState, SeasonState, WorldState,
+  Honors, MarketState, SeasonState, WorldState,
 } from '../contract';
 import { DEFAULT_TACTIC } from '../tactics';
 import { baseClubOf, createMarket, marketSquads, MARKET, type Squads } from '../transfers/market';
@@ -351,6 +351,13 @@ export function migrateCareer(
   let recordsMigrated = false;
   if (!w.records) { w.records = emptyRecords(); recordsMigrated = true; }
   if (s?.career && !s.career.lines) s.career.lines = {};
+  // (19/11) ícones: saves com Bola de Ouro já entregue ganham o ícone do último vencedor (até a próxima premiação)
+  const lastAward = w.awards?.at(-1);
+  if (!w.honors && lastAward?.ballonDor[0]) {
+    const g = lastAward.ballonDor[0];
+    w.honors = { world: { kind: 'world', playerId: g.playerId, name: g.name, clubId: g.clubId, label: lastAward.label } };
+  }
+  if (s?.career && w.honors && !s.career.honors) s.career.honors = JSON.parse(JSON.stringify(w.honors)) as Honors;
   // (Etapa 4) saves das Etapas 1–3: perfil econômico (TV, custos, teto da folha) e tabelas de prêmios no trecho em
   // andamento; a Moral da Torcida começa em 60 (ausente = 60). Sem `data`, o trecho segue com a economia antiga até
   // a próxima virada (que já cria o trecho com a economia nova).
@@ -918,6 +925,9 @@ export function createSeasonFromWorld(world: WorldState, data: CareerData, o: Se
       ...(econ ? { econ } : {}),
       // (Registros) linhas de carreira do trecho (a virada anterior já despejou as do trecho que acabou)
       lines: {},
+      // (19/11) Bola de Prata: números das ligas nacionais que atravessam a virada; ícones vigentes
+      ...(carry?.career?.leagueLines ? { leagueLines: keepLeagueLines(carry.career.leagueLines, new Set(carried.map((x) => x.id))) } : {}),
+      ...(world.honors ? { honors: JSON.parse(JSON.stringify(world.honors)) as Honors } : {}),
     },
     segment,
   };
@@ -1015,4 +1025,11 @@ export function careerNamePoolCodes(world: WorldState, data: CareerData, state?:
 export function scopeNamePoolCodes(data: CareerData): string[] {
   const have = new Set(data.countries.map((c) => c.code));
   return SCOPE_CODES.filter((c) => have.has(c)).sort();
+}
+
+/** (19/11) Linhas da Bola de Prata só das competições que continuam no trecho seguinte. */
+function keepLeagueLines<T>(lines: Record<string, T>, keep: Set<string>): Record<string, T> {
+  const out: Record<string, T> = {};
+  for (const [k, v] of Object.entries(lines)) if (keep.has(k.slice(k.lastIndexOf('|') + 1))) out[k] = v;
+  return out;
 }

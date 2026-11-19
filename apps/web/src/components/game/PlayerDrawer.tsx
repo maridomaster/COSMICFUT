@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Crown, History, Sprout, Target, TrendingUp, X, Zap } from 'lucide-react';
-import { playerCareer, STARS, starTier } from '@cosmicfut/engine';
+import { honorsOf, playerCareer, STARS, starTier } from '@cosmicfut/engine';
+import { HonorBallIcon, honorTitle } from './HonorBall';
 import { TierStarIcon } from './TierStar';
 import { useSeason, useWorld } from '@/store/season';
 import { Segmented } from '@/components/ui/range';
@@ -105,6 +106,7 @@ function PlayerCard({
   const card = cardTierMeta(p.overall);
   const growth = Math.max(0, p.potential - p.overall);
   const [tab, setTab] = useState<'card' | 'carreira'>('card');
+  const honors = honorsOf(useSeason((s) => s.save?.season.career?.honors), p.id);
 
   return (
     <div className="pb-8">
@@ -165,13 +167,18 @@ function PlayerCard({
             {context && <div className="mt-1.5 text-xs text-fg-muted">{context}</div>}
           </div>
         </div>
-        {(starTier(p) || (p.youth && p.age <= 20) || lineup?.captainId === p.id || lineup?.penaltyTakerId === p.id) && (
+        {(starTier(p) || honors.length > 0 || (p.youth && p.age <= 20) || lineup?.captainId === p.id || lineup?.penaltyTakerId === p.id) && (
           <div className="relative mt-4 flex flex-wrap gap-1.5">
             {starTier(p) && (
               <Badge variant={starTier(p) === 'top' ? 'club' : 'warning'} data-testid="tier-badge">
                 <TierStarIcon tier={starTier(p)!} size={14} /> {STARS.label[starTier(p)!]}
               </Badge>
             )}
+            {honors.map((h) => (
+              <Badge key={`${h.kind}-${h.competitionId ?? ''}`} variant={h.kind === 'world' ? 'warning' : 'default'} title={honorTitle(h)} data-testid={`honor-badge-${h.kind}`}>
+                <HonorBallIcon kind={h.kind} size={14} /> {h.kind === 'world' ? 'Bola de Ouro' : 'Bola de Prata'} {h.label} · +{h.kind === 'world' ? 2 : 1} overall
+              </Badge>
+            ))}
             {p.youth && p.age <= 20 && (
               <Badge variant="success">
                 <Sprout className="size-3" /> Base

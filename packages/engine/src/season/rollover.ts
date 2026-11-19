@@ -24,8 +24,8 @@ import { withWageFloor } from '../transfers/wage-floor';
 import { AI_MARKET } from '../transfers/ai';
 import { CAREER_REV, careerSquads, createSeasonFromWorld, worldSquads, type NamePools } from './career';
 import { finalRanking, forceFinishCompetition } from './format';
-import { competitionRecord, emptyRecords, flushLines, pruneRetired } from './records';
-import { AWARDS, computeSeasonAwards } from './awards';
+import { competitionRecord, emptyRecords, flushLines, isNationalLeague, pruneRetired } from './records';
+import { AWARDS, computeSeasonAwards, computeSilverBalls } from './awards';
 import { ordersFromSeason, qualifiedFrom, qualifyContinental } from './continental';
 import { qualifyAfc, qualifyUefa } from './confed';
 import {
@@ -238,6 +238,30 @@ export function rolloverSeason(
       .map((c) => ({ competitionId: c.id, name: c.name, seasonLabel: ti.label, clubIds: c.clubIds.slice() }));
     summary.awards = computeSeasonAwards(w, squads, Object.keys(state.clubs), { cycle, season, date: turnoverDate, leagues });
     w.awards = [...(w.awards ?? []), summary.awards].slice(-AWARDS.keep);
+    // (19/11) ícone da Bola de Ouro: vale até a próxima premiação
+    w.honors ??= {};
+    const g = summary.awards.ballonDor[0];
+    if (g) w.honors.world = { kind: 'world', playerId: g.playerId, name: g.name, clubId: g.clubId, label: summary.awards.label };
+    else delete w.honors.world;
+  }
+  // (19/11) Bola de Prata: o melhor de cada campeonato nacional que fecha (só os jogos da liga); o ícone troca de dono
+  {
+    const nat = closing.filter(isNationalLeague);
+    const silver = computeSilverBalls(state, squads, nat, ti.label, turnoverDate);
+    if (silver.length) {
+      summary.silver = silver;
+      w.silverBalls = [...(w.silverBalls ?? []), ...silver].slice(-AWARDS.silverKeep);
+    }
+    if (nat.length) {
+      w.honors ??= {};
+      const national = { ...(w.honors.national ?? {}) };
+      for (const c of nat) {
+        const s = silver.find((x) => x.competitionId === c.id);
+        if (s) national[c.id] = { kind: 'national', playerId: s.best.playerId, name: s.best.name, clubId: s.best.clubId, label: s.label, competitionId: c.id, leagueName: c.name };
+        else delete national[c.id];
+      }
+      w.honors.national = national;
+    }
   }
   for (const c of closing) w.lastRanking[c.id] = rankingOf(c);
   // campeões por país (copa e liga): Supercopa e pote 1 do ano seguinte

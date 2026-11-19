@@ -14,6 +14,7 @@ import { clubWageBill, loanOutWages } from '../transfers/market';
 import { aggregateBefore, finalRanking, forceFinishCompetition, progressCompetition, stageStandings } from './format';
 import { resolveConflicts } from './calendar';
 import { lightSimulate, type LightTeam } from './light';
+import { honorBonus } from './awards';
 import { benchPotentialLoss, monthlyDelta, playGrowthFactor } from './players';
 import { recordCompetitionGoals, recordLines } from './records';
 import { careerSquads } from './career';
@@ -150,6 +151,12 @@ export function buildTeamInput(state: SeasonState, clubId: string, players: Play
     else lineup = { ...lineup, bench: lineup.bench.filter((id) => ids.has(id)) };
   }
   if (!lineup) lineup = autoPickLineup(available, tactic, undefined, { fitness: club?.fitness });
+  // (19/11) ícones da Bola de Ouro/Prata dos jogadores deste elenco
+  let honors: Record<string, { overall: number; drain: number }> | undefined;
+  if (state.career?.honors) for (const p of available) {
+    const b = honorBonus(state.career.honors, p.id);
+    if (b) (honors ??= {})[p.id] = b;
+  }
   // (13/11) preço do ingresso do mandante: a simulação devolve o público pagante
   const ticketDemand = isHome ? homeTicketDemand(state, clubId) : undefined;
   // (Etapa 4) com o jogo informado, o público é o da bilheteria da economia (o mesmo que advanceDay grava)
@@ -168,6 +175,7 @@ export function buildTeamInput(state: SeasonState, clubId: string, players: Play
     fitness: club?.fitness,
     stadiumCapacity: info?.capacity,
     reputation: info?.reputation,
+    ...(honors ? { honors } : {}),
   };
 }
 
@@ -212,6 +220,7 @@ function cloneForDay(s: SeasonState): SeasonState {
     career: s.career ? {
       ...s.career, evo: monthly ? { ...s.career.evo } : s.career.evo, stats: { ...s.career.stats }, clubGames: { ...s.career.clubGames },
       ...(s.career.lines ? { lines: { ...s.career.lines } } : {}),
+      ...(s.career.leagueLines ? { leagueLines: { ...s.career.leagueLines } } : {}),
     } : undefined,
   };
 }
@@ -363,7 +372,11 @@ export function advanceDay(
           const lt = (id: string): LightTeam => {
             const c = state.clubs[id];
             const info = state.clubInfo?.[id];
-            return { clubId: id, players: squads(id), unavailable: c ? unavailablePlayers(c, f.competitionId) : undefined, capacity: info?.capacity, reputation: info?.reputation };
+            const hs = state.career?.honors;
+            const ps = squads(id);
+            // (19/11) ícones: o overall a mais também vale na simulação leve
+            const players = hs ? ps.map((p) => { const b = honorBonus(hs, p.id); return b ? { ...p, overall: Math.min(99, p.overall + b.overall) } : p; }) : ps;
+            return { clubId: id, players, unavailable: c ? unavailablePlayers(c, f.competitionId) : undefined, capacity: info?.capacity, reputation: info?.reputation };
           };
           result = lightSimulate(seed, lt(f.homeId), lt(f.awayId), { knockout: f.knockout, aggregate, neutral: f.neutral });
         } else {
@@ -394,7 +407,7 @@ export function advanceDay(
       if (comp.format) recordCompetitionGoals(comp, f.homeId, f.awayId, result);
       if (career) {
         recordStats(state, f, result);
-        recordLines(state, f.homeId, f.awayId, result);
+        recordLines(state, f.homeId, f.awayId, result, comp);
       }
       played.push({ fixture: f, result });
     }

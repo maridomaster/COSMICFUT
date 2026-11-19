@@ -2,6 +2,7 @@ import type { Player, Trait } from '@cosmicfut/shared';
 import { STATUS_META, type LineupStatus } from '@/lib/lineup';
 import { cn } from '@/lib/utils';
 import { PlayerTierStar } from './TierStar';
+import { PlayerHonors } from './HonorBall';
 
 /** Chips com os nomes das características (traits) do jogador. */
 export function TraitChips({ player, traits, className, max }: { player: Player; traits: Map<number, Trait>; className?: string; max?: number }) {
@@ -44,6 +45,7 @@ export function PlayerFlags({ player, className }: { player: Player; className?:
   return (
     <span className={cn('inline-flex shrink-0 items-center gap-1', className)}>
       <PlayerTierStar overall={player.overall} size={15} />
+      <PlayerHonors playerId={player.id} size={15} />
     </span>
   );
 }

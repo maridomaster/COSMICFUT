@@ -103,6 +103,8 @@ export interface MatchTeamInput {
   ticketDemand?: number;
   /** (Etapa 4) público pagante exato (bilheteria da economia, `matchGate`); tem prioridade sobre o cálculo da simulação */
   attendance?: number;
+  /** (19/11) ícones (Bola de Ouro/Prata): overall a mais e fator do cansaço por jogador */
+  honors?: Record<string, { overall: number; drain: number }>;
 }
 
 export interface MatchConfig {
@@ -608,7 +610,43 @@ export interface CareerSeasonInfo {
    * assistências, soma das notas × 10, emprestado (0/1)]. No trecho a temporada de cada clube é fixa (ver
    * season/records.ts); a virada despeja tudo em `WorldState.records.players`. Ausente ⇒ save antigo (começa vazio).
    */
-  lines?: Record<string, [number, number, number, number, number]>;
+  lines?: Record<string, [number, number, number, number, number, number?]>;
+  /**
+   * (19/11) Bola de Prata: números de cada jogador SÓ no campeonato nacional (liga da 1ª divisão de cada país):
+   * `${jogadorId}|${competicaoId}` → [jogos, gols, assistências, Σ notas × 10, jogos sem sofrer gol, clube]. A virada
+   * premia as ligas que fecham e mantém as do outro ciclo.
+   */
+  leagueLines?: Record<string, [number, number, number, number, number, string]>;
+  /** (19/11) ícones vigentes (Bola de Ouro / Bola de Prata): bônus nas partidas até a próxima premiação */
+  honors?: Honors;
+}
+
+/** (19/11) Ícone de premiação vigente. */
+export interface Honor {
+  kind: 'world' | 'national';
+  playerId: string;
+  name: string;
+  clubId: string;
+  /** temporada premiada ("2026", "2025/26") */
+  label: string;
+  /** Bola de Prata: o campeonato nacional */
+  competitionId?: string;
+  leagueName?: string;
+}
+
+/** (19/11) Bola de Ouro vigente e a Bola de Prata vigente de cada campeonato nacional. */
+export interface Honors {
+  world?: Honor;
+  national?: Record<string, Honor>;
+}
+
+/** (19/11) Bola de Prata entregue (histórico). */
+export interface SilverBall {
+  label: string;
+  date: string;
+  competitionId: string;
+  name: string;
+  best: AwardPlayer;
 }
 
 /* ───────────────────── Carreira / WorldState (adição Fase 1) ───────────────────── */
@@ -650,7 +688,7 @@ export type RecordRow = [string, string, string, number];
  * [rótulo da temporada ("2026" | "2026/27"), clubeId ('' = clube de origem do id), jogos, gols, assistências,
  *  nota média × 10, emprestado? (1, opcional)].
  */
-export type PlayerSeasonLine = [string, string, number, number, number, number, number?];
+export type PlayerSeasonLine = [string, string, number, number, number, number, number?, number?];
 
 /** (Registros) Registros persistentes da carreira (além de `WorldState.history`). */
 export interface CareerRecords {
@@ -772,6 +810,10 @@ export interface WorldState {
   records?: CareerRecords;
   /** (Prêmios) premiações de fim de temporada (Bola de Ouro, Seleção do Mundo, times dos campeonatos), as mais recentes */
   awards?: SeasonAwards[];
+  /** (19/11) ícones vigentes (cópia em `SeasonState.career.honors` para as partidas) */
+  honors?: Honors;
+  /** (19/11) Bolas de Prata entregues (as mais recentes) */
+  silverBalls?: SilverBall[];
   /**
    * (17/11) "Vários técnicos no mesmo computador" (hot-seat, como no Brasfoot): técnicos locais da carreira solo, na
    * ordem das vezes; `active` = quem está com o controle (o clube dele é `humanClubIds[0]`). A engine não usa.
@@ -1199,6 +1241,8 @@ export interface SeasonSummary {
   coachLeft?: string;
   /** (Prêmios) premiação desta virada (só nas viradas dos clubes humanos) */
   awards?: SeasonAwards;
+  /** (19/11) Bolas de Prata desta virada (campeonatos nacionais que fecharam) */
+  silver?: SilverBall[];
 }
 
 /* (Prêmios) ver season/awards.ts */
@@ -1214,6 +1258,8 @@ export interface AwardPlayer {
   games: number;
   goals: number;
   assists: number;
+  /** (19/11) jogos sem sofrer gol (defensores) */
+  cleanSheets?: number;
   /** nota média (1 casa) */
   rating: number;
   score: number;
