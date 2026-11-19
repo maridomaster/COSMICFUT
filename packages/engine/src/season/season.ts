@@ -18,6 +18,7 @@ import { monthlyDelta } from './players';
 import { recordCompetitionGoals, recordLines } from './records';
 import { careerSquads } from './career';
 import { academyDay } from './academy';
+import { trainingDay } from './training';
 import { homeTicketDemand, processMonthlyFinance, processStadiumWorks, resultAttendance, ticketPriceOf } from './finance';
 import { continentalCountryOf, linkContinental } from './continental';
 import { linkCompetitions } from './confed';
@@ -281,6 +282,8 @@ export function advanceDay(
   }
   // (Fase 2) obras do estádio concluídas
   if (worksPending) processStadiumWorks(state);
+  // (Treino) Centro de Treinamento dos humanos: evolução e energia perto dos jogos
+  if (career && state.market?.training) for (const n of trainingDay(state, squads)) news(n.text, n.clubId);
 
   // 2) finanças mensais
   if (date.endsWith('-01')) {

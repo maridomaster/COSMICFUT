@@ -236,6 +236,11 @@ function parseMarketAction(type: MarketAction['type'], raw: unknown): MarketActi
     case 'promote':
     case 'dismiss':
       return { type, playerId: V.id(o.playerId, 'Jogador') };
+    /* (Treino) jogadores no Centro de Treinamento (até 3) */
+    case 'train': {
+      if (!Array.isArray(o.playerIds) || o.playerIds.length > 3) fail('Lista de jogadores inválida (até 3).');
+      return { type, playerIds: (o.playerIds as unknown[]).map((x) => V.id(x, 'Jogador')) };
+    }
     /* (Mercado e Orçamentos) equilíbrio de orçamentos */
     case 'budget':
       return { type, toWage: money(o.toWage, 'Valor', -MAX_FEE, MAX_FEE) };

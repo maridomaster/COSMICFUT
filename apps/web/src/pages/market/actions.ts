@@ -12,7 +12,7 @@
 import { useMemo } from 'react';
 import type { Player } from '@cosmicfut/shared';
 import {
-  counterIncoming, exercisePurchaseOption, makeOffer, promoteProspect, proposeContract, releaseProspect, rebalanceBudgets, recallLoan, releasePlayer, renewContract, respondToOffer,
+  counterIncoming, exercisePurchaseOption, makeOffer, promoteProspect, proposeContract, releaseProspect, setTraining, rebalanceBudgets, recallLoan, releasePlayer, renewContract, respondToOffer,
   setLoanListed, setTransferListed, withdrawOffer,
   type ExternalClubInfo, type LoanTerms, type MarketResult, type PreContract, type SeasonState, type TransferOffer, type TransferRecord,
 } from '@cosmicfut/engine';
@@ -60,6 +60,8 @@ export interface MarketActions {
   promote(playerId: string): Promise<MarketOutcome>;
   /** (Base) dispensa um revelado da base */
   dismiss(playerId: string): Promise<MarketOutcome>;
+  /** (Treino) define os jogadores do Centro de Treinamento (até 3) */
+  train(playerIds: string[]): Promise<MarketOutcome>;
 }
 
 /* ───────── solo ───────── */
@@ -102,6 +104,7 @@ const SOLO: MarketActions = {
   budget: async (toWage) => soloApply((s) => rebalanceBudgets(s, squads, soloHuman(), toWage)),
   promote: async (playerId) => soloApply((s) => promoteProspect(s, squads, soloHuman(), playerId)),
   dismiss: async (playerId) => soloApply((s) => releaseProspect(s, soloHuman(), playerId)),
+  train: async (playerIds) => soloApply((s) => setTraining(s, squads, soloHuman(), playerIds)),
 };
 
 /* ───────── online ───────── */
@@ -134,6 +137,7 @@ function onlineActions(blocked: string | null): MarketActions {
     budget: guard((toWage) => net('budget', { toWage })),
     promote: guard((playerId) => net('promote', { playerId })),
     dismiss: guard((playerId) => net('dismiss', { playerId })),
+    train: guard((playerIds) => net('train', { playerIds })),
   };
 }
 

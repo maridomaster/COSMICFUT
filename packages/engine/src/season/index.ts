@@ -106,3 +106,4 @@ export { duplicateGroups, retireDuplicatePlayers, DEDUP_REV } from './dedupe';
 export { ACADEMY, academyDay, academyWage, generateProspect, promoteProspect, releaseProspect, rollAcademyRatings } from './academy';
 export { AWARDS, awardWindow, computeSeasonAwards, pickTeam } from './awards';
 export { prizeTable, type PrizeRow, type PrizeTableView } from './prizes';
+export { TRAINING, daysToNextMatch, setTraining, trainingAgeFactor, trainingCost, trainingDay, trainingEta, trainingRate } from './training';

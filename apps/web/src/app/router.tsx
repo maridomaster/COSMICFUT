@@ -16,6 +16,7 @@ import { FinancePage } from '@/pages/finance/FinancePage';
 import { MatchPage } from '@/pages/match/MatchPage';
 import { MarketPage } from '@/pages/market/MarketPage';
 import { AcademyPage } from '@/pages/academy/AcademyPage';
+import { TrainingPage } from '@/pages/training/TrainingPage';
 import { CompetitionsPage } from '@/pages/competitions/CompetitionsPage';
 import { HistoryPage } from '@/pages/history/HistoryPage';
 import { StatsPage } from '@/pages/stats/StatsPage';
@@ -80,6 +81,8 @@ export const router = createBrowserRouter([
           { path: '/mercado', element: <MarketPage /> },
           // (Base) categorias de base: revelações periódicas (solo e online)
           { path: '/base', element: <AcademyPage /> },
+          // (Treino) Centro de Treinamento (solo e online)
+          { path: '/treino', element: <TrainingPage /> },
           // (Fase 3) carreira do técnico (solo)
           { path: '/inbox', element: <InboxPage /> },
           // (carreira online) Central de Empregos online: vagas, propostas, diretoria

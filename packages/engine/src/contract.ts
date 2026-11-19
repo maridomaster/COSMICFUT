@@ -1559,6 +1559,14 @@ export interface MarketState {
    * atravessa a virada. Ausente ⇒ base ainda não começou.
    */
   academy?: Record<string, AcademyState>;
+  /** (Treino) Centro de Treinamento dos clubes humanos (clubId → estado). Ver season/training.ts */
+  training?: Record<string, TrainingState>;
+}
+
+/** (Treino) jogadores em treino especial (até 3) e o progresso de cada um até o próximo +1 de overall. */
+export interface TrainingState {
+  players: string[];
+  progress: Record<string, number>;
 }
 
 /** (Base) estado da base de um clube. */
