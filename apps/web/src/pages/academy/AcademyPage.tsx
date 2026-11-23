@@ -52,7 +52,7 @@ export function AcademyPage() {
           title="Base"
           eyebrow="Categorias de base"
           meta={meta}
-          description={`De tempos em tempos (a cada ${ACADEMY.gapDays[0]}–${ACADEMY.gapDays[1]} dias) a base revela um jogador de ${ACADEMY.age[0]}–${ACADEMY.age[1]} anos, com overall de ${ACADEMY.ovr[0]} a ${ACADEMY.ovr[1]} e potencial de ${ACADEMY.pot[0]} a ${ACADEMY.pot[1]} — os melhores são raros. Promova ao elenco principal (contrato de ${ACADEMY.contractYears} anos e salário pequeno) ou dispense. Sem decisão em ${ACADEMY.expireDays} dias, ele deixa o clube. Até ${ACADEMY.maxProspects} revelados esperando.`}
+          description={`De tempos em tempos (a cada ${ACADEMY.gapDays[0]}–${ACADEMY.gapDays[1]} dias) a base revela um jogador de ${ACADEMY.age[0]}–${ACADEMY.age[1]} anos, com overall de ${ACADEMY.ovr[0]} a ${ACADEMY.ovr[1]} e potencial de ${ACADEMY.pot[0]} a ${ACADEMY.pot[1]} (joias raras até ${ACADEMY.gem[1]}) — os melhores são raros. Promova ao elenco principal (contrato de ${ACADEMY.contractYears} anos e salário pequeno) ou dispense. Sem decisão em ${ACADEMY.expireDays} dias, ele deixa o clube. Até ${ACADEMY.maxProspects} revelados esperando.`}
         />
       </motion.div>
 

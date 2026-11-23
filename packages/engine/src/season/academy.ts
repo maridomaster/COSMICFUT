@@ -30,10 +30,15 @@ export const ACADEMY = {
   /** dias até o revelado sem decisão deixar o clube */
   expireDays: 120,
   ovr: [60, 82] as const,
-  pot: [75, 95] as const,
+  /** (23/11) potencial comum 75–90 (cauda íngreme); 90+ só na "joia" rara (antes 75–95: 1 em 8 saía 90+) */
+  pot: [75, 90] as const,
+  /** chance de joia (potencial 89–95, o topo ainda mais raro) */
+  gemChance: 0.01,
+  gem: [89, 95] as const,
   /** expoentes da cauda (maior = topo mais raro) */
   ovrCurve: 2.6,
   potCurve: 2.4,
+  gemCurve: 2,
   /** o potencial fica pelo menos isto acima do overall */
   minGrowth: 3,
   age: [17, 19] as const,
@@ -63,7 +68,9 @@ export function rollAcademyRatings(rng: Rng): { overall: number; potential: numb
   const [p0, p1] = ACADEMY.pot;
   const overall = o0 + Math.round((o1 - o0) * Math.pow(rng.next(), ACADEMY.ovrCurve));
   let potential = p0 + Math.round((p1 - p0) * Math.pow(rng.next(), ACADEMY.potCurve));
-  potential = Math.min(p1, Math.max(potential, overall + ACADEMY.minGrowth));
+  const [g0, g1] = ACADEMY.gem;
+  if (rng.chance(ACADEMY.gemChance)) potential = g0 + Math.round((g1 - g0) * Math.pow(rng.next(), ACADEMY.gemCurve));
+  potential = Math.min(Math.max(p1, potential), Math.max(potential, overall + ACADEMY.minGrowth));
   return { overall, potential };
 }
 

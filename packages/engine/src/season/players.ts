@@ -211,8 +211,10 @@ export const YOUTH = {
   /** overall inicial = squadTarget − offset ± spread (spec §4.5: −22 ± 6) */
   offset: 22,
   spread: 6,
-  potentialSd: 5,
-  worldPromise: 0.02,
+  /** (23/11) potencial 90+ mais raro: desvio 5 → 4; promessa mundial 2% (88–95) → 0,5% (86–93) */
+  potentialSd: 4,
+  worldPromise: 0.005,
+  promise: [86, 93] as const,
   /** apelido de nome único no Brasil */
   brazilNickname: 0.35,
   /** juniores extras por ano (além de 1 por aposentadoria), até `academyLimit` na base… */
@@ -323,7 +325,7 @@ export function generateYouthPlayer(s: YouthSpec): Player {
   const overall = Math.round(clamp(T - YOUTH.offset + (r.next() * 2 - 1) * YOUTH.spread, 25, 80));
   let potential = Math.round(overall + growthGap(age) + r.normal() * YOUTH.potentialSd);
   const promise = r.chance(YOUTH.worldPromise);
-  if (promise) potential = r.int(88, 95);
+  if (promise) potential = r.int(YOUTH.promise[0], YOUTH.promise[1]);
   potential = clamp(Math.max(potential, overall + 2), 1, 99);
   const traits = rollTraits(s.position, r);
   return {
