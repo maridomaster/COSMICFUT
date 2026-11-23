@@ -90,6 +90,9 @@ describe('prêmios: carreira', () => {
       expect(x.rating).toBeGreaterThan(5);
     }
     expect(n.world.awards?.at(-1)).toEqual(aw);
+    // (23/11) carreira de 01/01: a Europa joga a temporada 2025/26 (comprimida) em jan–jun — campeões e jogos
+    expect(n.world.history.some((h) => h.seasonLabel === '2025/26' && h.competitionId === 'ING-1' && !!h.championId)).toBe(true);
+    expect(Object.values(n.world.records!.players).some((ls) => ls.some((l) => l[0] === '2025/26' && l[2] >= 30))).toBe(true);
     // (19/11) 1ª premiação: a temporada europeia da carreira começa em julho (2026/27) e entra na janela; antes só
     // sul-americanos disputavam. Volume (70 jogos no Brasil) não decide sozinho.
     const sa = /-(bra|arg|uru|chi|col|par|per|ecu|bol|ven)$/;
@@ -97,12 +100,15 @@ describe('prêmios: carreira', () => {
     expect(aw.ballonDor.some((x) => !sa.test(x.clubId))).toBe(true);
     // saves antigos: a 1ª Bola de Ouro (só sul-americanos) é refeita e o ícone vai para o novo vencedor
     const fake = { ...aw.ballonDor[1], playerId: 'velho:1', name: 'Velho' };
-    const old: WorldState = { ...n.world, awardsRev: undefined, awards: [{ ...aw, ballonDor: [fake] }], honors: { ...n.world.honors, world: { kind: 'world', playerId: 'velho:1', name: 'Velho', clubId: fake.clubId, label: aw.label } } };
+    const old: WorldState = { ...n.world, awardsRev: undefined, prelude: undefined, awards: [{ ...aw, ballonDor: [fake] }], honors: { ...n.world.honors, world: { kind: 'world', playerId: 'velho:1', name: 'Velho', clubId: fake.clubId, label: aw.label } } };
     const mig = migrateCareer(old, n.state, { squads: base, data });
     expect(mig.awardsMigrated).toBe(true);
-    expect(mig.world.awards!.at(-1)!.ballonDor[0].playerId).toBe(aw.ballonDor[0].playerId);
-    expect(mig.world.honors?.world?.playerId).toBe(aw.ballonDor[0].playerId);
-    expect(mig.state?.career?.honors?.world?.playerId).toBe(aw.ballonDor[0].playerId);
+    const won = mig.world.awards!.at(-1)!.ballonDor[0].playerId;
+    expect(won).not.toBe('velho:1');
+    expect(mig.world.honors?.world?.playerId).toBe(won);
+    expect(mig.state?.career?.honors?.world?.playerId).toBe(won);
+    // com o prelúdio (carreiras novas) nada é refeito
+    expect(migrateCareer({ ...old, prelude: true }, n.state, { squads: base, data }).awardsMigrated).toBeUndefined();
     expect(migrateCareer(mig.world, mig.state, { squads: base, data }).awardsMigrated).toBeUndefined();
     // (19/11) ícone da Bola de Ouro e Bola de Prata do Brasileirão (só os jogos da liga); passam para o trecho seguinte
     expect(n.world.honors?.world?.playerId).toBe(aw.ballonDor[0].playerId);

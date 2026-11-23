@@ -51,7 +51,10 @@ describe('carreira: temporada do Brasil', () => {
     expect(first.competitions.find((c) => c.id === 'BRA-2')!.relegated).toBe(4);
     expect(first.competitions.filter((c) => c.type === 'state').length).toBeGreaterThanOrEqual(60);
     // 1º trecho: só competições de ano civil (as europeias 2026/27 começam em 01/07)
-    expect(first.competitions.every((c) => cycleOfCompetition(c) === 'calendar')).toBe(true);
+    // (23/11) + a temporada europeia/árabe 2025/26 comprimida em jan–jun (prelúdio)
+    const split = first.competitions.filter((c) => cycleOfCompetition(c) === 'split');
+    expect(split.every((c) => c.seasonLabel === '2025/26' && (c.calendar ?? []).every((d) => d >= '2026-01-03' && d <= '2026-06-30'))).toBe(true);
+    expect(split.some((c) => c.id === 'ING-1')).toBe(true);
     expect(first.segment).toEqual({ start: '2026-01-01', end: '2026-06-30', closes: 'split' });
   });
 

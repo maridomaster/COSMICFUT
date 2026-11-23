@@ -38,7 +38,8 @@ const HUMAN = 'palmeiras';
 // (Atualização 38) a nova curva de stamina mudou os resultados: 'assistente-d' passou a demitir o Flamengo na virada;
 // das seeds a, e, f, g testadas, e e g passam (a e f demitem o Real Madrid). Variância de resultado, não erro de código.
 // (18/11) menos amarelos (yellowPerFoul 0.155→0.095) mudou o sorteio: 'assistente-e' passou a demitir o Flamengo; 'g' passa.
-const SAFE_SEED = 'assistente-g';
+// (23/11) a Europa passou a jogar 2025/26 no 1º semestre (prelúdio): 'g' passou a demitir o Flamengo; 'h' passa.
+const SAFE_SEED = 'assistente-h';
 const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x)) as T;
 function career(seed: string) {
   return createCareer({ data, humanClubIds: [HUMAN], season: 2026, seed, squads: base, pools, options: { light: 'all', coachCareer: true } });

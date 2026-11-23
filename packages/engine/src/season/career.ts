@@ -431,7 +431,7 @@ function recomputeFirstAwards(w: WorldState, s: SeasonState, clubIds: string[], 
   let changed = false;
   w.awards = (w.awards ?? []).map((a) => {
     const { cycle, season } = awardCycleOf(a.label);
-    if (awardWindow(cycle, season, w.startDate).length === awardWindow(cycle, season).length) return a;
+    if (w.prelude || awardWindow(cycle, season, w.startDate).length === awardWindow(cycle, season).length) return a;
     const fresh = computeSeasonAwards(w, squads, clubIds, { cycle, season, date: a.date, leagues: [], level: (id) => leagueLevel(s, id) });
     changed = true;
     return { ...a, ballonDor: fresh.ballonDor, world: fresh.world };
@@ -483,7 +483,12 @@ export function createCareer(o: CreateCareerOptions): { world: WorldState; state
     world = { ...r.world, humanClubIds: o.humanClubIds.slice() };
     state = createSeasonFromWorld(world, o.data, { squads: worldSquads(world, base), startDate: start, carry: st });
   } else {
-    state = createSeasonFromWorld(world, o.data, { squads: o.squads ? worldSquads(world, o.squads) : undefined, startDate: start });
+    // (23/11) carreira de 01/01: a Europa/Arábia joga a temporada 2025/26 (comprimida) no 1º semestre — só quando
+    // nenhum humano treina clube europeu/árabe (sala mista: o europeu entra na liga em agosto, como antes)
+    const codes = codeMap(o.data);
+    const prelude = o.humanClubIds.every((id) => cycleOfRegion(regionOfDataClub(o.data, id, codes)) !== 'split');
+    if (prelude) world.prelude = true;
+    state = createSeasonFromWorld(world, o.data, { squads: o.squads ? worldSquads(world, o.squads) : undefined, startDate: start, prelude });
   }
   // (13/11) com os elencos, a meta da 1ª temporada segue a força real do elenco
   if (world.options.coachCareer) world.coach = createCoachCareer(world, state, o.data, { ...(o.coach ?? {}), ...(o.squads ? { squads: careerSquads(state, worldSquads(world, o.squads)) } : {}) });
@@ -655,6 +660,36 @@ export interface SeasonFromWorldOptions {
   carry?: SeasonState;
   /** ciclo cujas competições novas são criadas (padrão: 'calendar' em 01/01, 'split' em 01/07; null = nenhum) */
   opens?: Cycle | null;
+  /**
+   * (23/11) 1º trecho de uma carreira que começa em 01/01: cria também a temporada europeia/árabe em andamento
+   * (2025/26), com o calendário comprimido em jan–jun — sem isso a Europa ficava parada até julho e os europeus
+   * chegavam à 1ª Bola de Ouro com metade dos jogos.
+   */
+  prelude?: boolean;
+}
+
+/** (23/11) Janela da temporada europeia comprimida no 1º semestre (prelúdio). */
+export const PRELUDE = { from: '01-03', to: '06-24' } as const;
+
+/** Leva as datas das competições (ago–mai) para [from, to] mantendo a ordem e a proporção; datas sempre crescentes. */
+export function compressCalendars(comps: Competition[], from: string, to: string): void {
+  const all = comps.flatMap((c) => c.calendar ?? []);
+  if (!all.length) return;
+  const day = (d: string) => Date.parse(d + 'T00:00:00Z') / 86400000;
+  const lo = Math.min(...all.map(day)), hi = Math.max(...all.map(day));
+  const a = day(from), span = day(to) - a;
+  const k = hi > lo ? span / (hi - lo) : 0;
+  for (const c of comps) {
+    if (!c.calendar?.length) continue;
+    const out: string[] = [];
+    let prev = -Infinity;
+    for (const d of c.calendar) {
+      const v = Math.max(prev + 1, Math.round(a + (day(d) - lo) * k));
+      out.push(addDays(from, v - a));
+      prev = v;
+    }
+    c.calendar = out;
+  }
 }
 
 function emptyLedger(): FinanceLedger {
@@ -892,6 +927,11 @@ export function createSeasonFromWorld(world: WorldState, data: CareerData, o: Se
   const carried = (carry?.competitions ?? []).filter((c) => cycleOfCompetition(c) !== opens).map(deep);
   const runningIds = new Set(carried.map((c) => c.id));
   const fresh = opens ? cycleCompetitions(world, data, opens, cycleSeasonFor(opens, startDate)) : [];
+  if (o.prelude && opens === 'calendar' && !carry) {
+    const pre = cycleCompetitions(world, data, 'split', season - 1);
+    compressCalendars(pre, `${season}-${PRELUDE.from}`, `${season}-${PRELUDE.to}`);
+    fresh.push(...pre);
+  }
   const comps: Competition[] = [...carried, ...fresh];
 
   // clubes e economia

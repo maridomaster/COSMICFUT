@@ -814,6 +814,8 @@ export interface WorldState {
   honors?: Honors;
   /** (19/11) revisão das premiações já recalculadas (1 = 1ª Bola de Ouro com os 12 meses de todo o mundo) */
   awardsRev?: number;
+  /** (23/11) carreira criada com a temporada europeia 2025/26 jogada (comprimida) no 1º semestre */
+  prelude?: boolean;
   /** (19/11) Bolas de Prata entregues (as mais recentes) */
   silverBalls?: SilverBall[];
   /**

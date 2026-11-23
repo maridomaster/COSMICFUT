@@ -260,7 +260,7 @@ describe('18 meses a partir de 01/01/2026 (Palmeiras)', () => {
     expect(ds[0]).toBe('2026-08-22');
     expect(ds[ds.length - 1] >= '2027-05-01' && ds[ds.length - 1] <= '2027-05-31').toBe(true);
     // fechou na virada de 30/06/2027, com o rótulo da temporada
-    const h = final.world.history.find((x) => x.competitionId === 'ING-1')!;
+    const h = final.world.history.find((x) => x.competitionId === 'ING-1' && x.seasonLabel === '2026/27')!;
     expect(h.seasonLabel).toBe('2026/27');
     expect(h.season).toBe(2026);
     expect(h.championId).toBeTruthy();

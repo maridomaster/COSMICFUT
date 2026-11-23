@@ -136,12 +136,13 @@ export function pickTeam(cands: readonly AwardPlayer[]): AwardPlayer[] {
  * `leagues`: os campeonatos premiados (com os clubes e o rótulo da temporada deles).
  */
 export function computeSeasonAwards(
-  world: Pick<WorldState, 'records' | 'history'> & { startDate?: string },
+  world: Pick<WorldState, 'records' | 'history'> & { startDate?: string; prelude?: boolean },
   squads: (clubId: string) => readonly Player[],
   clubIds: readonly string[],
   o: { cycle: Cycle; season: number; date: string; leagues: { competitionId: string; name: string; seasonLabel: string; clubIds: string[] }[]; level?: (clubId: string) => number },
 ): SeasonAwards {
-  const labels = new Set(awardWindow(o.cycle, o.season, world.startDate));
+  // (23/11) com o prelúdio a Europa já jogou 2025/26 inteira: janela normal
+  const labels = new Set(awardWindow(o.cycle, o.season, world.prelude ? undefined : world.startDate));
   const recs = world.records?.players ?? {};
   const worldCands: AwardPlayer[] = [];
   const leagueCands = o.leagues.map(() => [] as AwardPlayer[]);
