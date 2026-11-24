@@ -535,17 +535,43 @@ export class RoomRelay {
    * sala desconectado (ex.: o próprio dono trocou de aparelho). Alvo pelo id da vaga ou pelo apelido exato
    * (sem diferenciar maiúsculas).
    */
-  async adminSeatCode(target: unknown): Promise<{ ok: true; data: { playerId: string; nickname: string; seatCode: string; expiresAt: number } } | { ok: false; error: string }> {
-    if (!this.room()) return { ok: false, error: 'Sala não encontrada.' };
+  /** Vaga de técnico pelo id ou pelo apelido exato (sem diferenciar maiúsculas); apelido do resumo do anfitrião. */
+  private adminTarget(target: unknown): { seat: Seat; nick: string } | { error: string } {
     const t = typeof target === 'string' ? target.trim() : '';
-    if (!t || t.length > 64) return { ok: false, error: 'Informe playerId ou nickname.' };
+    if (!t || t.length > 64) return { error: 'Informe playerId ou nickname.' };
     const metaNick = new Map((this.meta()?.players ?? []).map((x) => [x.id, x.nickname]));
     const nickOf = (s: Seat) => metaNick.get(s.p) ?? s.nick;
     const managers = this.seats().filter((s) => !s.spec);
     const seat = managers.find((s) => s.p === t) ?? managers.find((s) => nickOf(s).toLowerCase() === t.toLowerCase());
-    if (!seat) return { ok: false, error: `Técnico não encontrado. Vagas: ${managers.map((s) => `${nickOf(s)} (${s.p})`).join(', ')}` };
-    const r = await this.issueSeatCode(seat);
-    return { ok: true, data: { playerId: seat.p, nickname: nickOf(seat), ...r } };
+    if (!seat) return { error: `Técnico não encontrado. Vagas: ${managers.map((s) => `${nickOf(s)} (${s.p})`).join(', ')}` };
+    return { seat, nick: nickOf(seat) };
+  }
+
+  /**
+   * Administração: passa o host da sala para outro técnico durante a carreira (a tela só oferece isso no lobby).
+   * Manda ao anfitrião da simulação a mesma intenção que o dono mandaria, pela conexão on-line do dono — então o
+   * dono e o alvo precisam estar conectados (o próprio `setHost` da simulação confere o alvo).
+   */
+  adminTransferHost(target: unknown): { ok: true; data: { from: string; to: string; toNickname: string } } | { ok: false; error: string } {
+    if (!this.room()) return { ok: false, error: 'Sala não encontrada.' };
+    const owner = this.owner();
+    if (!owner) return { ok: false, error: 'A sala não tem dono.' };
+    const r = this.adminTarget(target);
+    if ('error' in r) return { ok: false, error: r.error };
+    if (r.seat.p === owner) return { ok: false, error: `${r.nick} já é o host.` };
+    const ownerWs = this.env.sockets().find((w) => w.att.p === owner && !w.att.lv);
+    if (!ownerWs) return { ok: false, error: 'O host atual precisa estar conectado (a simulação só aceita a troca vinda dele).' };
+    const sent = this.toHost({ t: 'i', c: ownerWs.att.c, p: owner, ev: 'room:transfer-host', a: { playerId: r.seat.p } });
+    if (!sent) return { ok: false, error: 'Anfitrião da simulação reconectando… tente de novo em instantes.' };
+    return { ok: true, data: { from: owner, to: r.seat.p, toNickname: r.nick } };
+  }
+
+  async adminSeatCode(target: unknown): Promise<{ ok: true; data: { playerId: string; nickname: string; seatCode: string; expiresAt: number } } | { ok: false; error: string }> {
+    if (!this.room()) return { ok: false, error: 'Sala não encontrada.' };
+    const t = this.adminTarget(target);
+    if ('error' in t) return { ok: false, error: t.error };
+    const r = await this.issueSeatCode(t.seat);
+    return { ok: true, data: { playerId: t.seat.p, nickname: t.nick, ...r } };
   }
 
   private end(ws: RelaySocket, k: number | undefined, a: unknown): void {

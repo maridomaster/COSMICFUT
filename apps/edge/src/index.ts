@@ -11,6 +11,7 @@
  *   GET  /public-url             → { url: null } (o link de convite usa a origem do GitHub Pages)
  *   POST /rooms/:code/admin/seat-code → (só com o segredo ADMIN_KEY no cabeçalho X-Admin-Key) código de vaga para
  *                                  {playerId} ou {nickname}, sem depender do dono da sala. Sem ADMIN_KEY: 404.
+ *   POST /rooms/:code/admin/transfer-host → (idem) passa o host para {playerId} ou {nickname} (dono e alvo on-line).
  *
  * Um Durable Object por sala (idFromName(código)), SQLite. Ver relay.ts. Nada aqui simula a carreira: cada
  * mensagem custa microssegundos de CPU (só cabeçalhos pequenos são lidos).
@@ -116,7 +117,7 @@ export default {
         );
         return cors(env, req, json({ ok: true, data: out }));
       }
-      const adm = /^\/rooms\/([A-Za-z0-9]{6})\/admin\/seat-code$/.exec(path);
+      const adm = /^\/rooms\/([A-Za-z0-9]{6})\/admin\/(seat-code|transfer-host)$/.exec(path);
       if (adm) {
         const key = req.headers.get('X-Admin-Key') ?? '';
         if (!env.ADMIN_KEY || env.ADMIN_KEY.length < 24 || req.method !== 'POST') return json({ ok: false, error: 'Não encontrado.' }, 404);
@@ -124,7 +125,7 @@ export default {
         const code = adm[1].toUpperCase();
         const body = (await readJson(req, 1024)) as { playerId?: unknown; nickname?: unknown };
         const stub = env.ROOMS.get(env.ROOMS.idFromName(code));
-        const r = await stub.fetch(`https://room/${code}/admin-seat-code`, { method: 'POST', body: JSON.stringify({ target: body?.playerId ?? body?.nickname }) });
+        const r = await stub.fetch(`https://room/${code}/admin-${adm[2]}`, { method: 'POST', body: JSON.stringify({ target: body?.playerId ?? body?.nickname }) });
         return new Response(r.body, r);
       }
       const m = /^\/rooms\/([A-Za-z0-9]{6})(\/ws)?$/.exec(path);
@@ -231,6 +232,11 @@ export class RoomDO implements DurableObject {
       const body = (await readJson(req, 1024).catch(() => ({}))) as { target?: unknown };
       const r = await relay.adminSeatCode(body.target);
       return json(r, r.ok ? 200 : 404);
+    }
+    if (op === 'admin-transfer-host' && req.method === 'POST') {
+      const body = (await readJson(req, 1024).catch(() => ({}))) as { target?: unknown };
+      const r = relay.adminTransferHost(body.target);
+      return json(r, r.ok ? 200 : 409);
     }
     if (op === 'ws') {
       if (!relay.room()) return json({ ok: false, error: 'Sala não encontrada.' }, 404);

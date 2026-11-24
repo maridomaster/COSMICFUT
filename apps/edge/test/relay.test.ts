@@ -137,6 +137,18 @@ describe('relay: autenticação e vagas', () => {
   });
 });
 
+describe('relay: administração do host', () => {
+  it('passa o host: manda ao anfitrião a intenção do dono, pela conexão do dono', async () => {
+    const env = makeRoom();
+    const { a, pidA, pids } = await room(env, ['Bia']);
+    expect((await env.relay.adminTransferHost('ana')).ok).toBe(false);
+    const r = env.relay.adminTransferHost('BIA');
+    if (!r.ok) throw new Error(r.error);
+    expect(r.data).toMatchObject({ from: pidA, to: pids[0], toNickname: 'Bia' });
+    expect(a.json<Msg>().filter((m) => m.t === 'i').pop()).toMatchObject({ p: pidA, ev: 'room:transfer-host', a: { playerId: pids[0] } });
+  });
+});
+
 describe('relay: roteamento', () => {
   it('intenções vão ao anfitrião com a vaga do relay (o cliente não escolhe a vaga)', async () => {
     const env = makeRoom();
