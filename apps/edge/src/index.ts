@@ -9,6 +9,8 @@
  *   GET  /rooms/:code/ws         → WebSocket da sala (DO RoomDO, API de hibernação)
  *   POST /careers/status         → "Minhas carreiras online" ({items:[{code, token}]}, até 30; nunca devolve tokens)
  *   GET  /public-url             → { url: null } (o link de convite usa a origem do GitHub Pages)
+ *   POST /rooms/:code/admin/seat-code → (só com o segredo ADMIN_KEY no cabeçalho X-Admin-Key) código de vaga para
+ *                                  {playerId} ou {nickname}, sem depender do dono da sala. Sem ADMIN_KEY: 404.
  *
  * Um Durable Object por sala (idFromName(código)), SQLite. Ver relay.ts. Nada aqui simula a carreira: cada
  * mensagem custa microssegundos de CPU (só cabeçalhos pequenos são lidos).
@@ -22,6 +24,19 @@ export interface Env {
   REGISTRY: DurableObjectNamespace;
   /** origens liberadas (vírgulas). Vazio/"*" = todas (tokens não são cookies; ainda assim restrinja em produção). */
   ALLOWED_ORIGINS?: string;
+  /** segredo (wrangler secret put ADMIN_KEY) da rota de administração; ausente = rota desligada */
+  ADMIN_KEY?: string;
+}
+
+/** Comparação em tempo constante (SHA-256 dos dois lados). */
+async function sameSecret(a: string, b: string): Promise<boolean> {
+  const enc = new TextEncoder();
+  const [x, y] = await Promise.all([crypto.subtle.digest('SHA-256', enc.encode(a)), crypto.subtle.digest('SHA-256', enc.encode(b))]);
+  const u = new Uint8Array(x);
+  const v = new Uint8Array(y);
+  let diff = 0;
+  for (let i = 0; i < u.length; i++) diff |= u[i] ^ v[i];
+  return diff === 0;
 }
 
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -100,6 +115,17 @@ export default {
           }),
         );
         return cors(env, req, json({ ok: true, data: out }));
+      }
+      const adm = /^\/rooms\/([A-Za-z0-9]{6})\/admin\/seat-code$/.exec(path);
+      if (adm) {
+        const key = req.headers.get('X-Admin-Key') ?? '';
+        if (!env.ADMIN_KEY || env.ADMIN_KEY.length < 24 || req.method !== 'POST') return json({ ok: false, error: 'Não encontrado.' }, 404);
+        if (!(await sameSecret(key, env.ADMIN_KEY))) return json({ ok: false, error: 'Não autorizado.' }, 401);
+        const code = adm[1].toUpperCase();
+        const body = (await readJson(req, 1024)) as { playerId?: unknown; nickname?: unknown };
+        const stub = env.ROOMS.get(env.ROOMS.idFromName(code));
+        const r = await stub.fetch(`https://room/${code}/admin-seat-code`, { method: 'POST', body: JSON.stringify({ target: body?.playerId ?? body?.nickname }) });
+        return new Response(r.body, r);
       }
       const m = /^\/rooms\/([A-Za-z0-9]{6})(\/ws)?$/.exec(path);
       if (m) {
@@ -199,6 +225,12 @@ export class RoomDO implements DurableObject {
     if (op === 'status') {
       const body = (await readJson(req, 4096).catch(() => ({}))) as { token?: unknown };
       return json(await relay.status(body.token));
+    }
+    if (op === 'admin-seat-code' && req.method === 'POST') {
+      // só alcançável pelo Worker (que já conferiu ADMIN_KEY): DOs não têm URL pública
+      const body = (await readJson(req, 1024).catch(() => ({}))) as { target?: unknown };
+      const r = await relay.adminSeatCode(body.target);
+      return json(r, r.ok ? 200 : 404);
     }
     if (op === 'ws') {
       if (!relay.room()) return json({ ok: false, error: 'Sala não encontrada.' }, 404);

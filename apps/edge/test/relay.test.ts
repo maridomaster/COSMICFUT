@@ -118,6 +118,23 @@ describe('relay: autenticação e vagas', () => {
     await again.msg({ t: 'hello', v: 1, mode: 'claim', seatCode: code });
     expect(again.last<Msg>('denied')).toBeTruthy();
   });
+
+  it('administração: código de vaga pelo apelido sem o dono conectado; o dono recupera a própria vaga', async () => {
+    const env = makeRoom();
+    const { a, pidA, tokA } = await room(env, ['Bia']);
+    a.close();
+    expect((await env.relay.adminSeatCode('ninguém')).ok).toBe(false);
+    const r = await env.relay.adminSeatCode('ana');
+    if (!r.ok) throw new Error(r.error);
+    expect(r.data.playerId).toBe(pidA);
+    expect(r.data.nickname).toBe('Ana');
+    for (const v of env.storage.kv.values()) expect(v.includes(r.data.seatCode)).toBe(false);
+    const c = env.open();
+    await c.msg({ t: 'hello', v: 1, mode: 'claim', seatCode: r.data.seatCode, nickname: 'Ana' });
+    const w = c.last<Msg>('welcome')!;
+    expect(w.playerId).toBe(pidA);
+    expect(w.token).not.toBe(tokA);
+  });
 });
 
 describe('relay: roteamento', () => {

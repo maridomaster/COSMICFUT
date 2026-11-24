@@ -517,12 +517,35 @@ export class RoomRelay {
     const pid = a && typeof a === 'object' ? (a as { playerId?: unknown }).playerId : undefined;
     const seat = typeof pid === 'string' && ID_RE.test(pid) ? this.seat(pid) : null;
     if (!seat || seat.spec) return this.ack(ws, k, { ok: false, error: 'Escolha um técnico da sala.' });
+    this.ack(ws, k, { ok: true, data: await this.issueSeatCode(seat) });
+  }
+
+  /** Gera (e guarda só o hash de) um código de vaga de uso único para `seat`. */
+  private async issueSeatCode(seat: Seat): Promise<{ seatCode: string; expiresAt: number }> {
     const bytes = this.env.random(6);
     let code = '';
     for (let i = 0; i < 6; i++) code += SEAT_CODE_ALPHABET[bytes[i] % SEAT_CODE_ALPHABET.length];
     const exp = this.env.now() + SEAT_CODE_TTL_MS;
     this.putJson(`seat:${seat.p}`, { ...seat, sc: { h: await this.env.sha256(`seat:${code}`), exp } } satisfies Seat);
-    this.ack(ws, k, { ok: true, data: { seatCode: code, expiresAt: exp } });
+    return { seatCode: code, expiresAt: exp };
+  }
+
+  /**
+   * Administração (dono do deploy, via ADMIN_KEY no Worker): código de vaga para um técnico mesmo com o dono da
+   * sala desconectado (ex.: o próprio dono trocou de aparelho). Alvo pelo id da vaga ou pelo apelido exato
+   * (sem diferenciar maiúsculas).
+   */
+  async adminSeatCode(target: unknown): Promise<{ ok: true; data: { playerId: string; nickname: string; seatCode: string; expiresAt: number } } | { ok: false; error: string }> {
+    if (!this.room()) return { ok: false, error: 'Sala não encontrada.' };
+    const t = typeof target === 'string' ? target.trim() : '';
+    if (!t || t.length > 64) return { ok: false, error: 'Informe playerId ou nickname.' };
+    const metaNick = new Map((this.meta()?.players ?? []).map((x) => [x.id, x.nickname]));
+    const nickOf = (s: Seat) => metaNick.get(s.p) ?? s.nick;
+    const managers = this.seats().filter((s) => !s.spec);
+    const seat = managers.find((s) => s.p === t) ?? managers.find((s) => nickOf(s).toLowerCase() === t.toLowerCase());
+    if (!seat) return { ok: false, error: `Técnico não encontrado. Vagas: ${managers.map((s) => `${nickOf(s)} (${s.p})`).join(', ')}` };
+    const r = await this.issueSeatCode(seat);
+    return { ok: true, data: { playerId: seat.p, nickname: nickOf(seat), ...r } };
   }
 
   private end(ws: RelaySocket, k: number | undefined, a: unknown): void {
