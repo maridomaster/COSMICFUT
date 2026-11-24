@@ -572,7 +572,27 @@ export function declineOffer(j: OnlineJobs, managerId: string, offerId: string):
 }
 
 /** Aceita: o clube sai da IA e vira do humano agora. */
-export function acceptOffer(j: OnlineJobs, world: WorldState, s: SeasonState, _data: CareerData, managerId: string, offerId: string, ctx: JobsCtx): JobsActionResult {
+/**
+ * Convite do host (administração): o clube `clubId` (da IA) convida o técnico, mesmo empregado. Aceitar deixa o
+ * clube atual (vaga aberta, como "deixou o clube") e assume o novo na hora.
+ */
+export function adminOffer(j: OnlineJobs, s: SeasonState, data: CareerData, managerId: string, clubId: string, ctx: JobsCtx): JobsActionResult {
+  const m = j.managers[managerId];
+  if (!m) return { ok: false, error: 'Técnico não encontrado na carreira.' };
+  if (!s.clubs[clubId]) return { ok: false, error: 'Clube fora da carreira.' };
+  if (m.clubId === clubId) return { ok: false, error: 'Ele já é o técnico deste clube.' };
+  if (s.humanClubIds.includes(clubId)) return { ok: false, error: 'Outro técnico da sala comanda este clube.' };
+  if (j.offers.some((o) => o.status === 'pending' && o.managerId === m.id && o.clubId === clubId)) return { ok: false, error: 'Já há um convite pendente deste clube.' };
+  const name = clubName(s, data, clubId);
+  const v: JobVacancy = {
+    id: '', clubId, name, reputation: clubRep(s, data, clubId), division: s.clubInfo?.[clubId]?.division ?? leagueOf(s, clubId)?.division ?? null,
+    minReputation: 0, openedOn: s.date, reason: 'initial', previousCoach: null, fillOn: s.date,
+  };
+  makeOffer(j, s, data, m, v, 'invite', s.date, ctx);
+  return { ok: true, message: `O ${name} convidou ${m.name}.` };
+}
+
+export function acceptOffer(j: OnlineJobs, world: WorldState, s: SeasonState, data: CareerData, managerId: string, offerId: string, ctx: JobsCtx): JobsActionResult {
   const m = j.managers[managerId];
   const o = j.offers.find((x) => x.id === offerId && x.managerId === managerId);
   if (!m || !o || o.status !== 'pending') return { ok: false, error: 'Proposta nÃ£o estÃ¡ mais disponÃ­vel.' };
@@ -580,13 +600,15 @@ export function acceptOffer(j: OnlineJobs, world: WorldState, s: SeasonState, _d
     o.status = 'expired';
     return { ok: false, error: 'A proposta expirou.' };
   }
-  if (m.clubId) return { ok: false, error: 'VocÃª jÃ¡ tem clube.' };
+  if (m.clubId === o.clubId) return { ok: false, error: 'Você já é o técnico deste clube.' };
   if (s.humanClubIds.includes(o.clubId)) {
     o.status = 'expired';
     return { ok: false, error: 'Outro tÃ©cnico jÃ¡ assumiu este clube.' };
   }
   if (!s.clubs[o.clubId]) return { ok: false, error: 'Clube fora da carreira.' };
   const date = s.date;
+  // empregado (só por convite do host): deixa o clube atual antes de assumir o novo
+  if (m.clubId) releaseManager(j, world, s, data, m.id, date);
   o.status = 'accepted';
   for (const x of j.offers) if (x.status === 'pending' && (x.managerId === m.id || x.clubId === o.clubId)) x.status = x.managerId === m.id ? 'declined' : 'expired';
   for (const a of j.applications) if (a.status === 'pending' && a.managerId === m.id) a.status = 'rejected';

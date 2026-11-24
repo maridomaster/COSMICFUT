@@ -98,17 +98,23 @@ export function OnlineJobsPage() {
         </section>
       )}
 
-      {unemployed && (
+      {(unemployed || offers.length > 0) && (
         <section className="cf-card p-4" aria-label="Propostas">
           <h2 className="flex items-center gap-2 text-sm font-bold">
             <Briefcase className="size-4 text-club-accent" /> Propostas para você ({offers.length})
           </h2>
+          {!unemployed && me.clubId && (
+            <p className="mt-1 text-xs text-warning">Convite com você empregado: aceitar deixa o {clubName(me.clubId)} (o clube volta para a IA).</p>
+          )}
           {offers.length === 0 ? (
             <p className="mt-2 text-xs text-fg-muted">Nenhuma proposta no momento. Elas chegam nos próximos dias; você também pode se candidatar às vagas abaixo.</p>
           ) : (
             <ul className="mt-3 grid gap-3 md:grid-cols-2">
               {offers.map((o) => (
-                <OfferItem key={o.id} o={o} busy={busy} disabled={!actionable} onAccept={() => void act(`a${o.id}`, 'accept', { offerId: o.id })} onDecline={() => void act(`d${o.id}`, 'decline', { offerId: o.id })} />
+                <OfferItem key={o.id} o={o} busy={busy} disabled={!actionable} onAccept={() => {
+                    if (!unemployed && me.clubId && !window.confirm(`Aceitar o ${o.name}? Você deixa o ${clubName(me.clubId)}.`)) return;
+                    void act(`a${o.id}`, 'accept', { offerId: o.id });
+                  }} onDecline={() => void act(`d${o.id}`, 'decline', { offerId: o.id })} />
               ))}
             </ul>
           )}

@@ -566,6 +566,25 @@ export class RoomRelay {
     return { ok: true, data: { from: owner, to: r.seat.p, toNickname: r.nick } };
   }
 
+  /**
+   * Administração: um clube da IA convida um técnico (mesmo empregado). Como em `adminTransferHost`, vai ao
+   * anfitrião da simulação como intenção do dono ('admin:job-offer', fora dos eventos de cliente), pela conexão
+   * on-line do dono; a simulação valida o clube e responde no feed/Central de Empregos do convidado.
+   */
+  adminJobOffer(target: unknown, clubId: unknown): { ok: true; data: { to: string; toNickname: string; clubId: string } } | { ok: false; error: string } {
+    if (!this.room()) return { ok: false, error: 'Sala não encontrada.' };
+    const owner = this.owner();
+    if (!owner) return { ok: false, error: 'A sala não tem dono.' };
+    if (typeof clubId !== 'string' || !/^[A-Za-z0-9:_.-]{1,96}$/.test(clubId)) return { ok: false, error: 'Informe clubId.' };
+    const r = this.adminTarget(target);
+    if ('error' in r) return { ok: false, error: r.error };
+    const ownerWs = this.env.sockets().find((w) => w.att.p === owner && !w.att.lv);
+    if (!ownerWs) return { ok: false, error: 'O host atual precisa estar conectado (a simulação só aceita o pedido vindo dele).' };
+    const sent = this.toHost({ t: 'i', c: ownerWs.att.c, p: owner, ev: 'admin:job-offer', a: { playerId: r.seat.p, clubId } });
+    if (!sent) return { ok: false, error: 'Anfitrião da simulação reconectando… tente de novo em instantes.' };
+    return { ok: true, data: { to: r.seat.p, toNickname: r.nick, clubId } };
+  }
+
   async adminSeatCode(target: unknown): Promise<{ ok: true; data: { playerId: string; nickname: string; seatCode: string; expiresAt: number } } | { ok: false; error: string }> {
     if (!this.room()) return { ok: false, error: 'Sala não encontrada.' };
     const t = this.adminTarget(target);

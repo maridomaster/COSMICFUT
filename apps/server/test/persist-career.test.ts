@@ -60,6 +60,30 @@ async function career(url: string, settings: Record<string, unknown> = {}) {
 }
 
 describe('carreira online salva', () => {
+  it('convite do host (admin:job-offer): clube da IA convida técnico empregado; aceitar deixa o clube antigo para a IA', async () => {
+    const { srv, url } = await boot({ simWorkers: 0, roomDefaults: { turnMode: 'simultaneous', matchMode: 'quick' } });
+    const { a, b, tb, code, guest } = await career(url);
+    // só o host convida; clube humano ou inexistente é recusado
+    expect((await call(b, 'admin:job-offer', { playerId: guest.playerId, clubId: 'flarj' })).ok).toBe(false);
+    expect((await call(a, 'admin:job-offer', { playerId: guest.playerId, clubId: 'palmeiras' })).ok).toBe(false);
+    expect((await call(a, 'admin:job-offer', { playerId: guest.playerId, clubId: 'nao-existe-xyz' })).ok).toBe(false);
+    await ok(a, 'admin:job-offer', { playerId: guest.playerId, clubId: 'flarj' });
+    expect((await call(a, 'admin:job-offer', { playerId: guest.playerId, clubId: 'flarj' })).ok).toBe(false);
+    const jobs = await ok<JobsPayload>(b, 'jobs:get');
+    const offer = jobs.offers.find((o) => o.status === 'pending' && o.clubId === 'flarj');
+    expect(offer).toBeTruthy();
+    const acc = await ok<{ clubId: string }>(b, 'jobs:accept', { offerId: offer!.id });
+    expect(acc.clubId).toBe('flarj');
+    await tb.waitRoom((r) => r.players.find((p) => p.playerId === guest.playerId)?.clubId === 'flarj');
+    const room = srv.rooms.get(code)!;
+    expect(room.humanClubIds).toContain('flarj');
+    expect(room.humanClubIds).not.toContain('santos');
+    const after = await ok<JobsPayload>(b, 'jobs:get');
+    expect(after.vacancies.some((v) => v.clubId === 'santos')).toBe(true);
+    expect(after.me?.history.find((h) => h.clubId === 'santos')).toMatchObject({ exit: 'left' });
+  });
+
+
   it('sala com a temporada iniciada sobrevive vazia além do TTL; sala no lobby expira', async () => {
     const { srv, url } = await boot({ roomTtlMs: 150, sweepIntervalMs: 40, unloadAfterMs: 60_000 });
     const { a, b, code } = await career(url);

@@ -147,6 +147,17 @@ describe('relay: administração do host', () => {
     expect(r.data).toMatchObject({ from: pidA, to: pids[0], toNickname: 'Bia' });
     expect(a.json<Msg>().filter((m) => m.t === 'i').pop()).toMatchObject({ p: pidA, ev: 'room:transfer-host', a: { playerId: pids[0] } });
   });
+
+  it('convite de clube: intenção admin:job-offer do dono; clientes não conseguem mandar o evento', async () => {
+    const env = makeRoom();
+    const { a, pidA, socks, pids } = await room(env, ['Bia']);
+    expect((await env.relay.adminJobOffer('bia', 'bad id!')).ok).toBe(false);
+    const r = env.relay.adminJobOffer('bia', 'flarj');
+    if (!r.ok) throw new Error(r.error);
+    expect(a.json<Msg>().filter((m) => m.t === 'i').pop()).toMatchObject({ p: pidA, ev: 'admin:job-offer', a: { playerId: pids[0], clubId: 'flarj' } });
+    await socks[0].msg({ t: 'i', ev: 'admin:job-offer', a: { playerId: pids[0], clubId: 'flarj' }, k: 9 });
+    expect(socks[0].last<Msg>('ack')!.r).toEqual({ ok: false, error: 'Evento desconhecido.' });
+  });
 });
 
 describe('relay: roteamento', () => {

@@ -596,6 +596,18 @@ export class Room {
     return { message: res.message ?? 'ok', ...(res.clubId ? { clubId: res.clubId } : {}) };
   }
 
+  /** 'admin:job-offer' (host): um clube da IA convida um técnico da sala, mesmo empregado. */
+  async adminJobOffer(host: PlayerRec, raw: unknown): Promise<{ message: string }> {
+    if (host.id !== this.hostId) fail('Só o host pode fazer isso.');
+    if (!this.career || this.phase === 'lobby') fail('A carreira ainda não começou.');
+    const o = V.obj(raw);
+    const target = this.player(V.id(o.playerId, 'Jogador'));
+    if (!target || target.spectator) fail('Escolha um técnico da sala.');
+    const res = await this.jobsCall({ type: 'admin-offer', managerId: target!.id, clubId: V.id(o.clubId, 'Clube') });
+    if (!res.ok) fail(res.error ?? 'Não foi possível.');
+    return { message: res.message ?? 'ok' };
+  }
+
   /** Técnico novo numa carreira em andamento: entra desempregado. */
   async registerLateJoiner(p: PlayerRec): Promise<void> {
     if (!this.career) return;

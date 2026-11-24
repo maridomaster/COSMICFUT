@@ -24,7 +24,7 @@ import {
 } from '@cosmicfut/engine';
 import { careerBase, loadBundle, loadCareerData, loadMarketSquads, loadNamePools, type BaseSquads, type CareerSource } from './career-data.ts';
 import {
-  acceptOffer, applyForVacancy, declineOffer, emptyJobs, jobsDay, registerManager, releaseManager, removeManager, renameManager,
+  acceptOffer, adminOffer, applyForVacancy, declineOffer, emptyJobs, jobsDay, registerManager, releaseManager, removeManager, renameManager,
   sanitizeJobs, seedVacancies, type JobEvent, type OnlineJobs,
 } from './jobs.ts';
 
@@ -44,7 +44,9 @@ export type JobsAction =
   | { type: 'decline'; managerId: string; offerId: string }
   /** o técnico deixa o clube (expulso da sala): clube volta à IA, vaga aberta */
   | { type: 'release'; managerId: string; remove?: boolean }
-  | { type: 'firing'; on: boolean };
+  | { type: 'firing'; on: boolean }
+  /** convite do host: o clube (da IA) convida o técnico, mesmo empregado */
+  | { type: 'admin-offer'; managerId: string; clubId: string };
 
 export interface JobsResponse {
   meta: CareerMeta;
@@ -440,6 +442,9 @@ export class CareerSimulator {
         r = { ok: true, message: club ? 'released' : 'ok' };
         break;
       }
+      case 'admin-offer':
+        r = adminOffer(j, s, this.data, a.managerId, a.clubId, this.jobsCtx(c));
+        break;
       case 'firing':
         j.firing = a.on;
         r = { ok: true, message: 'ok' };

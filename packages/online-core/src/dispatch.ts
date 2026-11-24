@@ -20,6 +20,7 @@ export const ROOM_INTENTS: readonly string[] = [
   'room:update-settings', 'room:pick-club', 'room:start', 'season:renew', 'season:sync', 'dev:advance',
   ...MARKET.map((t) => `market:${t}`),
   'round:set-lineup', 'round:ready', 'match:command', 'match:resume', 'match:pause-request', 'chat:send',
+  'admin:job-offer',
 ];
 
 /**
@@ -65,6 +66,8 @@ function intent(room: Room, player: PlayerRec, ev: string, raw: unknown): unknow
     case 'match:resume': room.resume(player, raw); return true;
     case 'match:pause-request': room.pauseRequest(player, raw); return true;
     case 'chat:send': room.chat(player, raw); return true;
+    // (host) no relay da Cloudflare só chega pela rota de administração (não é evento de cliente)
+    case 'admin:job-offer': return room.adminJobOffer(player, raw);
   }
   throw new GameError('Evento desconhecido.');
 }
