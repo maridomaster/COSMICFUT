@@ -13,7 +13,7 @@ import { Rng } from '../rng';
 import { isAttacking, isDefensive, matchOverall, STARS, starTier } from '../stars';
 import { autoPickLineup, FORMATIONS, formationSlotsRef, slotFit } from '../tactics';
 import {
-  ASSIST_W, COEF, FOUL_W, HEAD_W, MENT_ATT, MENT_OPP, MENT_POSS, MENTALITIES, MENTALITY_IDX, NORM,
+  ASSIST_W, COEF, FOUL_W, HEAD_W, leadEase, MENT_ATT, MENT_OPP, MENT_POSS, MENTALITIES, MENTALITY_IDX, NORM,
   PASS_ATT, PASS_BIG, PASS_OFFSIDE, PASS_POSS, PASS_VOLUME, PRESS_DRAIN, PRESS_FOUL, PRESS_OPP,
   PRESS_POSS, ROLE_W, SHOOT_W, STAMINA, staminaFactor, TEMPO_ATT, TEMPO_DRAIN, TEMPO_OPP, TEMPO_POSS,
 } from './model';
@@ -524,8 +524,9 @@ export class MatchSimulation implements MatchSimulationApi {
     const pc = clamp(
       COEF.baseChance * Math.exp(COEF.kAtt * (P.att - D.def)) *
         MENT_ATT[MENTALITY_IDX[P.tactic.mentality]] * TEMPO_ATT[P.tactic.tempo] * PASS_ATT[P.tactic.passing] *
-        MENT_OPP[MENTALITY_IDX[D.tactic.mentality]] * TEMPO_OPP[D.tactic.tempo] * PRESS_OPP[D.tactic.pressing],
-      0.02, 0.75,
+        MENT_OPP[MENTALITY_IDX[D.tactic.mentality]] * TEMPO_OPP[D.tactic.tempo] * PRESS_OPP[D.tactic.pressing] *
+        leadEase(s.score[P.side] - s.score[D.side]),
+      0.01, 0.75,
     );
     if (r.next() < pc) this.chance(P, D);
     else if (r.next() < COEF.cornerPerMinute) this.corner(P, D);

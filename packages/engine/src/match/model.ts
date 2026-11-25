@@ -49,6 +49,16 @@ export const COEF = {
   penaltyConv: 0.77,
 };
 
+/**
+ * (25/11) Placar elástico: quem já vence por muito tira o pé (troca passes, poupa energia) e quem perde fecha a
+ * casinha — multiplicador da criação de chances de quem lidera por N gols. Sem isso saíam 12 a 0 e 7+ gols de
+ * diferença em ~6% dos jogos desiguais (no futebol real: ~1 em 500–1000).
+ */
+export const LEAD_EASE: Record<number, number> = { 2: 0.88, 3: 0.65, 4: 0.45, 5: 0.3, 6: 0.18 };
+export function leadEase(lead: number): number {
+  return lead < 2 ? 1 : LEAD_EASE[Math.min(6, lead)];
+}
+
 /** Contribuição do papel tático para defesa/meio/ataque. */
 export const ROLE_W: Record<SlotRole, { def: number; mid: number; att: number }> = {
   GK: { def: 0, mid: 0, att: 0 },
