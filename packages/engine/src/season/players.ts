@@ -89,9 +89,11 @@ export function monthlyWage(age: number, ovr: number, rep = 2): number {
 
 /** Parâmetros (ajustáveis) da evolução. */
 export const EVOLUTION = {
-  youngRate: 0.035, // até 21: +gap × taxa por mês
-  midRate: 0.03, // 22–25
-  playedBonus: 0.25, // até 21, se jogou ≥ 50% dos jogos do clube
+  // (25/11) evolução mais lenta: titular de 19 anos 75/90 chega ao potencial em ~5 anos (antes ~16 meses; com o
+  // Centro de Treinamento, ~2,5 anos — antes 7 meses)
+  youngRate: 0.012, // até 21: +gap × taxa por mês (antes 0,035)
+  midRate: 0.018, // 22–25 (antes 0,03)
+  playedBonus: 0.06, // até 21, se jogou ≥ 50% dos jogos do clube (antes 0,25)
   peakNoise: 0.15, // 26–29
   decline: [
     [30, -0.08],
@@ -112,7 +114,7 @@ export const EVOLUTION = {
 export const PLAY = {
   minGames: 4,
   /** [participação mínima, multiplicador do crescimento] (a 1ª que servir) */
-  growth: [[0.6, 1.5], [0.35, 1.2], [0.15, 0.85], [0, 0.55]] as [number, number][],
+  growth: [[0.6, 1.3], [0.35, 1.15], [0.15, 0.85], [0, 0.55]] as [number, number][],
   /** em treino especial: crescimento pelo menos isto */
   trainingGrowth: 1.25,
   /** potencial cai quem fica no banco: participação abaixo disto, com o clube tendo jogado `decayMinGames` jogos */
@@ -157,7 +159,8 @@ export function yearEndBonus(age: number, games: number, avgRating: number): num
   let b = 0;
   if (age <= EVOLUTION.youngBonusMaxAge && games >= EVOLUTION.youngBonusGames) b++;
   if (games >= EVOLUTION.standoutMinGames && avgRating >= EVOLUTION.standoutRating) b++;
-  return b;
+  // (25/11) no máximo +1 por ano (antes +2: jovem titular e destaque somavam)
+  return Math.min(1, b);
 }
 
 /**

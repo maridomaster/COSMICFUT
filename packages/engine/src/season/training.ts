@@ -16,8 +16,8 @@ import { addDays } from './schedule';
 
 export const TRAINING = {
   maxPlayers: 3,
-  /** progresso por dia com o fator 1 (≈ +1 de overall a cada 25 dias) */
-  perDay: 0.04,
+  /** progresso por dia com o fator 1 (≈ +1 de overall a cada ~140 dias; jovem longe do potencial ~1 a cada 2 meses) — (25/11) antes 0,04 */
+  perDay: 0.007,
   /** fator pelo que falta até o potencial: (pot − ovr) / gapRef, até gapCap */
   gapRef: 8,
   gapCap: 1.5,

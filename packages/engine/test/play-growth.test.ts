@@ -23,7 +23,7 @@ describe('crescimento pelos minutos', () => {
 
   it('treino especial garante crescimento mesmo sem jogar', () => {
     expect(playGrowthFactor(0, 12, true)).toBe(PLAY.trainingGrowth);
-    expect(playGrowthFactor(0.8, 12, true)).toBe(1.5);
+    expect(playGrowthFactor(0.8, 12, true)).toBe(1.3);
   });
 
   it('potencial cai só para jovem encostado, com a temporada andando e sem treino', () => {

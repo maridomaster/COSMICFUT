@@ -163,7 +163,8 @@ describe('pular no tempo (TimeSkip)', () => {
     const w = clone(w0), st = clone(s0);
     w.coach!.board!.stability = 1;
     w.coach!.board!.gamesSinceHire = 10;
-    const r = timeSkip({ world: w, state: st, base, data, pools, until: '2026-03-31' });
+    // (25/11) só a demissão para (proposta por jogador desligada: com os valores novos ela chegava antes)
+    const r = timeSkip({ world: w, state: st, base, data, pools, until: '2026-03-31', stops: { jobOffer: false, playerOfferPct: 100_000 } });
     expect(r.reason).toBe('fired');
     expect(r.state.humanClubIds).toEqual([]);
     expect(r.state.date < '2026-03-31').toBe(true);

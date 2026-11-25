@@ -38,7 +38,7 @@ describe('Centro de Treinamento', () => {
     const before = new Map(picked.map((p) => [p.id, p.overall]));
     let tiredOnMatchDay = false;
     const w = worldSquads(world, base);
-    while (state.date < '2026-03-15') {
+    while (state.date < '2026-05-15') { // (25/11) treino mais lento: ~4,5 meses para +1
       const cost = trainingCost(state, human);
       const r = advanceDay(state, w, {}, { inPlace: true });
       state = r.state;

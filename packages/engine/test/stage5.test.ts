@@ -309,6 +309,8 @@ describe('Etapa 5: IA do mercado (uma temporada simulada)', () => {
     const moves = records.filter((r) => r.kind === 'transfer' || r.kind === 'loan');
     expect(moves.length).toBeGreaterThan(150);
     for (const r of moves) {
+      // (25/11) opção de compra exercida no fim do empréstimo vale fora da janela (é cláusula do contrato)
+      if (r.via === 'option') continue;
       const md = r.date.slice(5);
       if (r.toRegion === 'EU') expect(md >= '07-01' && md <= '09-01', `${r.playerName} ${r.date} → ${r.toName}`).toBe(true);
       if (r.toRegion === 'SA') expect(md <= '03-31' || (md >= '07-01' && md <= '09-30'), `${r.date}`).toBe(true);
