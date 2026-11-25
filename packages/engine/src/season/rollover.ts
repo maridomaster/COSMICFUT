@@ -550,7 +550,8 @@ export function rolloverSeason(
         const evo = career?.evo[p.id] ?? p.overall;
         const bonus = yearEndBonus(p.age, games, avg);
         if (bonus) summary.evolution.bonus += bonus;
-        const overall = Math.max(1, Math.min(99, Math.round(evo + bonus)));
+        // (25/11) bônus de fim de ano só até o potencial
+        const overall = Math.max(1, Math.min(99, Math.round(Math.min(evo + bonus, Math.max(evo, p.potential)))));
         summary.evolution.delta += overall - p.overall;
         summary.evolution.players++;
         const age = p.age + 1;

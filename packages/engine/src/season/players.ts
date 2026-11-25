@@ -143,7 +143,8 @@ export function benchPotentialLoss(age: number, playedShare: number, clubGames: 
  */
 export function monthlyDelta(age: number, overall: number, potential: number, playedShare: number, rng: Rng, growth = 1): number {
   const gap = Math.max(0, potential - overall);
-  if (age <= 21) return (gap * EVOLUTION.youngRate + (playedShare >= 0.5 ? EVOLUTION.playedBonus : 0) * (gap > 0 ? 1 : 0.3)) * growth;
+  // (25/11) no potencial não cresce mais (antes o bônus de minutos seguia ×0,3 e passava do potencial)
+  if (age <= 21) return gap > 0 ? (gap * EVOLUTION.youngRate + (playedShare >= 0.5 ? EVOLUTION.playedBonus : 0)) * growth : 0;
   if (age <= 25) return gap * EVOLUTION.midRate * growth;
   if (age <= 29) return (rng.next() * 2 - 1) * EVOLUTION.peakNoise;
   let d = 0;
@@ -172,8 +173,10 @@ export function realisticPotential(age: number, overall: number, potential: numb
 /** Potencial no fim do ano (idade já incrementada): ruído ±2 até 23; aos 24+ = `realisticPotential`. */
 export function nextPotential(newAge: number, potential: number, overall: number, rng: Rng): number {
   if (newAge >= 24) return realisticPotential(newAge, overall, potential);
-  const noise = Math.round(rng.normal() * 1.2);
-  return clamp(Math.max(overall, potential + clamp(noise, -2, 2)), 1, 99);
+  // (25/11) o potencial é o teto: não sobe mais com o sorteio anual (antes ±2 por ano até os 23). O sorteio continua
+  // sendo feito para não mudar a sequência dos demais.
+  rng.normal();
+  return clamp(Math.max(overall, potential), 1, 99);
 }
 
 /* ───────────── aposentadoria ───────────── */

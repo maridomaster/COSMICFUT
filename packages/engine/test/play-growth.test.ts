@@ -4,6 +4,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import { benchPotentialLoss, careerSquads, monthlyDelta, PLAY, playGrowthFactor } from '../src';
+import { nextPotential } from '../src/season/players';
 import { Rng } from '../src/rng';
 import type { Player } from '@cosmicfut/shared';
 import type { SeasonState } from '../src';
@@ -41,5 +42,12 @@ describe('crescimento pelos minutos', () => {
     expect(careerSquads(state, () => [p])('c')[0].potential).toBe(70);
     (state.career!.potNow as Record<string, number>)['c:1'] = 95;
     expect(careerSquads(state, () => [p])('c')[0].potential).toBe(86);
+  });
+
+  it('(25/11) o potencial é o teto: quem chegou nele não cresce, e o potencial não sobe sozinho', () => {
+    expect(monthlyDelta(20, 86, 86, 0.9, rng(), playGrowthFactor(0.9, 20, true))).toBe(0);
+    expect(monthlyDelta(20, 87, 86, 0.9, rng(), 1.5)).toBe(0);
+    for (let i = 0; i < 50; i++) expect(nextPotential(21, 90, 80, new Rng('p' + i))).toBe(90);
+    expect(nextPotential(21, 90, 91, rng())).toBe(91);
   });
 });

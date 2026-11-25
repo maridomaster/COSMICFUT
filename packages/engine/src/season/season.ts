@@ -648,7 +648,8 @@ function monthlyEvolution(state: SeasonState, squads: (clubId: string) => Player
       const share = games > 0 ? (st?.[0] ?? 0) / games : 0;
       const trains = inTraining.has(p.id);
       const rng = new Rng(`${state.seed ?? 'season'}:${state.date}:evo:${p.id}`);
-      const next = Math.max(1, Math.min(99, cur + monthlyDelta(p.age, cur, p.potential, share, rng, playGrowthFactor(share, games, trains))));
+      // (25/11) o potencial é o teto da evolução (só os ícones da Bola de Ouro/Prata somam, nas partidas)
+      const next = Math.max(1, Math.min(99, Math.max(cur, p.potential), cur + monthlyDelta(p.age, cur, p.potential, share, rng, playGrowthFactor(share, games, trains))));
       c.evo[p.id] = Math.round(next * 1000) / 1000;
       const loss = benchPotentialLoss(p.age, share, games, trains);
       if (loss > 0) {
