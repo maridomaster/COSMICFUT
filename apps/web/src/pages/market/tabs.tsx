@@ -159,6 +159,7 @@ export function IncomingTab({ season, humanId, clubMeta, onOpen }: { season: Sea
   const pending = all.filter((o) => o.status === 'pending');
   const past = all.filter((o) => o.status !== 'pending').slice(0, 12);
   const balance = season.clubs[humanId]?.balance ?? 0;
+  const mySquad = squads(humanId);
   const wageBill = squads(humanId).reduce((t, p) => t + p.wage, 0);
   /** (online) o comprador é outro técnico humano da sala */
   const coach = (clubId: string) => (actions.online ? (players?.find((p) => p.clubId === clubId)?.nickname ?? null) : null);
@@ -204,7 +205,11 @@ export function IncomingTab({ season, humanId, clubMeta, onOpen }: { season: Sea
           <AnimatePresence initial={false}>
             {pending.map((o) => {
               const days = o.expiresOn ? Math.max(0, daysBetween(season.date, o.expiresOn)) : null;
-              const ratio = o.player.value ? o.fee / o.player.value : 1;
+              // (25/11) valor de HOJE (o mesmo do Elenco): o da proposta é uma foto do dia em que ela chegou (antes de
+              // renovação, evolução, mudança de contrato)
+              const now = mySquad.find((p) => p.id === o.playerId);
+              const value = now?.value ?? o.player.value;
+              const ratio = value ? o.fee / value : 1;
               return (
                 <motion.div key={o.id} layout initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, x: 40 }} transition={{ ease: EASE_OUT }}>
                   <Card className="h-full p-3 ring-1 ring-warning/30">
@@ -220,7 +225,7 @@ export function IncomingTab({ season, humanId, clubMeta, onOpen }: { season: Sea
                           <button type="button" className="cursor-pointer truncate font-semibold underline-offset-2 hover:text-club-accent hover:underline" onClick={() => onOpen?.(o.playerId)} title={`Ver ficha de ${o.player.name}`} data-testid="incoming-player">
                             {o.player.name}
                           </button>
-                          <OvrBadge value={o.player.overall} />
+                          <OvrBadge value={now?.overall ?? o.player.overall} />
                         </div>
                       </div>
                       <div className="text-right">
@@ -228,7 +233,7 @@ export function IncomingTab({ season, humanId, clubMeta, onOpen }: { season: Sea
                         <div className={cn('text-[10px] font-semibold', ratio >= 1 ? 'text-success' : 'text-fg-subtle')}>{o.kind === 'loan' ? 'do salário pago por eles' : `${Math.round(ratio * 100)}% do valor`}</div>
                         {/* (18/11) quanto o jogador vale no mercado, para comparar com a oferta */}
                         <div className="text-[11px] text-fg-muted" data-testid="offer-player-value">
-                          Vale <b className="tabular font-bold text-fg">{fmtMoney(o.player.value)}</b>
+                          Vale <b className="tabular font-bold text-fg" title={value !== o.player.value ? `Quando a proposta chegou valia ${fmtMoney(o.player.value)}` : undefined}>{fmtMoney(value)}</b>
                         </div>
                       </div>
                     </div>
