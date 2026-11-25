@@ -71,7 +71,7 @@ function GoldView() {
       {holder && <HolderCard h={holder} />}
       <motion.div variants={fadeUp}>
         <Card data-testid="ballon-race">
-          <CardHeader icon={<Crown />} title={`Corrida da Bola de Ouro · ${label}`} subtitle="Todas as competições: gols, assistências, jogos e notas; defensores também pelos jogos sem sofrer gol" />
+          <CardHeader icon={<Crown />} title={`Corrida da Bola de Ouro · ${label}`} subtitle="Desempenho em todas as competições (nota, gols, assistências; defensores pelos jogos sem sofrer gol, pesando o nível da liga) + títulos do clube: Liga dos Campeões vale o dobro da Libertadores" />
           <CardContent>
             {race.length === 0 ? <p className="text-sm text-fg-muted">Ainda não há jogos suficientes nesta temporada.</p> : <RaceTable race={race} mine={mine} />}
           </CardContent>

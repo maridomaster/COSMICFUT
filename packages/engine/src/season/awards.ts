@@ -11,14 +11,15 @@
  * Nota de cada jogador (determinística):
  *   (nota média − 6) × 14 + gols × peso da posição + assistências × 0,35 + jogos × 0,06 (até 50) + overall × 0,3
  *   (gols/assistências/jogos sem sofrer gol no ritmo por jogo sobre no máximo 40 jogos — `volumeCap`)
- *   + títulos do clube na janela (continental +5, liga da 1ª divisão +3, copa nacional +1,5)
+ *   + títulos do clube na janela (Liga dos Campeões +14, Libertadores +7, Liga Europa +6, Sul-Americana +3,5…; liga da 1ª
+ *     divisão 2 + 3 × nível da liga — Premier ~6, Brasileirão ~4; copa nacional +2) — (25/11)
  * Mínimo de jogos: 18 no mundo, 12 no campeonato. Formação 4-3-3 (GOL, 2 LAT, 2 ZAG, 3 MEI, 3 ATA).
  */
 import type { Player, Position } from '@cosmicfut/shared';
 import type { AwardPlayer, CareerRecords, ChampionRecord, Competition, Honor, Honors, PlayerSeasonLine, SeasonAwards, SeasonState, SilverBall, WorldState } from '../contract';
 import { flushLines } from './records';
 import { baseClubOf } from '../transfers/market';
-import { clubLeagueMult } from '../transfers/value';
+import { clubLeagueMult, leagueMultiplier } from '../transfers/value';
 import { cycleSeason, seasonLabel, type Cycle } from './timeline';
 
 export const AWARDS = {
@@ -39,7 +40,16 @@ export const AWARDS = {
   overallWeight: 0.3,
   /** (19/11) jogos sem sofrer gol: o que mais pesa para os defensores */
   cleanSheetWeight: { GK: 0.6, CB: 0.4, FB: 0.3, MF: 0, FW: 0 } as Record<Position, number>,
-  title: { continental: 5, league: 3, cup: 1.5 },
+  /**
+   * (25/11) títulos pesam como no prêmio real: Liga dos Campeões vale o dobro da Libertadores; liga pelo nível dela
+   * (Premier ~6, LaLiga ~5, Brasileirão ~4); continentais pelo id, os demais `continental`
+   */
+  title: { continental: 2, league: 3, cup: 2 },
+  continentalTitle: {
+    UCL: 14, LIBERTADORES: 7, SUPERMUNDIAL: 6, UEL: 6, INTERCONTINENTAL: 4, SULAMERICANA: 3.5, UECL: 3, ACL: 3, RECOPA: 1, NORDESTE: 0.5,
+  } as Record<string, number>,
+  /** liga nacional (1ª divisão): base + por ponto do fator da liga (LEAGUE_MULT) */
+  leagueTitle: { base: 2, perMult: 3 },
   /** premiações guardadas no mundo (as mais recentes) */
   keep: 30,
   /** (19/11) Bolas de Prata guardadas (todas as ligas nacionais, as mais recentes) */
@@ -90,8 +100,8 @@ function titleBonus(history: readonly ChampionRecord[], labels: Set<string>, clu
     if (!r.championId || !clubs.has(r.championId)) continue;
     const label = r.seasonLabel ?? String(r.season);
     if (!labels.has(label)) continue;
-    if (r.type === 'continental') b += AWARDS.title.continental;
-    else if (r.type === 'league' && (r.division === undefined || r.division === 1) && r.countryId !== undefined) b += AWARDS.title.league;
+    if (r.type === 'continental') b += AWARDS.continentalTitle[r.competitionId] ?? AWARDS.title.continental;
+    else if (r.type === 'league' && (r.division === undefined || r.division === 1) && r.countryId !== undefined) b += AWARDS.leagueTitle.base + AWARDS.leagueTitle.perMult * leagueMultiplier(r.competitionId);
     else if (r.type === 'cup' && r.countryId !== undefined) b += AWARDS.title.cup;
   }
   return b;
@@ -102,7 +112,8 @@ function titleBonus(history: readonly ChampionRecord[], labels: Set<string>, clu
  * Argentina ~0,91, resto da América do Sul ~0,87 — gol na Premier vale um pouco mais que no Argentino.
  */
 export function leagueLevel(state: SeasonState, clubId: string): number {
-  return Math.min(1.1, Math.max(0.85, 0.8 + 0.2 * clubLeagueMult(state, clubId)));
+  // (25/11) mais forte: Premier ~1,15, top-5 ~1,02, Brasil ~0,89, Argentina ~0,82, resto da América do Sul ~0,75
+  return Math.min(1.15, Math.max(0.75, 0.6 + 0.4 * clubLeagueMult(state, clubId)));
 }
 
 function award(p: Player, clubId: string, a: Agg, bonus: number, level = 1): AwardPlayer {

@@ -18,16 +18,17 @@ import { DeclineArrow, Flag, OvrBadge, PositionChip, potentialClass } from '@/co
 import { MoraleChip } from '@/components/game/chips';
 import { PageHeader } from '@/components/ui/page-header';
 import { useFitHeight } from '@/lib/useFitHeight';
-import { useSeason } from '@/store/season';
+import { useSeason, useWorld } from '@/store/season';
 import { PlayerFlags, StatusChip, TraitChips } from '@/components/game/player';
 import { PlayerDrawer } from '@/components/game/PlayerDrawer';
 import { AvailabilityBadges, useHumanStatus, type PlayerStatus } from '@/components/game/status';
 import { StaminaBar } from '@/components/game/StaminaBar';
 import { contractInfo, contractTone, ContractRenew, ForSaleBadge, ListForSaleButton, LoanListBadge, LoanOfferButton, monthsLabel, useLoanListed, useTransferListed } from '@/components/game/market';
 import { ClubMini, useClubMeta } from '@/pages/market/common';
-import { loansOf } from '@cosmicfut/engine';
+import { loansOf, playerCareer } from '@cosmicfut/engine';
+import { humanSeasonLabel } from '@/season/view';
 
-type SortKey = 'position' | 'name' | 'age' | 'nationality' | 'overall' | 'potential' | 'traits' | 'wage' | 'value' | 'contract' | 'status';
+type SortKey = 'position' | 'name' | 'age' | 'nationality' | 'overall' | 'potential' | 'games' | 'goals' | 'assists' | 'traits' | 'wage' | 'value' | 'contract' | 'status';
 type Dir = 'asc' | 'desc';
 
 const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: string; align?: 'right' }[] = [
@@ -37,6 +38,10 @@ const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: strin
   { key: 'nationality', label: 'Nac', defaultDir: 'asc', className: 'hidden md:flex' },
   { key: 'overall', label: 'OVR', defaultDir: 'desc' },
   { key: 'potential', label: 'Pot', defaultDir: 'desc', className: 'hidden md:flex', align: 'right' },
+  // (25/11) números da temporada (todas as competições)
+  { key: 'games', label: 'J', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
+  { key: 'goals', label: 'G', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
+  { key: 'assists', label: 'A', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
   { key: 'traits', label: 'Características', defaultDir: 'desc', className: 'hidden xl:flex' },
   { key: 'wage', label: 'Salário', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
   { key: 'value', label: 'Valor', defaultDir: 'desc', className: 'hidden lg:flex', align: 'right' },
@@ -48,8 +53,8 @@ const COLUMNS: { key: SortKey; label: string; defaultDir: Dir; className?: strin
 const GRID =
   'grid-cols-[4.25rem_minmax(0,1fr)_2.25rem_3.25rem] ' +
   'md:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_5.5rem] ' +
-  'lg:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_4.75rem_4.75rem_5rem_5.5rem] ' +
-  'xl:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_11rem_4.75rem_4.75rem_5rem_5.5rem]';
+  'lg:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_1.75rem_1.75rem_1.75rem_4.75rem_4.75rem_5rem_5.5rem] ' +
+  'xl:grid-cols-[4.25rem_minmax(0,1fr)_2.5rem_2rem_3.25rem_2.25rem_1.75rem_1.75rem_1.75rem_11rem_4.75rem_4.75rem_5rem_5.5rem]';
 
 const STATUS_ORDER: LineupStatus[] = ['starter', 'bench', 'out'];
 
@@ -65,6 +70,18 @@ export function SquadPage() {
   const loanListed = useLoanListed();
   const season = useSeason((s) => s.save?.season);
   // (19/11) fim do contrato de cada jogador (null = emprestado ao clube)
+  // (25/11) jogos, gols e assistências na temporada do clube (todas as competições), das linhas de carreira
+  const world = useWorld();
+  const seasonStats = useMemo(() => {
+    const out = new Map<string, { games: number; goals: number; assists: number }>();
+    if (!season) return out;
+    const label = humanSeasonLabel(season);
+    for (const p of players) {
+      const rows = playerCareer(world, season, p.id).filter((r) => r.clubId === bundle.club.id && r.season === label);
+      out.set(p.id, { games: rows.reduce((a, r) => a + r.games, 0), goals: rows.reduce((a, r) => a + r.goals, 0), assists: rows.reduce((a, r) => a + r.assists, 0) });
+    }
+    return out;
+  }, [players, season, world, bundle.club.id]);
   const contracts = useMemo(() => new Map(players.map((p) => [p.id, season ? contractInfo(season, p, bundle.club.id) : null])), [players, season, bundle.club.id]);
   const outCount = [...statusMap.values()].filter((s) => s.injury || s.suspension).length;
   const morale = useSeason((s) => s.save?.season.clubs[bundle.club.id]?.morale);
@@ -111,8 +128,8 @@ export function SquadPage() {
         p.age >= age[0] &&
         p.age <= age[1],
     );
-    return sortPlayers(filtered, sort.key, sort.dir, { lineup, countries, traits, contracts });
-  }, [players, query, positions, statuses, ovr, age, sort, lineup, countries, traits, contracts]);
+    return sortPlayers(filtered, sort.key, sort.dir, { lineup, countries, traits, contracts, seasonStats });
+  }, [players, query, positions, statuses, ovr, age, sort, lineup, countries, traits, contracts, seasonStats]);
 
   const toggleSort = (key: SortKey) =>
     setSort((s) => (s.key === key ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: COLUMNS.find((c) => c.key === key)!.defaultDir }));
@@ -316,6 +333,7 @@ export function SquadPage() {
                       availability={statusMap.get(p.id)}
                       forSale={listed.has(p.id)}
                       contract={contracts.get(p.id)}
+                      stats={seasonStats.get(p.id)}
                       loanMonths={loanListed.ids.has(p.id) ? (loanListed.months[p.id] ?? 0) : undefined}
                       onOpen={() => setSelectedId(p.id)}
                     />
@@ -364,6 +382,7 @@ function SquadRow({
   forSale,
   loanMonths,
   contract,
+  stats,
   onOpen,
 }: {
   player: Player;
@@ -376,6 +395,7 @@ function SquadRow({
   /** na lista de empréstimo (duração pedida; 0 = sem prazo) */
   loanMonths?: number;
   contract?: { end: string; months: number } | null;
+  stats?: { games: number; goals: number; assists: number };
   onOpen: () => void;
 }) {
   const delay = Math.min(index, 18) * 0.012;
@@ -422,6 +442,9 @@ function SquadRow({
           <OvrBadge value={p.overall} size="sm" />
         </span>
         <span className={cn('tabular hidden text-right text-[13px] md:block', potentialClass(p.age, p.overall, p.potential))}>{p.potential}<DeclineArrow age={p.age} className="ml-0.5" /></span>
+        <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block" data-testid="squad-games">{stats?.games ?? 0}</span>
+        <span className={cn('tabular hidden text-right text-[13px] lg:block', stats?.goals ? 'font-semibold' : 'text-fg-subtle')}>{stats?.goals ?? 0}</span>
+        <span className={cn('tabular hidden text-right text-[13px] lg:block', stats?.assists ? 'font-semibold' : 'text-fg-subtle')}>{stats?.assists ?? 0}</span>
         <TraitChips player={p} traits={traits} className="hidden flex-nowrap overflow-hidden xl:flex" />
         <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block">{fmtMoney(p.wage)}</span>
         <span className="tabular hidden text-right text-[13px] text-fg-muted lg:block">{fmtMoney(p.value)}</span>
@@ -440,7 +463,7 @@ function sortPlayers(
   players: Player[],
   key: SortKey,
   dir: Dir,
-  ctx: { lineup: ReturnType<typeof useGame.getState>['lineup']; countries: Map<number, Country>; traits: Map<number, Trait>; contracts: Map<string, { end: string; months: number } | null> },
+  ctx: { lineup: ReturnType<typeof useGame.getState>['lineup']; countries: Map<number, Country>; traits: Map<number, Trait>; contracts: Map<string, { end: string; months: number } | null>; seasonStats: Map<string, { games: number; goals: number; assists: number }> },
 ): Player[] {
   const m = dir === 'asc' ? 1 : -1;
   const statusRank = (p: Player) => {
@@ -469,6 +492,12 @@ function sortPlayers(
         return p.wage;
       case 'value':
         return p.value;
+      case 'games':
+        return ctx.seasonStats.get(p.id)?.games ?? 0;
+      case 'goals':
+        return ctx.seasonStats.get(p.id)?.goals ?? 0;
+      case 'assists':
+        return ctx.seasonStats.get(p.id)?.assists ?? 0;
       case 'contract':
         return ctx.contracts.get(p.id)?.months ?? 999;
       case 'status':
