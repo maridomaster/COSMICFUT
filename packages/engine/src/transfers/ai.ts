@@ -689,6 +689,9 @@ function aiLoanDeal(c: Ctx, p: Player, seller: ClubView, buyer: ClubView): strin
 
 /* ═════════════════════ 6) ofertas pelos jogadores do humano ═════════════════════ */
 
+/** (25/11) propostas por jogadores do humano que NÃO estão à venda */
+export const UNSOLICITED = { top: 8, chance: 0.015, below: 4 };
+
 function aiOffersForHuman(c: Ctx, human: string): void {
   const { state, rng } = c;
   const m = state.market!;
@@ -699,18 +702,22 @@ function aiOffersForHuman(c: Ctx, human: string): void {
   const loanListed = new Set((m.loanList ?? []).filter((pid) => currentClubOf(state, pid) === human));
   const topUnlisted = hSquad
     .filter((p) => !listed.has(p.id) && !loanListed.has(p.id))
-    .sort((a, b) => b.value - a.value || (a.id < b.id ? -1 : 1))
-    .slice(0, 3);
+    .sort((a, b) => b.value - a.value || (a.id < b.id ? -1 : 1));
+  // (25/11) mais propostas espontâneas: os 8 mais valiosos + 1 jogador qualquer do elenco por dia (antes: só os 3
+  // mais valiosos a 1,2%/dia — 0 a 3 propostas no ano; agora ~11 a 18 por ano, por 6 a 10 jogadores)
+  const spontaneous = topUnlisted.slice(0, UNSOLICITED.top);
+  const rest = topUnlisted.slice(UNSOLICITED.top);
+  if (rest.length) spontaneous.push(rest[rng.int(0, rest.length - 1)]);
   const targets: { p: Player; listed: boolean; loan: boolean }[] = [
     ...hSquad.filter((p) => listed.has(p.id)).map((p) => ({ p, listed: true, loan: false })),
     ...hSquad.filter((p) => loanListed.has(p.id) && !listed.has(p.id)).map((p) => ({ p, listed: true, loan: true })),
-    ...topUnlisted.map((p) => ({ p, listed: false, loan: false })),
+    ...spontaneous.map((p) => ({ p, listed: false, loan: false })),
   ];
   for (const { p: p0, listed: isListed, loan } of targets) {
     if (pending().length >= 6) break;
     if (m.contracts[p0.id]?.kind === 'loan' && m.contracts[p0.id].loanFrom !== human) continue; // emprestado ao humano
     if (m.preContracts?.[p0.id]) continue;
-    if (!rng.chance(isListed ? (loan ? 0.2 : 0.3) : 0.012)) continue;
+    if (!rng.chance(isListed ? (loan ? 0.2 : 0.3) : UNSOLICITED.chance)) continue;
     if (m.offers.filter((o) => o.playerId === p0.id && o.status === 'pending').length >= 2) continue;
     const p = c.live(p0);
     const already = new Set(m.offers.filter((o) => o.playerId === p.id && o.status === 'pending').map((o) => o.toClubId));
@@ -727,7 +734,7 @@ function aiOffersForHuman(c: Ctx, human: string): void {
       // listados: interessa a quem ganharia uma opção útil de elenco; não listados: só se melhorar o XI
       return isListed
         ? p.overall >= positionLevel(sq, p.position) - 6 || p.overall >= c.strength(sq) - 6
-        : p.overall >= positionLevel(sq, p.position) - 2;
+        : p.overall >= positionLevel(sq, p.position) - UNSOLICITED.below;
     });
     if (!cands.length) continue;
     const buyerId = cands[rng.weightedIndex(cands.map((id) => 1 + Math.max(0, state.clubs[id].balance) / 5e6))];
