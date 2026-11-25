@@ -382,7 +382,7 @@ export function Controls() {
   const running = useMatch((s) => s.running);
   const speed0 = useMatch((s) => s.speed);
   const isFinal = useMatch((s) => s.isFinal);
-  const speed = isFinal ? 1 : speed0;
+  const speed = speed0;
   const play = useMatch((s) => s.play);
   const pause = useMatch((s) => s.pause);
   const setSpeed = useMatch((s) => s.setSpeed);
@@ -396,13 +396,12 @@ export function Controls() {
           {running ? <Pause /> : <Play fill="currentColor" />} {running ? 'Pausar' : 'Jogar'}
         </Button>
       </Tooltip>
-      <div role="radiogroup" aria-label="Velocidade" title={isFinal ? 'Final: sempre na velocidade normal, para ter suspense' : undefined} className="flex rounded-lg border border-line bg-surface-2/60 p-0.5">
+      <div role="radiogroup" aria-label="Velocidade" className="flex rounded-lg border border-line bg-surface-2/60 p-0.5">
         {([1, 2, 4] as Speed[]).map((s) => (
           <button
             key={s}
             role="radio"
             aria-checked={speed === s}
-            disabled={isFinal && s !== 1}
             onClick={() => setSpeed(s)}
             className={cn('tabular h-6 rounded-md px-2.5 text-xs font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-40', speed === s ? 'bg-club-accent text-club-on-accent' : 'text-fg-muted hover:text-fg')}
           >
@@ -410,7 +409,7 @@ export function Controls() {
           </button>
         ))}
       </div>
-      {isFinal && <span className="text-[11px] font-bold uppercase tracking-wide text-club-accent" title="Final: sempre na velocidade normal, para ter suspense">Final</span>}
+      {isFinal && <span className="text-[11px] font-bold uppercase tracking-wide text-club-accent">Final</span>}
       <Button variant="ghost" size="sm" onClick={skip} title="Simula o restante da partida">
         <SkipForward /> <span className="hidden sm:inline">Pular para o fim</span>
       </Button>

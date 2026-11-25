@@ -11,7 +11,7 @@ import { publicConfig } from './match-config.ts';
 
 /** (19/11) disputa de pênaltis sempre devagar (uma cobrança a cada 1,5 s), mesmo na velocidade rápida — tem que ter emoção */
 export const PENALTY_TICK_MS = 1500; // só nas velocidades reais (≥ 50 ms; os testes usam 1–20 ms)
-/** (19/11) velocidade Normal: as finais nunca rodam mais rápido que isso (suspense) */
+/** (19/11) velocidade Normal — (25/11) sem uso: as finais voltaram a acelerar */
 export const FINAL_MIN_TICK_MS = 400;
 
 export interface LiveMatchHooks {
@@ -161,7 +161,8 @@ export class LiveMatch {
 
   /** (19/11) final: no mínimo a velocidade Normal (só nas velocidades reais, ≥ 50 ms; os testes usam 1–20 ms) */
   private clampSpeed(ms: number): number {
-    return this.opts.final && ms >= 50 ? Math.max(ms, FINAL_MIN_TICK_MS) : ms;
+    // (25/11) as finais também aceleram (pedido do jogador); só os pênaltis seguem devagar
+    return ms;
   }
 
   /** muda a velocidade no meio da partida (vale já no próximo minuto) */

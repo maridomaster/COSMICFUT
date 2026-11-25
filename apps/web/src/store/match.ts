@@ -113,7 +113,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
     return true;
   };
 
-  const intervalFor = (phase: string | undefined, speed: Speed) => (phase === 'penalties' ? PENALTY_INTERVAL_MS : BASE_INTERVAL_MS / (get().isFinal ? 1 : speed));
+  const intervalFor = (phase: string | undefined, speed: Speed) => (phase === 'penalties' ? PENALTY_INTERVAL_MS : BASE_INTERVAL_MS / speed);
 
   const startTimer = () => {
     stopTimer();
@@ -181,7 +181,7 @@ export const useMatch = create<MatchStore>()((set, get) => {
       set({ running: false });
     },
     setSpeed: (speed) => {
-      if (get().isFinal) return;
+      // (25/11) finais também aceleram (a trava das finais saiu; os pênaltis continuam devagar)
       set({ speed });
       if (get().running) startTimer();
     },
