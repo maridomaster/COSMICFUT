@@ -578,7 +578,7 @@ export class CareerSimulator {
       worldVersion: req.worldVersion, wb: worldSquads(m.world, base), worldDirty: false, jobs: emptyJobs(),
     };
     // (dados) cópias duplicadas aposentadas agora: mundo novo para os clientes
-    if (m.dedupMigrated || m.awardsMigrated) {
+    if (m.dedupMigrated || m.awardsMigrated || m.potCapMigrated) {
       c.worldVersion++;
       c.worldDirty = true;
     }

@@ -461,7 +461,7 @@ async function handle(m: ToWorker): Promise<void> {
         await ensureCoachPools();
         send({ t: 'loaded', id: m.id, save: payload(), meta: slotMeta, legacy: false, otherCareer: false, migrated: mig.migrated, coachCreated: !!mig.coachCreated, econMigrated: !!mig.econMigrated, ms: performance.now() - t0 });
         // grava o resultado da migração (o aviso aparece uma vez só)
-        if (mig.migrated || mig.coachCreated || mig.econMigrated || mig.recordsMigrated || mig.dedupMigrated || mig.awardsMigrated) await persistNow();
+        if (mig.migrated || mig.coachCreated || mig.econMigrated || mig.recordsMigrated || mig.dedupMigrated || mig.awardsMigrated || mig.potCapMigrated) await persistNow();
         return;
       }
       if (save && isCareerSave(save) && save.clubId !== m.clubId) throw new Error('o save deste slot é de outro clube');

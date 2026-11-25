@@ -335,7 +335,7 @@ export function isLegacyCareer(world: Pick<WorldState, 'rev'> | null | undefined
  */
 export function migrateCareer(
   world: WorldState, state?: SeasonState, opts: MigrateCareerOptions = {},
-): { world: WorldState; state?: SeasonState; migrated: boolean; coachCreated?: boolean; legacy?: boolean; econMigrated?: boolean; marketMigrated?: boolean; recordsMigrated?: boolean; budgetsMigrated?: boolean; dedupMigrated?: number; awardsMigrated?: boolean } {
+): { world: WorldState; state?: SeasonState; migrated: boolean; coachCreated?: boolean; legacy?: boolean; econMigrated?: boolean; marketMigrated?: boolean; recordsMigrated?: boolean; budgetsMigrated?: boolean; dedupMigrated?: number; awardsMigrated?: boolean; potCapMigrated?: number } {
   if (isLegacyCareer(world)) return { world, state, migrated: false, legacy: true };
   const w = JSON.parse(JSON.stringify(world)) as WorldState;
   const s = state ? (JSON.parse(JSON.stringify(state)) as SeasonState) : undefined;
@@ -410,6 +410,12 @@ export function migrateCareer(
     if (w.awards?.length) awardsMigrated = recomputeFirstAwards(w, s, opts.data.clubs.map((c) => c.id), careerSquads(s, worldSquads(w, opts.squads as Squads)));
     w.awardsRev = 1;
   }
+  // (25/11) potencial é o teto: quem passou do potencial ORIGINAL dos dados (bugs de evolução antes de 25/11) volta a ele
+  let potCapMigrated = 0;
+  if (opts.squads && opts.data && (w.potCapRev ?? 0) < 1) {
+    potCapMigrated = capToDataPotential(w, s, opts.data.clubs.map((c) => c.id), opts.squads as Squads);
+    w.potCapRev = 1;
+  }
   let budgetsMigrated = false;
   if (s?.career && ensureBudgets(s) > 0) budgetsMigrated = true;
   // (Fase 3) carreira do técnico: criada a partir do clube atual (opcional; o servidor online não pede)
@@ -422,8 +428,36 @@ export function migrateCareer(
   return {
     world: w, state: s, migrated: false, ...(coachCreated ? { coachCreated } : {}), ...(econMigrated ? { econMigrated } : {}), ...(marketMigrated ? { marketMigrated } : {}),
     ...(recordsMigrated ? { recordsMigrated } : {}), ...(budgetsMigrated ? { budgetsMigrated } : {}), ...(dedupMigrated ? { dedupMigrated } : {}),
-    ...(awardsMigrated ? { awardsMigrated } : {}),
+    ...(awardsMigrated ? { awardsMigrated } : {}), ...(potCapMigrated ? { potCapMigrated } : {}),
   };
+}
+
+/**
+ * (25/11) Teto do potencial nos saves: overall e potencial de cada jogador dos DADOS limitados ao potencial original
+ * (a virada gravava o potencial já "puxado" pelo overall). Juniores gerados e revelados da base não têm referência e
+ * ficam como estão. MUTA `w` e `s`. Devolve quantos jogadores mudaram.
+ */
+export function capToDataPotential(w: WorldState, s: SeasonState | undefined, clubIds: string[], base: Squads): number {
+  const cap = new Map<string, number>();
+  for (const id of clubIds) for (const p of base(id)) if (!cap.has(p.id)) cap.set(p.id, p.potential);
+  const changed = new Set<string>();
+  const fix = (pid: string, ovr: number, pot: number): [number, number] | null => {
+    const c = cap.get(pid);
+    if (c === undefined || (ovr <= c && pot <= c)) return null;
+    changed.add(pid);
+    return [Math.min(ovr, c), Math.min(pot, c)];
+  };
+  const wp = w.players;
+  for (const [pid, d] of Object.entries(wp.delta)) { const f = fix(pid, d[1], d[2]); if (f) { d[1] = f[0]; d[2] = f[1]; } }
+  for (const [pid, p] of Object.entries(wp.data)) { const f = fix(pid, p.overall, p.potential); if (f) wp.data[pid] = { ...p, overall: f[0], potential: f[1] }; }
+  const mp = s?.market?.players;
+  if (mp) for (const [pid, p] of Object.entries(mp)) { const f = fix(pid, p.overall, p.potential); if (f) mp[pid] = { ...p, overall: f[0], potential: f[1] }; }
+  const c = s?.career;
+  if (c) {
+    for (const [pid, v] of Object.entries(c.evo ?? {})) { const k = cap.get(pid); if (k !== undefined && v > k) { c.evo[pid] = k; changed.add(pid); } }
+    for (const [pid, v] of Object.entries(c.potNow ?? {})) { const k = cap.get(pid); if (k !== undefined && v > k) c.potNow![pid] = k; }
+  }
+  return changed.size;
 }
 
 /** (19/11) Recalcula as premiações cuja janela mudou com a correção da 1ª temporada (ver `awardWindow`). */

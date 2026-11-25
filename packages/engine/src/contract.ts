@@ -816,6 +816,8 @@ export interface WorldState {
   awardsRev?: number;
   /** (23/11) carreira criada com a temporada europeia 2025/26 jogada (comprimida) no 1º semestre */
   prelude?: boolean;
+  /** (25/11) jogadores dos dados acima do potencial original já foram trazidos de volta a ele (1) */
+  potCapRev?: number;
   /** (19/11) Bolas de Prata entregues (as mais recentes) */
   silverBalls?: SilverBall[];
   /**
