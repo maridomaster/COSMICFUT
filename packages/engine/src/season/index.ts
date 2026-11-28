@@ -107,3 +107,4 @@ export { ACADEMY, academyDay, academyWage, generateProspect, promoteProspect, re
 export { AWARDS, awardWindow, awardCycleOf, leagueLevel, ballonRace, raceLabels, HONOR, honorBonus, honorsOf, silverRanking, computeSilverBalls, computeSeasonAwards, pickTeam } from './awards';
 export { prizeTable, type PrizeRow, type PrizeTableView } from './prizes';
 export { TRAINING, daysToNextMatch, setTraining, trainingAgeFactor, trainingCost, trainingDay, trainingEta, trainingRate } from './training';
+export { SPONSOR, SPONSOR_BRANDS, declineSponsor, initialSponsor, signSponsor, sponsorDay, sponsorMonthlyDelta, sponsorSlotMonthly } from './sponsor';

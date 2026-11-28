@@ -13,7 +13,7 @@ import { useMemo } from 'react';
 import type { Player } from '@cosmicfut/shared';
 import {
   counterIncoming, exercisePurchaseOption, makeOffer, promoteProspect, proposeContract, releaseProspect, setTraining, rebalanceBudgets, recallLoan, releasePlayer, renewContract, respondToOffer,
-  setLoanListed, setTransferListed, withdrawOffer, setTicketPrice, takeLoan, repayLoan, expandStadium, payOffLuva,
+  setLoanListed, setTransferListed, withdrawOffer, setTicketPrice, takeLoan, repayLoan, expandStadium, payOffLuva, signSponsor, declineSponsor,
   type ExternalClubInfo, type LoanTerms, type MarketResult, type PreContract, type SeasonState, type TransferOffer, type TransferRecord,
 } from '@cosmicfut/engine';
 import { squads } from '@/data/squads';
@@ -25,7 +25,8 @@ export type FinanceReq =
   | { op: 'ticket'; price: number | null }
   | { op: 'loan' | 'repay'; blocks: number }
   | { op: 'stadium'; seats: number }
-  | { op: 'luva'; playerId: string };
+  | { op: 'luva'; playerId: string }
+  | { op: 'sponsor'; offerId: string; accept: boolean };
 
 function applyFinance(s: SeasonState, clubId: string, r: FinanceReq): MarketResult {
   return r.op === 'ticket' ? setTicketPrice(s, clubId, r.price)
@@ -33,6 +34,7 @@ function applyFinance(s: SeasonState, clubId: string, r: FinanceReq): MarketResu
     : r.op === 'repay' ? repayLoan(s, clubId, r.blocks)
     : r.op === 'stadium' ? expandStadium(s, clubId, r.seats)
     : r.op === 'luva' ? payOffLuva(s, clubId, r.playerId)
+    : r.op === 'sponsor' ? (r.accept ? signSponsor(s, clubId, r.offerId) : declineSponsor(s, clubId, r.offerId))
     : { state: s, error: 'Operação inválida.' };
 }
 

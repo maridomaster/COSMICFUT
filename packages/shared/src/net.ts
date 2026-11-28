@@ -623,7 +623,7 @@ export interface ClientEvents extends Omit<ClientToServer, 'round:ready' | 'chat
   /** (Treino) jogadores no Centro de Treinamento (até 3) */
   'market:train': (p: { playerIds: string[] }, ack?: (r: Ack<MarketActionResult>) => void) => void;
   /** (28/11) gestão do clube: ingresso, empréstimo bancário, obra do estádio, quitar luva */
-  'market:finance': (p: { op: 'ticket' | 'loan' | 'repay' | 'stadium' | 'luva'; price?: number | null; blocks?: number; seats?: number; playerId?: string }, ack?: (r: Ack<MarketActionResult>) => void) => void;
+  'market:finance': (p: { op: 'ticket' | 'loan' | 'repay' | 'stadium' | 'luva' | 'sponsor'; price?: number | null; blocks?: number; seats?: number; playerId?: string; offerId?: string; accept?: boolean }, ack?: (r: Ack<MarketActionResult>) => void) => void;
   /* ── (Etapa 5) ── */
   /** contraproposta a uma oferta recebida da IA (o comprador aceita até o teto dele, melhora ou desiste) */
   'market:counter': (p: { offerId: string; fee: number }, ack?: (r: Ack<MarketActionResult>) => void) => void;

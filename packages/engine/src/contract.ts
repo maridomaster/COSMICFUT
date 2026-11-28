@@ -1624,6 +1624,44 @@ export interface MarketState {
   loanMonths?: Record<string, number>;
   /** (Treino) Centro de Treinamento dos clubes humanos (clubId → estado). Ver season/training.ts */
   training?: Record<string, TrainingState>;
+  /** (28/11) patrocínio master dos clubes humanos (clubId → estado). Ver season/sponsor.ts */
+  sponsor?: Record<string, SponsorState>;
+}
+
+/** (28/11) Meta de um contrato de patrocínio master: bônus pago no fim da temporada do clube se cumprida. */
+export interface SponsorGoal {
+  kind: 'position' | 'title';
+  /** posição máxima na liga nacional (kind 'position') */
+  position?: number;
+  bonus: number;
+  /** resultado por temporada (rótulo) já avaliada */
+  done?: Record<string, boolean>;
+}
+
+/** (28/11) Proposta / contrato de patrocínio master. */
+export interface SponsorDeal {
+  id: string;
+  brand: string;
+  sector: string;
+  /** valor por mês */
+  monthly: number;
+  years: number;
+  goals: SponsorGoal[];
+  /** proposta: válida até; contrato: começo e fim */
+  expiresOn?: string;
+  start?: string;
+  end?: string;
+  /** contrato padrão herdado (o patrocinador que o clube já tinha) */
+  default?: boolean;
+}
+
+export interface SponsorState {
+  deal: SponsorDeal | null;
+  offers: SponsorDeal[];
+  nextOfferOn: string;
+  seq: number;
+  /** temporadas (rótulo) cujas metas já foram avaliadas */
+  evaluated?: string[];
 }
 
 /** (Treino) jogadores em treino especial (até 3) e o progresso de cada um até o próximo +1 de overall. */

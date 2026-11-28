@@ -20,6 +20,7 @@ import { recordCompetitionGoals, recordLines } from './records';
 import { careerSquads } from './career';
 import { academyDay } from './academy';
 import { trainingDay } from './training';
+import { sponsorDay, sponsorMonthlyDelta } from './sponsor';
 import { homeTicketDemand, processMonthlyFinance, processStadiumWorks, resultAttendance, ticketPriceOf } from './finance';
 import { continentalCountryOf, linkContinental } from './continental';
 import { linkCompetitions } from './confed';
@@ -293,6 +294,8 @@ export function advanceDay(
   if (worksPending) processStadiumWorks(state);
   // (Treino) Centro de Treinamento dos humanos: evolução e energia perto dos jogos
   if (career && state.market?.training) for (const n of trainingDay(state, squads)) news(n.text, n.clubId);
+  // (28/11) patrocínio master dos humanos: propostas, fim de contrato e metas
+  if (career && state.market) for (const n of sponsorDay(state, squads)) news(n.text, n.clubId);
 
   // 2) finanças mensais
   if (date.endsWith('-01')) {
@@ -307,7 +310,7 @@ export function advanceDay(
       // (Etapa 4) demonstrativo mensal dos humanos: fecha o mês anterior antes dos lançamentos de hoje
       if (human) rollMonth(club, date);
       if (hasEcon(info)) {
-        const r = monthlyCashFlow(club, info, wages);
+        const r = monthlyCashFlow(club, info, wages, human ? sponsorMonthlyDelta(state, club.clubId) : 0);
         if (club.ticketPrice != null && club.ticketPrice > 0) bumpFans(club, fanPriceDelta(club.ticketPrice, info.basePrice));
         const extra = club.loan || club.luvaDebts?.length ? processMonthlyFinance(club) : null;
         if (human) monthlyNews(state, club, info, r, extra, wages, news, name);

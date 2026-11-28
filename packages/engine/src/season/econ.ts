@@ -603,9 +603,10 @@ export interface MonthlyResult {
  * Dia 1 (economia da Etapa 4): TV, patrocínio e aporte entram; salários, comissão técnica/funcionários, manutenção do
  * estádio e despesas operacionais saem; saldo negativo paga juros do cheque especial. MUTA o clube.
  */
-export function monthlyCashFlow(club: ClubSeasonState, info: ClubEconomyInfo & EconProfile, wages: number): MonthlyResult {
+export function monthlyCashFlow(club: ClubSeasonState, info: ClubEconomyInfo & EconProfile, wages: number, sponsorDelta = 0): MonthlyResult {
   const tv = Math.round(info.tvPerSeason / 12);
-  const sponsor = Math.round(info.sponsorPerSeason / 12);
+  // (28/11) patrocínio master dos humanos: o contrato em vigor substitui a cota master (40%)
+  const sponsor = Math.max(0, Math.round(info.sponsorPerSeason / 12) + sponsorDelta);
   // dono-investidor (PIF): o aporte acompanha a folha atual (cobre aumentos; diminui se a folha cair)
   const owner = info.ownerBacked
     ? Math.max(0, Math.round(info.ownerPerSeason / 12 + wages - (info.wageBill ?? 0) / 12))

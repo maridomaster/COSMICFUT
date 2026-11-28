@@ -13,7 +13,7 @@ import { fromUtf8, gunzip, gzip, utf8 } from './platform.ts';
 import type { ClubBundle, NamePool, Player } from '@cosmicfut/shared';
 import {
   advanceDay, applyTransfer, baseClubOf, buildTeamInput, careerNamePoolCodes, careerSquads, createCareer,
-  currentClubOf, expiringContracts, fixtureMatchRules, fmtMoneyShort, FREE, makeOffer, migrateCareer, nextSeason, proposeContract, releasePlayer, promoteProspect, releaseProspect, setTraining, setTicketPrice, takeLoan, repayLoan, expandStadium, payOffLuva,
+  currentClubOf, expiringContracts, fixtureMatchRules, fmtMoneyShort, FREE, makeOffer, migrateCareer, nextSeason, proposeContract, releasePlayer, promoteProspect, releaseProspect, setTraining, setTicketPrice, takeLoan, repayLoan, expandStadium, payOffLuva, signSponsor, declineSponsor,
   renewalDemand, respondToOffer, rolloverSeason, seasonOver, setTransferListed, withdrawOffer, worldSquads,
   autoTurnoverDue, isLegacyCareer, marketWindow, scopeNamePoolCodes, turnoverDue,
   counterIncoming, exercisePurchaseOption, recallLoan, releaseClauseOf, renewContract, setLoanListed, computeStandings, TimeSkip,
@@ -141,6 +141,8 @@ export type MarketAction =
   | { type: 'finance'; op: 'loan' | 'repay'; blocks: number }
   | { type: 'finance'; op: 'stadium'; seats: number }
   | { type: 'finance'; op: 'luva'; playerId: string }
+  /** (28/11) patrocínio master: assinar (accept) ou recusar uma proposta */
+  | { type: 'finance'; op: 'sponsor'; offerId: string; accept: boolean }
   /** (Mercado e Orçamentos) equilíbrio: move 	oWage € de transferências para a folha (negativo = o contrário) */
   | { type: 'budget'; toWage: number };
 
@@ -959,6 +961,7 @@ export class CareerSimulator {
           : a.op === 'repay' ? repayLoan(s0, clubId, a.blocks)
           : a.op === 'stadium' ? expandStadium(s0, clubId, a.seats)
           : a.op === 'luva' ? payOffLuva(s0, clubId, a.playerId)
+          : a.op === 'sponsor' ? (a.accept ? signSponsor(s0, clubId, a.offerId) : declineSponsor(s0, clubId, a.offerId))
           : { state: s0, error: 'Operação inválida.' };
         return this.commit(c, s0, r, [clubId]);
       }

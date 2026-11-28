@@ -249,6 +249,10 @@ function parseMarketAction(type: MarketAction['type'], raw: unknown): MarketActi
       if (op === 'loan' || op === 'repay') return { type, op, blocks: Math.round(money(o.blocks ?? 1, 'Blocos', 1, 50)) };
       if (op === 'stadium') return { type, op, seats: Math.round(money(o.seats, 'Lugares', 1, 200_000)) };
       if (op === 'luva') return { type, op, playerId: V.id(o.playerId, 'Jogador') };
+      if (op === 'sponsor') {
+        if (typeof o.accept !== 'boolean') fail('accept inválido.');
+        return { type, op, offerId: V.id(o.offerId, 'Proposta'), accept: o.accept as boolean };
+      }
       return fail('Operação inválida.');
     }
     /* (Mercado e Orçamentos) equilíbrio de orçamentos */

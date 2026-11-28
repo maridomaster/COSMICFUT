@@ -3,10 +3,11 @@ import { useSearchParams } from 'react-router';
 import { PageHeader } from '@/components/ui/page-header';
 import { motion } from 'motion/react';
 import {
-  ArrowLeftRight, Award, Banknote, BarChart3, Building2, CalendarDays, Gauge, Handshake, HandCoins, Heart, Landmark, LineChart, Percent, PiggyBank, Ticket,
+  ArrowLeftRight, Award, BadgeDollarSign, Banknote, BarChart3, Building2, CalendarDays, Gauge, Handshake, HandCoins, Heart, Landmark, LineChart, Percent, PiggyBank, Ticket,
   Scale, TrendingDown, TrendingUp, Tv, UserMinus, Users, Wrench,
 } from 'lucide-react';
 import { ManagementPanel } from './ManagementPanel';
+import { SponsorPanel } from './SponsorPanel';
 import { budgetsApply, financeOverview, type SeasonState } from '@cosmicfut/engine';
 import { BudgetBalance } from './BudgetBalance';
 import { useCurrentClub } from '@/app/ClubContext';
@@ -95,6 +96,8 @@ export function FinancePage() {
     { key: 'resumo', label: 'Resumo', icon: <Scale /> },
     ...(econ ? [{ key: 'diretoria', label: 'Diretoria e mês', icon: <Gauge /> }] : []),
     ...(manage || econ ? [{ key: 'gestao', label: 'Bilheteria e gestão', icon: <Ticket /> }] : []),
+    // (28/11) patrocínio master
+    ...(econ ? [{ key: 'patrocinio', label: 'Patrocínio', icon: <BadgeDollarSign /> }] : []),
     ...(isCurrent || years.length > 1 ? [{ key: 'historico', label: 'Histórico', icon: <LineChart /> }] : []),
   ] as const;
   const tab = tabs.find((t) => t.key === tabParam)?.key ?? 'resumo';
@@ -238,6 +241,12 @@ export function FinancePage() {
             <CashFlowCard ov={ov} />
           </motion.div>
         </>
+      )}
+
+      {tab === 'patrocinio' && (
+        <motion.div variants={fadeUp}>
+          <SponsorPanel season={season} clubId={humanId} />
+        </motion.div>
       )}
 
       {tab === 'gestao' && (
