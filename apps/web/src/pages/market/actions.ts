@@ -13,13 +13,28 @@ import { useMemo } from 'react';
 import type { Player } from '@cosmicfut/shared';
 import {
   counterIncoming, exercisePurchaseOption, makeOffer, promoteProspect, proposeContract, releaseProspect, setTraining, rebalanceBudgets, recallLoan, releasePlayer, renewContract, respondToOffer,
-  setLoanListed, setTransferListed, withdrawOffer,
+  setLoanListed, setTransferListed, withdrawOffer, setTicketPrice, takeLoan, repayLoan, expandStadium, payOffLuva,
   type ExternalClubInfo, type LoanTerms, type MarketResult, type PreContract, type SeasonState, type TransferOffer, type TransferRecord,
 } from '@cosmicfut/engine';
 import { squads } from '@/data/squads';
 import { useIsOnline } from '@/store/mode';
 import { useOnline, type MarketCallType } from '@/store/online';
 import { useSoloSeason } from '@/store/season';
+
+export type FinanceReq =
+  | { op: 'ticket'; price: number | null }
+  | { op: 'loan' | 'repay'; blocks: number }
+  | { op: 'stadium'; seats: number }
+  | { op: 'luva'; playerId: string };
+
+function applyFinance(s: SeasonState, clubId: string, r: FinanceReq): MarketResult {
+  return r.op === 'ticket' ? setTicketPrice(s, clubId, r.price)
+    : r.op === 'loan' ? takeLoan(s, clubId, r.blocks)
+    : r.op === 'repay' ? repayLoan(s, clubId, r.blocks)
+    : r.op === 'stadium' ? expandStadium(s, clubId, r.seats)
+    : r.op === 'luva' ? payOffLuva(s, clubId, r.playerId)
+    : { state: s, error: 'Operação inválida.' };
+}
 
 export interface MarketOutcome {
   error?: string;
@@ -63,6 +78,8 @@ export interface MarketActions {
   dismiss(playerId: string): Promise<MarketOutcome>;
   /** (Treino) define os jogadores do Centro de Treinamento (até 3) */
   train(playerIds: string[]): Promise<MarketOutcome>;
+  /** (28/11) gestão do clube (ingresso, empréstimo, estádio, luva) — solo e online */
+  finance(req: FinanceReq): Promise<MarketOutcome>;
 }
 
 /* ───────── solo ───────── */
@@ -106,6 +123,7 @@ const SOLO: MarketActions = {
   promote: async (playerId) => soloApply((s) => promoteProspect(s, squads, soloHuman(), playerId)),
   dismiss: async (playerId) => soloApply((s) => releaseProspect(s, soloHuman(), playerId)),
   train: async (playerIds) => soloApply((s) => setTraining(s, squads, soloHuman(), playerIds)),
+  finance: async (r) => soloApply((s) => applyFinance(s, soloHuman(), r)),
 };
 
 /* ───────── online ───────── */
@@ -139,6 +157,7 @@ function onlineActions(blocked: string | null): MarketActions {
     promote: guard((playerId) => net('promote', { playerId })),
     dismiss: guard((playerId) => net('dismiss', { playerId })),
     train: guard((playerIds) => net('train', { playerIds })),
+    finance: guard((r) => net('finance', { ...r })),
   };
 }
 

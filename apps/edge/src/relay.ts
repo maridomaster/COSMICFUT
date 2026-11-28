@@ -45,7 +45,7 @@ export const CLIENT_EVENTS = new Set([
   'match:command', 'match:pause-request', 'match:resume', 'chat:send', 'season:renew', 'season:sync',
   'vote:propose', 'vote:cast', 'skip:cancel', 'friends:get', 'jobs:get', 'jobs:apply', 'jobs:accept', 'jobs:decline',
   'market:offer', 'market:contract', 'market:respond', 'market:withdraw', 'market:list', 'market:release', 'market:counter',
-  'market:loanlist', 'market:option', 'market:recall', 'market:renew', 'market:budget', 'market:promote', 'market:dismiss', 'market:train',
+  'market:loanlist', 'market:option', 'market:recall', 'market:renew', 'market:budget', 'market:promote', 'market:dismiss', 'market:train', 'market:finance',
   // só com DEV_COMMANDS no anfitrião (desligado no navegador); testes
   'dev:advance',
 ]);

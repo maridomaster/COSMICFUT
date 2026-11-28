@@ -242,6 +242,15 @@ function parseMarketAction(type: MarketAction['type'], raw: unknown): MarketActi
       if (!Array.isArray(o.playerIds) || o.playerIds.length > 3) fail('Lista de jogadores inválida (até 3).');
       return { type, playerIds: (o.playerIds as unknown[]).map((x) => V.id(x, 'Jogador')) };
     }
+    /* (28/11) gestão do clube no online (antes só no solo) */
+    case 'finance': {
+      const op = o.op;
+      if (op === 'ticket') return { type, op, price: o.price === null ? null : money(o.price, 'Preço', 0, 10_000) };
+      if (op === 'loan' || op === 'repay') return { type, op, blocks: Math.round(money(o.blocks ?? 1, 'Blocos', 1, 50)) };
+      if (op === 'stadium') return { type, op, seats: Math.round(money(o.seats, 'Lugares', 1, 200_000)) };
+      if (op === 'luva') return { type, op, playerId: V.id(o.playerId, 'Jogador') };
+      return fail('Operação inválida.');
+    }
     /* (Mercado e Orçamentos) equilíbrio de orçamentos */
     case 'budget':
       return { type, toWage: money(o.toWage, 'Valor', -MAX_FEE, MAX_FEE) };

@@ -8,13 +8,14 @@ import { useMemo, useState, type ReactNode } from 'react';
 import { motion } from 'motion/react';
 import { Banknote, Building2, Construction, HandCoins, Landmark, RotateCcw, Ticket } from 'lucide-react';
 import {
-  FINANCE, expandStadium, financeOverview, payOffLuva, repayLoan, setTicketPrice, stadiumWorkDays, takeLoan,
+  FINANCE, financeOverview, stadiumWorkDays,
   type SeasonState,
 } from '@cosmicfut/engine';
 import { addDays, fmtDate, fmtInt, fmtMoney } from '@/lib/format';
 import { EASE_OUT } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { useSeason } from '@/store/season';
+import { useMarketActions, type FinanceReq } from '@/pages/market/actions';
 import { daysBetween } from '@/season/view';
 import { fmtPrice, gateEstimate, nextHomeFixture } from '@/season/finance';
 import { Button } from '@/components/ui/button';
@@ -24,17 +25,22 @@ import { ConfirmDialog, type ConfirmRequest } from '@/components/ui/confirm';
 import { ClubCrest, clubLabel } from '@/components/game/status';
 
 export function ManagementPanel({ season, clubId }: { season: SeasonState; clubId: string }) {
-  const apply = useSeason((s) => s.market);
-  const busy = useSeason((s) => !!s.advancing || s.rolling);
+  // (28/11) mesma ação no solo e no online (antes o painel só existia no solo)
+  const actions = useMarketActions();
+  const soloBusy = useSeason((s) => !!s.advancing || s.rolling);
+  const [pending, setPending] = useState(false);
+  const busy = soloBusy || pending || !!actions.blocked;
   const ov = useMemo(() => financeOverview(season, clubId), [season, clubId]);
   const [confirm, setConfirm] = useState<ConfirmRequest | null>(null);
   const [msg, setMsg] = useState<{ tone: 'ok' | 'error'; text: string } | null>(null);
 
-  const run = (fn: (s: SeasonState) => { state: SeasonState; error?: string }, ok: string) => {
-    const r = apply(fn);
-    if (!r) setMsg({ tone: 'error', text: 'Aguarde a simulação terminar.' });
-    else if (r.error) setMsg({ tone: 'error', text: r.error });
-    else setMsg({ tone: 'ok', text: ok });
+  const run = (req: FinanceReq, ok: string) => {
+    setPending(true);
+    void actions.finance(req).then((r) => {
+      setPending(false);
+      if (r.error) setMsg({ tone: 'error', text: r.error });
+      else setMsg({ tone: 'ok', text: ok });
+    });
   };
 
   return (
@@ -65,7 +71,7 @@ export function ManagementPanel({ season, clubId }: { season: SeasonState; clubI
 }
 
 type Overview = ReturnType<typeof financeOverview>;
-type Run = (fn: (s: SeasonState) => { state: SeasonState; error?: string }, ok: string) => void;
+type Run = (req: FinanceReq, ok: string) => void;
 
 function Box({ icon, title, hint, children }: { icon: ReactNode; title: string; hint?: ReactNode; children: ReactNode }) {
   return (
@@ -181,7 +187,7 @@ function TicketBox({ season, clubId, ov, busy, run }: { season: SeasonState; clu
           variant="club"
           size="sm"
           disabled={busy || !changed || price < min}
-          onClick={() => run((s) => setTicketPrice(s, clubId, price), `Ingresso agora custa ${fmtPrice(price)}.`)}
+          onClick={() => run({ op: 'ticket', price }, `Ingresso agora custa ${fmtPrice(price)}.`)}
         >
           <Ticket /> Aplicar preço
         </Button>
@@ -192,7 +198,7 @@ function TicketBox({ season, clubId, ov, busy, run }: { season: SeasonState; clu
             disabled={busy}
             onClick={() => {
               setPrice(sug);
-              run((s) => setTicketPrice(s, clubId, null), 'O clube volta a cobrar o preço sugerido.');
+              run({ op: 'ticket', price: null }, 'O clube volta a cobrar o preço sugerido.');
             }}
           >
             <RotateCcw /> Voltar ao sugerido
@@ -205,7 +211,7 @@ function TicketBox({ season, clubId, ov, busy, run }: { season: SeasonState; clu
 
 /* ───────────── empréstimo ───────────── */
 
-function LoanBox({ ov, busy, run, clubId, ask }: { ov: Overview; busy: boolean; run: Run; clubId: string; ask: (r: ConfirmRequest) => void }) {
+function LoanBox({ ov, busy, run, ask }: { ov: Overview; busy: boolean; run: Run; clubId: string; ask: (r: ConfirmRequest) => void }) {
   const block = ov.loanBlock;
   const rate = ov.loanRate;
   const canTake = ov.loan + block <= ov.maxLoan;
@@ -247,7 +253,7 @@ function LoanBox({ ov, busy, run, clubId, ask }: { ov: Overview; busy: boolean; 
                   ]}
                 />
               ),
-              onConfirm: () => run((s) => takeLoan(s, clubId, 1), `Empréstimo de ${fmtMoney(block)} contratado.`),
+              onConfirm: () => run({ op: 'loan', blocks: 1 }, `Empréstimo de ${fmtMoney(block)} contratado.`),
             })
           }
         >
@@ -271,7 +277,7 @@ function LoanBox({ ov, busy, run, clubId, ask }: { ov: Overview; busy: boolean; 
                   ]}
                 />
               ),
-              onConfirm: () => run((s) => repayLoan(s, clubId, 1), `Pagamento de ${fmtMoney(repay)} realizado.`),
+              onConfirm: () => run({ op: 'repay', blocks: 1 }, `Pagamento de ${fmtMoney(repay)} realizado.`),
             })
           }
         >
@@ -284,7 +290,7 @@ function LoanBox({ ov, busy, run, clubId, ask }: { ov: Overview; busy: boolean; 
 
 /* ───────────── estádio ───────────── */
 
-function StadiumBox({ season, ov, busy, run, clubId, ask }: { season: SeasonState; ov: Overview; busy: boolean; run: Run; clubId: string; ask: (r: ConfirmRequest) => void }) {
+function StadiumBox({ season, ov, busy, run, ask }: { season: SeasonState; ov: Overview; busy: boolean; run: Run; clubId: string; ask: (r: ConfirmRequest) => void }) {
   const [seats, setSeats] = useState(5000);
   const cost = seats * ov.seatCost;
   const days = stadiumWorkDays(seats);
@@ -361,7 +367,7 @@ function StadiumBox({ season, ov, busy, run, clubId, ask }: { season: SeasonStat
                     ]}
                   />
                 ),
-                onConfirm: () => run((s) => expandStadium(s, clubId, seats), `Obra iniciada: +${fmtInt(seats)} lugares em ${fmtDate(until)}.`),
+                onConfirm: () => run({ op: 'stadium', seats }, `Obra iniciada: +${fmtInt(seats)} lugares em ${fmtDate(until)}.`),
               })
             }
           >
@@ -375,7 +381,7 @@ function StadiumBox({ season, ov, busy, run, clubId, ask }: { season: SeasonStat
 
 /* ───────────── luvas ───────────── */
 
-function LuvasBox({ ov, busy, run, clubId, ask }: { ov: Overview; busy: boolean; run: Run; clubId: string; ask: (r: ConfirmRequest) => void }) {
+function LuvasBox({ ov, busy, run, ask }: { ov: Overview; busy: boolean; run: Run; clubId: string; ask: (r: ConfirmRequest) => void }) {
   const total = ov.luvaDebts.reduce((t, d) => t + Math.max(0, d.total - (d.paid ?? 0)), 0);
   return (
     <Box icon={<HandCoins />} title="Luvas parceladas" hint="25% do valor do jogador livre · parcelas sem juros no dia 1">
@@ -423,7 +429,7 @@ function LuvasBox({ ov, busy, run, clubId, ask }: { ov: Overview; busy: boolean;
                               ]}
                             />
                           ),
-                          onConfirm: () => run((s) => payOffLuva(s, clubId, d.playerId), `Luva de ${d.playerName ?? 'jogador'} quitada.`),
+                          onConfirm: () => run({ op: 'luva', playerId: d.playerId }, `Luva de ${d.playerName ?? 'jogador'} quitada.`),
                         })
                       }
                     >

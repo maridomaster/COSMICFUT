@@ -6,7 +6,6 @@ import {
   ArrowLeftRight, Award, Banknote, BarChart3, Building2, CalendarDays, Gauge, Handshake, HandCoins, Heart, Landmark, LineChart, Percent, PiggyBank, Ticket,
   Scale, TrendingDown, TrendingUp, Tv, UserMinus, Users, Wrench,
 } from 'lucide-react';
-import { useIsOnline } from '@/store/mode';
 import { ManagementPanel } from './ManagementPanel';
 import { budgetsApply, financeOverview, type SeasonState } from '@cosmicfut/engine';
 import { BudgetBalance } from './BudgetBalance';
@@ -49,7 +48,6 @@ export function FinancePage() {
   const { bundle } = useCurrentClub();
   const season = useSeasonState();
   const world = useWorld();
-  const online = useIsOnline();
   // seletor estável: `?? []` criaria um array novo a cada leitura (loop de re-render)
   const history = useSeason((s) => s.save?.history) ?? NO_HISTORY;
   const humanId = bundle.club.id;
@@ -91,7 +89,8 @@ export function FinancePage() {
 
   // (Atualização 41) abas: antes eram 10 cards empilhados (3.109px a 1280×720); cada aba cabe (ou quase) numa tela
   const econ = isCurrent && !!ov.econ;
-  const manage = isCurrent && !!world && !online;
+  // (28/11) a gestão (ingresso, empréstimo, estádio, luvas) também no online
+  const manage = isCurrent && !!world;
   const tabs = [
     { key: 'resumo', label: 'Resumo', icon: <Scale /> },
     ...(econ ? [{ key: 'diretoria', label: 'Diretoria e mês', icon: <Gauge /> }] : []),

@@ -288,6 +288,22 @@ describe('mercado online', () => {
     if (!blocked.ok) expect(blocked.error).toMatch(/Clube irritado com propostas insistentes\. Disponível novamente em \d\d\/\d\d\./);
   });
 
+  it('(28/11) gestão do clube no online: ingresso, empréstimo e obra do estádio', async () => {
+    const t = await ok<MarketActionResult>(a, 'market:finance', { op: 'ticket', price: 42 });
+    expect((await va.at(t.version)).clubs[A_CLUB].ticketPrice).toBe(42);
+    const back = await ok<MarketActionResult>(a, 'market:finance', { op: 'ticket', price: null });
+    expect((await va.at(back.version)).clubs[A_CLUB].ticketPrice ?? null).toBeNull();
+    const bal0 = va.state!.clubs[A_CLUB].balance;
+    const l = await ok<MarketActionResult>(a, 'market:finance', { op: 'loan', blocks: 1 });
+    const sl = await va.at(l.version);
+    expect(sl.clubs[A_CLUB].balance).toBeGreaterThan(bal0);
+    expect(sl.clubs[A_CLUB].loan ?? 0).toBeGreaterThan(0);
+    const w = await call<MarketActionResult>(a, 'market:finance', { op: 'stadium', seats: 1000 });
+    if (w.ok) expect((await va.at(w.data.version)).clubs[A_CLUB].stadiumWork?.seats).toBe(1000);
+    else expect(w.error).toBeTruthy();
+    expect((await call(a, 'market:finance', { op: 'xyz' })).ok).toBe(false);
+  });
+
   it('(Etapa 5) lista de empréstimo, renovação e validações das ações novas', async () => {
     const st = va.state!;
     const mineA = squads(st, va.world!)(A_CLUB).filter((p) => !p.youth).sort((x, y) => y.overall - x.overall)[2];
