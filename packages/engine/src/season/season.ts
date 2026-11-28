@@ -382,7 +382,7 @@ export function advanceDay(
         } else {
           const home = buildTeamInput(state, f.homeId, squads(f.homeId), true, undefined, f.competitionId);
           const away = buildTeamInput(state, f.awayId, squads(f.awayId), false, undefined, f.competitionId);
-          const cfg: MatchConfig = { seed, home, away };
+          const cfg: MatchConfig = { seed, home, away, ...(f.neutral ? { neutral: true } : {}) };
           if (f.knockout) { cfg.knockout = true; cfg.extraTime = !!f.extraTime; if (aggregate) cfg.aggregate = aggregate; }
           result = quickSimulate(cfg);
         }
@@ -757,11 +757,36 @@ function monthlyNews(
 }
 
 /** Regras de partida de um jogo (para a UI montar o MatchConfig de um jogo humano). */
-export function fixtureMatchRules(state: SeasonState, f: Fixture): Pick<MatchConfig, 'knockout' | 'extraTime' | 'aggregate'> {
-  if (!f.knockout) return {};
+export function fixtureMatchRules(state: SeasonState, f: Fixture): Pick<MatchConfig, 'knockout' | 'extraTime' | 'aggregate' | 'neutral'> {
+  // (28/11) final em campo neutro: sem vantagem de mando
+  const neutral = f.neutral ? { neutral: true } : {};
+  if (!f.knockout) return neutral;
   const comp = state.competitions.find((c) => c.id === f.competitionId);
   const aggregate = comp ? aggregateBefore(comp, f) : undefined;
-  return { knockout: true, extraTime: !!f.extraTime, ...(aggregate ? { aggregate } : {}) };
+  return { knockout: true, extraTime: !!f.extraTime, ...(aggregate ? { aggregate } : {}), ...neutral };
+}
+
+/**
+ * (28/11) Estádio do jogo em campo neutro (finais em jogo único): um dos maiores estádios de onde faz sentido — do
+ * país (competição nacional) ou da confederação (continental); mundiais: qualquer um. Nunca de um dos finalistas.
+ * Determinístico pelo jogo. Devolve o clube dono do estádio (a UI mostra o nome) ou null.
+ */
+export function neutralVenue(state: SeasonState, f: Fixture): { clubId: string; capacity: number } | null {
+  if (!f.neutral) return null;
+  const comp = state.competitions.find((c) => c.id === f.competitionId);
+  const info = state.clubInfo ?? {};
+  const region = comp?.region ?? info[f.homeId]?.region;
+  const world = comp?.type === 'continental' && /INTERCONTINENTAL|SUPERMUNDIAL/.test(comp.id);
+  const cands = Object.entries(info)
+    .filter(([id, i]) => id !== f.homeId && id !== f.awayId && !i.guest && (i.capacity ?? 0) > 0
+      && (comp?.countryId !== undefined && comp.type !== 'continental' ? i.countryId === comp.countryId : world || !region || i.region === region))
+    .sort((a, b) => (b[1].capacity ?? 0) - (a[1].capacity ?? 0) || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 8);
+  if (!cands.length) return null;
+  let h = 2166136261;
+  for (const ch of f.id) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  const [clubId, i] = cands[(h >>> 0) % cands.length];
+  return { clubId, capacity: i.capacity ?? 0 };
 }
 
 function clamp(v: number, a: number, b: number): number {

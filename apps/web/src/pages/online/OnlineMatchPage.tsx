@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 import { motion } from 'motion/react';
 import { MATCH_SPEEDS } from '@/online/config';
 import { CalendarClock, ChevronRight, Gauge, Hourglass, ListOrdered, Loader2, PauseCircle, Play, Radio, Swords, Timer, Volleyball } from 'lucide-react';
-import type { Competition, Fixture, MatchCommand, Side } from '@cosmicfut/engine';
+import { neutralVenue, type Competition, type Fixture, type MatchCommand, type Side } from '@cosmicfut/engine';
 import { fmtDate } from '@/lib/format';
 import { fadeUp, staggerContainer } from '@/lib/motion';
 import { cn } from '@/lib/utils';
@@ -134,6 +134,8 @@ export function FixtureStrip({ live }: { live: OnlineLiveMatch }) {
     const f = fixtureIndex(season).get(nf.id) ?? ({ ...nf, group: undefined } as unknown as Fixture);
     return fixtureInfo(season, f);
   }, [season, nf]);
+  // (28/11) final em campo neutro: estádio de um terceiro clube
+  const venue = useMemo(() => (season && nf?.neutral ? neutralVenue(season, (fixtureIndex(season).get(nf.id) ?? nf) as Fixture) : null), [season, nf]);
   if (!nf) return null;
   const rules = live.config;
   const continental = info?.comp?.type === 'continental';
@@ -155,7 +157,7 @@ export function FixtureStrip({ live }: { live: OnlineLiveMatch }) {
           {rules.aggregate ? 'decide no agregado' : 'jogo decisivo'} · empate → {rules.extraTime ? 'prorrogação e pênaltis' : 'pênaltis'}
         </span>
       )}
-      {nf.neutral && <span className="rounded-md border border-line px-1.5">campo neutro</span>}
+      {nf.neutral && <span className="rounded-md border border-line px-1.5" data-testid="neutral-venue">campo neutro{venue ? ` · casa do ${clubLabel(venue.clubId, true)}` : ''}</span>}
     </div>
   );
 }

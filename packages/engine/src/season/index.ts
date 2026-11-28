@@ -1,6 +1,6 @@
 export { generateRoundRobin, roundDates, addDays, type RoundRobinMatch } from './schedule';
 export { computeStandings, type StandingsOptions } from './standings';
-export { createSeason, nextFixtureFor, fixturesOn, advanceDay, buildTeamInput, unavailablePlayers, fixtureMatchRules, type AdvanceDayOptions } from './season';
+export { createSeason, nextFixtureFor, fixturesOn, advanceDay, buildTeamInput, unavailablePlayers, fixtureMatchRules, neutralVenue, type AdvanceDayOptions } from './season';
 export {
   ECONOMY, LEGACY_ECONOMY, operatingMonthly, ticketRevenue, tvMonthly, sponsorMonthly, leaguePrize,
   REAL_ECONOMY, hasRealEconomy, realTicketPrice, realOperatingPerSeason, ownerSupportPerSeason, ownerMonthly, foreignMatchdayMonthly, expectedFill,

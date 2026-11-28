@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { AlertTriangle, Landmark, Pencil, Play, Shirt, Swords, Wand2 } from 'lucide-react';
 import type { Player } from '@cosmicfut/shared';
-import { getFormationSlots, type Competition, type Fixture, type Lineup, type MatchConfig, type MatchTeamInput, type SeasonState, type Side } from '@cosmicfut/engine';
+import { getFormationSlots, neutralVenue, type Competition, type Fixture, type Lineup, type MatchConfig, type MatchTeamInput, type SeasonState, type Side } from '@cosmicfut/engine';
 import { cachedBundle, ensureBundles, squadOf } from '@/data/squads';
 import { clubIndexEntry } from '@/data/clubIndex';
 import { fixtureInfo } from '@/season/comps';
@@ -51,13 +51,15 @@ export function PreMatch({ season, fixture, humanId, preset, footer }: {
   );
   // bundles completos dos dois clubes só para exibição (nome curto, estádio, escudo grande)
   const [, bump] = useState(0);
+  // (28/11) final em campo neutro: estádio de um terceiro clube (do país ou da confederação)
+  const venue = useMemo(() => neutralVenue(season, fixture), [season, fixture]);
   useEffect(() => {
     let alive = true;
-    void ensureBundles([fixture.homeId, fixture.awayId]).then(() => alive && bump((n) => n + 1));
+    void ensureBundles([fixture.homeId, fixture.awayId, ...(venue ? [venue.clubId] : [])]).then(() => alive && bump((n) => n + 1));
     return () => {
       alive = false;
     };
-  }, [fixture.homeId, fixture.awayId]);
+  }, [fixture.homeId, fixture.awayId, venue]);
   const humanSide = setup.humanSide;
   const human = setup.config[humanSide];
   const ai = setup.config[humanSide === 'home' ? 'away' : 'home'];
@@ -65,9 +67,10 @@ export function PreMatch({ season, fixture, humanId, preset, footer }: {
   const info = useMemo(() => fixtureInfo(season, fixture), [season, fixture]);
   const comp = info.comp;
   const colors = useMatchColors(clubColors(fixture.homeId), clubColors(fixture.awayId));
-  const homeClub = cachedBundle(fixture.homeId)?.club;
+  const hostId = venue?.clubId ?? fixture.homeId;
+  const homeClub = cachedBundle(hostId)?.club;
   // (Fase 2) capacidade da temporada (inclui ampliações do estádio)
-  const homeCap = season.clubInfo?.[fixture.homeId]?.capacity ?? homeClub?.stadium.capacity ?? clubIndexEntry(fixture.homeId)?.capacity;
+  const homeCap = season.clubInfo?.[hostId]?.capacity ?? homeClub?.stadium.capacity ?? clubIndexEntry(hostId)?.capacity;
   // mandante humano (carreira): público esperado com o preço do ingresso
   const gate = humanId === fixture.homeId && !fixture.neutral && season.career ? gateEstimate(season, fixture.homeId, fixture.awayId, undefined, fixture) : null;
   const continental = comp?.type === 'continental';
@@ -139,7 +142,8 @@ export function PreMatch({ season, fixture, humanId, preset, footer }: {
           </div>
           {(homeClub || homeCap) && (
             <p className="mt-2 flex flex-wrap items-center justify-center gap-1.5 text-xs text-fg-muted">
-              <Landmark className="size-3.5" /> {homeClub ? `${homeClub.stadium.name} · ` : `Casa do ${clubLabel(fixture.homeId, true)} · `}
+              <Landmark className="size-3.5" /> {homeClub ? `${homeClub.stadium.name} · ` : `Casa do ${clubLabel(hostId, true)} · `}
+              {venue && <span data-testid="neutral-venue">campo neutro ({clubLabel(venue.clubId, true)}) · </span>}
               {fmtInt(homeCap ?? 0)} lugares
               {gate && (
                 <span className="text-fg-subtle">

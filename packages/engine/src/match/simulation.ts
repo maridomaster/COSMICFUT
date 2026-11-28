@@ -471,7 +471,7 @@ export class MatchSimulation implements MatchSimulationApi {
       mid += w.mid * eff * (1 + inf.tMid);
       att += w.att * eff * (1 + inf.tAtt);
     }
-    const bonus = (t.side === 'home' ? COEF.homeAdv : 0) + (t.morale - 50) * COEF.moralePerPoint;
+    const bonus = (t.side === 'home' && !this.cfg.neutral ? COEF.homeAdv : 0) + (t.morale - 50) * COEF.moralePerPoint;
     // (Táticas) equilíbrio de setores do desenho (formações padrão: multiplicadores exatamente 1)
     const sb = shapeBalance(t.slots);
     t.def = (def / NORM.def) * sb.def + bonus;

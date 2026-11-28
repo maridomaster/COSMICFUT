@@ -115,6 +115,8 @@ export interface MatchConfig {
   knockout?: boolean;
   /** máximo de substituições (padrão 5) */
   maxSubs?: number;
+  /** (28/11) campo neutro (final em jogo único): ninguém tem a vantagem de jogar em casa */
+  neutral?: boolean;
   /**
    * (adição Fase 1) prorrogação no mata-mata. Padrão true (comportamento antigo); as competições
    * fiéis ao original passam false: empate → direto aos pênaltis.
